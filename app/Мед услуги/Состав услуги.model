@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="usluga_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
+  <entity Name="qUslugaContents" Title="" entityHeight="200" entityIconified="false" entityId="142281705591607" entityLocationX="206" entityLocationY="20" entityWidth="150" queryId="qUslugaContents" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="142281719690638" entityLocationX="407" entityLocationY="19" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="usluga_id" rightEntityId="142281705591607" rightEntityParameterName="usluga_id"/>
+  <referenceRelation leftEntityFieldName="usl_content" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142281719690638"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142281719690638"/>
+</datamodel>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="300px" prefWidth="616px">
+  <widget dividerLocation="220" leftComponent="modelGrid" name="splitPane" parent="Form" prefHeight="300px" prefWidth="616px" rightComponent="panel" type="SplitDesignInfo">
+    <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" prefHeight="296px" prefWidth="218px" type="DbGridDesignInfo">
+    <column name="column" title="Услуга">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Lucida Grande" size="13"/>
+      </headerStyle>
+      <datamodelElement entityId="142281517226819" fieldName="row_name"/>
+    </column>
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="142281517226819" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo>
+      <unaryLinkField entityId="142281517226819" fieldName="parent_type_id"/>
+    </treeDesignInfo>
+  </widget>
+  <widget name="panel" parent="splitPane" prefHeight="296px" prefWidth="385px" type="PanelDesignInfo">
+    <layout type="MarginLayoutDesignInfo"/>
+  </widget>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>

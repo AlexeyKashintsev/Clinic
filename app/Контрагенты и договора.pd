@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307260303278" entityLocationX="235" entityLocationY="43" entityWidth="150" tableName="buh_company"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307258231290" entityLocationX="51" entityLocationY="43" entityWidth="150" tableName="buh_dogovor"/>
+</datamodel>

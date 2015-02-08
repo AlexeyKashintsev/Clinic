@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="451px" prefWidth="720px">
+  <widget backgroundColor="#464f5c" foregroundColor="#000000" name="formDesktop" parent="Form" prefHeight="426px" prefWidth="720px" type="DesktopDesignInfo">
+    <constraints bottom="0px" left="0px" right="0px" top="25px" type="MarginConstraintsDesignInfo"/>
+    <easFont name="Tahoma" size="11"/>
+  </widget>
+  <widget name="menuBar" parent="Form" prefHeight="25px" prefWidth="720px" type="MenubarDesignInfo">
+    <constraints height="25px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="mnuUslugi" parent="menuBar" prefHeight="24px" prefWidth="65px" text="Услуги" type="MenuDesignInfo"/>
+  <widget actionPerformed="miUslugiTypesActionPerformed" name="miUslugiTypes" parent="mnuUslugi" prefHeight="19px" prefWidth="311px" text="Справочник типы услуг" type="MenuItemDesignInfo"/>
+  <widget actionPerformed="miUslugiListActionPerformed" name="miUslugiList" parent="mnuUslugi" prefHeight="19px" prefWidth="311px" text="Справочник услуги" type="MenuItemDesignInfo"/>
+  <widget name="mnuEdit" parent="menuBar" prefHeight="24px" prefWidth="134px" text="Редактирование" type="MenuDesignInfo"/>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>

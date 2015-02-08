@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307290477943" entityLocationX="39" entityLocationY="60" entityWidth="150" tableName="phys_patient"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307336453236" entityLocationX="371" entityLocationY="36" entityWidth="150" tableName="phys_reception"/>
+</datamodel>
