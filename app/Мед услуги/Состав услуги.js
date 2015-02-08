@@ -8,6 +8,12 @@
 function UslugaContent() {
 var self = this, model = this.model, form = this; 
 
+self.setUsluga = function(aUslugaID) {
+    model.qUslugaContents.params.usluga_id = aUslugaID;
+    model.qUslugaContents.execute();
+    model.params.usl_id = aUslugaID;
+};
+
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
     if (self.model.modified&&confirm('Сохранить изменения?')){
         self.model.save();

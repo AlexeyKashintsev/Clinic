@@ -5,7 +5,7 @@
 function MainView() {
     var self = this, model = this.model, form = this;
     
-    var fmUslTypes, fmUslList;
+    var fmUslTypes, fmUslList, fmUslContents;
     
     self.showFormAsInternal = function(aForm) {
         var frameRunner = aForm;
@@ -36,9 +36,16 @@ function MainView() {
             fmUslList = new UslugiByTypeView();
             fmUslList.mainForm = self;
             self.showFormAsInternal(fmUslList);
-           // self.setDate();
         } else self.showFormAsInternal(fmUslList);
     }//GEN-LAST:event_miUslugiListActionPerformed
+
+    function miUslugiContentsActionPerformed(evt) {//GEN-FIRST:event_miUslugiContentsActionPerformed
+        if (!fmUslContents) {
+            fmUslContents = new UslugiContentsView();
+            fmUslContents.mainForm = self;
+            self.showFormAsInternal(fmUslContents);
+        }	else self.showFormAsInternal(fmUslContents);
+    }//GEN-LAST:event_miUslugiContentsActionPerformed
 }
 /*
  * 
@@ -46,6 +53,5 @@ function MainView() {
             fmServices = new ServicesForm();
             fmServices.mainForm = self;
             self.showFormAsInternal(fmServices);
-           // self.setDate();
     }	else self.showFormAsInternal(fmServices);
  */

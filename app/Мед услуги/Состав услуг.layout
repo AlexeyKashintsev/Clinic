@@ -2,9 +2,15 @@
   <widget dividerLocation="220" leftComponent="modelGrid" name="splitPane" parent="Form" prefHeight="300px" prefWidth="616px" rightComponent="panel" type="SplitDesignInfo">
     <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
   </widget>
-  <widget deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" prefHeight="296px" prefWidth="218px" type="DbGridDesignInfo">
+  <widget deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" prefHeight="298px" prefWidth="219px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="142281663562841" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo>
+      <unaryLinkField entityId="142281663562841" fieldName="parent_type_id"/>
+    </treeDesignInfo>
     <column name="column" title="Услуга">
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <datamodelElement entityId="142281663562841" fieldName="row_name"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -14,18 +20,12 @@
         <cellValueField/>
       </cellDesignInfo>
       <headerStyle>
-        <nativeFont name="Lucida Grande" size="13"/>
+        <nativeFont name="Dialog" size="13"/>
       </headerStyle>
-      <datamodelElement entityId="142281517226819" fieldName="row_name"/>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="142281517226819" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo>
-      <unaryLinkField entityId="142281517226819" fieldName="parent_type_id"/>
-    </treeDesignInfo>
   </widget>
-  <widget name="panel" parent="splitPane" prefHeight="296px" prefWidth="385px" type="PanelDesignInfo">
+  <widget name="panel" parent="splitPane" prefHeight="298px" prefWidth="390px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
   <layout type="MarginLayoutDesignInfo"/>

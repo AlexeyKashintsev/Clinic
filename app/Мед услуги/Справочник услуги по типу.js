@@ -8,6 +8,7 @@
 function UslugiByTypeView() {
 
     var self = this, model = this.model, form = this;
+    var fmUslContent;
 
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
         if (self.model.modified && confirm('Сохранить изменения?')) {
@@ -30,12 +31,14 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
 }//GEN-LAST:event_formWindowClosing
 
     function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
-        var uslName = prompt('Введите наименование новой услуги');
-        if (uslName)
-            model.qUslugiByType.push({
-                    usl_type    :   model.qUslTypes.cursor.usl_types_id,
-                    usl_name    :   uslName
-            });
+        if (model.qUslTypes.cursor.usl_types_id != 0) {
+            var uslName = prompt('Введите наименование новой услуги');
+            if (uslName)
+                model.qUslugiByType.push({
+                        usl_type    :   model.qUslTypes.cursor.usl_types_id,
+                        usl_name    :   uslName
+                });
+        }
     }//GEN-LAST:event_btnAddActionPerformed
 
     function btnDelActionPerformed(evt) {//GEN-FIRST:event_btnDelActionPerformed
@@ -45,4 +48,13 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
     function grdUslTypeMouseClicked(evt) {//GEN-FIRST:event_grdUslTypeMouseClicked
 
     }//GEN-LAST:event_grdUslTypeMouseClicked
+
+    function buttonActionPerformed(evt) {//GEN-FIRST:event_buttonActionPerformed
+        if (model.qUslugiByType.cursor.usl_uslugi_id) {
+            if (!fmUslContent)
+                fmUslContent = new UslugaContent();
+            fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id)
+            fmUslContent.showModal();
+        }
+    }//GEN-LAST:event_buttonActionPerformed
 }

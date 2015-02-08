@@ -4,4 +4,5 @@
   <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142281411534111" entityLocationX="211" entityLocationY="72" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
   <relation leftEntityFieldName="usl_types_id" leftEntityId="142281411534111" rightEntityId="142281411753062" rightEntityParameterName="usl_type"/>
   <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142281411753062" rightEntityFieldName="usl_types_id" rightEntityId="142281411534111"/>
+  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142281411534111" rightEntityFieldName="usl_types_id" rightEntityId="142281411534111"/>
 </datamodel>

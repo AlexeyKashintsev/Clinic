@@ -33,7 +33,11 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
     function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
         var newUslName = prompt('Название нового типа услуги');
         if (newUslName)
-            model.qUslTypes.push({type_name :   newUslName});
+            model.qUslTypes.push({
+                type_name   :   newUslName,
+                type_parent :   
+                        model.qUslTypes.cursor.type_parent !== 0 ? model.qUslTypes.cursor.type_parent : null
+            });
     }//GEN-LAST:event_btnAddActionPerformed
 
     function btnDelActionPerformed(evt) {//GEN-FIRST:event_btnDelActionPerformed
@@ -45,4 +49,14 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
             alert('Невозможно удалить данный тип услуг!');
         }
     }//GEN-LAST:event_btnDelActionPerformed
+
+    function btnAddParentActionPerformed(evt) {//GEN-FIRST:event_btnAddParentActionPerformed
+        var newUslName = prompt('Название нового типа услуги');
+        if (newUslName)
+            model.qUslTypes.push({
+                type_name   :   newUslName,
+                type_parent :   
+                        model.qUslTypes.cursor.usl_types_id !== 0 ? model.qUslTypes.cursor.usl_types_id : null
+            });
+    }//GEN-LAST:event_btnAddParentActionPerformed
 }

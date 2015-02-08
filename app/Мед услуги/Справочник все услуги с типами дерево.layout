@@ -6,16 +6,22 @@
   <widget actionPerformed="btnSelectActionPerformed" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="pnlSelLock" prefHeight="35px" prefWidth="125px" text="Выбрать" type="ButtonDesignInfo">
     <constraints bottom="7px" height="35px" right="139px" type="MarginConstraintsDesignInfo" width="125px"/>
   </widget>
-  <widget icon="icons/22x22/actions/gtk-no.png" name="btnCancel" parent="pnlSelLock" prefHeight="35px" prefWidth="125px" text="Отмена" type="ButtonDesignInfo">
+  <widget actionPerformed="btnCancelActionPerformed" icon="icons/22x22/actions/gtk-no.png" name="btnCancel" parent="pnlSelLock" prefHeight="35px" prefWidth="125px" text="Отмена" type="ButtonDesignInfo">
     <constraints bottom="7px" height="35px" right="10px" type="MarginConstraintsDesignInfo" width="125px"/>
   </widget>
   <widget name="pnlWorkSpace" parent="Form" prefHeight="298px" prefWidth="372px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
     <constraints place="Center" type="BorderLayoutConstraintsDesignInfo"/>
   </widget>
-  <widget deletable="false" editable="false" insertable="false" name="modelGrid" parent="pnlWorkSpace" prefHeight="298px" prefWidth="372px" type="DbGridDesignInfo">
+  <widget name="modelGrid" parent="pnlWorkSpace" prefHeight="298px" prefWidth="372px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="142281517226819" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo>
+      <unaryLinkField entityId="142281517226819" fieldName="parent_type_id"/>
+    </treeDesignInfo>
     <column name="column" title="Услуга">
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <datamodelElement entityId="142281517226819" fieldName="row_name"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -25,16 +31,10 @@
         <cellValueField/>
       </cellDesignInfo>
       <headerStyle>
-        <nativeFont name="Lucida Grande" size="13"/>
+        <nativeFont name="Tahoma" size="11"/>
       </headerStyle>
-      <datamodelElement entityId="142281517226819" fieldName="row_name"/>
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
     </column>
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="142281517226819" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo>
-      <unaryLinkField entityId="142281517226819" fieldName="parent_type_id"/>
-    </treeDesignInfo>
     <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <layout type="BorderLayoutDesignInfo"/>
