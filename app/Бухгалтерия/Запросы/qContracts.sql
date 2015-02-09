@@ -1,0 +1,5 @@
+/**
+ * 
+ * @author Алексей
+ * @name qContracts
+ */

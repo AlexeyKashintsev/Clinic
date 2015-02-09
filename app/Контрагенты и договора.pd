@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307260303278" entityLocationX="235" entityLocationY="43" entityWidth="150" tableName="buh_company"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307258231290" entityLocationX="51" entityLocationY="43" entityWidth="150" tableName="buh_dogovor"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342752924591" entityLocationX="25" entityLocationY="52" entityWidth="150" tableName="buh_contracts"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342098497230" entityLocationX="267" entityLocationY="47" entityWidth="150" tableName="buh_companies"/>
 </datamodel>

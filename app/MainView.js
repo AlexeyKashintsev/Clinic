@@ -6,6 +6,7 @@ function MainView() {
     var self = this, model = this.model, form = this;
     
     var fmUslTypes, fmUslList, fmUslContents;
+    var fmContragents;
     
     self.showFormAsInternal = function(aForm) {
         var frameRunner = aForm;
@@ -46,6 +47,14 @@ function MainView() {
             self.showFormAsInternal(fmUslContents);
         }	else self.showFormAsInternal(fmUslContents);
     }//GEN-LAST:event_miUslugiContentsActionPerformed
+
+    function miContragentsActionPerformed(evt) {//GEN-FIRST:event_miContragentsActionPerformed
+        if (!fmContragents) {
+            fmContragents = new CompaniesList();
+            fmContragents.mainForm = self;
+            self.showFormAsInternal(fmContragents);
+    }	else self.showFormAsInternal(fmContragents);
+    }//GEN-LAST:event_miContragentsActionPerformed
 }
 /*
  * 

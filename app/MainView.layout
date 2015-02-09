@@ -6,10 +6,12 @@
   <widget name="menuBar" parent="Form" prefHeight="25px" prefWidth="720px" type="MenubarDesignInfo">
     <constraints height="25px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
   </widget>
-  <widget name="mnuUslugi" parent="menuBar" prefHeight="23px" prefWidth="47px" text="Услуги" type="MenuDesignInfo"/>
+  <widget name="mnuUslugi" parent="menuBar" prefHeight="23px" prefWidth="85px" text="Профпатолог" type="MenuDesignInfo"/>
   <widget actionPerformed="miUslugiTypesActionPerformed" name="miUslugiTypes" parent="mnuUslugi" prefHeight="22px" prefWidth="255px" text="Справочник типы услуг" type="MenuItemDesignInfo"/>
   <widget actionPerformed="miUslugiListActionPerformed" name="miUslugiList" parent="mnuUslugi" prefHeight="22px" prefWidth="255px" text="Справочник услуги" type="MenuItemDesignInfo"/>
-  <widget actionPerformed="miUslugiContentsActionPerformed" name="miUslugiContents" parent="mnuUslugi" prefHeight="22px" prefWidth="255px" text="Состав услуг" type="MenuItemDesignInfo"/>
-  <widget name="mnuEdit" parent="menuBar" prefHeight="23px" prefWidth="97px" text="Редактирование" type="MenuDesignInfo"/>
+  <widget actionPerformed="miUslugiContentsActionPerformed" name="miUslugiContents" parent="mnuUslugi" prefHeight="22px" prefWidth="255px" text="Назначения по услугам" type="MenuItemDesignInfo"/>
+  <widget name="mnuCompanies" parent="menuBar" prefHeight="23px" prefWidth="75px" text="Бухгалтерия" type="MenuDesignInfo"/>
+  <widget actionPerformed="miContragentsActionPerformed" name="miContragents" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Справочник контрагенты" type="MenuItemDesignInfo"/>
+  <widget name="mnuPacients" parent="menuBar" prefHeight="23px" prefWidth="81px" text="Регистратура" type="MenuDesignInfo"/>
   <layout type="MarginLayoutDesignInfo"/>
 </layout>

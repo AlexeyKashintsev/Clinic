@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281282477562" entityLocationX="40" entityLocationY="68" entityWidth="150" tableName="usl_content"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281321934163" entityLocationX="595" entityLocationY="51" entityWidth="150" tableName="buh_dogovor"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="229" entityLocationY="68" entityWidth="150" tableName="usl_uslugi"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281294671140" entityLocationX="417" entityLocationY="51" entityWidth="150" tableName="usl_cost"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281303702642" entityLocationX="240" entityLocationY="275" entityWidth="150" tableName="usl_types"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281575563454" entityLocationX="683" entityLocationY="309" entityWidth="150" tableName="dummy"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281282477562" entityLocationX="126" entityLocationY="46" entityWidth="150" tableName="usl_content"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342740151218" entityLocationX="766" entityLocationY="63" entityWidth="150" tableName="buh_contracts"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="384" entityLocationY="112" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281294671140" entityLocationX="680" entityLocationY="300" entityWidth="150" tableName="usl_cost"/>
+  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142281303702642" entityLocationX="462" entityLocationY="328" entityWidth="150" tableName="usl_types"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342135073784" entityLocationX="193" entityLocationY="293" entityWidth="150" tableName="man_sex"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342157606498" entityLocationX="20" entityLocationY="346" entityWidth="150" tableName="usl_periodic_type"/>
 </datamodel>
