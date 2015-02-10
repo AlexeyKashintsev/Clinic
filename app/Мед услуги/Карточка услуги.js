@@ -14,8 +14,6 @@ self.setUsluga = function(aUslugaID) {
         model.save();
     }
     if (model.qUslugiByType.findById(aUslugaID)) {
-        model.qUslugaContents.params.usluga_id = aUslugaID;
-        model.qUslugaContents.execute();
         model.params.usl_id = aUslugaID;
     }
 };
@@ -43,7 +41,7 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
 
     function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
         if (!fmUslSelect)
-            fmUslSelect = new UslugiSelectList();
+            fmUslSelect = new Uslugi4SelectView();
         fmUslSelect.showModal(function(aUslID) {
             if (aUslID)
                 model.qUslugaContents.push({

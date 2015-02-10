@@ -32,6 +32,11 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
     function addNewContract() {
         if (!fmContract)
             fmContract = new ContractDetailsView();
+        fmContract.setContractID(null, model.qContracts.params.company_id);
+        fmContract.showModal(function(aResult) {
+            if (aResult)
+                model.requery();
+        });
     }
 
     function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -41,4 +46,16 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
         } else 
             addNewContract();
     }//GEN-LAST:event_btnAddActionPerformed
+
+    function modelGridMouseClicked(evt) {//GEN-FIRST:event_modelGridMouseClicked
+        if (evt.clickCount > 1) {
+            if (!fmContract)
+                fmContract = new ContractDetailsView();
+            fmContract.setContractID(model.qContracts.cursor.buh_contracts_id);
+            fmContract.showModal(function(aResult) {
+                if (aResult)
+                    model.requery();
+            });
+        }
+    }//GEN-LAST:event_modelGridMouseClicked
 }

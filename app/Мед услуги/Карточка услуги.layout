@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" locationByPlatform="true" name="Form" prefHeight="385px" prefWidth="377px" windowClosing="formWindowClosing" windowOpened="formWindowOpened">
+  <widget name="pnlWorkSpace" parent="Form" prefHeight="385px" prefWidth="377px" type="PanelDesignInfo">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="modelGrid" parent="pnlWorkSpace" prefHeight="210px" prefWidth="377px" type="DbGridDesignInfo">
+    <column name="colUslContent" selectFunction="colUslContentOnSelect" selectOnly="true" title="Назначения">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <displayField entityId="142281719690638" fieldName="usl_name"/>
+        <valueField entityId="142281719690638" fieldName="usl_uslugi_id"/>
+      </controlInfo>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Dialog" size="13"/>
+      </headerStyle>
+      <datamodelElement entityId="142281705591607" fieldName="usl_content"/>
+    </column>
+    <column name="column1" title="Пол" width="10">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <displayField entityId="142342357611333" fieldName="sex_short"/>
+        <valueField entityId="142342357611333" fieldName="man_sex_id"/>
+      </controlInfo>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="142281705591607" fieldName="sex"/>
+    </column>
+    <column name="column2" title="Периодичность" width="30">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <displayField entityId="142342357763318" fieldName="type_name"/>
+        <valueField entityId="142342357763318" fieldName="usl_periodic_type_id"/>
+      </controlInfo>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Tahoma" size="11"/>
+      </headerStyle>
+      <datamodelElement entityId="142281705591607" fieldName="periodic_type"/>
+    </column>
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="142281705591607" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <constraints bottom="48px" left="0px" right="0px" top="127px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="label" parent="pnlWorkSpace" prefHeight="16px" prefWidth="96px" text="Наименование" type="LabelDesignInfo">
+    <constraints height="16px" left="12px" top="18px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget floatable="false" name="toolBar" parent="pnlWorkSpace" prefHeight="30px" prefWidth="377px" rollover="true" type="ToolbarDesignInfo">
+    <constraints height="30px" left="0px" right="0px" top="96px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget actionPerformed="btnAddActionPerformed" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="26px" prefWidth="34px" toolTipText="Добавить" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnDelActionPerformed" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="26px" prefWidth="34px" toolTipText="Удалить" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnReqActionPerformed" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="26px" prefWidth="34px" toolTipText="Обновить" type="ButtonDesignInfo" verticalTextPosition="3"/>
+  <widget actionPerformed="btnSaveActionPerformed" focusable="false" horizontalTextPosition="0" name="btnSave" parent="pnlWorkSpace" prefHeight="29px" prefWidth="96px" text="Сохранить" toolTipText="Сохранить" type="ButtonDesignInfo" verticalTextPosition="3">
+    <constraints bottom="7px" height="29px" right="101px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="button" parent="pnlWorkSpace" prefHeight="29px" prefWidth="86px" text="Отмена" type="ButtonDesignInfo">
+    <constraints bottom="7px" height="29px" right="15px" type="MarginConstraintsDesignInfo" width="86px"/>
+  </widget>
+  <widget name="modelFormattedField" parent="pnlWorkSpace" prefHeight="28px" prefWidth="240px" type="DbLabelDesignInfo">
+    <datamodelElement entityId="142359212387922" fieldName="usl_name"/>
+    <constraints height="28px" left="120px" right="17px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="label1" parent="pnlWorkSpace" prefHeight="16px" prefWidth="96px" text="Тип услуги" type="LabelDesignInfo">
+    <constraints height="16px" left="12px" top="54px" type="MarginConstraintsDesignInfo" width="96px"/>
+  </widget>
+  <widget name="modelCombo" parent="pnlWorkSpace" prefHeight="28px" prefWidth="240px" type="DbComboDesignInfo">
+    <displayField entityId="142359242649121" fieldName="type_name"/>
+    <valueField entityId="142359242649121" fieldName="usl_types_id"/>
+    <datamodelElement entityId="142359212387922" fieldName="usl_type"/>
+    <constraints height="28px" left="120px" right="17px" top="48px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>

@@ -53,7 +53,7 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
         if (model.qUslugiByType.cursor.usl_uslugi_id) {
             if (!fmUslContent)
                 fmUslContent = new UslugaContent();
-            fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id)
+            fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id);
             fmUslContent.showModal();
         }
     }//GEN-LAST:event_buttonActionPerformed

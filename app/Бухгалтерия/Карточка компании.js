@@ -32,11 +32,13 @@ function CompanyCard() {
 
     function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
         model.save();
+        fmContracts.model.save();
         form.close();
     }//GEN-LAST:event_btnSaveActionPerformed
 
     function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerformed
         model.revert();
+        fmContracts.model.revert();
         form.close();
     }//GEN-LAST:event_btnCancelActionPerformed
 }

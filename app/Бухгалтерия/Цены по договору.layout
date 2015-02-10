@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="348px" prefWidth="600px" windowClosing="formWindowClosing" windowOpened="formWindowOpened">
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" locationByPlatform="true" name="Form" prefHeight="348px" prefWidth="600px" windowClosing="formWindowClosing" windowOpened="formWindowOpened">
   <widget floatable="false" name="toolBar" parent="Form" prefHeight="30px" prefWidth="600px" rollover="true" type="ToolbarDesignInfo">
     <constraints place="North" type="BorderLayoutConstraintsDesignInfo"/>
   </widget>
@@ -10,8 +10,10 @@
   </widget>
   <widget name="modelGrid" parent="pnlWorkSpace" prefHeight="318px" prefWidth="600px" type="DbGridDesignInfo">
     <column name="colUsluga_id" title="Наименование услуги" width="90">
-      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <datamodelElement entityId="142357284678653" fieldName="usluga_id"/>
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <displayField entityId="142359130477831" fieldName="usl_name"/>
+        <valueField entityId="142359130477831" fieldName="usl_uslugi_id"/>
+      </controlInfo>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -23,13 +25,13 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142357284678653" fieldName="usluga_id"/>
     </column>
     <column name="colSex" title="Пол" width="20">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142357321588684" fieldName="man_sex_id"/>
         <displayField entityId="142357321588684" fieldName="sex_short"/>
+        <valueField entityId="142357321588684" fieldName="man_sex_id"/>
       </controlInfo>
-      <datamodelElement entityId="142357284678653" fieldName="sex"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -41,13 +43,13 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142357284678653" fieldName="sex"/>
     </column>
     <column name="colPer_type" title="Периодичность">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142357321165973" fieldName="usl_periodic_type_id"/>
         <displayField entityId="142357321165973" fieldName="type_name"/>
+        <valueField entityId="142357321165973" fieldName="usl_periodic_type_id"/>
       </controlInfo>
-      <datamodelElement entityId="142357284678653" fieldName="per_type"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -59,10 +61,10 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142357284678653" fieldName="per_type"/>
     </column>
     <column name="colStart_date" title="Начало" width="30">
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy HH:mm:ss" name="view" prefHeight="0px" prefWidth="0px"/>
-      <datamodelElement entityId="142357284678653" fieldName="start_date"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -74,10 +76,10 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142357284678653" fieldName="start_date"/>
     </column>
     <column name="colEnd_date" title="Окончание" width="30">
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy HH:mm:ss" name="view" prefHeight="0px" prefWidth="0px"/>
-      <datamodelElement entityId="142357284678653" fieldName="end_date"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -89,10 +91,10 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142357284678653" fieldName="end_date"/>
     </column>
     <column name="colCost" title="Цена" width="30">
       <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <datamodelElement entityId="142357284678653" fieldName="cost"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -104,6 +106,7 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142357284678653" fieldName="cost"/>
     </column>
     <rowsColumnsDesignInfo>
       <rowsDatasource entityId="142357284678653" field="false"/>

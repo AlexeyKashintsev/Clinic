@@ -4,12 +4,16 @@
  */
 function ContractDetailsView() {
     var self = this, model = this.model, form = this;
-    var fmCosts;
+    var fmCosts = new ContractPricesView();
+    fmCosts.showOnPanel(form.pnlCosts);
+    var newContract = false;
     
     self.setContractID = function(aContractID, aCompanyID) {
         if (aContractID) {
             model.qContract.params.contract_id = aContractID;
             model.qContract.execute();
+            fmCosts.setContractId(aContractID);
+            newContract = false;
         } else {
             if (model.modified)
                 model.revert();
@@ -18,20 +22,25 @@ function ContractDetailsView() {
                 active      :   true,
                 start_date  :   new Date()
             });
+            model.save();
+            newContract = true;
+            fmCosts.setContractId(model.qContract.cursor.buh_contracts_id);
         }
     };
 
     function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
         model.save();
-        if (fmCosts)
-            fmCosts.model.save();
+        fmCosts.model.save();
         form.close(true);
     }//GEN-LAST:event_btnSaveActionPerformed
 
     function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        model.revert();
-        if (fmCosts)
-            fmCosts.model.revert();
+        if (newContract) {
+            model.qContract.deleteRow();
+            model.save();
+        } else            
+            model.revert();
+        fmCosts.model.revert();
         form.close(false);
     }//GEN-LAST:event_btnCancelActionPerformed
 }
