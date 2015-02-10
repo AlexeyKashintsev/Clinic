@@ -7,7 +7,7 @@
   <widget actionPerformed="btnReqActionPerformed" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="26px" prefWidth="34px" toolTipText="Обновить" type="ButtonDesignInfo" verticalTextPosition="3"/>
   <widget name="label" parent="toolBar" prefHeight="16px" prefWidth="120px" text="                              " type="LabelDesignInfo"/>
   <widget name="modelCheckBox" parent="toolBar" prefHeight="28px" prefWidth="100px" text="Активные" type="DbCheckDesignInfo">
-    <datamodelElement entityId="-1" fieldName="active"/>
+    <datamodelElement entityId="-1" fieldName="с_active"/>
   </widget>
   <widget name="pnlWorkSpace" parent="Form" prefHeight="316px" prefWidth="372px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
@@ -42,7 +42,7 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
-      <datamodelElement entityId="142355568228255" fieldName="active"/>
+      <datamodelElement entityId="142355568228255" fieldName="с_active"/>
     </column>
     <column name="colStart_date" readonly="true" selectOnly="true" title="Начало">
       <controlInfo classHint="DbDateDesignInfo" dateFormat="dd.MM.yyyy HH:mm:ss" name="view" prefHeight="0px" prefWidth="0px"/>

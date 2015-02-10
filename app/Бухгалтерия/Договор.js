@@ -19,7 +19,7 @@ function ContractDetailsView() {
                 model.revert();
             model.qContract.push({
                 company_id  :   aCompanyID,
-                active      :   true,
+                с_active    :   true,
                 start_date  :   new Date()
             });
             model.save();

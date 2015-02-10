@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="400px" prefWidth="407px">
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="400px" prefWidth="489px">
   <widget name="label" parent="Form" prefHeight="16px" prefWidth="72px" text="Компания" type="LabelDesignInfo">
     <constraints height="16px" left="12px" top="18px" type="MarginConstraintsDesignInfo" width="72px"/>
   </widget>
-  <widget editable="false" name="modelCombo" parent="Form" prefHeight="28px" prefWidth="303px" type="DbComboDesignInfo">
+  <widget editable="false" name="modelCombo" parent="Form" prefHeight="28px" prefWidth="385px" type="DbComboDesignInfo">
     <displayField entityId="142356364807652" fieldName="company_name"/>
     <valueField entityId="142356364807652" fieldName="buh_companies_id"/>
     <datamodelElement entityId="142356364522567" fieldName="company_id"/>
@@ -11,14 +11,14 @@
   <widget name="label1" parent="Form" prefHeight="16px" prefWidth="72px" text="Номер" type="LabelDesignInfo">
     <constraints height="16px" left="12px" top="54px" type="MarginConstraintsDesignInfo" width="72px"/>
   </widget>
-  <widget name="modelTextArea" parent="Form" prefHeight="28px" prefWidth="303px" type="DbTextDesignInfo">
+  <widget name="modelTextArea" parent="Form" prefHeight="28px" prefWidth="385px" type="DbTextDesignInfo">
     <datamodelElement entityId="142356364522567" fieldName="contr_name"/>
     <constraints height="28px" left="96px" right="8px" top="48px" type="MarginConstraintsDesignInfo"/>
   </widget>
-  <widget name="tabbedPane" parent="Form" prefHeight="276px" prefWidth="408px" type="TabsDesignInfo">
-    <constraints bottom="40px" left="0px" right="-1px" top="84px" type="MarginConstraintsDesignInfo"/>
+  <widget name="tabbedPane" parent="Form" prefHeight="240px" prefWidth="490px" type="TabsDesignInfo">
+    <constraints bottom="40px" left="0px" right="-1px" top="120px" type="MarginConstraintsDesignInfo"/>
   </widget>
-  <widget name="pnlCosts" parent="tabbedPane" prefHeight="230px" prefWidth="387px" type="PanelDesignInfo">
+  <widget name="pnlCosts" parent="tabbedPane" prefHeight="194px" prefWidth="469px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
     <constraints tabTitle="Цены по договору" type="TabsConstraintsDesignInfo"/>
   </widget>
@@ -27,6 +27,24 @@
   </widget>
   <widget actionPerformed="btnCancelActionPerformed" name="btnCancel" parent="Form" prefHeight="29px" prefWidth="106px" text="Отмена" type="ButtonDesignInfo">
     <constraints bottom="11px" height="29px" right="13px" type="MarginConstraintsDesignInfo" width="106px"/>
+  </widget>
+  <widget name="modelCheckBox" parent="Form" prefHeight="28px" prefWidth="120px" text="Активен" type="DbCheckDesignInfo">
+    <datamodelElement entityId="142356364522567" fieldName="с_active"/>
+    <constraints height="28px" left="12px" top="84px" type="MarginConstraintsDesignInfo" width="120px"/>
+  </widget>
+  <widget name="modelDate" parent="Form" prefHeight="28px" prefWidth="144px" type="DbDateDesignInfo">
+    <datamodelElement entityId="142356364522567" fieldName="start_date"/>
+    <constraints height="28px" left="156px" top="84px" type="MarginConstraintsDesignInfo" width="144px"/>
+  </widget>
+  <widget name="label2" parent="Form" prefHeight="16px" prefWidth="12px" text="с" type="LabelDesignInfo">
+    <constraints height="16px" left="144px" top="90px" type="MarginConstraintsDesignInfo" width="12px"/>
+  </widget>
+  <widget name="label3" parent="Form" prefHeight="16px" prefWidth="38px" text="по" type="LabelDesignInfo">
+    <constraints height="16px" left="312px" top="90px" type="MarginConstraintsDesignInfo" width="38px"/>
+  </widget>
+  <widget name="modelDate1" parent="Form" prefHeight="28px" prefWidth="148px" type="DbDateDesignInfo">
+    <datamodelElement entityId="142356364522567" fieldName="end_date"/>
+    <constraints height="28px" left="336px" top="84px" type="MarginConstraintsDesignInfo" width="148px"/>
   </widget>
   <layout type="MarginLayoutDesignInfo"/>
 </layout>
