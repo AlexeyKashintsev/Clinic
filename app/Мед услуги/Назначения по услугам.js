@@ -11,10 +11,10 @@ function UslugiContentsView() {
         if (!fmUslContent)
             fmUslContent = new UslugaContent();
         fmUslContent.showOnPanel(form.pnlUslContent);
-        fmUslContent.setUsluga(model.qUslWithTypesTree.row_id);
+        fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id);
     }//GEN-LAST:event_formWindowOpened
 
-    function qUslWithTypesTreeOnScrolled(evt) {//GEN-FIRST:event_qUslWithTypesTreeOnScrolled
-        fmUslContent.setUsluga(model.qUslWithTypesTree.cursor.row_id);
-    }//GEN-LAST:event_qUslWithTypesTreeOnScrolled
+    function qUslugiByTypeOnScrolled(evt) {//GEN-FIRST:event_qUslugiByTypeOnScrolled
+        fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id);
+    }//GEN-LAST:event_qUslugiByTypeOnScrolled
 }

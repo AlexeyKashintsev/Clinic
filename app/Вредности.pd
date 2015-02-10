@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
+  <fieldsEntity entityHeight="88" entityIconified="false" entityId="142348883226664" entityLocationX="21" entityLocationY="125" entityWidth="150" tableName="hazard_groups"/>
+  <fieldsEntity entityHeight="65" entityIconified="false" entityId="142349216137797" entityLocationX="402" entityLocationY="16" entityWidth="150" tableName="usl_period"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142348740228232" entityLocationX="209" entityLocationY="3" entityWidth="150" tableName="hazards"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142349295921290" entityLocationX="580" entityLocationY="18" entityWidth="150" tableName="hazard_contents"/>
+  <fieldsEntity entityHeight="106" entityIconified="false" entityId="142348599175899" entityLocationX="22" entityLocationY="10" entityWidth="150" tableName="hazard_types"/>
+</datamodel>

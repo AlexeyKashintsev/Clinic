@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
+  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="142357321588684" entityLocationX="578" entityLocationY="9" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
+  <entity Name="qPeriodic" Title="" entityHeight="200" entityIconified="false" entityId="142357321165973" entityLocationX="416" entityLocationY="174" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>
+  <entity Name="qPricesByContract" Title="" entityHeight="200" entityIconified="false" entityId="142357284678653" entityLocationX="225" entityLocationY="21" entityWidth="150" queryId="qPricesByContract" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="sex" leftEntityId="142357284678653" rightEntityFieldName="man_sex_id" rightEntityId="142357321588684"/>
+  <referenceRelation leftEntityFieldName="per_type" leftEntityId="142357284678653" rightEntityFieldName="usl_periodic_type_id" rightEntityId="142357321165973"/>
+</datamodel>

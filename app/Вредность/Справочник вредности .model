@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="haz_to_find" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="hazard_type" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
+  <entity Name="qHazardTypesList" Title="" entityHeight="61" entityIconified="false" entityId="142349641375305" entityLocationX="411" entityLocationY="3" entityWidth="150" queryId="qHazardTypesList" tableName="" tableSchemaName=""/>
+  <entity Name="qPeriods" Title="" entityHeight="200" entityIconified="false" entityId="142349654648636" entityLocationX="414" entityLocationY="88" entityWidth="150" queryId="qPeriods" tableName="" tableSchemaName=""/>
+  <entity Name="qHazards" Title="" entityHeight="200" entityIconified="false" entityId="142349585554181" entityLocationX="236" entityLocationY="16" entityWidth="150" queryId="qHazards" tableName="" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="hazard_type" rightEntityId="142349585554181" rightEntityParameterName="hazard_type"/>
+  <relation leftEntityId="-1" leftEntityParameterName="haz_to_find" rightEntityId="142349585554181" rightEntityParameterName="hazard_find"/>
+  <referenceRelation leftEntityFieldName="period_type" leftEntityId="142349585554181" rightEntityFieldName="usl_period_id" rightEntityId="142349654648636"/>
+  <referenceRelation leftEntityFieldName="hazard_type" leftEntityId="142349585554181" rightEntityFieldName="hazard_types_id" rightEntityId="142349641375305"/>
+</datamodel>

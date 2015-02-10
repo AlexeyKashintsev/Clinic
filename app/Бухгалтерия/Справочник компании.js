@@ -6,7 +6,8 @@
  */
 
 function CompaniesList() {
-var self = this, model = this.model, form = this; 
+var self = this, model = this.model, form = this;
+var fmCompany;
 
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
     if (model.modified&&confirm('Сохранить изменения?')){
@@ -37,4 +38,13 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
         if (confirm('Удалить выделенного контрагента'))
             model.qAllFirms.deleteRow();
     }//GEN-LAST:event_btnDelActionPerformed
+
+    function modelGridMouseClicked(evt) {//GEN-FIRST:event_modelGridMouseClicked
+        if (evt.clickCount > 1) {
+            if (!fmCompany)
+                fmCompany = new CompanyCard;
+            fmCompany.setCompany(model.qAllFirms.cursor.buh_companies_id);
+            mainForm.showFormAsInternal(fmCompany);
+        }
+    }//GEN-LAST:event_modelGridMouseClicked
 }

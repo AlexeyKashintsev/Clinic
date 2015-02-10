@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="400px" prefWidth="407px">
+  <widget name="label" parent="Form" prefHeight="16px" prefWidth="72px" text="Компания" type="LabelDesignInfo">
+    <constraints height="16px" left="12px" top="18px" type="MarginConstraintsDesignInfo" width="72px"/>
+  </widget>
+  <widget name="modelCombo" parent="Form" prefHeight="28px" prefWidth="303px" type="DbComboDesignInfo">
+    <constraints height="28px" left="96px" right="8px" top="12px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="label1" parent="Form" prefHeight="16px" prefWidth="72px" text="Номер" type="LabelDesignInfo">
+    <constraints height="16px" left="12px" top="54px" type="MarginConstraintsDesignInfo" width="72px"/>
+  </widget>
+  <widget name="modelTextArea" parent="Form" prefHeight="28px" prefWidth="303px" type="DbTextDesignInfo">
+    <constraints height="28px" left="96px" right="8px" top="48px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget name="tabbedPane" parent="Form" prefHeight="276px" prefWidth="408px" type="TabsDesignInfo">
+    <constraints height="276px" left="0px" top="84px" type="MarginConstraintsDesignInfo" width="408px"/>
+  </widget>
+  <widget name="panel" parent="tabbedPane" prefHeight="230px" prefWidth="387px" type="PanelDesignInfo">
+    <layout type="MarginLayoutDesignInfo"/>
+    <constraints tabTitle="Цены по договору" type="TabsConstraintsDesignInfo"/>
+  </widget>
+  <widget actionPerformed="btnSaveActionPerformed" name="btnSave" parent="Form" prefHeight="29px" prefWidth="110px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints bottom="11px" height="29px" left="180px" type="MarginConstraintsDesignInfo" width="110px"/>
+  </widget>
+  <widget actionPerformed="btnCancelActionPerformed" name="btnCancel" parent="Form" prefHeight="29px" prefWidth="106px" text="Отмена" type="ButtonDesignInfo">
+    <constraints bottom="11px" height="29px" right="13px" type="MarginConstraintsDesignInfo" width="106px"/>
+  </widget>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>

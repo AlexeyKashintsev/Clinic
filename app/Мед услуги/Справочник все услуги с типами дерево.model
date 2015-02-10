@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
-  <entity Name="qUslWithTypesTree" Title="" entityHeight="200" entityIconified="false" entityId="142281517226819" entityLocationX="192" entityLocationY="16" entityWidth="150" queryId="qUslWithTypesTree" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="parent_type_id" leftEntityId="142281517226819" rightEntityFieldName="row_id" rightEntityId="142281517226819"/>
-</datamodel>
