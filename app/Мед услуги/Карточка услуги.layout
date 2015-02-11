@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" locationByPlatform="true" name="Form" prefHeight="385px" prefWidth="377px" windowClosing="formWindowClosing" windowOpened="formWindowOpened">
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="385px" prefWidth="377px" windowClosing="formWindowClosing" windowOpened="formWindowOpened">
   <widget name="pnlWorkSpace" parent="Form" prefHeight="385px" prefWidth="377px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
     <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
@@ -76,7 +76,7 @@
   <widget actionPerformed="btnSaveActionPerformed" focusable="false" horizontalTextPosition="0" name="btnSave" parent="pnlWorkSpace" prefHeight="29px" prefWidth="96px" text="Сохранить" toolTipText="Сохранить" type="ButtonDesignInfo" verticalTextPosition="3">
     <constraints bottom="7px" height="29px" right="101px" type="MarginConstraintsDesignInfo" width="96px"/>
   </widget>
-  <widget name="button" parent="pnlWorkSpace" prefHeight="29px" prefWidth="86px" text="Отмена" type="ButtonDesignInfo">
+  <widget actionPerformed="buttonActionPerformed" name="button" parent="pnlWorkSpace" prefHeight="29px" prefWidth="86px" text="Отмена" type="ButtonDesignInfo">
     <constraints bottom="7px" height="29px" right="15px" type="MarginConstraintsDesignInfo" width="86px"/>
   </widget>
   <widget name="modelFormattedField" parent="pnlWorkSpace" prefHeight="28px" prefWidth="240px" type="DbLabelDesignInfo">

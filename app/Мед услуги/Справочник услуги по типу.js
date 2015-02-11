@@ -11,13 +11,13 @@ function UslugiByTypeView() {
     var fmUslContent;
 
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
-        if (model.modified && confirm('Сохранить изменения?')) {
-            model.save();
+        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
+            model.qUslugiByType.requery();
         }
-        model.qUslugiByType.requery();
 }//GEN-LAST:event_btnReqActionPerformed
 
 function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    model.save();
 }//GEN-LAST:event_btnSaveActionPerformed
 
 function formWindowOpened(evt) {//GEN-FIRST:event_formWindowOpened
@@ -31,13 +31,20 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
 }//GEN-LAST:event_formWindowClosing
 
     function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
+        if (!fmUslContent)
+            fmUslContent = new UslugaContent();
         if (model.qUslTypes.cursor.usl_types_id != 0) {
             var uslName = prompt('Введите наименование новой услуги');
             if (uslName)
-                model.qUslugiByType.push({
+                fmUslContent.setUsluga(null, model.qUslTypes.cursor.usl_types_id, uslName);
+                fmUslContent.showModal(function(aResult) {
+                    if (aResult)
+                        model.requery();
+                });
+            /*    model.qUslugiByType.push({
                         usl_type    :   model.qUslTypes.cursor.usl_types_id,
                         usl_name    :   uslName
-                });
+                });*/
         }
     }//GEN-LAST:event_btnAddActionPerformed
 

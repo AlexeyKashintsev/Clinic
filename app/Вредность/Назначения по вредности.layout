@@ -13,10 +13,9 @@
   <widget name="modelGrid" parent="pnlWorkSpace" prefHeight="282px" prefWidth="377px" type="DbGridDesignInfo">
     <column name="colUslContent" selectFunction="colUslContentOnSelect" selectOnly="true" title="Назначения">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142351393650933" fieldName="usl_uslugi_id"/>
         <displayField entityId="142351393650933" fieldName="usl_name"/>
+        <valueField entityId="142351393650933" fieldName="usl_uslugi_id"/>
       </controlInfo>
-      <datamodelElement entityId="142351288078628" fieldName="usluga_id"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -28,13 +27,13 @@
       <headerStyle>
         <nativeFont name="Dialog" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142351288078628" fieldName="usluga_id"/>
     </column>
     <column name="column1" title="Пол" width="10">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142342357611333" fieldName="man_sex_id"/>
         <displayField entityId="142342357611333" fieldName="sex_short"/>
+        <valueField entityId="142342357611333" fieldName="man_sex_id"/>
       </controlInfo>
-      <datamodelElement entityId="142351288078628" fieldName="sex"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -46,13 +45,13 @@
       <headerStyle>
         <nativeFont name="Tahoma" size="11"/>
       </headerStyle>
+      <datamodelElement entityId="142351288078628" fieldName="sex"/>
     </column>
     <column name="column2" title="Периодичность" width="30">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142342357763318" fieldName="usl_periodic_type_id"/>
         <displayField entityId="142342357763318" fieldName="type_name"/>
+        <valueField entityId="142342357763318" fieldName="usl_periodic_type_id"/>
       </controlInfo>
-      <datamodelElement entityId="142351288078628" fieldName="periodic_type"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -64,13 +63,13 @@
       <headerStyle>
         <nativeFont name="Tahoma" size="11"/>
       </headerStyle>
+      <datamodelElement entityId="142351288078628" fieldName="periodic_type"/>
     </column>
     <column name="column" title="Период" width="40">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142351305372688" fieldName="usl_period_id"/>
         <displayField entityId="142351305372688" fieldName="period_name"/>
+        <valueField entityId="142351305372688" fieldName="usl_period_id"/>
       </controlInfo>
-      <datamodelElement entityId="142351288078628" fieldName="period_id"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -82,6 +81,7 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142351288078628" fieldName="period_id"/>
     </column>
     <rowsColumnsDesignInfo>
       <rowsDatasource entityId="142351288078628" field="false"/>
@@ -93,8 +93,8 @@
     <constraints height="16px" left="12px" top="9px" type="MarginConstraintsDesignInfo" width="156px"/>
   </widget>
   <widget editable="false" list="false" name="modelCombo" opaque="false" parent="pnlWorkSpace" prefHeight="28px" prefWidth="207px" type="DbComboDesignInfo">
-    <valueField entityId="142351279670093" fieldName="hazards_id"/>
     <displayField entityId="142351279670093" fieldName="haz_name"/>
+    <valueField entityId="142351279670093" fieldName="hazards_id"/>
     <datamodelElement entityId="-1" fieldName="haz_id"/>
     <constraints height="28px" left="158px" right="12px" top="3px" type="MarginConstraintsDesignInfo"/>
   </widget>

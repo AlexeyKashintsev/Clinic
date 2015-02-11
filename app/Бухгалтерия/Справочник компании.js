@@ -10,10 +10,9 @@ var self = this, model = this.model, form = this;
 var fmCompany;
 
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
-    if (model.modified&&confirm('Сохранить изменения?')){
-        model.save();
+    if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
+        model.requery();
     }
-    model.requery();
 }//GEN-LAST:event_btnReqActionPerformed
 
 function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed

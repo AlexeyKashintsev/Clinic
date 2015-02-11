@@ -15,7 +15,6 @@
   <widget name="grdHazards" parent="panel1" prefHeight="276px" prefWidth="697px" type="DbGridDesignInfo">
     <column name="Код">
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <datamodelElement entityId="142349585554181" fieldName="haz_code"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -27,13 +26,13 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142349585554181" fieldName="haz_code"/>
     </column>
     <column name="Тип">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
         <displayField entityId="142349641375305" fieldName="type_name"/>
+        <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
       </controlInfo>
-      <datamodelElement entityId="142349585554181" fieldName="hazard_type"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -45,10 +44,10 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142349585554181" fieldName="hazard_type"/>
     </column>
     <column name="Наименование" width="100">
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <datamodelElement entityId="142349585554181" fieldName="haz_short_name"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -60,13 +59,13 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142349585554181" fieldName="haz_short_name"/>
     </column>
     <column name="Периодичность">
       <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <valueField entityId="142349654648636" fieldName="usl_period_id"/>
         <displayField entityId="142349654648636" fieldName="period_name"/>
+        <valueField entityId="142349654648636" fieldName="usl_period_id"/>
       </controlInfo>
-      <datamodelElement entityId="142349585554181" fieldName="period_type"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -78,6 +77,7 @@
       <headerStyle>
         <nativeFont name="Lucida Grande" size="13"/>
       </headerStyle>
+      <datamodelElement entityId="142349585554181" fieldName="period_type"/>
     </column>
     <rowsColumnsDesignInfo>
       <rowsDatasource entityId="142349585554181" field="false"/>
@@ -96,8 +96,8 @@
     <constraints height="16px" left="396px" top="6px" type="MarginConstraintsDesignInfo" width="38px"/>
   </widget>
   <widget name="modelCombo" parent="panel1" prefHeight="28px" prefWidth="252px" type="DbComboDesignInfo">
-    <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
     <displayField entityId="142349641375305" fieldName="type_name"/>
+    <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
     <datamodelElement entityId="-1" fieldName="hazard_type"/>
     <constraints height="28px" left="432px" top="0px" type="MarginConstraintsDesignInfo" width="252px"/>
   </widget>

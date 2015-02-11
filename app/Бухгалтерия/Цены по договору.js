@@ -12,7 +12,7 @@ function ContractPricesView() {
     self.setContractId = function(aContractId) {
         model.qPricesByContract.params.contract_id = aContractId;
         model.qPricesByContract.execute();
-    }
+    };
 
 function formWindowOpened(evt) {//GEN-FIRST:event_formWindowOpened
 }//GEN-LAST:event_formWindowOpened

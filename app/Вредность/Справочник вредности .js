@@ -1,7 +1,6 @@
 /**
  * 
  * @author Алексей
- * @name template2
  * @public
  */
 
@@ -10,10 +9,9 @@ function HazardsByGroupView() {
     var fmHazardContent;
 
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
-        if (model.modified && confirm('Сохранить изменения?')) {
-            model.save();
-        }
-        model.qUslugiByType.requery();
+    if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
+        model.requery();
+    }
 }//GEN-LAST:event_btnReqActionPerformed
 
 function formWindowOpened(evt) {//GEN-FIRST:event_formWindowOpened

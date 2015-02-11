@@ -9,15 +9,15 @@
   <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="142281719690638" entityLocationX="416" entityLocationY="218" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
   <entity Name="qUslugaContents" Title="" entityHeight="200" entityIconified="false" entityId="142281705591607" entityLocationX="412" entityLocationY="10" entityWidth="150" queryId="qUslugaContents" tableName="" tableSchemaName=""/>
   <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142359242649121" entityLocationX="204" entityLocationY="240" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="usl_id" rightEntityId="142359212387922" rightEntityParameterName="usluga_id"/>
   <relation leftEntityId="-1" leftEntityParameterName="usl_id" rightEntityId="142281705591607" rightEntityParameterName="usluga_id"/>
-  <referenceRelation leftEntityFieldName="usl_content" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142359212387922"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142359212387922"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142281719690638"/>
-  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142359242649121" rightEntityFieldName="usl_types_id" rightEntityId="142359242649121"/>
+  <relation leftEntityId="-1" leftEntityParameterName="usl_id" rightEntityId="142359212387922" rightEntityParameterName="usluga_id"/>
   <referenceRelation leftEntityFieldName="sex" leftEntityId="142281705591607" rightEntityFieldName="man_sex_id" rightEntityId="142342357611333"/>
-  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142281719690638" rightEntityFieldName="usl_types_id" rightEntityId="142359242649121"/>
+  <referenceRelation leftEntityFieldName="usl_content" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142359212387922"/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142359212387922" rightEntityFieldName="usl_types_id" rightEntityId="142359242649121"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142359212387922"/>
   <referenceRelation leftEntityFieldName="usl_content" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142281719690638"/>
   <referenceRelation leftEntityFieldName="periodic_type" leftEntityId="142281705591607" rightEntityFieldName="usl_periodic_type_id" rightEntityId="142342357763318"/>
-  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142359212387922" rightEntityFieldName="usl_types_id" rightEntityId="142359242649121"/>
+  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142359242649121" rightEntityFieldName="usl_types_id" rightEntityId="142359242649121"/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142281719690638" rightEntityFieldName="usl_types_id" rightEntityId="142359242649121"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142281705591607" rightEntityFieldName="usl_uslugi_id" rightEntityId="142281719690638"/>
 </datamodel>

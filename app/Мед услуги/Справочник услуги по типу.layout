@@ -18,7 +18,7 @@
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
   <widget name="grdUslugi" parent="panel1" prefHeight="314px" prefWidth="460px" type="DbGridDesignInfo">
-    <column name="colItem_name" title="Название">
+    <column name="colItem_name" selectOnly="true" title="Название">
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
       <columnsDatasource/>
       <columnsDisplayField/>
