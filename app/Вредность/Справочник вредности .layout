@@ -13,76 +13,76 @@
     <constraints bottom="0px" left="0px" right="0px" top="2px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget name="grdHazards" parent="panel1" prefHeight="276px" prefWidth="697px" type="DbGridDesignInfo">
-    <column name="Код">
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <columnsDatasource/>
-      <columnsDisplayField/>
-      <cellsDatasource/>
-      <cellDesignInfo>
-        <rowsKeyField/>
-        <columnsKeyField/>
-        <cellValueField/>
-      </cellDesignInfo>
-      <headerStyle>
-        <nativeFont name="Lucida Grande" size="13"/>
-      </headerStyle>
-      <datamodelElement entityId="142349585554181" fieldName="haz_code"/>
-    </column>
-    <column name="Тип">
-      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <displayField entityId="142349641375305" fieldName="type_name"/>
-        <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
-      </controlInfo>
-      <columnsDatasource/>
-      <columnsDisplayField/>
-      <cellsDatasource/>
-      <cellDesignInfo>
-        <rowsKeyField/>
-        <columnsKeyField/>
-        <cellValueField/>
-      </cellDesignInfo>
-      <headerStyle>
-        <nativeFont name="Lucida Grande" size="13"/>
-      </headerStyle>
-      <datamodelElement entityId="142349585554181" fieldName="hazard_type"/>
-    </column>
-    <column name="Наименование" width="100">
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <columnsDatasource/>
-      <columnsDisplayField/>
-      <cellsDatasource/>
-      <cellDesignInfo>
-        <rowsKeyField/>
-        <columnsKeyField/>
-        <cellValueField/>
-      </cellDesignInfo>
-      <headerStyle>
-        <nativeFont name="Lucida Grande" size="13"/>
-      </headerStyle>
-      <datamodelElement entityId="142349585554181" fieldName="haz_short_name"/>
-    </column>
-    <column name="Периодичность">
-      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
-        <displayField entityId="142349654648636" fieldName="period_name"/>
-        <valueField entityId="142349654648636" fieldName="usl_period_id"/>
-      </controlInfo>
-      <columnsDatasource/>
-      <columnsDisplayField/>
-      <cellsDatasource/>
-      <cellDesignInfo>
-        <rowsKeyField/>
-        <columnsKeyField/>
-        <cellValueField/>
-      </cellDesignInfo>
-      <headerStyle>
-        <nativeFont name="Lucida Grande" size="13"/>
-      </headerStyle>
-      <datamodelElement entityId="142349585554181" fieldName="period_type"/>
-    </column>
     <rowsColumnsDesignInfo>
       <rowsDatasource entityId="142349585554181" field="false"/>
     </rowsColumnsDesignInfo>
     <treeDesignInfo/>
+    <column name="Код">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <datamodelElement entityId="142349585554181" fieldName="haz_code"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Lucida Grande" size="13"/>
+      </headerStyle>
+    </column>
+    <column name="Тип">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
+        <displayField entityId="142349641375305" fieldName="type_name"/>
+      </controlInfo>
+      <datamodelElement entityId="142349585554181" fieldName="hazard_type"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Lucida Grande" size="13"/>
+      </headerStyle>
+    </column>
+    <column name="Наименование" width="100">
+      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <datamodelElement entityId="142349585554181" fieldName="haz_short_name"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Lucida Grande" size="13"/>
+      </headerStyle>
+    </column>
+    <column name="Периодичность">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <valueField entityId="142349654648636" fieldName="usl_period_id"/>
+        <displayField entityId="142349654648636" fieldName="period_name"/>
+      </controlInfo>
+      <datamodelElement entityId="142349585554181" fieldName="period_type"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Lucida Grande" size="13"/>
+      </headerStyle>
+    </column>
     <constraints bottom="4px" left="0px" right="0px" top="36px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget name="label" parent="panel1" prefHeight="16px" prefWidth="156px" text="Поиск по вредностям" type="LabelDesignInfo">
@@ -93,13 +93,13 @@
     <constraints height="28px" left="168px" right="313px" top="0px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget name="label1" parent="panel1" prefHeight="16px" prefWidth="38px" text="Тип" type="LabelDesignInfo">
-    <constraints height="16px" left="396px" top="6px" type="MarginConstraintsDesignInfo" width="38px"/>
+    <constraints height="16px" right="263px" top="6px" type="MarginConstraintsDesignInfo" width="38px"/>
   </widget>
   <widget name="modelCombo" parent="panel1" prefHeight="28px" prefWidth="252px" type="DbComboDesignInfo">
-    <displayField entityId="142349641375305" fieldName="type_name"/>
     <valueField entityId="142349641375305" fieldName="hazard_types_id"/>
+    <displayField entityId="142349641375305" fieldName="type_name"/>
     <datamodelElement entityId="-1" fieldName="hazard_type"/>
-    <constraints height="28px" left="432px" top="0px" type="MarginConstraintsDesignInfo" width="252px"/>
+    <constraints height="28px" right="13px" top="0px" type="MarginConstraintsDesignInfo" width="252px"/>
   </widget>
   <layout type="BorderLayoutDesignInfo"/>
 </layout>

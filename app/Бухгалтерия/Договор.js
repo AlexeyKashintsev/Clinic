@@ -11,12 +11,15 @@ function ContractDetailsView() {
     self.setContractID = function(aContractID, aCompanyID) {
         if (aContractID) {
             model.qContract.params.contract_id = aContractID;
-            model.qContract.execute();
+            model.revert();
+            model.requery();
             fmCosts.setContractId(aContractID);
             newContract = false;
         } else {
-            if (model.modified)
+            if (model.modified) {
                 model.revert();
+                model.requery();
+            }
             model.qContract.push({
                 company_id  :   aCompanyID,
                 с_active    :   true,
