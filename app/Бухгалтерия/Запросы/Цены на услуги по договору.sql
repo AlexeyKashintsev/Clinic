@@ -2,6 +2,7 @@
  *
  * @author Alexey
  * @name qPricesByContract
+ * @public
  */ 
 Select *
 From usl_cost t1

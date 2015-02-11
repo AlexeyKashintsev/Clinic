@@ -3,6 +3,7 @@
  * @author Алексей
  * @name qContracts
  * @manual
+ * @public
  */ 
 Select * 
 From buh_contracts t1

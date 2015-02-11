@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="294px" prefWidth="303px" windowClosed="formWindowClosed" windowOpened="formWindowOpened">
+  <widget foregroundColor="#ff0000" name="lbPhone" parent="Form" prefHeight="24px" prefWidth="192px" type="LabelDesignInfo">
+    <constraints height="24px" left="96px" top="180px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget actionPerformed="tfPhoneActionPerformed" focusLost="tfPhoneFocusLost" keyPressed="tfPhoneKeyPressed" keyReleased="tfPhoneKeyReleased" name="tfPhone" parent="Form" prefHeight="27px" prefWidth="192px" type="TextFieldDesignInfo">
+    <constraints height="27px" left="96px" top="156px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget focusLost="tfEmailFocusLost" keyPressed="tfEmailKeyPressed" keyReleased="tfEmailKeyReleased" name="tfEmail" parent="Form" prefHeight="27px" prefWidth="192px" type="TextFieldDesignInfo">
+    <constraints height="27px" left="96px" top="108px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="label2" parent="Form" prefHeight="17px" prefWidth="72px" text="Email" type="LabelDesignInfo">
+    <constraints height="17px" left="24px" top="113px" type="MarginConstraintsDesignInfo" width="72px"/>
+  </widget>
+  <widget keyPressed="tfPassKeyPressed" mouseClicked="tfPassMouseClicked" name="tfPass" parent="Form" prefHeight="27px" prefWidth="192px" type="TextFieldDesignInfo">
+    <constraints height="27px" left="96px" top="60px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="label11" parent="Form" prefHeight="17px" prefWidth="72px" text="Телефон" type="LabelDesignInfo">
+    <constraints height="17px" left="24px" top="156px" type="MarginConstraintsDesignInfo" width="72px"/>
+  </widget>
+  <widget name="label1" parent="Form" prefHeight="17px" prefWidth="72px" text="Пароль*" type="LabelDesignInfo">
+    <constraints height="17px" left="24px" right="207px" top="65px" type="MarginConstraintsDesignInfo"/>
+  </widget>
+  <widget actionPerformed="btnSaveActionPerformed" name="btnSave" parent="Form" prefHeight="29px" prefWidth="120px" text="Сохранить" type="ButtonDesignInfo">
+    <constraints bottom="11px" height="29px" left="84px" type="MarginConstraintsDesignInfo" width="120px"/>
+  </widget>
+  <widget name="label" parent="Form" prefHeight="17px" prefWidth="72px" text="Логин*" type="LabelDesignInfo">
+    <constraints height="17px" left="24px" top="17px" type="MarginConstraintsDesignInfo" width="72px"/>
+  </widget>
+  <widget actionPerformed="btnCancelActionPerformed" name="btnCancel" parent="Form" prefHeight="29px" prefWidth="94px" text="Отмена" type="ButtonDesignInfo">
+    <constraints bottom="11px" height="29px" right="5px" type="MarginConstraintsDesignInfo" width="94px"/>
+  </widget>
+  <widget focusLost="tfLoginFocusLost" keyPressed="tfLoginKeyPressed" name="tfLogin" parent="Form" prefHeight="27px" prefWidth="192px" type="TextFieldDesignInfo">
+    <constraints height="27px" left="96px" top="12px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="lbInfo" parent="Form" prefHeight="24px" prefWidth="192px" type="LabelDesignInfo">
+    <constraints height="24px" left="96px" top="36px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="lbPass" parent="Form" prefHeight="29px" prefWidth="192px" type="LabelDesignInfo">
+    <constraints height="29px" left="96px" top="84px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget foregroundColor="#ff0000" name="lbEmail" parent="Form" prefHeight="24px" prefWidth="192px" type="LabelDesignInfo">
+    <constraints height="24px" left="96px" top="132px" type="MarginConstraintsDesignInfo" width="192px"/>
+  </widget>
+  <widget name="label3" parent="Form" prefHeight="16px" prefWidth="38px" text="Роль" type="LabelDesignInfo">
+    <constraints height="16px" left="24px" top="192px" type="MarginConstraintsDesignInfo" width="38px"/>
+  </widget>
+  <widget name="modelCombo" parent="Form" prefHeight="28px" prefWidth="264px" type="DbComboDesignInfo">
+    <valueField entityId="142363574316349" fieldName="role_name"/>
+    <displayField entityId="142363574316349" fieldName="role_full_name"/>
+    <datamodelElement entityId="-1" fieldName="role_name"/>
+    <constraints height="28px" left="24px" top="216px" type="MarginConstraintsDesignInfo" width="264px"/>
+  </widget>
+  <nonvisual name="buttonGroup" type="ButtonGroupDesignInfo"/>
+  <nonvisual name="buttonGroup1" type="ButtonGroupDesignInfo"/>
+  <layout type="MarginLayoutDesignInfo"/>
+</layout>

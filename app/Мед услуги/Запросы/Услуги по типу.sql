@@ -2,6 +2,7 @@
  *
  * @author Alexey
  * @name qUslugiByType
+ * @public
  */ 
 Select * 
 From usl_uslugi t1

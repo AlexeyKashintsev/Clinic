@@ -2,6 +2,7 @@
  *
  * @author Alexey
  * @name qUslTypes
+ * @public
  */ 
 Select * 
 From usl_types t1

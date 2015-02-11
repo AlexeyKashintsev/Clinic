@@ -2,6 +2,7 @@
  *
  * @author Алексей
  * @name qPeriodic
+ * @public
  */ 
 Select * 
 From usl_periodic_type t1

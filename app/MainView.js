@@ -8,13 +8,17 @@ function MainView() {
     var fmUslTypes, fmUslList, fmUslContents;
     var fmContragents;
     var fmHazards;
+    var fmUsers;
     
     self.showFormAsInternal = function(aForm) {
         var frameRunner = aForm;
         try {
             frameRunner.desktop = self.formDesktop;
             frameRunner.showInternalFrame(self.formDesktop);
-        } finally {
+        } catch(e) {
+            frameRunner.show();
+        }
+        finally {
             frameRunner.toFront();
         }
     };
@@ -26,39 +30,68 @@ function MainView() {
 
     function miUslugiTypesActionPerformed(evt) {//GEN-FIRST:event_miUslugiTypesActionPerformed
         if (!fmUslTypes) {
-            fmUslTypes = new UslTypesView();
-            self.showFormAsInternal(fmUslTypes);
+            require(['UslTypesView'], function() {
+                fmUslTypes = new UslTypesView();
+                self.showFormAsInternal(fmUslTypes);
+            });
         } else 
             self.showFormAsInternal(fmUslTypes);
     }//GEN-LAST:event_miUslugiTypesActionPerformed
 
     function miUslugiListActionPerformed(evt) {//GEN-FIRST:event_miUslugiListActionPerformed
         if (!fmUslList) {
-            fmUslList = new UslugiByTypeView();
+            require(['UslugiByTypeView'], function() {
+                fmUslList = new UslugiByTypeView();
+                self.showFormAsInternal(fmUslList);
+            });            
+        } else
             self.showFormAsInternal(fmUslList);
-        } else self.showFormAsInternal(fmUslList);
     }//GEN-LAST:event_miUslugiListActionPerformed
 
     function miUslugiContentsActionPerformed(evt) {//GEN-FIRST:event_miUslugiContentsActionPerformed
         if (!fmUslContents) {
-            fmUslContents = new UslugiContentsView();
+            require(['UslugiContentsView'], function() {
+                fmUslContents = new UslugiContentsView();
+                self.showFormAsInternal(fmUslContents);
+            });
+        } else
             self.showFormAsInternal(fmUslContents);
-        }	else self.showFormAsInternal(fmUslContents);
     }//GEN-LAST:event_miUslugiContentsActionPerformed
 
     function miContragentsActionPerformed(evt) {//GEN-FIRST:event_miContragentsActionPerformed
         if (!fmContragents) {
-            fmContragents = new CompaniesList();
+            require(['CompaniesList'], function() {
+                fmContragents = new CompaniesList();
+                self.showFormAsInternal(fmContragents);
+            });
+        } else 
             self.showFormAsInternal(fmContragents);
-    }	else self.showFormAsInternal(fmContragents);
     }//GEN-LAST:event_miContragentsActionPerformed
 
     function miHazardsActionPerformed(evt) {//GEN-FIRST:event_miHazardsActionPerformed
         if (!fmHazards) {
-            fmHazards = new HazardsByGroupView();
+            require(['HazardsByGroupView'], function() {
+                fmHazards = new HazardsByGroupView();
+                self.showFormAsInternal(fmHazards);
+            });
+        } else
             self.showFormAsInternal(fmHazards);
-    }	else self.showFormAsInternal(fmHazards);
     }//GEN-LAST:event_miHazardsActionPerformed
+
+    function formWindowOpened(evt) {//GEN-FIRST:event_formWindowOpened
+        //var d = document.getElementById('menuBar');
+        //document.body.appendChild(d);
+    }//GEN-LAST:event_formWindowOpened
+
+    function miUsersActionPerformed(evt) {//GEN-FIRST:event_miUsersActionPerformed
+        if (!fmUsers) {
+            require(['UsersView'], function() {
+                fmUsers = new UsersView();
+                self.showFormAsInternal(fmUsers);
+            });
+        } else
+            self.showFormAsInternal(fmUsers);
+    }//GEN-LAST:event_miUsersActionPerformed
 }
 /*
  * 

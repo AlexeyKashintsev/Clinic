@@ -2,6 +2,7 @@
  *
  * @author Алексей
  * @name qAllFirms
+ * @public
  */ 
 Select * 
 From buh_companies t1

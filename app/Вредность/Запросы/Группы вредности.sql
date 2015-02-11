@@ -2,6 +2,7 @@
  *
  * @author Alexey
  * @name qHazardGroup
+ * @public
  */ 
 Select * 
 From hazard_groups t1

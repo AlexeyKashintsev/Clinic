@@ -2,6 +2,7 @@
  *
  * @author Alexey
  * @name qHazardContents
+ * @public
  */ 
 Select * 
 From hazard_contents t1
