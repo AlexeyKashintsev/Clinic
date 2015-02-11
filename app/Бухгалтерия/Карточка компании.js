@@ -9,9 +9,15 @@ function CompanyCard() {
     fmContracts.showOnPanel(form.pnlContracts);
     
     self.setCompany = function(aCompanyID) {
-        model.qAllFirms.params.company_id = aCompanyID;
-        model.requery();
-        fmContracts.setCompany(aCompanyID);
+        if (aCompanyID) {
+            model.qAllFirms.params.company_id = aCompanyID;
+            model.requery();
+            fmContracts.setCompany(aCompanyID);
+        } else {
+            model.revert();
+            model.requery();
+            self.addNewCompany();
+        }
     };
     
     self.addNewCompany = function() {

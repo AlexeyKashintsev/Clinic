@@ -30,7 +30,11 @@ function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
 
 
     function btnAddActionPerformed(evt) {//GEN-FIRST:event_btnAddActionPerformed
-        model.qAllFirms.insert();
+        if (!fmCompany)
+                fmCompany = new CompanyCard;
+        fmCompany.addNewCompany();
+        mainForm.showFormAsInternal(fmCompany);
+        //model.qAllFirms.insert();
     }//GEN-LAST:event_btnAddActionPerformed
 
     function btnDelActionPerformed(evt) {//GEN-FIRST:event_btnDelActionPerformed

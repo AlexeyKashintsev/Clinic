@@ -18,8 +18,13 @@
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
   <widget name="grdUslugi" parent="panel1" prefHeight="314px" prefWidth="460px" type="DbGridDesignInfo">
-    <column name="colItem_name" selectOnly="true" title="Название">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="142281411753062" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo/>
+    <column name="colItem_name" selectOnly="true" title="Название" width="100">
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <datamodelElement entityId="142281411753062" fieldName="usl_name"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -31,20 +36,40 @@
       <headerStyle>
         <nativeFont name="Dialog" size="15"/>
       </headerStyle>
-      <datamodelElement entityId="142281411753062" fieldName="usl_name"/>
     </column>
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="142281411753062" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo/>
+    <column name="colType" title="Тип услуги">
+      <controlInfo classHint="DbComboDesignInfo" name="view" prefHeight="0px" prefWidth="0px">
+        <valueField entityId="142281411534111" fieldName="usl_types_id"/>
+        <displayField entityId="142281411534111" fieldName="type_name"/>
+      </controlInfo>
+      <datamodelElement entityId="142281411753062" fieldName="usl_type"/>
+      <columnsDatasource/>
+      <columnsDisplayField/>
+      <cellsDatasource/>
+      <cellDesignInfo>
+        <rowsKeyField/>
+        <columnsKeyField/>
+        <cellValueField/>
+      </cellDesignInfo>
+      <headerStyle>
+        <nativeFont name="Lucida Grande" size="13"/>
+      </headerStyle>
+    </column>
     <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <widget name="panel" parent="splitPane" prefHeight="314px" prefWidth="228px" type="PanelDesignInfo">
     <layout type="MarginLayoutDesignInfo"/>
   </widget>
   <widget deletable="false" editable="false" insertable="false" mouseClicked="grdUslTypeMouseClicked" name="grdUslType" parent="panel" prefHeight="314px" prefWidth="228px" type="DbGridDesignInfo">
+    <rowsColumnsDesignInfo>
+      <rowsDatasource entityId="142281411534111" field="false"/>
+    </rowsColumnsDesignInfo>
+    <treeDesignInfo>
+      <unaryLinkField entityId="142281411534111" fieldName="type_parent"/>
+    </treeDesignInfo>
     <column name="colType_description" selectOnly="true" title="Тип услуги">
       <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
+      <datamodelElement entityId="142281411534111" fieldName="type_name"/>
       <columnsDatasource/>
       <columnsDisplayField/>
       <cellsDatasource/>
@@ -56,14 +81,7 @@
       <headerStyle>
         <nativeFont name="Dialog" size="15"/>
       </headerStyle>
-      <datamodelElement entityId="142281411534111" fieldName="type_name"/>
     </column>
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="142281411534111" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo>
-      <unaryLinkField entityId="142281411534111" fieldName="type_parent"/>
-    </treeDesignInfo>
     <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
   </widget>
   <layout type="BorderLayoutDesignInfo"/>

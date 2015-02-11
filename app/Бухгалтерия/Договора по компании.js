@@ -10,7 +10,8 @@ var fmContract;
 
 self.setCompany = function(aCompanyId) {
     model.qContracts.params.company_id = aCompanyId;
-    model.qContracts.execute();
+    model.revert();
+    model.requery();
 };
 
 function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
