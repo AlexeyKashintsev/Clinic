@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281282477562" entityLocationX="257" entityLocationY="62" entityWidth="150" tableName="usl_content"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342740151218" entityLocationX="730" entityLocationY="59" entityWidth="150" tableName="buh_contracts"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="458" entityLocationY="65" entityWidth="150" tableName="usl_uslugi"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281294671140" entityLocationX="680" entityLocationY="300" entityWidth="150" tableName="usl_cost"/>
-  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142281303702642" entityLocationX="462" entityLocationY="328" entityWidth="150" tableName="usl_types"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342135073784" entityLocationX="193" entityLocationY="293" entityWidth="150" tableName="man_sex"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342157606498" entityLocationX="20" entityLocationY="346" entityWidth="150" tableName="usl_periodic_type"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142349310994420" entityLocationX="12" entityLocationY="59" entityWidth="150" tableName="hazard_contents"/>
+  <fieldsEntity entityHeight="162" entityIconified="false" entityId="142281294671140" entityLocationX="762" entityLocationY="252" entityWidth="150" tableName="usl_cost"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342135073784" entityLocationX="226" entityLocationY="157" entityWidth="150" tableName="man_sex"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="564" entityLocationY="26" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142342157606498" entityLocationX="55" entityLocationY="158" entityWidth="150" tableName="usl_periodic_type"/>
+  <fieldsEntity entityHeight="134" entityIconified="false" entityId="142342740151218" entityLocationX="932" entityLocationY="252" entityWidth="150" tableName="buh_contracts"/>
+  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142281303702642" entityLocationX="564" entityLocationY="236" entityWidth="150" tableName="usl_types"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142626852915389" entityLocationX="398" entityLocationY="26" entityWidth="150" tableName="usl_routes"/>
 </datamodel>
