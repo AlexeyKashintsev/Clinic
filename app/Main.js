@@ -11,7 +11,9 @@ function Main() {
         form.show();
     };
     
-    // TODO : place your code here
+    var modUslugi = new ModelUslugi();
+    
+    form.grdUslugi.data = modelUslugi.model.qUslugiByType;
     
     model.requery(function () {
         // TODO : place your code here

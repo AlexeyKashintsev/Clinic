@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307290477943" entityLocationX="39" entityLocationY="60" entityWidth="150" tableName="phys_patient"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142307336453236" entityLocationX="371" entityLocationY="36" entityWidth="150" tableName="phys_reception"/>
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="80" entityIconified="false" entityId="142641825635427" entityLocationX="660" entityLocationY="244" entityWidth="150" tableName="man_job"/>
+  <fieldsEntity entityHeight="80" entityIconified="false" entityId="142641804941239" entityLocationX="21" entityLocationY="36" entityWidth="150" tableName="man_sex"/>
+  <fieldsEntity entityHeight="152" entityIconified="false" entityId="142641813625000" entityLocationX="385" entityLocationY="36" entityWidth="150" tableName="man_workplace"/>
+  <fieldsEntity entityHeight="119" entityIconified="false" entityId="142641811037396" entityLocationX="668" entityLocationY="116" entityWidth="150" tableName="buh_companies"/>
+  <fieldsEntity entityHeight="92" entityIconified="false" entityId="142641834140859" entityLocationX="667" entityLocationY="18" entityWidth="150" tableName="man_hazards"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641768292968" entityLocationX="209" entityLocationY="38" entityWidth="150" tableName="man_patient"/>
+  <fieldsEntity entityHeight="149" entityIconified="false" entityId="142641848574515" entityLocationX="840" entityLocationY="28" entityWidth="150" tableName="hazards"/>
 </datamodel>
