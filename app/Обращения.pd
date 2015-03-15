@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142641931387629" entityLocationX="353" entityLocationY="17" entityWidth="150" tableName="obr_route"/>
+  <fieldsEntity entityHeight="92" entityIconified="false" entityId="142641957742147" entityLocationX="353" entityLocationY="115" entityWidth="150" tableName="obr_additional"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="781" entityLocationY="84" entityWidth="150" tableName="usl_cost"/>
+  <fieldsEntity entityHeight="124" entityIconified="false" entityId="142641909834871" entityLocationX="354" entityLocationY="211" entityWidth="150" tableName="obr_uslugi"/>
+  <fieldsEntity entityHeight="155" entityIconified="false" entityId="142641921948460" entityLocationX="729" entityLocationY="389" entityWidth="150" tableName="buh_contracts"/>
+  <fieldsEntity entityHeight="105" entityIconified="false" entityId="142641969026538" entityLocationX="595" entityLocationY="246" entityWidth="150" tableName="buh_oplata"/>
+  <fieldsEntity entityHeight="97" entityIconified="false" entityId="142641888807406" entityLocationX="597" entityLocationY="18" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="176" entityLocationY="22" entityWidth="150" tableName="obr_treatment"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807003" entityLocationX="10" entityLocationY="20" entityWidth="150" tableName="man_patient"/>
+</datamodel>
