@@ -3,9 +3,11 @@
  * @author Alexey
  */
 function MainView() {
-    var self = this, model = this.model, form = this;
+    var self = this
+            , model = P.loadModel(this.constructor.name)
+            , form = P.loadForm(this.constructor.name, model);
     mainForm = this;
-    var fmUslTypes, fmUslList, fmUslContents;
+  /*  var fmUslTypes, fmUslList, fmUslContents;
     var fmContragents;
     var fmHazards;
     var fmUsers;
@@ -91,7 +93,7 @@ function MainView() {
             });
         } else
             self.showFormAsInternal(fmUsers);
-    }//GEN-LAST:event_miUsersActionPerformed
+    }//GEN-LAST:event_miUsersActionPerformed*/
 }
 /*
  * 
