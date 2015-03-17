@@ -5,7 +5,7 @@
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="25px"/>
   </DesktopPane>
   <MenuBar cursor="0" name="menuBar" parent="view" prefHeight="25px" prefWidth="720px">
-    <AnchorsPaneConstraints height="25px" left="0px" top="0px" width="720px"/>
+    <AnchorsPaneConstraints height="25px" left="0px" right="0px" top="0px"/>
   </MenuBar>
   <Menu cursor="0" name="mnuUslugi" parent="menuBar" prefHeight="23px" prefWidth="85px" text="Профпатолог"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiTypes" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Справочник типы услуг"/>
@@ -16,5 +16,5 @@
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Справочник контрагенты"/>
   <Menu cursor="0" name="mnuPacients" parent="menuBar" prefHeight="23px" prefWidth="81px" text="Регистратура"/>
   <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="23px" prefWidth="95px" text="Администратор"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsers" parent="mnuAdmin" prefHeight="22px" prefWidth="201px" text="Пользователи"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsers" parent="mnuAdmin" prefHeight="0px" prefWidth="0px" text="Пользователи"/>
 </layout>

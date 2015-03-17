@@ -2,7 +2,7 @@
  * 
  * @author Alexey
  */
-function UslugiContentsView() {
+function UslugiContentsView_old() {
     var self = this, model = this.model, form = this;
     var fmUslContent = new UslugaContent();
     fmUslContent.doClose = false;

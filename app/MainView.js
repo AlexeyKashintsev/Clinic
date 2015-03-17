@@ -117,7 +117,10 @@ function MainView() {
         fmUslList.show();
     };
     form.miUslugiContents.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if (!fmUslContents) {
+                fmUslContents = new UslugiContentsView();
+        }
+        fmUslContents.show();   
     };
     form.miContragents.onActionPerformed = function(event) {
         if (!fmContragents) {
