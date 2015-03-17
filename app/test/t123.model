@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142659279149475" entityLocationX="326" entityLocationY="63" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
+  <entity Name="qTest" Title="" entityHeight="200" entityIconified="false" entityId="142659007867244" entityLocationX="116" entityLocationY="46" entityWidth="150" queryId="qTest" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142659279149475" rightEntityFieldName="usl_types_id" rightEntityId="142659279149475"/>
+</datamodel>

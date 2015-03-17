@@ -5,8 +5,8 @@
 // this === global
 (function () {
     function ready() {
-        P.require(['Main'], function(){
-            var m = new Main();
+        P.require(['MainView'], function(){
+            var m = new MainView();
             m.show();
         }, function(e){
             P.Logger.severe(e);

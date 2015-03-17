@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="clinic_dev">
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142653721625222" entityLocationX="198" entityLocationY="10" entityWidth="150" tableAlias="t1" tableName="hazard_groups" tableSchemaName=""/>
+</datamodel>

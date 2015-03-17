@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="230px" prefWidth="350px">
+    <AnchorsPaneConstraints height="230px" left="30px" top="50px" width="350px"/>
+    <ModelGridColumn field="id" name="column" title="column" width="116px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="parent" name="column1" title="column" width="116px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="name" name="column2" title="column" width="116px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>
