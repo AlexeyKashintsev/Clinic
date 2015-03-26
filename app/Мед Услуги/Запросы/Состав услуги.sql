@@ -2,9 +2,8 @@
  *
  * @author Alexey
  * @name qUslugaContents
- * @writable usl_content
- * @public
  */ 
 Select * 
-From usl_content t1
-where t1.usl_container = :usluga_id
+From usl_routes t1
+ Inner Join usl_uslugi t on t1.usl_container = t.usl_uslugi_id
+ Where :usluga_id = t.usl_uslugi_id

@@ -2,7 +2,7 @@
  * 
  * @author minya92
  */
-function UslugiByTypeView() {
+function Назначение_по_вредности() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
@@ -17,8 +17,4 @@ function UslugiByTypeView() {
         // TODO : place your code here
     });
     
-    form.button1.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
-        alert("jhjhj");
-    };
 }

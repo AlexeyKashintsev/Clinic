@@ -5,7 +5,7 @@
  * @public
  */
 
-function UslugaContent() {
+function UslugaContent_old() {
 var self = this, model = this.model, form = this; 
 var fmUslSelect;
 self.doClose = true;

@@ -9,19 +9,19 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
   <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="370px" prefWidth="570px" rightComponent="modelGrid1">
-    <font family="Tahoma" size="11" style="0"/>
+    <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="0px" top="30px"/>
   </SplitPane>
   <ModelGrid childrenField="p" cursor="0" data="qUslTypes" name="modelGrid" parent="splitPane" parentField="c" prefHeight="368px" prefWidth="199px">
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="type_name" name="colType_name" title="Название" width="158px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <ModelGrid cursor="0" data="qUslugiByType" name="modelGrid1" parent="splitPane" prefHeight="368px" prefWidth="366px">
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="163px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="usl_type" name="colUsl_type" title="Тип" width="162px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>

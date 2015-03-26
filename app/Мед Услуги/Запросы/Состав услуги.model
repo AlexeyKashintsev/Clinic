@@ -2,7 +2,9 @@
   <parameters>
     <parameter description="" name="usluga_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
   </parameters>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="142281701525028" entityLocationX="203" entityLocationY="11" entityWidth="150" tableAlias="t1" tableName="usl_content" tableSchemaName=""/>
-  <relation leftEntityFieldName="usl_container" leftEntityId="142281701525028" rightEntityId="-1" rightEntityParameterName="usluga_id"/>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="6" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142730745853549" entityLocationX="416" entityLocationY="2" entityWidth="150" tableAlias="t" tableName="usl_uslugi" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142730745355231" entityLocationX="210" entityLocationY="3" entityWidth="150" tableAlias="t1" tableName="usl_routes" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="usluga_id" rightEntityFieldName="usl_uslugi_id" rightEntityId="142730745853549"/>
+  <relation leftEntityFieldName="usl_container" leftEntityId="142730745355231" rightEntityFieldName="usl_uslugi_id" rightEntityId="142730745853549"/>
 </datamodel>

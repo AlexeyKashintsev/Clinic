@@ -2,9 +2,9 @@
   <fieldsEntity entityHeight="134" entityIconified="false" entityId="142342740151218" entityLocationX="594" entityLocationY="320" entityWidth="150" tableName="buh_contracts"/>
   <fieldsEntity entityHeight="68" entityIconified="false" entityId="142642007334869" entityLocationX="130" entityLocationY="85" entityWidth="150" tableName="usl_lim_age_type"/>
   <fieldsEntity entityHeight="213" entityIconified="false" entityId="142281294671140" entityLocationX="364" entityLocationY="225" entityWidth="150" tableName="usl_cost"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="594" entityLocationY="15" entityWidth="150" tableName="usl_uslugi"/>
-  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142281303702642" entityLocationX="797" entityLocationY="32" entityWidth="150" tableName="usl_types"/>
-  <fieldsEntity entityHeight="64" entityIconified="false" entityId="142642023114976" entityLocationX="129" entityLocationY="163" entityWidth="150" tableName="usl_period"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="594" entityLocationY="13" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142281303702642" entityLocationX="800" entityLocationY="30" entityWidth="150" tableName="usl_types"/>
+  <fieldsEntity entityHeight="64" entityIconified="false" entityId="142642023114976" entityLocationX="130" entityLocationY="163" entityWidth="150" tableName="usl_period"/>
   <fieldsEntity entityHeight="68" entityIconified="false" entityId="142342157606498" entityLocationX="131" entityLocationY="234" entityWidth="150" tableName="usl_periodic_type"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142626852915389" entityLocationX="364" entityLocationY="10" entityWidth="150" tableName="usl_routes"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142626852915389" entityLocationX="364" entityLocationY="7" entityWidth="150" tableName="usl_routes"/>
 </datamodel>

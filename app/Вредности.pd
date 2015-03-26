@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142626878593044" entityLocationX="610" entityLocationY="4" entityWidth="150" tableName="usl_routes"/>
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="88" entityIconified="false" entityId="142348883226664" entityLocationX="21" entityLocationY="124" entityWidth="150" tableName="hazard_groups"/>
+  <fieldsEntity entityHeight="65" entityIconified="false" entityId="142349216137797" entityLocationX="403" entityLocationY="81" entityWidth="150" tableName="usl_period"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142348740228232" entityLocationX="212" entityLocationY="9" entityWidth="150" tableName="hazards"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142626878593044" entityLocationX="610" entityLocationY="2" entityWidth="150" tableName="usl_routes"/>
   <fieldsEntity entityHeight="106" entityIconified="false" entityId="142348599175899" entityLocationX="22" entityLocationY="10" entityWidth="150" tableName="hazard_types"/>
-  <fieldsEntity entityHeight="88" entityIconified="false" entityId="142348883226664" entityLocationX="21" entityLocationY="125" entityWidth="150" tableName="hazard_groups"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142348740228232" entityLocationX="209" entityLocationY="3" entityWidth="150" tableName="hazards"/>
-  <fieldsEntity entityHeight="65" entityIconified="false" entityId="142349216137797" entityLocationX="397" entityLocationY="70" entityWidth="150" tableName="usl_period"/>
 </datamodel>
