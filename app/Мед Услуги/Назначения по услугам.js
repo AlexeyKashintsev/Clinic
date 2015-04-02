@@ -1,5 +1,5 @@
 /**
- * 
+ * @public
  * @author minya92
  */
 function UslugiContentsView() {
@@ -11,10 +11,18 @@ function UslugiContentsView() {
         form.show();
     };
     
-    // TODO : place your code here
+    var fmUslContent = new UslugaContent();
     
-    model.requery(function () {
-        // TODO : place your code here
-    });
-    
+    function req(){
+        //fmUslContent.close();
+        fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_id, model.qUslTypes.cursor.usl_types_id, model.qUslugiByType.cursor.usl_name);
+        fmUslContent.show();
+    }
+    model.requery(req);
+    model.qUslTypes.onScrolled = req;
+    model.qUslugiByType.onScrolled =  req;
+    //form.pnlUslContent.add(fmUslContent, "reg");
+    //P.
+    //form.pnlUslContent.showInternalFrame(fmUslContent.show());
+    //form.pnlUslContent.
 }

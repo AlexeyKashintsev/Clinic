@@ -17,8 +17,4 @@ function UslugiByTypeView() {
         // TODO : place your code here
     });
     
-    form.button1.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
-        alert("jhjhj");
-    };
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="399px" prefWidth="570px"/>
+  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="400px" prefWidth="570px" rightComponent="modelGrid1">
+    <font family="Monospaced" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="-1px" left="0px" right="0px" top="0px"/>
+  </SplitPane>
+  <ModelGrid childrenField="p" cursor="0" data="qUslTypes" name="modelGrid" parent="splitPane" parentField="c" prefHeight="398px" prefWidth="199px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="158px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ModelGrid cursor="0" data="qUslugiByType" name="modelGrid1" parent="splitPane" prefHeight="398px" prefWidth="366px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="325px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>

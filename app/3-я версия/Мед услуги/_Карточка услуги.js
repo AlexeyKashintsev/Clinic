@@ -1,5 +1,4 @@
 /**
- * 
  * @author Алексей
  * @name template
  * @public
