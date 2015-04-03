@@ -11,6 +11,10 @@ function UslugaContent() {
         form.show();
     };
     
+    self.showOnPanel = function (aPanel) {
+        aPanel.add(form.view);
+    };
+    
     self.close = function () {
         form.close(true);
     };
@@ -37,26 +41,24 @@ function UslugaContent() {
         }
     };
     
-    
-    // TODO : place your code here
-    
     model.requery(function () {
         // TODO : place your code here
     });
     
     form.btnAdd.onActionPerformed = function(event) {
-         if (!fmUslSelect)
+        if (!fmUslSelect)
             fmUslSelect = new Uslugi4SelectView();
-         fmUslSelect.show(self);
-    };
-    
-    self.uslAdd = function(aRouteId){
-        model.qUslugaContents.push({
-            route_usl       : aRouteId,
-            usl_container   : uslContainer,
-            usl_type        : uslTypeId
+        fmUslSelect.showModal(function(aRouteId) {
+            model.qUslugaContents.push({
+                route_usl       : aRouteId,
+                usl_container   : uslContainer,
+                usl_type        : uslTypeId
+            });
+            model.save();
+            model.qUslugaContents.requery();
         });
     };
+
     form.btnReq1.onActionPerformed = function(event) {
         model.save();
     };

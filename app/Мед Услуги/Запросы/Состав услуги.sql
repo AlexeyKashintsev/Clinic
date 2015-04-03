@@ -2,6 +2,7 @@
  * @public
  * @author Alexey
  * @name qUslugaContents
+ * @writable usl_routes
  */ 
 Select * 
 From usl_routes t1
