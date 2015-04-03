@@ -7,18 +7,32 @@ function UslugiContentsView() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
+    form.title = "Назначение по услугам";
+    var fmUslContent = new UslugaContent();
+    
     self.show = function () {
         form.show();
     };
     
-    var fmUslContent = new UslugaContent();
+    model.qUslTypes.onScrolled = function(){
+        model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
+        model.qUslugiByType.requery();
+    };
     
-    function req(){
-        fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_id, model.qUslTypes.cursor.usl_types_id, model.qUslugiByType.cursor.usl_name);
-    }
+    model.qUslugiByType.onRequeried =  function(){
+        if(model.qUslugiByType.length > 0){
+            fmUslContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id, 
+                                   model.qUslugiByType.cursor.usl_type,
+                                   model.qUslugiByType.cursor.usl_name
+            );
+        }
+    };
     
-    model.requery(req);
-    model.qUslTypes.onScrolled = req;
-    model.qUslugiByType.onScrolled =  req;
+    model.qUslugiByType.onScrolled = function(event) {
+        model.qUslugiByType.onRequeried();
+    };
+
     fmUslContent.showOnPanel(form.pnlUslContent);
+    
+    model.requery();
 }

@@ -26,7 +26,6 @@ function UslugaContent() {
     };
     
     var fmUslSelect;
-    self.doClose = true;
     var uslContainer;
     var uslTypeId;
     
@@ -38,7 +37,11 @@ function UslugaContent() {
 //        }
         uslContainer = aUslugaID;
         model.qUslugaById.params.usluga_id = aUslugaID;
+        model.qUslugaContents.params.usluga_id = aUslugaID;
         model.qUslugaById.requery();
+        model.qUslugaContents.requery();
+        model.qUslTypes.requery();
+        
         if (!aUslugaID) {
             model.qUslugaById.push({
                 usl_type    :   aUslTypeID,
@@ -62,15 +65,28 @@ function UslugaContent() {
                 usl_container   : uslContainer,
                 usl_type        : uslTypeId
             });
-            model.save();
-            model.qUslugaContents.requery();
+            model.save(function(){
+                model.qUslugaContents.requery();
+            });
         });
     };
 
     form.btnReq1.onActionPerformed = function(event) {
         model.save();
     };
+    
     form.btnReq.onActionPerformed = function(event) {
         model.requery();
     };
+    
+    form.btnDel.onActionPerformed = function(event) {
+        if(confirm("Удалить выбранную услугу?")){
+            model.qUslugaContents.remove(model.qUslugaContents.cursorPos); // deleteRow();
+        }
+    };
+    
+    form.modelCombo.onValueChange = function(event) {
+        model.qUslugaById.cursor.usl_type = model.qUslTypes.cursor.usl_types_id;
+    };
+
 }
