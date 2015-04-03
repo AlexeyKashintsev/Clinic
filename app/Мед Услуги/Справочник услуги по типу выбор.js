@@ -6,20 +6,16 @@ function Uslugi4SelectView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
+    self.form = form;
     
     var parent;
-    self.show = function (aParent) {
+    self.show = function () {
         form.show();
-        //console.log(aParent);
-        parent = aParent;
     };
     
-    form.onWindowClosing = function(event) {
-        alert(model.qUslugiByType.cursor.usl_usligi_id);
-        console.log(model.qUslugiByType.cursor.usr_name);
-        parent.uslAdd(2);
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
     };
-
     
     model.requery(function () {
         // TODO : place your code here
@@ -33,8 +29,12 @@ function Uslugi4SelectView() {
     form.modelGrid1.onMouseClicked = function(evt){
         if(evt.clickCount == 2){
             //parent.uslAdd();
-            alert(model.qUslugiByType.cursor.usl_usligi_id);
-            form.close();
+            //alert();
+            form.close(model.qUslugiByType.cursor.usl_uslugi_id);
         }
+    };
+    
+    form.button.onActionPerformed = function(event) {
+        alert(model.qUslugiByType.cursor.usl_uslugi_id);
     };
 }

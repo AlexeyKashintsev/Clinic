@@ -3,11 +3,11 @@
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Состав мед услуг для">
     <AnchorsPaneConstraints height="20px" left="10px" top="12px" width="140px"/>
   </Label>
-  <ModelCombo cursor="0" data="qHazards" displayField="haz_name" displayList="qHazards" field="cursor.hazards_id" name="modelCombo" parent="view" prefHeight="30px" prefWidth="180px">
-    <AnchorsPaneConstraints height="30px" left="150px" top="10px" width="180px"/>
+  <ModelCombo cursor="0" displayField="haz_name" displayList="qHazards" name="modelCombo" parent="view" prefHeight="30px" prefWidth="180px">
+    <AnchorsPaneConstraints height="30px" left="150px" right="19px" top="10px"/>
   </ModelCombo>
   <ModelGrid cursor="0" data="qHazardContents" name="modelGrid" parent="view" prefHeight="400px" prefWidth="350px">
-    <AnchorsPaneConstraints height="400px" left="0px" top="50px" width="350px"/>
+    <AnchorsPaneConstraints bottom="-2px" left="0px" right="-1px" top="50px"/>
     <ServiceGridColumn name="colService"/>
     <ModelGridColumn field="usl_uslugi_id" name="colUsl_uslugi_id" title="colUsl_uslugi_id" width="75px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>

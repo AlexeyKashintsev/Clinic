@@ -11,7 +11,23 @@ function HazardContent() {
         form.show();
     };
     
-    // TODO : place your code here
+    form.modelCombo.onValueChange = function(aEvt) {
+        
+    };
+    
+    model.qHazards.onScrolled = function(){
+        alert("scroll");
+        model.qHazardContents.params.hazard_id = model.qHazards.cursor.hazards_id;
+        model.qHazardContents.requery();
+    };
+    
+    form.modelCombo.onItemSelected = function(){
+        alert("test");
+    };
+    
+//    form.modelCombo.on = function(){
+//        alert("test");
+//    };
     
     model.requery(function () {
         // TODO : place your code here
