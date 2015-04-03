@@ -8,7 +8,8 @@ function MainView() {
         , form = P.loadForm(this.constructor.name, model);
     
     self.show = function () {
-        form.show();
+        //form.show();
+        form.view.showOn(document.getElementById('Main'));
     };
     
     var obj = [
