@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qPatientById" Title="" entityHeight="200" entityIconified="false" entityId="142808343601814" entityLocationX="47" entityLocationY="19" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
+  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="142808371015377" entityLocationX="292" entityLocationY="24" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
+  <referenceRelation collectionPropertyName="sex_list" leftEntityFieldName="sex" leftEntityId="142808343601814" rightEntityFieldName="man_sex_id" rightEntityId="142808371015377" scalarPropertyName="sex_id"/>
+</datamodel>
