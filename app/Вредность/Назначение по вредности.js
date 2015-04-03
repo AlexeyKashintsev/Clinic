@@ -1,8 +1,8 @@
 /**
- * 
+ * @public
  * @author minya92
  */
-function Назначение_по_вредности() {
+function HazardContent() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);

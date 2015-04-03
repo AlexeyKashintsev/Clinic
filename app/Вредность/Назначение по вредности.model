@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<datamodel>
-    <parametersEntity Title="Параметры" entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150">
-    </parametersEntity>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qHazards" Title="" entityHeight="200" entityIconified="false" entityId="142805372611620" entityLocationX="206" entityLocationY="14" entityWidth="150" queryId="qHazards" tableName="" tableSchemaName=""/>
+  <entity Name="qHazardContents" Title="" entityHeight="200" entityIconified="false" entityId="142805200880028" entityLocationX="19" entityLocationY="12" entityWidth="150" queryId="qHazardContents" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142805200880028" rightEntityFieldName="usl_uslugi_id" rightEntityId="142805200880028"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142805200880028" rightEntityFieldName="usl_uslugi_id" rightEntityId="142805200880028"/>
+  <referenceRelation leftEntityFieldName="hazard" leftEntityId="142805200880028" rightEntityFieldName="hazards_id" rightEntityId="142805372611620"/>
 </datamodel>

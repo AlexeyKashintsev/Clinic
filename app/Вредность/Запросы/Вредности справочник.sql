@@ -1,5 +1,4 @@
 /**
- *
  * @author Alexey
  * @name qHazards
  * @public

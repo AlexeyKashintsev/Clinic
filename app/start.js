@@ -5,8 +5,8 @@
 // this === global
 (function () {
     function ready() {
-        P.require(['UslugiContentsView'], function(){
-            var m = new UslugiContentsView();
+        P.require(['HazardContent'], function(){
+            var m = new HazardContent();
             m.show();
         }, function(e){
             P.Logger.severe(e);

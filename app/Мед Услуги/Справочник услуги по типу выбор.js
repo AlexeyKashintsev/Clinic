@@ -7,11 +7,19 @@ function Uslugi4SelectView() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    self.show = function () {
-        form.showModal(function(a){alert(a)});
+    var parent;
+    self.show = function (aParent) {
+        form.show();
+        //console.log(aParent);
+        parent = aParent;
     };
     
-    // TODO : place your code here
+    form.onWindowClosing = function(event) {
+        alert(model.qUslugiByType.cursor.usl_usligi_id);
+        console.log(model.qUslugiByType.cursor.usr_name);
+        parent.uslAdd(2);
+    };
+
     
     model.requery(function () {
         // TODO : place your code here
@@ -25,7 +33,8 @@ function Uslugi4SelectView() {
     form.modelGrid1.onMouseClicked = function(evt){
         if(evt.clickCount == 2){
             //parent.uslAdd();
-            form.close(model.qUslugiByType.cursor.usl_usligi_id);
+            alert(model.qUslugiByType.cursor.usl_usligi_id);
+            form.close();
         }
     };
 }

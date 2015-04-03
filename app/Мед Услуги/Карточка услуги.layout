@@ -1,67 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="366px" prefWidth="387px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="366px" prefWidth="624px"/>
   <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="96px" text="Наименование">
     <AnchorsPaneConstraints height="16px" left="10px" top="6px" width="96px"/>
   </Label>
-  <ModelFormattedField cursor="0" data="qUslugaById" field="cursor.usl_name" format="" name="modelFormattedField" parent="view" prefHeight="28px" prefWidth="263px">
+  <ModelFormattedField cursor="0" data="qUslugaById" field="cursor.usl_name" format="" name="modelFormattedField" parent="view" prefHeight="28px" prefWidth="500px">
     <AnchorsPaneConstraints height="28px" left="120px" right="4px" top="0px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label1" parent="view" prefHeight="16px" prefWidth="96px" text="Тип услуги">
     <AnchorsPaneConstraints height="16px" left="10px" top="46px" width="96px"/>
   </Label>
-  <ModelCombo cursor="0" data="qUslugaById" displayField="type_name" displayList="qUslTypes" field="cursor.usl_type" name="modelCombo" parent="view" prefHeight="28px" prefWidth="263px">
+  <ModelCombo cursor="0" data="qUslugaById" displayField="type_name" displayList="qUslTypes" field="cursor.usl_type" name="modelCombo" parent="view" prefHeight="28px" prefWidth="500px">
     <AnchorsPaneConstraints height="28px" left="120px" right="4px" top="40px"/>
   </ModelCombo>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="390px">
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="627px">
     <AnchorsPaneConstraints height="30px" left="0px" right="-3px" top="70px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="view" prefHeight="270px" prefWidth="390px">
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/gtk-floppy.png" name="btnReq1" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
+  <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="view" prefHeight="270px" prefWidth="627px">
     <AnchorsPaneConstraints bottom="-4px" left="0px" right="-3px" top="100px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="usl_uslugi_id" name="colUsl_uslugi_id" title="colUsl_uslugi_id" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="195px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_type" name="colUsl_type" title="colUsl_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="196px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="colUsl_name" width="75px">
-      <ModelFormattedField/>
-    </ModelGridColumn>
-    <ModelGridColumn field="use_hazards" name="colUse_hazards" title="colUse_hazards" width="75px">
+    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="195px">
       <ModelCheckBox/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_routes_id" name="colUsl_routes_id" title="colUsl_routes_id" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="colSex" width="75px">
-      <ModelFormattedField/>
-    </ModelGridColumn>
-    <ModelGridColumn field="periodic_type" name="colPeriodic_type" title="colPeriodic_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="limitation_age_type" name="colLimitation_age_type" title="colLimitation_age_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="limitation_age" name="colLimitation_age" title="colLimitation_age" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colMandatory" title="colMandatory" width="75px">
-      <ModelCheckBox/>
-    </ModelGridColumn>
-    <ModelGridColumn field="route_usl" name="colRoute_usl" title="colRoute_usl" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_container" name="colUsl_container" title="colUsl_container" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="hazard" name="colHazard" title="colHazard" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="period" name="colPeriod" title="colPeriod" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
 </layout>
