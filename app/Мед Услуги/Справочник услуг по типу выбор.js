@@ -7,6 +7,8 @@ function Uslugi4SelectView() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
+    var uslugaContent = new UslugaContent();
+    
     form.title = "Выбор услуги";
     
     self.show = function () {
@@ -41,8 +43,19 @@ function Uslugi4SelectView() {
     };
     
     form.button.onActionPerformed = function(event) {
-        // TODO Добавьте карточку услуги!!!
+        uslugaContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id, 
+                                model.qUslugiByType.cursor.usl_type, 
+                                model.qUslugiByType.cursor.usl_name);
+        uslugaContent.showModal(function(){
+            model.qUslugiByType.requery();
+        });
     };
+    
+    form.mgUsl.onMouseClicked = function(event) {
+        if(event.clickCount == 2)
+            form.button.onActionPerformed();
+    };
+
     
     form.btnAdd.onActionPerformed = function(event) {
         var uslName = prompt("Введите название новой услуги:");

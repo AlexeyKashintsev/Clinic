@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="366px" prefWidth="624px"/>
   <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="96px" text="Наименование">
     <AnchorsPaneConstraints height="16px" left="10px" top="6px" width="96px"/>
