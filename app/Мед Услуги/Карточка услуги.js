@@ -7,12 +7,18 @@ function UslugaContent() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
+    form.title = "Карточка услуги";
+    
     self.show = function () {
         form.show();
     };
     
     self.showOnPanel = function (aPanel) {
         aPanel.add(form.view);
+    };
+    
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
     };
     
     self.close = function () {
@@ -28,9 +34,11 @@ function UslugaContent() {
 //        if (model.modified){
 //            confirm('Сохранить изменения?') ? model.save() : model.revert();
 //        }
-        if (model.qUslugiByType.findById(aUslugaID)) {
-            uslContainer = aUslugaID;
-        }
+//        if (model.qUslugiByType.findByKey(aUslugaID)) {
+//        }
+        uslContainer = aUslugaID;
+        model.qUslugaById.params.usluga_id = aUslugaID;
+        model.qUslugaById.requery();
         if (!aUslugaID) {
             model.qUslugaById.push({
                 usl_type    :   aUslTypeID,

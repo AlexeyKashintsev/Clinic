@@ -2,7 +2,7 @@
  * 
  * @author minya92
  */
-function Uslugi4SelectView() {
+function Uslugi4SelectView__() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
