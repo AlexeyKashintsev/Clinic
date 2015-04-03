@@ -4,8 +4,9 @@
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="781" entityLocationY="84" entityWidth="150" tableName="usl_cost"/>
   <fieldsEntity entityHeight="124" entityIconified="false" entityId="142641909834871" entityLocationX="354" entityLocationY="211" entityWidth="150" tableName="obr_uslugi"/>
   <fieldsEntity entityHeight="155" entityIconified="false" entityId="142641921948460" entityLocationX="729" entityLocationY="389" entityWidth="150" tableName="buh_contracts"/>
-  <fieldsEntity entityHeight="105" entityIconified="false" entityId="142641969026538" entityLocationX="595" entityLocationY="246" entityWidth="150" tableName="buh_oplata"/>
-  <fieldsEntity entityHeight="97" entityIconified="false" entityId="142641888807406" entityLocationX="597" entityLocationY="18" entityWidth="150" tableName="usl_uslugi"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="176" entityLocationY="22" entityWidth="150" tableName="obr_treatment"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807003" entityLocationX="10" entityLocationY="20" entityWidth="150" tableName="man_patient"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142807979855640" entityLocationX="175" entityLocationY="353" entityWidth="150" tableName="obr_status"/>
+  <fieldsEntity entityHeight="105" entityIconified="false" entityId="142641969026538" entityLocationX="570" entityLocationY="266" entityWidth="150" tableName="buh_oplata"/>
+  <fieldsEntity entityHeight="97" entityIconified="false" entityId="142641888807406" entityLocationX="571" entityLocationY="149" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="174" entityLocationY="132" entityWidth="150" tableName="obr_treatment"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807003" entityLocationX="12" entityLocationY="133" entityWidth="150" tableName="man_patient"/>
 </datamodel>

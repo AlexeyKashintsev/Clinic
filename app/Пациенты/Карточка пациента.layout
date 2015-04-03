@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="Карта пациента" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="412px" prefWidth="400px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="50px" text="Фамилия">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="50px" text="Имя">
+    <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="50px" text="Отчество">
+    <AnchorsPaneConstraints height="20px" left="10px" top="70px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label3" parent="view" prefHeight="20px" prefWidth="50px" text="Пол">
+    <AnchorsPaneConstraints height="20px" right="120px" top="10px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label4" parent="view" prefHeight="20px" prefWidth="90px" text="Дата рождения">
+    <AnchorsPaneConstraints height="20px" right="80px" top="40px" width="90px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.surname" name="tfSurname" parent="view" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="70px" right="180px" top="10px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.firstname" name="tfName" parent="view" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="70px" right="180px" top="40px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.patronymic" name="tfPatronymic" parent="view" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="70px" right="180px" top="70px"/>
+  </ModelFormattedField>
+  <ModelCombo cursor="0" data="qPatientById" displayField="sex_short" displayList="qSex" field="cursor.sex_list" name="ddSex" parent="view" prefHeight="20px" prefWidth="120px">
+    <AnchorsPaneConstraints height="20px" right="10px" top="10px" width="120px"/>
+  </ModelCombo>
+  <ModelDate cursor="0" data="qPatientById" dateFormat="dd MMM yyyy" field="cursor.date_oft_birth" name="mdDateOfBirth" parent="view" prefHeight="20px" prefWidth="160px">
+    <AnchorsPaneConstraints height="20px" right="10px" top="70px" width="160px"/>
+  </ModelDate>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="12px" height="30px" right="100px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="12px" height="30px" right="10px" width="80px"/>
+  </Button>
+</layout>

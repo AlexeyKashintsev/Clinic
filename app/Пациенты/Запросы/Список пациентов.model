@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="surname" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="firstname" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="company_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="6" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142807900138639" entityLocationX="197" entityLocationY="9" entityWidth="150" tableAlias="t1" tableName="man_patient" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142807944388191" entityLocationX="369" entityLocationY="7" entityWidth="150" tableAlias="t" tableName="man_workplace" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="company_id" rightEntityFieldName="company_id" rightEntityId="142807944388191"/>
+  <relation leftEntityFieldName="surname" leftEntityId="142807900138639" rightEntityId="-1" rightEntityParameterName="surname"/>
+  <relation leftEntityFieldName="firstname" leftEntityId="142807900138639" rightEntityId="-1" rightEntityParameterName="firstname"/>
+  <relation leftEntityFieldName="man_id" leftEntityId="142807944388191" rightEntityFieldName="man_patient_id" rightEntityId="142807900138639"/>
+</datamodel>
