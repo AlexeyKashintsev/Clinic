@@ -11,8 +11,23 @@ function HazardContent() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     form.modelCombo.onValueChange = function(aEvt) {
         
+    };
+    
+    self.setHazard = function(aHazardID){
+        if (model.modified && confirm('Сохранить изменения?')){
+        model.save();
+    }
+    //if (model.qUslugiByType.findById(aHazardID)) {
+        model.qHazardContents.params.hazard_id = aHazardID;
+        model.qHazardContents.execute();
+        //model.params.haz_id = aHazardID;
+    //}
     };
     
     model.qHazards.onScrolled = function(){
