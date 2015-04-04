@@ -1,36 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Цены по договору" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="349px" prefWidth="635px"/>
   <ModelGrid cursor="0" data="qPricesByContract" name="modelGrid" parent="view" prefHeight="320px" prefWidth="630px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="5px" top="30px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="usl_cost_id" name="colUsl_cost_id" title="colUsl_cost_id" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usluga_id" name="colUsluga_id" title="colUsluga_id" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="contract_id" name="colContract_id" title="colContract_id" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="cost" name="colCost" title="colCost" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="start_date" name="colStart_date" title="colStart_date" width="75px">
-      <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="end_date" name="colEnd_date" title="colEnd_date" width="75px">
-      <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="colSex" width="75px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="usluga_id" name="column" title="Наименование услуги" width="98px">
       <ModelFormattedField/>
     </ModelGridColumn>
-    <ModelGridColumn field="per_type" name="colPer_type" title="colPer_type" width="75px">
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="98px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="per_type" name="colPer_type" title="Периодичность" width="98px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="limitation_age_type" name="colLimitation_age_type" title="colLimitation_age_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="start_date" name="colStart_date" title="Начало" width="98px">
+      <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
     </ModelGridColumn>
-    <ModelGridColumn field="limitation_age" name="colLimitation_age" title="colLimitation_age" width="75px">
+    <ModelGridColumn field="end_date" name="colEnd_date" title="Окончание" width="99px">
+      <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="cost" name="colCost" title="Цена" width="98px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
