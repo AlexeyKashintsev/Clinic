@@ -19,6 +19,12 @@ function ContractPricesView() {
         // TODO : place your code here
     });
     
+    self.setContractId = function(aContractId) {
+        model.qPricesByContract.params.contract_id = aContractId;
+        //model.revert();
+        model.requery();
+    };
+    
     form.btnAdd.onActionPerformed = function(event) {
         // TODO Добавьте здесь свой код
     };

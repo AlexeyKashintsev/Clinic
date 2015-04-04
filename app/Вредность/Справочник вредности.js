@@ -2,7 +2,7 @@
  * 
  * @author minya92
  */
-function Справочник_компании_для_выбора() {
+function Справочник_вредности() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);

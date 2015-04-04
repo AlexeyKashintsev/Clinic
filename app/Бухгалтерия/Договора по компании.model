@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<datamodel>
-    <parametersEntity Title="Параметры" entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150">
-    </parametersEntity>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="142815203477337" entityLocationX="31" entityLocationY="27" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
+  <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142815194125098" entityLocationX="239" entityLocationY="31" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142815194125098" rightEntityFieldName="usl_types_id" rightEntityId="142815194125098"/>
 </datamodel>

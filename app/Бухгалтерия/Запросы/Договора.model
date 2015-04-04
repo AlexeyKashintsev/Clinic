@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <parameters>
-    <parameter description="" name="company_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
-    <parameter description="" name="c_active" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="16" typeName="BOOLEAN"/>
+    <parameter description="" name="comp_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+    <parameter description="" name="c_act" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="16" typeName="BOOLEAN"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="142355553502606" entityLocationX="204" entityLocationY="5" entityWidth="150" tableAlias="t1" tableName="buh_contracts" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="c_active" rightEntityFieldName="с_active" rightEntityId="142355553502606"/>
-  <relation leftEntityId="-1" leftEntityParameterName="company_id" rightEntityFieldName="company_id" rightEntityId="142355553502606"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142355553502606" entityLocationX="209" entityLocationY="4" entityWidth="150" tableAlias="t1" tableName="buh_contracts" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="c_act" rightEntityFieldName="с_active" rightEntityId="142355553502606"/>
+  <relation leftEntityId="-1" leftEntityParameterName="comp_id" rightEntityFieldName="company_id" rightEntityId="142355553502606"/>
 </datamodel>

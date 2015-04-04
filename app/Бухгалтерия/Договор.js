@@ -17,6 +17,11 @@ function ContractDetailsView() {
     fmCosts.showOnPanel(form.pnlCosts);
     var newContract = false;
     
+    form.ddCompany.onValueChange = function(event) {
+        fmCosts.setContractId(model.qAllFirms.cursor.buh_companies_id);
+        //alert(1);
+    };
+    
     self.setContractID = function(aContractID, aCompanyID) {
         if (aContractID) {
             model.qContract.params.contract_id = aContractID;

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qPeriods" Title="" entityHeight="200" entityIconified="false" entityId="142815250939295" entityLocationX="181" entityLocationY="268" entityWidth="150" queryId="qPeriods" tableName="" tableSchemaName=""/>
+  <entity Name="qHazardTypesList" Title="" entityHeight="200" entityIconified="false" entityId="142815181216165" entityLocationX="259" entityLocationY="35" entityWidth="150" queryId="qHazardTypesList" tableName="" tableSchemaName=""/>
+  <entity Name="qHazards" Title="" entityHeight="200" entityIconified="false" entityId="142815180680850" entityLocationX="32" entityLocationY="37" entityWidth="150" queryId="qHazards" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="period_type" leftEntityId="142815180680850" rightEntityFieldName="usl_period_id" rightEntityId="142815250939295"/>
+  <referenceRelation leftEntityFieldName="hazard_type" leftEntityId="142815180680850" rightEntityFieldName="hazard_types_id" rightEntityId="142815181216165"/>
+</datamodel>

@@ -33,7 +33,7 @@
   <ModelDate cursor="0" data="qContract" field="cursor.end_date" name="modelDate1" parent="view" prefHeight="28px" prefWidth="148px">
     <AnchorsPaneConstraints height="28px" left="336px" top="82px" width="148px"/>
   </ModelDate>
-  <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="modelCombo" parent="view" prefHeight="30px" prefWidth="370px">
+  <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="ddCompany" parent="view" prefHeight="30px" prefWidth="370px">
     <AnchorsPaneConstraints height="30px" left="110px" top="10px" width="370px"/>
   </ModelCombo>
   <ModelCheckBox cursor="0" data="qContract" field="cursor.с_active" name="modelCheckBox" parent="view" prefHeight="30px" prefWidth="111px" text="Активен">

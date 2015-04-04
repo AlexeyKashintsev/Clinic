@@ -2,19 +2,46 @@
  * 
  * @author minya92
  */
-function Договора_по_компании() {
+function ContractsByCompanyView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
-    // TODO : place your code here
+    self.showOnPanel = function (aPanel) {
+        aPanel.add(form.view);
+    };
+    
+    self.setCompany = function(aCompanyId) {
+        model.qContracts.params.comp_id = aCompanyId;
+        model.revert();
+        model.requery();
+    };
+    
+    model.qContracts.params.c_act = null;
+    model.qContracts.params.comp_id = null;
     
     model.requery(function () {
         // TODO : place your code here
     });
     
+    form.btnAdd.onActionPerformed = function(event) {
+        // TODO Добавьте здесь свой код
+    };
+    
+    form.btnReq.onActionPerformed = function(event) {
+        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
+            model.requery();
+        }
+    };
+    
+    form.onWindowClosing = function(event) {
+        if (model.modified&&confirm('Сохранить изменения?')){
+            model.save();
+        }
+    };
+
 }
