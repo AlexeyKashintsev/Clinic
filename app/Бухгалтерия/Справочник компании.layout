@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник компании" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Справочник компании" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="367px" prefWidth="701px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="701px">
     <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qAllFirms" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="270px" prefWidth="400px">
+  <ModelGrid cursor="0" data="qAllFirms" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="337px" prefWidth="701px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="company_name" name="colCompany_name" title="Наименование" width="90px">
+    <ModelGridColumn field="company_name" name="colCompany_name" title="Наименование" width="165px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="inn" name="colInn" title="Инн" width="90px">
+    <ModelGridColumn field="inn" name="colInn" title="Инн" width="165px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="reg_address" name="colReg_address" title="Юр адрес" width="90px">
+    <ModelGridColumn field="reg_address" name="colReg_address" title="Юр адрес" width="165px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="mail_address" name="colMail_address" title="Почтовый адрес" width="89px">
+    <ModelGridColumn field="mail_address" name="colMail_address" title="Почтовый адрес" width="165px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>

@@ -18,14 +18,14 @@ function PatientsForm() {
     
     model.requery();
     
-    form.button1.onActionPerformed = function(event) {
+    form.btnEditPatient.onActionPerformed = function(event) {
         fmPatient.setParams(model.qPatientsByParams.cursor.man_patient_id);
         fmPatient.showModal(function(aResult) {
             if (aResult)
                 model.qPatientsByParams.requery();
         });
     };
-    form.button.onActionPerformed = function(event) {
+    form.btnAddPatient.onActionPerformed = function(event) {
         fmPatient.setParams(null);
         fmPatient.showModal(function(aResult) {
             if (aResult)
@@ -34,8 +34,9 @@ function PatientsForm() {
         //model.qPatientsByParams.push({});
     };
     form.btnApply.onActionPerformed = function(event) {
-        model.qPatientsByParams.params.company_id = form.mcWorkPlace.data;
-        model.qPatientsByParams.params.firstname = form.mcWorkPlace.text;
+        model.qPatientsByParams.params.company_id = form.mcWorkPlace.value ? 
+                form.mcWorkPlace.value.buh_companies_id : null;
+        model.qPatientsByParams.params.firstname = form.tfFirstName.text;
         model.qPatientsByParams.params.surname = form.tfSurname.text;
         model.qPatientsByParams.requery();
     };

@@ -76,8 +76,8 @@
   <Label cursor="0" name="label5" parent="pnlWorkplace" prefHeight="20px" prefWidth="90px" text="Место работы">
     <AnchorsPaneConstraints height="20px" left="10px" top="6px" width="90px"/>
   </Label>
-  <Button cursor="0" icon="icons/22x22/actions/insert-object.png" name="btnAddWorkPlace" parent="pnlWorkplace" prefHeight="30px" prefWidth="170px" text="Новое место работы">
-    <AnchorsPaneConstraints height="30px" right="5px" top="1px" width="170px"/>
+  <Button cursor="0" icon="icons/22x22/actions/insert-object.png" name="btnAddWorkPlace" parent="pnlWorkplace" prefHeight="30px" prefWidth="210px" text="Новое место работы">
+    <AnchorsPaneConstraints height="30px" right="5px" top="1px" width="210px"/>
   </Button>
   <Label cursor="0" name="label6" parent="pnlWorkplace" prefHeight="20px" prefWidth="70px" text="Вредности">
     <AnchorsPaneConstraints bottom="103px" height="20px" left="10px" width="70px"/>

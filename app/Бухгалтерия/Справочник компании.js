@@ -10,7 +10,7 @@ function CompaniesList() {
     form.title = "Справочник компании";
     
     self.show = function () {
-        form.show();
+        DESKTOP ? form.showInternalFrame(DESKTOP) : form.show();
     };
     
     var fmCompany;
@@ -33,7 +33,7 @@ function CompaniesList() {
         }
     };
     form.btnReq.onActionPerformed = function(event) {
-       if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
+        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
             model.requery();
         }
     };
