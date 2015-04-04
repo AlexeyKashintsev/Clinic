@@ -33,6 +33,11 @@ function ManJobForm() {
             model.requery();
     };
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(function(){
+                model.requery();
+            });
+    };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qManJob.cursor.man_job_id);
     };
 }

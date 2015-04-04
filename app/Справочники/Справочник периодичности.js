@@ -33,6 +33,11 @@ function UslPeriodForm() {
             model.requery();
     };
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(function(){
+                model.requery();
+            });
+    };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qUslPeriod.cursor.usl_period_id);
     };
 }

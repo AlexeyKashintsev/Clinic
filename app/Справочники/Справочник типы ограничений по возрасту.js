@@ -33,6 +33,11 @@ function UsiLimAgeTypeForm() {
             model.requery();
     };
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(function(){
+                model.requery();
+            });
+    };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qUsiLimAgeType.cursor.usl_lim_age_type_id);
     };
 }

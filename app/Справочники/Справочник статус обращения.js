@@ -34,6 +34,11 @@ function ObrStatusForm() {
             model.requery();        
     };
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(function(){
+                model.requery();
+            });
+    };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qObrStatus.cursor.obr_status_id);
     };
 }

@@ -33,6 +33,11 @@ function UslPeriodicTypeForm() {
             model.requery();
     };
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(function(){
+                model.requery();
+            });
+    };
+    form.button.onActionPerformed = function(event) {
+         form.close(model.qUslPeriodicType.cursor.usl_periodic_type_id);
     };
 }
