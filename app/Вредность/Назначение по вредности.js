@@ -15,37 +15,19 @@ function HazardContent() {
         form.showModal(aCallback);
     };
     
-    form.modelCombo.onValueChange = function(aEvt) {
-        
+    form.mcHazard.onValueChange = function(aEvt) {
+        self.setHazard(form.mcHazard.value.hazards_id);
     };
     
     self.setHazard = function(aHazardID){
-        if (model.modified && confirm('Сохранить изменения?')){
-        model.save();
-    }
-    //if (model.qUslugiByType.findById(aHazardID)) {
+        if (model.modified && confirm('Сохранить изменения?')) {
+            model.save();
+        }
         model.qHazardContents.params.hazard_id = aHazardID;
         model.qHazardContents.execute();
-        //model.params.haz_id = aHazardID;
-    //}
+        
     };
     
-    model.qHazards.onScrolled = function(){
-        alert("scroll");
-        model.qHazardContents.params.hazard_id = model.qHazards.cursor.hazards_id;
-        model.qHazardContents.requery();
-    };
-    
-    form.modelCombo.onItemSelected = function(){
-        alert("test");
-    };
-    
-//    form.modelCombo.on = function(){
-//        alert("test");
-//    };
-    
-    model.requery(function () {
-        // TODO : place your code here
-    });
+    model.requery();
     
 }

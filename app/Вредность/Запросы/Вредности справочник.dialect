@@ -1,7 +1,7 @@
 Select * 
 From hazards t1
  Where (:hazard_type = t1.hazard_type or :hazard_type is null)
- and (t1.haz_code like '%' || :hazard_find || '%'
- or t1.haz_name like '%' || :hazard_find || '%'
- or t1.haz_short_name like '%' || :hazard_find || '%'
+ and (t1.haz_code ilike '%' || :hazard_find || '%'
+ or t1.haz_name ilike '%' || :hazard_find || '%'
+ or t1.haz_short_name ilike '%' || :hazard_find || '%'
  or :hazard_find is null)

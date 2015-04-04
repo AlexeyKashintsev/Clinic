@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="448px" prefWidth="431px"/>
+<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Назначение по вредности" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="448px" prefWidth="500px"/>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Состав мед услуг для">
-    <AnchorsPaneConstraints height="20px" left="10px" top="12px" width="140px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="15px" width="140px"/>
   </Label>
-  <ModelCombo cursor="0" displayField="haz_name" displayList="qHazards" name="modelCombo" parent="view" prefHeight="30px" prefWidth="262px">
+  <ModelCombo cursor="0" displayField="haz_name" displayList="qHazards" name="mcHazard" parent="view" prefHeight="30px" prefWidth="331px">
     <AnchorsPaneConstraints height="30px" left="150px" right="19px" top="10px"/>
   </ModelCombo>
-  <ModelGrid cursor="0" data="qHazardContents" name="modelGrid" parent="view" prefHeight="400px" prefWidth="432px">
+  <ModelGrid cursor="0" data="qHazardContents" name="modelGrid" parent="view" prefHeight="400px" prefWidth="501px">
     <AnchorsPaneConstraints bottom="-2px" left="0px" right="-1px" top="50px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Назначения" width="98px">
+    <ModelGridColumn field="usl_name" minWidth="75px" movable="false" name="colUsl_name" preferredWidth="180px" title="Назначения" width="187px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="Пол" width="98px">
-      <ModelFormattedField format=""/>
+    <ModelGridColumn field="sex_id" name="colSex" title="Пол" width="83px">
+      <ModelCombo displayField="sex_short" displayList="qSex"/>
     </ModelGridColumn>
-    <ModelGridColumn field="periodic_type" name="colPeriodic_type" title="Периодичность" width="98px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="periodic_type_id" name="colPeriodic_type" title="Тип" width="83px">
+      <ModelCombo displayField="type_name" displayList="qUslPeriodicType"/>
     </ModelGridColumn>
-    <ModelGridColumn field="period" name="colPeriod" title="Период" width="97px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="period_id" name="colPeriod" preferredWidth="100px" title="Период" width="107px">
+      <ModelCombo displayField="period_name" displayList="qUslPeriod"/>
     </ModelGridColumn>
   </ModelGrid>
 </layout>

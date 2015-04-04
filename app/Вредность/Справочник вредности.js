@@ -12,7 +12,15 @@ function HazardForm() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
-    // TODO : place your code here
+    form.tfHazardSearch.onValueChange = function() {
+        model.qHazards.params.hazard_find = form.tfHazardSearch.text;
+        model.qHazards.execute();
+    };
+    
+    form.modelCombo.onValueChange = function() {
+        model.qHazards.params.hazard_type = form.modelCombo.value.hazard_types_id;
+        model.qHazards.execute();
+    };
     
     model.requery(function () {
         // TODO : place your code here
@@ -21,6 +29,7 @@ function HazardForm() {
     form.button.onActionPerformed = function(event) {
         form.close(model.qHazards.cursor.hazards_id);
     };
+    
     form.btnReq.onActionPerformed = function(event) {
         if(model.modified && confirm("Сохранить изменения?")) 
             model.save(function(){
@@ -29,6 +38,7 @@ function HazardForm() {
         else
             model.requery();
     };
+    
     form.btnContents.onActionPerformed = function(event) {
         if (model.qHazards.cursor.hazards_id) {
             if (!fmHazardContent)
