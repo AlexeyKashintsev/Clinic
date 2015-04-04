@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="142351393650933" entityLocationX="233" entityLocationY="239" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
-  <entity Name="qHazardContents" Title="" entityHeight="200" entityIconified="false" entityId="142351288078628" entityLocationX="439" entityLocationY="12" entityWidth="150" queryId="qHazardContents" tableName="" tableSchemaName=""/>
+  <entity Name="qHazardContents" Title="" entityHeight="311" entityIconified="false" entityId="142351288078628" entityLocationX="439" entityLocationY="12" entityWidth="150" queryId="qHazardContents" tableName="" tableSchemaName=""/>
   <entity Name="qPeriodic" Title="" entityHeight="200" entityIconified="false" entityId="142342357763318" entityLocationX="642" entityLocationY="274" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>
   <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="142342357611333" entityLocationX="647" entityLocationY="59" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
-  <entity Name="qPeriods" Title="" entityHeight="200" entityIconified="false" entityId="142351305372688" entityLocationX="442" entityLocationY="231" entityWidth="150" queryId="qPeriods" tableName="" tableSchemaName=""/>
+  <entity Name="qPeriods" Title="" entityHeight="200" entityIconified="false" entityId="142351305372688" entityLocationX="440" entityLocationY="350" entityWidth="150" queryId="qPeriods" tableName="" tableSchemaName=""/>
   <entity Name="qHazards" Title="" entityHeight="200" entityIconified="false" entityId="142351279670093" entityLocationX="226" entityLocationY="14" entityWidth="150" queryId="qHazards" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142351288078628" rightEntityFieldName="usl_uslugi_id" rightEntityId="142351393650933"/>
+  <referenceRelation leftEntityFieldName="period" leftEntityId="142351288078628" rightEntityFieldName="usl_period_id" rightEntityId="142351305372688"/>
+  <referenceRelation leftEntityFieldName="sex" leftEntityId="142351288078628" rightEntityFieldName="man_sex_id" rightEntityId="142342357611333"/>
+  <referenceRelation leftEntityFieldName="periodic_type" leftEntityId="142351288078628" rightEntityFieldName="usl_periodic_type_id" rightEntityId="142342357763318"/>
+  <referenceRelation leftEntityFieldName="hazard" leftEntityId="142351288078628" rightEntityFieldName="hazards_id" rightEntityId="142351279670093"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142351288078628" rightEntityFieldName="usl_uslugi_id" rightEntityId="142351288078628"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142351288078628" rightEntityFieldName="usl_uslugi_id" rightEntityId="142351393650933"/>
   <referenceRelation leftEntityFieldName="period_type" leftEntityId="142351279670093" rightEntityFieldName="usl_period_id" rightEntityId="142351305372688"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142351288078628" rightEntityFieldName="usl_uslugi_id" rightEntityId="142351288078628"/>
 </datamodel>
