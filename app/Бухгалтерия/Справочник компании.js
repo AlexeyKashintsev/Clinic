@@ -7,6 +7,8 @@ function CompaniesList() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
+    form.title = "Справочник компании";
+    
     self.show = function () {
         form.show();
     };
@@ -18,16 +20,27 @@ function CompaniesList() {
     });
     
     form.btnAdd.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        var aName = prompt("Введите наименовние:");
+        if(aName){
+            model.qAllFirms.push({
+                company_name: aName
+            });
+        }
     };
     form.btnDel.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if(confirm("Удалить компанию?")){
+            model.qAllFirms.remove(model.qAllFirms.cursorPos);
+        }
     };
     form.btnReq.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+       if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
+            model.requery();
+        }
     };
     form.btnSave.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if (model.modified&&confirm('Сохранить изменения?')){
+            model.save();
+        }
     };
     
     form.modelGrid.onMouseClicked = function(evt) {
@@ -35,7 +48,11 @@ function CompaniesList() {
             if (!fmCompany)
                 fmCompany = new CompanyCard;
             fmCompany.setCompany(model.qAllFirms.cursor.buh_companies_id);
-            fmCompany.show();
+            fmCompany.showModal(function(a){
+                model.qAllFirms.requery(function(){
+                    model.requery();
+                });
+            });
         }
     };
 

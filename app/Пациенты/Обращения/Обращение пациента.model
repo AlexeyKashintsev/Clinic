@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qPatientById" Title="" entityHeight="200" entityIconified="false" entityId="142815577638195" entityLocationX="287" entityLocationY="33" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
+  <entity Name="qWorkPlaceByPatient" Title="" entityHeight="200" entityIconified="false" entityId="142816107134558" entityLocationX="476" entityLocationY="37" entityWidth="150" queryId="qWorkPlaceByPatient" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatRoute" Title="" entityHeight="200" entityIconified="false" entityId="142816100095779" entityLocationX="100" entityLocationY="242" entityWidth="150" queryId="qTreatRoute" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatById" Title="" entityHeight="200" entityIconified="false" entityId="142815577139219" entityLocationX="100" entityLocationY="32" entityWidth="150" queryId="qTreatById" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="142816100095779" rightEntityFieldName="obr_treatment_id" rightEntityId="142815577139219"/>
+  <referenceRelation leftEntityFieldName="man_id" leftEntityId="142816107134558" rightEntityFieldName="man_patient_id" rightEntityId="142815577638195"/>
+  <referenceRelation leftEntityFieldName="patient" leftEntityId="142815577139219" rightEntityFieldName="man_patient_id" rightEntityId="142815577638195"/>
+</datamodel>

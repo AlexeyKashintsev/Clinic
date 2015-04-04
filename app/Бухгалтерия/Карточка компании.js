@@ -13,6 +13,10 @@ function CompanyCard() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     self.showOnPanel = function (aPanel) {
         aPanel.add(form.view);
     };
@@ -48,15 +52,14 @@ function CompanyCard() {
         };
     };
 
-    function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    form.btnSave.onActionPerformed = function(event) {
         model.save();
         fmContracts.model.save();
-        form.close();
-    }//GEN-LAST:event_btnSaveActionPerformed
-
-    function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        form.close(true);
+    };
+    form.btnCancel.onActionPerformed = function(event) {
         model.revert();
         fmContracts.model.revert();
         form.close();
-    }//GEN-LAST:event_btnCancelActionPerformed
+    };
 }
