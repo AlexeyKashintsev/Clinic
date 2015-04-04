@@ -1,3 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="372px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="40px" prefWidth="372px">
+    <AnchorsPaneConstraints height="40px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
+  <Label cursor="0" name="label" parent="toolBar" prefHeight="40px" prefWidth="120px" text="                              "/>
+  <ModelCheckBox cursor="0" field="cursor.с_active" name="modelCheckBox" parent="toolBar" prefHeight="40px" prefWidth="100px" text="Активные"/>
+  <ModelGrid cursor="0" data="qContracts" name="modelGrid" parent="view" prefHeight="260px" prefWidth="370px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="2px" top="40px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="contr_name" name="colContr_name" title="colContr_name" width="82px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="с_active" name="colС_active" title="colС_active" width="82px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn field="start_date" name="colStart_date" title="colStart_date" width="83px">
+      <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="end_date" name="colEnd_date" title="colEnd_date" width="82px">
+      <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
+    </ModelGridColumn>
+  </ModelGrid>
 </layout>

@@ -1,27 +1,20 @@
 /**
  * 
- * @author Алексей
- * @name template
- * @public
+ * @author minya92
  */
-
-function CompaniesListForSelect() {
-var self = this, model = this.model, form = this; 
-
-function btnReqActionPerformed(evt) {//GEN-FIRST:event_btnReqActionPerformed
-    if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
-        model.requery();
-    }
-}//GEN-LAST:event_btnReqActionPerformed
-
-function formWindowOpened(evt) {//GEN-FIRST:event_formWindowOpened
-    model.requery();
-}//GEN-LAST:event_formWindowOpened
-
-function formWindowClosing(evt) {//GEN-FIRST:event_formWindowClosing
-    if (model.modified&&confirm('Сохранить изменения?')){
-        model.save();
-    }
-}//GEN-LAST:event_formWindowClosing
-
+function Справочник_компании_для_выбора() {
+    var self = this
+            , model = P.loadModel(this.constructor.name)
+            , form = P.loadForm(this.constructor.name, model);
+    
+    self.show = function () {
+        form.show();
+    };
+    
+    // TODO : place your code here
+    
+    model.requery(function () {
+        // TODO : place your code here
+    });
+    
 }

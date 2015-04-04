@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
-  <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="142342499365759" entityLocationX="196" entityLocationY="21" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
+  <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="142815038853528" entityLocationX="30" entityLocationY="28" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
 </datamodel>

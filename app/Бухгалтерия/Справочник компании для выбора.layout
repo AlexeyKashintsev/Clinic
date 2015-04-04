@@ -1,54 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="348px" prefWidth="372px" windowClosing="formWindowClosing" windowOpened="formWindowOpened">
-  <widget name="pnlSelLock" parent="Form" prefHeight="50px" prefWidth="372px" type="PanelDesignInfo">
-    <layout type="MarginLayoutDesignInfo"/>
-    <constraints place="South" type="BorderLayoutConstraintsDesignInfo"/>
-  </widget>
-  <widget icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="pnlSelLock" prefHeight="35px" prefWidth="125px" text="Выбрать" type="ButtonDesignInfo">
-    <constraints bottom="7px" height="35px" right="7px" type="MarginConstraintsDesignInfo" width="125px"/>
-  </widget>
-  <widget actionPerformed="btnReqActionPerformed" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="pnlSelLock" prefHeight="35px" prefWidth="35px" toolTipText="Обновить" type="ButtonDesignInfo" verticalTextPosition="3">
-    <constraints bottom="7px" height="35px" left="12px" top="10px" type="MarginConstraintsDesignInfo" width="35px"/>
-  </widget>
-  <widget name="pnlWorkSpace" parent="Form" prefHeight="298px" prefWidth="372px" type="PanelDesignInfo">
-    <layout type="MarginLayoutDesignInfo"/>
-    <constraints place="Center" type="BorderLayoutConstraintsDesignInfo"/>
-  </widget>
-  <widget name="modelGrid" parent="pnlWorkSpace" prefHeight="298px" prefWidth="372px" type="DbGridDesignInfo">
-    <column name="colCompany_name" title="Наименование">
-      <controlInfo classHint="DbLabelDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <columnsDatasource/>
-      <columnsDisplayField/>
-      <cellsDatasource/>
-      <cellDesignInfo>
-        <rowsKeyField/>
-        <columnsKeyField/>
-        <cellValueField/>
-      </cellDesignInfo>
-      <headerStyle>
-        <nativeFont name="Tahoma" size="11"/>
-      </headerStyle>
-      <datamodelElement entityId="142342499365759" fieldName="company_name"/>
-    </column>
-    <column name="colInn" title="Инн">
-      <controlInfo classHint="DbSpinDesignInfo" name="view" prefHeight="0px" prefWidth="0px"/>
-      <columnsDatasource/>
-      <columnsDisplayField/>
-      <cellsDatasource/>
-      <cellDesignInfo>
-        <rowsKeyField/>
-        <columnsKeyField/>
-        <cellValueField/>
-      </cellDesignInfo>
-      <headerStyle>
-        <nativeFont name="Tahoma" size="11"/>
-      </headerStyle>
-      <datamodelElement entityId="142342499365759" fieldName="inn"/>
-    </column>
-    <rowsColumnsDesignInfo>
-      <rowsDatasource entityId="142342499365759" field="false"/>
-    </rowsColumnsDesignInfo>
-    <treeDesignInfo/>
-    <constraints bottom="0px" left="0px" right="0px" top="0px" type="MarginConstraintsDesignInfo"/>
-  </widget>
-  <layout type="BorderLayoutDesignInfo"/>
+<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="35px" prefWidth="125px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="5px" height="35px" right="5px" width="125px"/>
+  </Button>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="view" prefHeight="35px" prefWidth="35px" toolTipText="Обновить" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="5px" height="35px" right="135px" width="35px"/>
+  </Button>
+  <ModelGrid cursor="0" data="qAllFirms" name="modelGrid" parent="view" prefHeight="250px" prefWidth="400px">
+    <AnchorsPaneConstraints bottom="50px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="company_name" name="colCompany_name" title="Наименование" width="180px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colInn" title="Инн" width="179px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+  </ModelGrid>
 </layout>
