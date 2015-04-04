@@ -33,6 +33,8 @@ function ManJobForm() {
             model.requery();
     };
     form.btnSave.onActionPerformed = function(event) {
-        model.save();
+        model.save(function(){
+                model.requery();
+            });
     };
 }
