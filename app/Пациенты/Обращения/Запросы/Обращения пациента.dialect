@@ -1,0 +1,11 @@
+Select *,
+array_to_string(
+    array(
+        select uu.usl_name
+        from usl_uslugi uu
+        inner join obr_uslugi ou on uu.usl_uslugi_id = ou.usluga_id
+        where ou.treat_id = t1.obr_treatment_id
+    ), ', '
+) as usl_string
+From obr_treatment t1
+ Where :patient_id = t1.patient

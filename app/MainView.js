@@ -21,6 +21,7 @@ function MainView() {
     var fmContragents;
     var fmHazards;
     var fmUsers;
+    var fmPatients;
     
     form.miUsers.onActionPerformed = function(event) {
         if (!fmUsers) {
@@ -37,12 +38,12 @@ function MainView() {
     };
     
     form.miHazards.onActionPerformed = function(event) {
-
+        alert("haz");
     };
     
     form.miUslugiList.onActionPerformed = function(event) {
         if (!fmUslList) {
-            fmUslList = new UslugiByTypeView();
+            fmUslList = new Uslugi4SelectView();
         }
         fmUslList.show(form.formDesktop);
     };
@@ -55,11 +56,12 @@ function MainView() {
     form.miContragents.onActionPerformed = function(event) {
         if (!fmContragents) {
                 fmContragents = new CompaniesList();
-                self.showFormAsInternal(fmContragents);
         }
-        self.showFormAsInternal(fmContragents);
+        fmContragents.show(form.formDesktop);
     };
     form.miPatients.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if (!fmPatients)
+            fmPatients = new PatientsForm();
+        fmPatients.show(form.formDesktop);
     };
 }
