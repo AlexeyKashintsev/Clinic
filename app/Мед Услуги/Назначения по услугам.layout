@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="471px" prefWidth="596px"/>
   <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="splitPane" name="splitPane1" parent="view" prefHeight="471px" prefWidth="596px" rightComponent="pnlUslContent">
     <font family="Monospaced" size="11" style="0"/>
@@ -7,13 +7,13 @@
   <SplitPane cursor="0" dividerLocation="150" foreground="#000000" leftComponent="grdTypes" name="splitPane" orientation="0" parent="splitPane1" prefHeight="469px" prefWidth="199px" rightComponent="grdUslugi">
     <font family="Monospaced" size="11" style="0"/>
   </SplitPane>
-  <ModelGrid cursor="0" data="qUslTypes" name="grdTypes" parent="splitPane" prefHeight="149px" prefWidth="197px">
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="grdTypes" parent="splitPane" parentField="parent" prefHeight="149px" prefWidth="197px">
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="156px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qUslugiByType" name="grdUslugi" parent="splitPane" prefHeight="315px" prefWidth="197px">
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="grdUslugi" parent="splitPane" prefHeight="315px" prefWidth="197px">
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование услуги" width="156px">
       <ModelFormattedField format=""/>
