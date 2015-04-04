@@ -6,6 +6,9 @@ function ContractsByCompanyView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
+    self.model = model;
+    
+    form.title = "Договора по компании";
     
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
@@ -21,8 +24,7 @@ function ContractsByCompanyView() {
         model.requery();
     };
     
-    model.qContracts.params.c_act = null;
-    model.qContracts.params.comp_id = null;
+    model.qContracts.execute();
     
     model.requery(function () {
         // TODO : place your code here
