@@ -12,8 +12,8 @@ function PatientsForm() {
     
     var fmPatient = new PatientForm();
     
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
     model.requery();

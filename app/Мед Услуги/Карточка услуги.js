@@ -9,8 +9,8 @@ function UslugaContent() {
     
     form.title = "Карточка услуги";
     
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
     self.showOnPanel = function (aPanel) {

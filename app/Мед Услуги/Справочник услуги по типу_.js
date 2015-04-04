@@ -9,8 +9,8 @@ function Uslugi4SelectView__() {
     self.form = form;
     
     var parent;
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
     self.showModal = function(aCallback) {

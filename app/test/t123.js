@@ -7,8 +7,8 @@ function t123() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     var a = [
         {id: "1", parent:"0", name:"p"},

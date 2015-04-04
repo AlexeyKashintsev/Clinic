@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Управление клиникой" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Управление клиникой" view="view">
   <AnchorsPane cursor="0" name="view" prefHeight="451px" prefWidth="720px"/>
   <DesktopPane background="#464f5c" cursor="0" foreground="#000000" name="formDesktop" parent="view" prefHeight="426px" prefWidth="720px">
     <font family="Monospaced" size="11" style="0"/>
@@ -15,6 +15,7 @@
   <Menu cursor="0" name="mnuCompanies" parent="menuBar" prefHeight="23px" prefWidth="75px" text="Бухгалтерия"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Справочник контрагенты"/>
   <Menu cursor="0" name="mnuPacients" parent="menuBar" prefHeight="23px" prefWidth="81px" text="Регистратура"/>
+  <MenuItem name="miPatients" parent="mnuPacients" prefHeight="22px" prefWidth="179px" text="Пациенты"/>
   <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="23px" prefWidth="95px" text="Администратор"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsers" parent="mnuAdmin" prefHeight="0px" prefWidth="0px" text="Пользователи"/>
 </layout>
