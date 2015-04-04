@@ -11,9 +11,10 @@ function UsersView() {
     
     form.title = "Пользователи";
     
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
+    
     form.btnDel.onActionPerformed = function(event) {
         // TODO Добавьте здесь свой код
     };

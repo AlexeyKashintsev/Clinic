@@ -10,8 +10,8 @@ function UslugiContentsView() {
     form.title = "Назначение по услугам";
     var fmUslContent = new UslugaContent();
     
-    self.show = function () {
-        form.show();
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
     model.qUslTypes.onScrolled = function(){
