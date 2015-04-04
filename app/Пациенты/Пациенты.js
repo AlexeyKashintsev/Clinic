@@ -39,4 +39,15 @@ function PatientsForm() {
         model.qPatientsByParams.params.surname = form.tfSurname.text;
         model.qPatientsByParams.requery();
     };
+    
+    model.qPatientsByParams.onRequeried = function(event) {
+        form.lbPatientsCount.text = model.qPatientsByParams.length;
+        form.lbSelectedCount.text = form.mgPatients.selected.length;
+    };
+    
+    form.mgPatients.onMouseClicked = function(event) {
+        if (event.clickCount === 2)
+            form.button1.onActionPerformed();
+        form.lbSelectedCount.text = form.mgPatients.selected.length;
+    };
 }

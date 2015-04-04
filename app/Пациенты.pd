@@ -7,5 +7,5 @@
   <fieldsEntity entityHeight="155" entityIconified="false" entityId="142657845819696" entityLocationX="23" entityLocationY="131" entityWidth="150" tableName="mtd_users"/>
   <fieldsEntity entityHeight="92" entityIconified="false" entityId="142641834140859" entityLocationX="667" entityLocationY="18" entityWidth="150" tableName="man_hazards"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641768292968" entityLocationX="209" entityLocationY="38" entityWidth="150" tableName="man_patient"/>
-  <fieldsEntity entityHeight="149" entityIconified="false" entityId="142641848574515" entityLocationX="840" entityLocationY="28" entityWidth="150" tableName="hazards"/>
+  <fieldsEntity entityHeight="149" entityIconified="false" entityId="142641848574515" entityLocationX="833" entityLocationY="19" entityWidth="150" tableName="hazards"/>
 </datamodel>
