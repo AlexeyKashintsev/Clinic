@@ -37,4 +37,7 @@ function ManJobForm() {
                 model.requery();
             });
     };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qManJob.cursor.man_job_id);
+    };
 }

@@ -13,7 +13,7 @@
   <ModelGrid cursor="0" data="qUslPeriodicType" name="modelGrid" parent="view" prefHeight="230px" prefWidth="400px">
     <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="colType_name" width="359px">
+    <ModelGridColumn field="type_name" name="colType_name" title="Наименование" width="359px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>

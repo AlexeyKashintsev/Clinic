@@ -38,4 +38,7 @@ function ObrStatusForm() {
                 model.requery();
             });
     };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qObrStatus.cursor.obr_status_id);
+    };
 }

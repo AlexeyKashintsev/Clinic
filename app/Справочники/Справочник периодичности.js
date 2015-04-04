@@ -37,4 +37,7 @@ function UslPeriodForm() {
                 model.requery();
             });
     };
+    form.button.onActionPerformed = function(event) {
+        form.close(model.qUslPeriod.cursor.usl_period_id);
+    };
 }
