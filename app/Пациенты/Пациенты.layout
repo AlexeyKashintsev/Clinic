@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Пациенты" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="486px" prefWidth="859px"/>
+  <AnchorsPane background="#eaeaea" cursor="0" name="view" prefHeight="486px" prefWidth="859px"/>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="486px" prefWidth="230px">
     <AnchorsPaneConstraints bottom="0px" left="0px" top="0px" width="230px"/>
   </AnchorsPane>
   <ModelCombo cursor="0" field="model.qPatientsByParams.params.company_id" name="mcWorkPlace" parent="panel" prefHeight="20px" prefWidth="210px">
     <AnchorsPaneConstraints height="20px" left="10px" top="60px" width="210px"/>
   </ModelCombo>
-  <ModelFormattedField cursor="0" name="tfFirstName" parent="panel" prefHeight="20px" prefWidth="210px">
+  <ModelFormattedField cursor="0" format="" name="tfFirstName" parent="panel" prefHeight="20px" prefWidth="210px">
     <AnchorsPaneConstraints height="20px" left="10px" top="160px" width="210px"/>
   </ModelFormattedField>
-  <ModelFormattedField cursor="0" name="tfSurname" parent="panel" prefHeight="20px" prefWidth="210px">
+  <ModelFormattedField cursor="0" format="" name="tfSurname" parent="panel" prefHeight="20px" prefWidth="210px">
     <AnchorsPaneConstraints height="20px" left="10px" top="210px" width="210px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="70px" text="Компания">
@@ -25,17 +25,17 @@
     <AnchorsPaneConstraints height="30px" left="110px" top="250px" width="110px"/>
   </Button>
   <Label cursor="0" name="label4" parent="panel" prefHeight="40px" prefWidth="210px" text="Фильтр:">
-    <font family="Tahoma" size="18" style="0"/>
+    <font family="Monospaced" size="18" style="0"/>
     <AnchorsPaneConstraints height="40px" left="10px" top="0px" width="210px"/>
   </Label>
   <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="view" prefHeight="406px" prefWidth="629px">
     <AnchorsPaneConstraints bottom="0px" left="230px" right="0px" top="80px"/>
-    <CheckGridColumn name="colCheck"/>
+    <CheckGridColumn name="colCheck" resizable="true"/>
     <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="99px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="98px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="99px">
       <ModelTextArea/>
@@ -50,7 +50,7 @@
       <ModelCombo/>
     </ModelGridColumn>
   </ModelGrid>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="629px">
+  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="629px">
     <AnchorsPaneConstraints height="80px" left="230px" right="0px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/list-add-user.png" name="button" parent="toolBar" prefHeight="80px" prefWidth="70px" text="Добавить" verticalTextPosition="3"/>

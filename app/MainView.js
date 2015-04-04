@@ -21,6 +21,7 @@ function MainView() {
     var fmContragents;
     var fmHazards;
     var fmUsers;
+    var fmPatients;
     
     form.miUsers.onActionPerformed = function(event) {
         if (!fmUsers) {
@@ -55,11 +56,12 @@ function MainView() {
     form.miContragents.onActionPerformed = function(event) {
         if (!fmContragents) {
                 fmContragents = new CompaniesList();
-                self.showFormAsInternal(fmContragents);
         }
-        self.showFormAsInternal(fmContragents);
+        fmContragents.show(form.formDesktop);
     };
     form.miPatients.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if (!fmPatients)
+            fmPatients = new PatientsForm();
+        fmPatients.show(form.formDesktop);
     };
 }
