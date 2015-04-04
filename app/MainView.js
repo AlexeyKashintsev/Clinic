@@ -22,6 +22,7 @@ function MainView() {
     var fmHazards;
     var fmUsers;
     var fmPatients;
+    var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType;
     
     form.miUsers.onActionPerformed = function(event) {
         if (!fmUsers) {
@@ -63,5 +64,30 @@ function MainView() {
         if (!fmPatients)
             fmPatients = new PatientsForm();
         fmPatients.show(form.formDesktop);
+    };
+    form.miManJob.onActionPerformed = function(event) {
+        if (!fmManJob)
+            fmManJob = new ManJobForm();
+        fmManJob.show(form.formDesktop);
+    };
+    form.miUslPeriod.onActionPerformed = function(event) {
+        if (!fmUslPeriod)
+            fmUslPeriod = new UslPeriodForm();
+        fmUslPeriod.show(form.formDesktop);
+    };
+    form.miObrStatus.onActionPerformed = function(event) {
+        if (!fmObrStatus)
+            fmObrStatus = new ObrStatusForm();
+        fmObrStatus.show(form.formDesktop);
+    };
+    form.miUslPeriodicType.onActionPerformed = function(event) {
+        if (!fmUslPeriodicType)
+            fmUslPeriodicType = new UslPeriodicTypeForm();
+        fmUslPeriodicType.show(form.formDesktop);
+    };
+    form.miUsiLimAgeType.onActionPerformed = function(event) {
+        if (!fmUsiLimAgeType)
+            fmUsiLimAgeType = new UsiLimAgeTypeForm();
+        fmUsiLimAgeType.show(form.formDesktop);
     };
 }
