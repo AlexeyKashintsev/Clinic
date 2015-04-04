@@ -3,7 +3,19 @@
  * @author Алексей
  */
 function CompanyCard() {
-    var self = this, model = this.model, form = this;
+    var self = this
+            , model = P.loadModel(this.constructor.name)
+            , form = P.loadForm(this.constructor.name, model);
+    
+    form.title = "Карточка компании";
+    
+    self.show = function (aDesktop) {
+        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
+    };
+    
+    self.showOnPanel = function (aPanel) {
+        aPanel.add(form.view);
+    };
     
     var fmContracts = new ContractsByCompanyView();
     fmContracts.showOnPanel(form.pnlContracts);
@@ -21,7 +33,7 @@ function CompanyCard() {
     };
     
     self.addNewCompany = function() {
-        model.qAllFirms.insert();
+        model.qAllFirms.push({});
         fmContracts.setCompany(model.qAllFirms.cursor.buh_companies_id);
         fmContracts.checkForUpdate = function() {
             if (model.modified) {

@@ -1,47 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?><layout defaultCloseOperation="2" name="Form" prefHeight="424px" prefWidth="495px">
-  <widget name="modelFormattedField12" parent="Form" prefHeight="28px" prefWidth="360px" type="DbLabelDesignInfo">
-    <datamodelElement entityId="142342719875963" fieldName="reg_address"/>
-    <constraints height="28px" left="120px" right="15px" top="84px" type="MarginConstraintsDesignInfo"/>
-  </widget>
-  <widget name="modelFormattedField11" parent="Form" prefHeight="28px" prefWidth="180px" type="DbLabelDesignInfo">
-    <constraints height="28px" left="300px" right="15px" top="48px" type="MarginConstraintsDesignInfo"/>
-  </widget>
-  <widget name="modelFormattedField1" parent="Form" prefHeight="28px" prefWidth="180px" type="DbLabelDesignInfo">
-    <datamodelElement entityId="142342719875963" fieldName="inn"/>
-    <constraints height="28px" left="60px" top="48px" type="MarginConstraintsDesignInfo" width="180px"/>
-  </widget>
-  <widget name="label" parent="Form" prefHeight="16px" prefWidth="108px" text="Наименование" type="LabelDesignInfo">
-    <constraints height="16px" left="12px" top="18px" type="MarginConstraintsDesignInfo" width="108px"/>
-  </widget>
-  <widget name="modelFormattedField" parent="Form" prefHeight="28px" prefWidth="360px" type="DbLabelDesignInfo">
-    <datamodelElement entityId="142342719875963" fieldName="company_name"/>
-    <constraints height="28px" left="120px" right="15px" top="12px" type="MarginConstraintsDesignInfo"/>
-  </widget>
-  <widget name="label1" parent="Form" prefHeight="16px" prefWidth="38px" text="ИНН" type="LabelDesignInfo">
-    <constraints height="16px" left="12px" top="54px" type="MarginConstraintsDesignInfo" width="38px"/>
-  </widget>
-  <widget name="label2" parent="Form" prefHeight="16px" prefWidth="38px" text="ОГРН" type="LabelDesignInfo">
-    <constraints height="16px" left="252px" top="54px" type="MarginConstraintsDesignInfo" width="38px"/>
-  </widget>
-  <widget name="label3" parent="Form" prefHeight="16px" prefWidth="84px" text="Юр. Адрес" type="LabelDesignInfo">
-    <constraints height="16px" left="12px" top="90px" type="MarginConstraintsDesignInfo" width="84px"/>
-  </widget>
-  <widget name="tabbedPane" parent="Form" prefHeight="264px" prefWidth="495px" type="TabsDesignInfo">
-    <constraints bottom="40px" left="0px" right="0px" top="120px" type="MarginConstraintsDesignInfo"/>
-  </widget>
-  <widget name="pnlContracts" parent="tabbedPane" prefHeight="218px" prefWidth="474px" type="PanelDesignInfo">
-    <layout type="MarginLayoutDesignInfo"/>
-    <constraints tabTitle="Договора" type="TabsConstraintsDesignInfo"/>
-  </widget>
-  <widget name="pnlPeople" parent="tabbedPane" prefHeight="218px" prefWidth="474px" type="PanelDesignInfo" visible="false">
-    <layout type="MarginLayoutDesignInfo"/>
-    <constraints tabTitle="Сотрудники" type="TabsConstraintsDesignInfo"/>
-  </widget>
-  <widget actionPerformed="btnSaveActionPerformed" name="btnSave" parent="Form" prefHeight="29px" prefWidth="98px" text="Сохранить" type="ButtonDesignInfo">
-    <constraints bottom="11px" height="29px" right="109px" type="MarginConstraintsDesignInfo" width="98px"/>
-  </widget>
-  <widget actionPerformed="btnCancelActionPerformed" name="btnCancel" parent="Form" prefHeight="29px" prefWidth="94px" text="Отмена" type="ButtonDesignInfo">
-    <constraints bottom="11px" height="29px" right="17px" type="MarginConstraintsDesignInfo" width="94px"/>
-  </widget>
-  <layout type="MarginLayoutDesignInfo"/>
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane cursor="0" name="view" prefHeight="424px" prefWidth="495px"/>
+  <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.reg_address" format="" name="modelFormattedField12" parent="view" prefHeight="28px" prefWidth="360px">
+    <AnchorsPaneConstraints height="28px" left="120px" right="15px" top="84px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" format="" name="modelFormattedField11" parent="view" prefHeight="28px" prefWidth="180px">
+    <AnchorsPaneConstraints height="28px" left="300px" right="15px" top="48px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.inn" format="" name="modelFormattedField1" parent="view" prefHeight="28px" prefWidth="180px">
+    <AnchorsPaneConstraints height="28px" left="60px" top="48px" width="180px"/>
+  </ModelFormattedField>
+  <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="98px" text="Наименование">
+    <AnchorsPaneConstraints height="16px" left="12px" top="18px" width="98px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.company_name" format="" name="modelFormattedField" parent="view" prefHeight="28px" prefWidth="360px">
+    <AnchorsPaneConstraints height="28px" left="120px" top="10px" width="360px"/>
+  </ModelFormattedField>
+  <Label cursor="0" name="label1" parent="view" prefHeight="16px" prefWidth="38px" text="ИНН">
+    <AnchorsPaneConstraints height="16px" left="12px" top="54px" width="38px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="view" prefHeight="16px" prefWidth="38px" text="ОГРН">
+    <AnchorsPaneConstraints height="16px" left="252px" top="54px" width="38px"/>
+  </Label>
+  <Label cursor="0" name="label3" parent="view" prefHeight="16px" prefWidth="84px" text="Юр. Адрес">
+    <AnchorsPaneConstraints height="16px" left="12px" top="90px" width="84px"/>
+  </Label>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="264px" prefWidth="495px" selectedComponent="pnlContracts">
+    <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="120px"/>
+  </TabbedPane>
+  <BorderPane cursor="0" name="pnlContracts" parent="tabbedPane" prefHeight="236px" prefWidth="490px">
+    <TabbedPaneConstraints tabTitle="Договора"/>
+  </BorderPane>
+  <BorderPane cursor="0" name="pnlPeople" parent="tabbedPane" prefHeight="236px" prefWidth="490px" visible="false">
+    <TabbedPaneConstraints tabTitle="Сотрудники"/>
+  </BorderPane>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="29px" prefWidth="98px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="11px" height="29px" right="109px" width="98px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="29px" prefWidth="94px" text="Отмена">
+    <AnchorsPaneConstraints bottom="11px" height="29px" right="17px" width="94px"/>
+  </Button>
 </layout>

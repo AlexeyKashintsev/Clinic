@@ -71,4 +71,13 @@ function ContractsByCompanyView_() {
 //            });
 //        }
 //    }//GEN-LAST:event_modelGridMouseClicked
+    form.btnAdd.onActionPerformed = function(event) {
+        // TODO Добавьте здесь свой код
+    };
+    form.btnDel.onActionPerformed = function(event) {
+        // TODO Добавьте здесь свой код
+    };
+    form.btnReq.onActionPerformed = function(event) {
+        // TODO Добавьте здесь свой код
+    };
 }
