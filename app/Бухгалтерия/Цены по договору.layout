@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Цены по договору" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Цены по договору" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="349px" prefWidth="635px"/>
   <ModelGrid cursor="0" data="qPricesByContract" name="modelGrid" parent="view" prefHeight="320px" prefWidth="630px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="5px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usluga_id" name="column" title="Наименование услуги" width="98px">
-      <ModelFormattedField/>
+    <ModelGridColumn field="usl_id" name="column" title="Наименование услуги" width="98px">
+      <ModelCombo displayField="usl_name" displayList="qPricesByContract" list="false"/>
     </ModelGridColumn>
     <ModelGridColumn field="sex" name="colSex" title="Пол" width="98px">
-      <ModelFormattedField format=""/>
+      <ModelCombo displayField="sex_long" displayList="qSex"/>
     </ModelGridColumn>
-    <ModelGridColumn field="per_type" name="colPer_type" title="Периодичность" width="98px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="usl_per_type" name="colPer_type" title="Периодичность" width="98px">
+      <ModelCombo displayField="type_name" displayList="qPeriodic"/>
     </ModelGridColumn>
     <ModelGridColumn field="start_date" name="colStart_date" title="Начало" width="98px">
       <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
