@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник &quot;Тип периодичности&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
     <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="400px"/>
@@ -12,9 +12,9 @@
   </Button>
   <ModelGrid cursor="0" data="qUslPeriodicType" name="modelGrid" parent="view" prefHeight="230px" prefWidth="400px">
     <AnchorsPaneConstraints height="230px" left="0px" top="30px" width="400px"/>
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="type_name" name="colType_name" title="colType_name" width="359px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
 </layout>
