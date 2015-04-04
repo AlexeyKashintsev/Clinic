@@ -31,7 +31,12 @@ function ContractsByCompanyView() {
     });
     
     form.btnAdd.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        var aName = prompt("Введите название:");
+        if(aName) {
+            model.qContracts.push({
+                contr_name: aName
+            });
+        }
     };
     
     form.btnReq.onActionPerformed = function(event) {
@@ -46,4 +51,7 @@ function ContractsByCompanyView() {
         }
     };
 
+    form.btnDel.onActionPerformed = function(event) {
+        model.qContracts.remove(model.qContracts.cursorPos);
+    };
 }

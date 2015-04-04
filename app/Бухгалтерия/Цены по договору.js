@@ -19,6 +19,8 @@ function ContractPricesView() {
         // TODO : place your code here
     });
     
+    var fmUslSel;
+
     self.setContractId = function(aContractId) {
         model.qPricesByContract.params.contract_id = aContractId;
         //model.revert();
@@ -26,9 +28,28 @@ function ContractPricesView() {
     };
     
     form.btnAdd.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if (!fmUslSel)
+            fmUslSel = new Uslugi4SelectView();
+        fmUslSel.showModal(function(aUslId) {
+            if (aUslId) {
+                model.qPricesByContract.push({
+                    usluga_id   :   aUslId,
+                    contract_id :   model.qPricesByContract.params.contract_id
+                });
+            }
+        });
     };
     form.btnDel.onActionPerformed = function(event) {
-        // TODO Добавьте здесь свой код
+        if(confirm("Удалить?")){
+            model.qPricesByContract.remove(model.qPricesByContract.cursorPos);
+        }
+    };
+    
+    form.modelGrid.column.onSelect = function (evt){
+        fmUslSel.showModal(function(aUslId) {
+            if (aUslId) {
+                model.qPricesByContract.cursor.usluga_id = aUslId;
+            }
+        });
     };
 }
