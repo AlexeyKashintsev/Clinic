@@ -28,15 +28,27 @@
     <AnchorsPaneConstraints height="25px" left="0px" right="0px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/add-files-to-archive.png" name="btnAddUsl" opaque="false" parent="toolBar" prefHeight="25px" prefWidth="30px" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" name="modelGrid" parent="pnlUslugi" prefHeight="276px" prefWidth="375px">
+  <ModelGrid cursor="0" name="mgUslugi" parent="pnlUslugi" prefHeight="276px" prefWidth="375px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="26px"/>
-    <ModelGridColumn name="colUslName" title="column" width="373px">
+    <ModelGridColumn name="colUslName" title="column" width="93px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="column" title="column" width="93px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="column1" title="column" width="94px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="column2" title="column" width="93px">
       <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlRoute" parent="tabbedPane" prefHeight="302px" prefWidth="375px" visible="false">
     <TabbedPaneConstraints tabTitle="Назначения"/>
   </AnchorsPane>
+  <ModelGrid cursor="0" name="modelGrid1" parent="pnlRoute" prefHeight="302px" prefWidth="375px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+  </ModelGrid>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
     <AnchorsPaneConstraints bottom="12px" height="30px" right="100px" width="100px"/>
   </Button>
