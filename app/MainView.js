@@ -38,12 +38,12 @@ function MainView() {
     };
     
     form.miHazards.onActionPerformed = function(event) {
-
+        alert("haz");
     };
     
     form.miUslugiList.onActionPerformed = function(event) {
         if (!fmUslList) {
-            fmUslList = new UslugiByTypeView();
+            fmUslList = new Uslugi4SelectView();
         }
         fmUslList.show(form.formDesktop);
     };
