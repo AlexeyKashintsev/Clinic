@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="449px" prefWidth="400px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="60px" text="Пациент">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="60px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.surname + ' ' + cursor.firstname + ' ' + cursor.patronymic" name="tfPatioentFIO" parent="view" prefHeight="20px" prefWidth="330px">
+    <AnchorsPaneConstraints height="20px" left="60px" right="10px" top="10px"/>
+  </ModelFormattedField>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="100px" text="Дата рождения">
+    <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="100px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="30px" text="Пол">
+    <AnchorsPaneConstraints height="20px" right="120px" top="40px" width="30px"/>
+  </Label>
+  <ModelDate cursor="0" name="mdDateOfBirth" parent="view" prefHeight="20px" prefWidth="130px">
+    <AnchorsPaneConstraints height="20px" left="110px" right="160px" top="40px"/>
+  </ModelDate>
+  <ModelFormattedField cursor="0" name="tfSex" parent="view" prefHeight="20px" prefWidth="110px">
+    <AnchorsPaneConstraints height="20px" right="10px" top="40px" width="110px"/>
+  </ModelFormattedField>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="330px" prefWidth="380px">
+    <AnchorsPaneConstraints bottom="49px" left="10px" right="10px" top="70px"/>
+  </TabbedPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="tabbedPane" prefHeight="302px" prefWidth="375px">
+    <TabbedPaneConstraints tabTitle="Услуги"/>
+  </AnchorsPane>
+  <ToolBar cursor="0" name="toolBar" parent="pnlUslugi" prefHeight="25px" prefWidth="375px">
+    <AnchorsPaneConstraints height="25px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/add-files-to-archive.png" name="btnAddUsl" opaque="false" parent="toolBar" prefHeight="25px" prefWidth="30px" verticalTextPosition="3"/>
+  <ModelGrid cursor="0" name="modelGrid" parent="pnlUslugi" prefHeight="276px" prefWidth="375px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="26px"/>
+    <ModelGridColumn name="colUslName" title="column" width="373px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoute" parent="tabbedPane" prefHeight="302px" prefWidth="375px" visible="false">
+    <TabbedPaneConstraints tabTitle="Назначения"/>
+  </AnchorsPane>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="12px" height="30px" right="100px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="12px" height="30px" right="10px" width="80px"/>
+  </Button>
+</layout>
