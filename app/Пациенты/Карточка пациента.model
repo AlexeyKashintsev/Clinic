@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qPatientById" Title="" entityHeight="200" entityIconified="false" entityId="142808343601814" entityLocationX="47" entityLocationY="19" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
-  <entity Name="qWorkPlaceByPatient" Title="" entityHeight="200" entityIconified="false" entityId="142814774378783" entityLocationX="234" entityLocationY="238" entityWidth="150" queryId="qWorkPlaceByPatient" tableName="" tableSchemaName=""/>
-  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="142808371015377" entityLocationX="292" entityLocationY="24" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
-  <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="142814760638095" entityLocationX="48" entityLocationY="231" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
+  <entity Name="qHazardsByManJob" Title="" entityHeight="216" entityIconified="false" entityId="142815056972508" entityLocationX="427" entityLocationY="245" entityWidth="150" queryId="qHazardsByManJob" tableName="" tableSchemaName=""/>
+  <entity Name="qPatientById" Title="" entityHeight="200" entityIconified="false" entityId="142808343601814" entityLocationX="229" entityLocationY="3" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
+  <entity Name="qObrStatus" Title="" entityHeight="67" entityIconified="false" entityId="142814935793249" entityLocationX="587" entityLocationY="15" entityWidth="150" queryId="qObrStatus" tableName="" tableSchemaName=""/>
+  <entity Name="qAllFirms" Title="" entityHeight="134" entityIconified="false" entityId="142814958434969" entityLocationX="25" entityLocationY="236" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
+  <entity Name="qWorkPlaceByPatient" Title="" entityHeight="200" entityIconified="false" entityId="142814774378783" entityLocationX="224" entityLocationY="234" entityWidth="150" queryId="qWorkPlaceByPatient" tableName="" tableSchemaName=""/>
+  <entity Name="qSex" Title="" entityHeight="84" entityIconified="false" entityId="142808371015377" entityLocationX="60" entityLocationY="3" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
+  <entity Name="qManJob" Title="" entityHeight="66" entityIconified="false" entityId="142814955397042" entityLocationX="26" entityLocationY="385" entityWidth="150" queryId="qManJob" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="142814760638095" entityLocationX="412" entityLocationY="14" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="treat_status" leftEntityId="142814760638095" rightEntityFieldName="obr_status_id" rightEntityId="142814935793249"/>
   <referenceRelation leftEntityFieldName="man_id" leftEntityId="142814774378783" rightEntityFieldName="man_patient_id" rightEntityId="142808343601814"/>
   <referenceRelation collectionPropertyName="sex_list" leftEntityFieldName="sex" leftEntityId="142808343601814" rightEntityFieldName="man_sex_id" rightEntityId="142808371015377" scalarPropertyName="sex_id"/>
+  <referenceRelation leftEntityFieldName="workplace_id" leftEntityId="142815056972508" rightEntityFieldName="man_workplace_id" rightEntityId="142814774378783"/>
   <referenceRelation leftEntityFieldName="patient" leftEntityId="142814760638095" rightEntityFieldName="man_patient_id" rightEntityId="142808343601814"/>
+  <referenceRelation leftEntityFieldName="company_id" leftEntityId="142814774378783" rightEntityFieldName="buh_companies_id" rightEntityId="142814958434969"/>
+  <referenceRelation leftEntityFieldName="hazard_id" leftEntityId="142815056972508" rightEntityFieldName="hazards_id" rightEntityId="142815056972508"/>
+  <referenceRelation leftEntityFieldName="job_id" leftEntityId="142814774378783" rightEntityFieldName="man_job_id" rightEntityId="142814955397042"/>
 </datamodel>

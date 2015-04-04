@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Пациенты" view="view">
-  <AnchorsPane background="#eaeaea" cursor="0" name="view" prefHeight="486px" prefWidth="859px"/>
+  <AnchorsPane background="#eaeaea" cursor="0" name="view" prefHeight="486px" prefWidth="940px"/>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="486px" prefWidth="230px">
     <AnchorsPaneConstraints bottom="0px" left="0px" top="0px" width="230px"/>
   </AnchorsPane>
@@ -28,31 +28,53 @@
     <font family="Monospaced" size="18" style="0"/>
     <AnchorsPaneConstraints height="40px" left="10px" top="0px" width="210px"/>
   </Label>
-  <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="view" prefHeight="406px" prefWidth="629px">
-    <AnchorsPaneConstraints bottom="0px" left="230px" right="0px" top="80px"/>
+  <Label cursor="0" name="label6" parent="panel" prefHeight="20px" prefWidth="70px" text="Назначения">
+    <AnchorsPaneConstraints height="20px" left="10px" top="90px" width="70px"/>
+  </Label>
+  <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="view" prefHeight="385px" prefWidth="710px">
+    <AnchorsPaneConstraints bottom="21px" left="230px" right="0px" top="80px"/>
     <CheckGridColumn name="colCheck" resizable="true"/>
-    <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="99px">
+    <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="112px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="98px">
+    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="112px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="99px">
+    <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="112px">
       <ModelTextArea/>
     </ModelGridColumn>
-    <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="98px">
-      <ModelDate/>
+    <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="112px">
+      <ModelDate dateFormat="dd MMMM yyyy" datePicker="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="company_id" name="colCompany" readonly="true" title="Компания" width="99px">
+    <ModelGridColumn field="company_id" name="colCompany" readonly="true" title="Компания" width="112px">
       <ModelCombo/>
     </ModelGridColumn>
-    <ModelGridColumn field="job_id" name="colJobTitle" readonly="true" title="Должность" width="98px">
+    <ModelGridColumn field="job_id" name="colJobTitle" readonly="true" title="Должность" width="112px">
       <ModelCombo/>
     </ModelGridColumn>
   </ModelGrid>
-  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="629px">
+  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="710px">
     <AnchorsPaneConstraints height="80px" left="230px" right="0px" top="0px"/>
   </ToolBar>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/list-add-user.png" name="button" parent="toolBar" prefHeight="80px" prefWidth="70px" text="Добавить" verticalTextPosition="3"/>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-edit.png" name="button1" parent="toolBar" prefHeight="80px" prefWidth="70px" text="Карточка" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/list-add-user.png" name="button" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-edit.png" name="button1" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Карточка" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-new.png" name="button2" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Назначение" verticalTextPosition="3"/>
+  <AnchorsPane background="#eaeaea" cursor="0" name="panel1" parent="view" prefHeight="20px" prefWidth="710px">
+    <AnchorsPaneConstraints bottom="0px" height="20px" left="230px" right="0px"/>
+  </AnchorsPane>
+  <Label cursor="0" name="label1" parent="panel1" prefHeight="20px" prefWidth="110px" text="Всего записей:">
+    <AnchorsPaneConstraints height="20px" left="0px" top="0px" width="110px"/>
+  </Label>
+  <Label cursor="0" name="lbPatientsCount" parent="panel1" prefHeight="20px" prefWidth="70px">
+    <AnchorsPaneConstraints height="20px" left="110px" top="0px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label5" parent="panel1" prefHeight="20px" prefWidth="120px" text="Записей выбрано:">
+    <AnchorsPaneConstraints height="20px" left="220px" top="0px" width="120px"/>
+  </Label>
+  <Label cursor="0" name="lbSelectedCount" parent="panel1" prefHeight="20px" prefWidth="70px">
+    <AnchorsPaneConstraints height="20px" left="340px" top="0px" width="70px"/>
+  </Label>
+  <Button cursor="0" name="btnSelAll" parent="panel1" prefHeight="20px" prefWidth="110px" text="Выбрать все">
+    <AnchorsPaneConstraints height="20px" left="410px" top="0px" width="110px"/>
+  </Button>
 </layout>
