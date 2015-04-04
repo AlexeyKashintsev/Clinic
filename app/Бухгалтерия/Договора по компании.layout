@@ -10,9 +10,9 @@
   <ModelCheckBox cursor="0" field="cursor.с_active" name="modelCheckBox" parent="toolBar" prefHeight="40px" prefWidth="100px" text="Активные"/>
   <ModelGrid cursor="0" data="qContracts" name="modelGrid" parent="view" prefHeight="260px" prefWidth="370px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="2px" top="40px"/>
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="contr_name" name="colContr_name" title="colContr_name" width="82px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="с_active" name="colС_active" title="colС_active" width="82px">
       <ModelCheckBox/>
