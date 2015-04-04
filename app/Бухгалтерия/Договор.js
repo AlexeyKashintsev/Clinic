@@ -7,6 +7,8 @@ function ContractDetailsView() {
         , model = P.loadModel(this.constructor.name)
         , form = P.loadForm(this.constructor.name, model);
     
+    form.title = "Договоры";
+    
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
@@ -53,4 +55,6 @@ function ContractDetailsView() {
         fmCosts.model.revert();
         form.close(false);
     }//GEN-LAST:event_btnCancelActionPerformed
+    
+    model.requery();
 }

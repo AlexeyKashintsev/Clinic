@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <parameters>
-    <parameter description="" name="с_active" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="16" typeName="BOOLEAN"/>
-  </parameters>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
-  <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="142355568228255" entityLocationX="260" entityLocationY="61" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="с_active" rightEntityId="142355568228255" rightEntityParameterName="c_active"/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<datamodel>
+    <parametersEntity Title="Параметры" entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150">
+    </parametersEntity>
 </datamodel>

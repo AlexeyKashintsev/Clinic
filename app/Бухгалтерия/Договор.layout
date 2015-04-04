@@ -1,34 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane cursor="0" name="view" prefHeight="400px" prefWidth="489px"/>
-  <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="72px" text="Компания">
-    <AnchorsPaneConstraints height="16px" left="12px" top="18px" width="72px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="24px" prefWidth="88px" text="Компания">
+    <AnchorsPaneConstraints height="24px" left="12px" top="10px" width="88px"/>
   </Label>
-  <ModelCombo cursor="0" data="qContract" displayField="company_name" displayList="qAllFirms" field="cursor.company_id" name="modelCombo" parent="view" prefHeight="28px" prefWidth="385px">
-    <AnchorsPaneConstraints height="28px" left="93px" right="11px" top="10px"/>
-  </ModelCombo>
-  <Label cursor="0" name="label1" parent="view" prefHeight="16px" prefWidth="72px" text="Номер">
-    <AnchorsPaneConstraints height="16px" left="12px" top="54px" width="72px"/>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="88px" text="Номер">
+    <AnchorsPaneConstraints height="20px" left="12px" top="50px" width="88px"/>
   </Label>
-  <ModelTextArea cursor="0" data="qContract" field="cursor.contr_name" name="modelTextArea" parent="view" prefHeight="28px" prefWidth="385px">
-    <AnchorsPaneConstraints height="28px" left="93px" right="11px" top="48px"/>
+  <ModelTextArea cursor="0" data="qContract" field="cursor.contr_name" name="modelTextArea" parent="view" prefHeight="28px" prefWidth="368px">
+    <AnchorsPaneConstraints height="28px" left="110px" right="11px" top="48px"/>
   </ModelTextArea>
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="240px" prefWidth="490px" selectedComponent="pnlCosts">
     <AnchorsPaneConstraints bottom="40px" left="0px" right="-1px" top="120px"/>
   </TabbedPane>
-  <AnchorsPane cursor="0" name="pnlCosts" parent="tabbedPane" prefHeight="212px" prefWidth="485px">
-    <TabbedPaneConstraints tabIcon="" tabTitle="Цены по договору"/>
-  </AnchorsPane>
+  <BorderPane cursor="0" name="pnlCosts" parent="tabbedPane" prefHeight="212px" prefWidth="485px">
+    <TabbedPaneConstraints tabTitle="Цены по договору"/>
+  </BorderPane>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="29px" prefWidth="110px" text="Сохранить">
     <AnchorsPaneConstraints bottom="11px" height="29px" right="117px" width="110px"/>
   </Button>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="29px" prefWidth="106px" text="Отмена">
     <AnchorsPaneConstraints bottom="11px" height="29px" right="13px" width="106px"/>
   </Button>
-  <ModelCheckBox cursor="0" data="qContract" field="cursor.с_active" name="modelCheckBox" parent="view" prefHeight="28px" prefWidth="120px" text="Активен">
-    <AnchorsPaneConstraints height="28px" left="12px" top="84px" width="120px"/>
-  </ModelCheckBox>
   <ModelDate cursor="0" data="qContract" field="cursor.start_date" name="modelDate" parent="view" prefHeight="28px" prefWidth="144px">
-    <AnchorsPaneConstraints height="28px" left="156px" top="84px" width="144px"/>
+    <AnchorsPaneConstraints height="28px" left="156px" top="82px" width="144px"/>
   </ModelDate>
   <Label cursor="0" name="label2" parent="view" prefHeight="16px" prefWidth="12px" text="с">
     <AnchorsPaneConstraints height="16px" left="144px" top="90px" width="12px"/>
@@ -37,6 +31,12 @@
     <AnchorsPaneConstraints height="16px" left="312px" top="90px" width="38px"/>
   </Label>
   <ModelDate cursor="0" data="qContract" field="cursor.end_date" name="modelDate1" parent="view" prefHeight="28px" prefWidth="148px">
-    <AnchorsPaneConstraints height="28px" left="336px" top="84px" width="148px"/>
+    <AnchorsPaneConstraints height="28px" left="336px" top="82px" width="148px"/>
   </ModelDate>
+  <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="modelCombo" parent="view" prefHeight="30px" prefWidth="370px">
+    <AnchorsPaneConstraints height="30px" left="110px" top="10px" width="370px"/>
+  </ModelCombo>
+  <ModelCheckBox cursor="0" data="qContract" field="cursor.с_active" name="modelCheckBox" parent="view" prefHeight="30px" prefWidth="111px" text="Активен">
+    <AnchorsPaneConstraints height="30px" left="10px" top="81px" width="111px"/>
+  </ModelCheckBox>
 </layout>
