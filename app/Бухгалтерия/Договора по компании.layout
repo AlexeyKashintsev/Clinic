@@ -7,7 +7,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Label cursor="0" name="label" parent="toolBar" prefHeight="40px" prefWidth="120px" text="                              "/>
-  <ModelCheckBox cursor="0" field="cursor.с_active" name="modelCheckBox" parent="toolBar" prefHeight="40px" prefWidth="100px" text="Активные"/>
+  <ModelCheckBox cursor="0" field="cursor.с_active" name="cbActive" parent="toolBar" prefHeight="40px" prefWidth="100px" text="Активные"/>
   <ModelGrid cursor="0" data="qContracts" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="260px" prefWidth="446px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="2px" top="40px"/>
     <ServiceGridColumn name="colService" resizable="true"/>

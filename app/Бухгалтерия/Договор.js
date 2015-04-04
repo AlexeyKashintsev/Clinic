@@ -13,6 +13,10 @@ function ContractDetailsView() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     var fmCosts = new ContractPricesView();
     fmCosts.showOnPanel(form.pnlCosts);
     var newContract = false;
@@ -44,22 +48,22 @@ function ContractDetailsView() {
             fmCosts.setContractId(model.qContract.cursor.buh_contracts_id);
         }
     };
-
-    function btnSaveActionPerformed(evt) {//GEN-FIRST:event_btnSaveActionPerformed
+    
+    model.requery();
+    
+    form.btnSave.onActionPerformed = function(event) {
         model.save();
         fmCosts.model.save();
         form.close(true);
-    }//GEN-LAST:event_btnSaveActionPerformed
-
-    function btnCancelActionPerformed(evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        if (newContract) {
+    };
+    
+    form.btnCancel.onActionPerformed = function(event) {
+         if (newContract) {
             model.qContract.deleteRow();
             model.save();
         } else            
             model.revert();
         fmCosts.model.revert();
         form.close(false);
-    }//GEN-LAST:event_btnCancelActionPerformed
-    
-    model.requery();
+    };
 }

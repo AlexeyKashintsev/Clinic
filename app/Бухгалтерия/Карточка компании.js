@@ -9,8 +9,8 @@ function CompanyCard() {
     
     form.title = "Карточка компании";
     
-    self.show = function (aDesktop) {
-        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
+    self.show = function () {
+        DESKTOP ? form.showInternalFrame(DESKTOP) : form.show();
     };
     
     self.showModal = function(aCallback) {

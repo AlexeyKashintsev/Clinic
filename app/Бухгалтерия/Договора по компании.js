@@ -41,7 +41,7 @@ function ContractsByCompanyView() {
     
     form.btnReq.onActionPerformed = function(event) {
         if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
-            model.requery();
+            model.qContracts.execute();
         }
     };
     
@@ -54,4 +54,22 @@ function ContractsByCompanyView() {
     form.btnDel.onActionPerformed = function(event) {
         model.qContracts.remove(model.qContracts.cursorPos);
     };
+    
+    form.cbActive.onMouseClicked = function(event) {
+        if(form.cbActive.value)
+            model.qContracts.params.c_act = true;
+        else
+            model.qContracts.params.c_act = null;
+        model.qContracts.execute();
+    };
+    
+    form.modelGrid.onMouseClicked = function(evt){
+        if(evt.clickCount > 1){
+            var contractDetailsView = new ContractDetailsView();
+            contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id);
+            contractDetailsView.showModal(function(a){
+                model.qContracts.execute();
+            });
+        }
+    }
 }

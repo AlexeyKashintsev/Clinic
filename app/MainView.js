@@ -2,10 +2,15 @@
  * 
  * @author Alexey
  */
+
+var DESKTOP = null;
+
 function MainView() {
     var self = this
         , model = P.loadModel(this.constructor.name)
         , form = P.loadForm(this.constructor.name, model);
+    
+    DESKTOP = form.formDesktop;
     
     self.show = function (aDesktop) {
         //aDesktop ? form.showInternalFrame(aDesktop) : form.show();
