@@ -1,54 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="448px" prefWidth="349px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="448px" prefWidth="431px"/>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Состав мед услуг для">
     <AnchorsPaneConstraints height="20px" left="10px" top="12px" width="140px"/>
   </Label>
-  <ModelCombo cursor="0" displayField="haz_name" displayList="qHazards" name="modelCombo" parent="view" prefHeight="30px" prefWidth="180px">
+  <ModelCombo cursor="0" displayField="haz_name" displayList="qHazards" name="modelCombo" parent="view" prefHeight="30px" prefWidth="262px">
     <AnchorsPaneConstraints height="30px" left="150px" right="19px" top="10px"/>
   </ModelCombo>
-  <ModelGrid cursor="0" data="qHazardContents" name="modelGrid" parent="view" prefHeight="400px" prefWidth="350px">
+  <ModelGrid cursor="0" data="qHazardContents" name="modelGrid" parent="view" prefHeight="400px" prefWidth="432px">
     <AnchorsPaneConstraints bottom="-2px" left="0px" right="-1px" top="50px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="usl_uslugi_id" name="colUsl_uslugi_id" title="colUsl_uslugi_id" width="75px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Назначения" width="98px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="98px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="periodic_type" name="colPeriodic_type" title="Периодичность" width="98px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_type" name="colUsl_type" title="colUsl_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="colUsl_name" width="75px">
-      <ModelFormattedField/>
-    </ModelGridColumn>
-    <ModelGridColumn field="use_hazards" name="colUse_hazards" title="colUse_hazards" width="75px">
-      <ModelCheckBox/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_routes_id" name="colUsl_routes_id" title="colUsl_routes_id" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="colSex" width="75px">
-      <ModelFormattedField/>
-    </ModelGridColumn>
-    <ModelGridColumn field="periodic_type" name="colPeriodic_type" title="colPeriodic_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="limitation_age_type" name="colLimitation_age_type" title="colLimitation_age_type" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="limitation_age" name="colLimitation_age" title="colLimitation_age" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colMandatory" title="colMandatory" width="75px">
-      <ModelCheckBox/>
-    </ModelGridColumn>
-    <ModelGridColumn field="route_usl" name="colRoute_usl" title="colRoute_usl" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_container" name="colUsl_container" title="colUsl_container" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="hazard" name="colHazard" title="colHazard" width="75px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="period" name="colPeriod" title="colPeriod" width="75px">
+    <ModelGridColumn field="period" name="colPeriod" title="Период" width="97px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>

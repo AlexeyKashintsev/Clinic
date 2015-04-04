@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник вредности" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="672px"/>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="670px">
-    <AnchorsPaneConstraints height="30px" left="0px" right="2px" top="0px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="357px" prefWidth="679px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="680px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="-1px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="btnContents" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Назначения" verticalTextPosition="3"/>
@@ -12,25 +12,28 @@
     <AnchorsPaneConstraints height="28px" left="168px" top="30px" width="191px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label1" parent="view" prefHeight="16px" prefWidth="38px" text="Тип">
-    <AnchorsPaneConstraints height="16px" left="371px" top="36px" width="38px"/>
+    <AnchorsPaneConstraints height="16px" left="381px" top="36px" width="38px"/>
   </Label>
   <ModelCombo cursor="0" displayField="type_name" displayList="qHazardTypesList" field="cursor.hazard_type" name="modelCombo" parent="view" prefHeight="28px" prefWidth="252px">
-    <AnchorsPaneConstraints height="28px" left="407px" top="30px" width="252px"/>
+    <AnchorsPaneConstraints height="28px" left="417px" top="30px" width="252px"/>
   </ModelCombo>
-  <ModelGrid cursor="0" data="qHazards" name="modelGrid" parent="view" prefHeight="240px" prefWidth="670px">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="2px" top="60px"/>
+  <ModelGrid cursor="0" data="qHazards" name="modelGrid" parent="view" prefHeight="261px" prefWidth="677px">
+    <AnchorsPaneConstraints bottom="36px" left="0px" right="2px" top="60px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="haz_code" name="colHaz_code" title="Код" width="157px">
+    <ModelGridColumn field="haz_code" name="colHaz_code" title="Код" width="159px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="hazard_type" name="colHazard_type" title="Тип" width="157px">
+    <ModelGridColumn field="hazard_type" name="colHazard_type" title="Тип" width="159px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
-    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Наименование" width="158px">
+    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Наименование" width="159px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="period_type" name="colPeriod_type" title="Периодичность" width="157px">
+    <ModelGridColumn field="period_type" name="colPeriod_type" title="Периодичность" width="159px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
+  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="80px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="7px" height="20px" right="12px" width="80px"/>
+  </Button>
 </layout>

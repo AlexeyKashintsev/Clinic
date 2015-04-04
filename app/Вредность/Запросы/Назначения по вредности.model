@@ -4,7 +4,7 @@
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="142805192740435" entityLocationX="418" entityLocationY="2" entityWidth="150" tableAlias="t" tableName="usl_uslugi" tableSchemaName=""/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="142805190721444" entityLocationX="224" entityLocationY="6" entityWidth="150" tableAlias="t1" tableName="usl_routes" tableSchemaName=""/>
-  <relation leftEntityFieldName="route_usl" leftEntityId="142805190721444" rightEntityFieldName="usl_uslugi_id" rightEntityId="142805192740435"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142805190721444" entityLocationX="223" entityLocationY="6" entityWidth="150" tableAlias="t1" tableName="usl_routes" tableSchemaName=""/>
   <relation leftEntityId="-1" leftEntityParameterName="hazard_id" rightEntityFieldName="hazard" rightEntityId="142805190721444"/>
+  <relation leftEntityFieldName="route_usl" leftEntityId="142805190721444" rightEntityFieldName="usl_uslugi_id" rightEntityId="142805192740435"/>
 </datamodel>
