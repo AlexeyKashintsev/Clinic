@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><Context path="">
-  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="clinic_dev_home" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
-  <Resource driverClassName="org.h2.Driver" name="test_db" password="" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/test_db" username="sa"/>
-  <Resource driverClassName="org.postgresql.Driver" name="clinic_dev_home" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/clinic_dev" username="remotedev"/>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="clinic" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
+  <Resource driverClassName="org.postgresql.Driver" name="clinic" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/clinic" username="remotedev"/>
 </Context>
