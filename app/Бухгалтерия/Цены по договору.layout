@@ -3,13 +3,13 @@
   <ModelGrid cursor="0" data="qPricesByContract" name="modelGrid" parent="view" prefHeight="320px" prefWidth="630px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="5px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_id" name="column" title="Наименование услуги" width="98px">
+    <ModelGridColumn field="usl_id" name="column" title="Наименование услуги" width="99px">
       <ModelCombo displayField="usl_name" displayList="qPricesByContract" list="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="Пол" width="98px">
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="99px">
       <ModelCombo displayField="sex_long" displayList="qSex"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_per_type" name="colPer_type" title="Периодичность" width="98px">
+    <ModelGridColumn field="usl_per_type" name="colPer_type" title="Периодичность" width="99px">
       <ModelCombo displayField="type_name" displayList="qPeriodic"/>
     </ModelGridColumn>
     <ModelGridColumn field="start_date" name="colStart_date" title="Начало" width="98px">
@@ -27,4 +27,5 @@
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
 </layout>

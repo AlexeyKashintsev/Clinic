@@ -8,26 +8,26 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
-  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="310px" prefWidth="570px" rightComponent="mgUsl">
+  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="300px" prefWidth="570px" rightComponent="mgUsl">
     <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="38px" left="0px" right="0px" top="30px"/>
+    <AnchorsPaneConstraints bottom="48px" left="0px" right="0px" top="30px"/>
   </SplitPane>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" parentField="parent" prefHeight="308px" prefWidth="199px">
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" parentField="parent" prefHeight="298px" prefWidth="199px">
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="158px">
+    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="161px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="splitPane" prefHeight="308px" prefWidth="366px">
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="splitPane" prefHeight="298px" prefWidth="366px">
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="325px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="328px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="btnSelect" parent="view" prefHeight="20px" prefWidth="90px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="8px" height="20px" right="10px" width="90px"/>
+  <Button cursor="0" name="btnSelect" parent="view" prefHeight="30px" prefWidth="100px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="8px" height="30px" right="110px" width="100px"/>
   </Button>
-  <Button cursor="0" name="btnCancel" parent="view" prefHeight="20px" prefWidth="80px" text="Отмена">
-    <AnchorsPaneConstraints bottom="8px" height="20px" right="110px" width="80px"/>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="90px" text="Отмена">
+    <AnchorsPaneConstraints bottom="8px" height="30px" right="10px" width="90px"/>
   </Button>
 </layout>

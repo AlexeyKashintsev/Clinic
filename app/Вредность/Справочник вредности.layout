@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник вредности" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Справочник вредности" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="357px" prefWidth="698px"/>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="699px">
     <AnchorsPaneConstraints height="30px" left="0px" right="-1px" top="0px"/>
@@ -19,18 +19,18 @@
   </ModelCombo>
   <ModelGrid cursor="0" data="qHazards" name="modelGrid" parent="view" prefHeight="261px" prefWidth="696px">
     <AnchorsPaneConstraints bottom="36px" left="0px" right="2px" top="60px"/>
-    <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="haz_code" name="colHaz_code" title="Код" width="164px">
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="haz_code" maxWidth="75px" name="colHaz_code" title="Код" width="75px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="hazard_type" name="colHazard_type" title="Тип" width="164px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="haz_type" maxWidth="100px" name="colHazard_type" title="Тип" width="75px">
+      <ModelCombo displayField="type_name" displayList="qHazardTypesList"/>
     </ModelGridColumn>
-    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Наименование" width="164px">
+    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Наименование" width="433px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="period_type" name="colPeriod_type" title="Периодичность" width="163px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="per_type" maxWidth="100px" name="colPeriod_type" title="Периодичность" width="75px">
+      <ModelCombo displayField="period_name" displayList="qPeriods"/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="80px" text="Выбрать">

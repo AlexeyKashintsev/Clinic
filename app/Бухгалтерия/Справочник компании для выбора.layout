@@ -1,19 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник компании для выбора" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Справочник компании для выбора" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="35px" prefWidth="125px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="5px" height="35px" right="5px" width="125px"/>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="30px" prefWidth="125px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="170px" width="125px"/>
   </Button>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="view" prefHeight="35px" prefWidth="35px" toolTipText="Обновить" verticalTextPosition="3">
-    <AnchorsPaneConstraints bottom="5px" height="35px" right="135px" width="35px"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="view" prefHeight="30px" prefWidth="35px" toolTipText="Обновить" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="10px" width="35px"/>
   </Button>
   <ModelGrid cursor="0" data="qAllFirms" name="modelGrid" parent="view" prefHeight="250px" prefWidth="400px">
     <AnchorsPaneConstraints bottom="50px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="company_name" name="colCompany_name" title="Наименование" width="180px">
+    <ModelGridColumn field="company_name" name="colCompany_name" title="Наименование" width="181px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colInn" title="Инн" width="179px">
+    <ModelGridColumn name="colInn" title="Инн" width="181px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="30px" right="0px" width="100px"/>
+  </Button>
 </layout>

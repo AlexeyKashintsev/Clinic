@@ -24,17 +24,17 @@
   <Label cursor="0" name="label3" parent="view" prefHeight="26px" prefWidth="84px" text="Юр. Адрес">
     <AnchorsPaneConstraints height="26px" left="12px" top="83px" width="84px"/>
   </Label>
-  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="264px" prefWidth="495px" selectedComponent="pnlContracts">
-    <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="120px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="250px" prefWidth="495px" selectedComponent="pnlContracts">
+    <AnchorsPaneConstraints bottom="54px" left="0px" right="0px" top="120px"/>
   </TabbedPane>
-  <BorderPane cursor="0" name="pnlContracts" parent="tabbedPane" prefHeight="236px" prefWidth="490px">
+  <BorderPane cursor="0" name="pnlContracts" parent="tabbedPane" prefHeight="222px" prefWidth="490px">
     <TabbedPaneConstraints tabTitle="Договора"/>
   </BorderPane>
-  <BorderPane cursor="0" name="pnlPeople" parent="tabbedPane" prefHeight="236px" prefWidth="490px" visible="false">
+  <BorderPane cursor="0" name="pnlPeople" parent="tabbedPane" prefHeight="222px" prefWidth="490px" visible="false">
     <TabbedPaneConstraints tabTitle="Сотрудники"/>
   </BorderPane>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="29px" prefWidth="98px" text="Сохранить">
-    <AnchorsPaneConstraints bottom="11px" height="29px" right="109px" width="98px"/>
+    <AnchorsPaneConstraints bottom="11px" height="29px" right="119px" width="98px"/>
   </Button>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="29px" prefWidth="94px" text="Отмена">
     <AnchorsPaneConstraints bottom="11px" height="29px" right="17px" width="94px"/>
