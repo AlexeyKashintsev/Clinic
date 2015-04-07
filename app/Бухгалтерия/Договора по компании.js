@@ -6,7 +6,13 @@ function ContractsByCompanyView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-    self.model = model;
+    
+    self.save = function() {
+        model.save();
+    };
+    self.revert = function() {
+        model.revert();
+    }
     
     form.title = "Договора по компании";
     
@@ -21,10 +27,10 @@ function ContractsByCompanyView() {
     self.setCompany = function(aCompanyId) {
         model.qContracts.params.comp_id = aCompanyId;
         model.revert();
-        model.requery();
+        model.qContracts.requery();
     };
     
-    model.qContracts.execute();
+    //model.qContracts.execute();
     
     model.requery(function () {
         // TODO : place your code here
@@ -34,14 +40,16 @@ function ContractsByCompanyView() {
         var aName = prompt("Введите название:");
         if(aName) {
             model.qContracts.push({
-                contr_name: aName
+                contr_name: aName,
+                с_active: true,
+                company_id: model.qContracts.params.comp_id
             });
         }
     };
     
     form.btnReq.onActionPerformed = function(event) {
         if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')) {
-            model.qContracts.execute();
+            model.qContracts.requery();
         }
     };
     
@@ -65,11 +73,13 @@ function ContractsByCompanyView() {
     
     form.modelGrid.onMouseClicked = function(evt){
         if(evt.clickCount > 1){
-            var contractDetailsView = new ContractDetailsView();
-            contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id);
-            contractDetailsView.showModal(function(a){
-                model.qContracts.execute();
+            model.save(function() {
+                var contractDetailsView = new ContractDetailsView();
+                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id);
+                contractDetailsView.showModal(function(a){
+                    model.qContracts.execute();
+                });
             });
         }
-    }
+    };
 }

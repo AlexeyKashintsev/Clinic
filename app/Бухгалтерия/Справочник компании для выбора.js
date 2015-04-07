@@ -2,7 +2,7 @@
  * 
  * @author minya92
  */
-function Справочник_компании_для_выбора() {
+function CompanySelectorView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
@@ -17,4 +17,13 @@ function Справочник_компании_для_выбора() {
         // TODO : place your code here
     });
     
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close(false);
+    };
+    form.btnReq.onActionPerformed = function(event) {
+        model.requery();
+    };
+    form.btnSelect.onActionPerformed = function(event) {
+        form.close(model.qAllFirms.cursor.buh_companies_id);
+    };
 }

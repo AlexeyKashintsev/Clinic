@@ -54,12 +54,12 @@ function CompanyCard() {
 
     form.btnSave.onActionPerformed = function(event) {
         model.save();
-        fmContracts.model.save();
+        fmContracts.save();
         form.close(true);
     };
     form.btnCancel.onActionPerformed = function(event) {
         model.revert();
-        fmContracts.model.revert();
+        fmContracts.revert();
         form.close();
     };
 }

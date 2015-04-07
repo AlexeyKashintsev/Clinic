@@ -7,8 +7,6 @@ function ContractDetailsView() {
         , model = P.loadModel(this.constructor.name)
         , form = P.loadForm(this.constructor.name, model);
     
-    form.title = "Договоры";
-    
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
@@ -21,14 +19,10 @@ function ContractDetailsView() {
     fmCosts.showOnPanel(form.pnlCosts);
     var newContract = false;
     
-    form.ddCompany.onValueChange = function(event) {
-        fmCosts.setContractId(model.qAllFirms.cursor.buh_companies_id);
-        //alert(1);
-    };
-    
     self.setContractID = function(aContractID, aCompanyID) {
         if (aContractID) {
             model.qContract.params.contract_id = aContractID;
+            model.qAllFirms.params.company_id = aCompanyID;
             model.revert();
             model.requery();
             fmCosts.setContractId(aContractID);
@@ -53,7 +47,7 @@ function ContractDetailsView() {
     
     form.btnSave.onActionPerformed = function(event) {
         model.save();
-        fmCosts.model.save();
+        fmCosts.save();
         form.close(true);
     };
     
@@ -63,7 +57,7 @@ function ContractDetailsView() {
             model.save();
         } else            
             model.revert();
-        fmCosts.model.revert();
+        fmCosts.revert();
         form.close(false);
     };
 }

@@ -30,11 +30,6 @@ function UslugaContent() {
     var uslTypeId;
     
     self.setUsluga = function(aUslugaID, aUslTypeID, aUslName) {
-//        if (model.modified){
-//            confirm('Сохранить изменения?') ? model.save() : model.revert();
-//        }
-//        if (model.qUslugiByType.findByKey(aUslugaID)) {
-//        }
         uslContainer = aUslugaID;
         model.qUslugaById.params.usluga_id = aUslugaID;
         model.qUslugaContents.params.usluga_id = aUslugaID;
@@ -85,8 +80,8 @@ function UslugaContent() {
         }
     };
     
-    form.modelCombo.onValueChange = function(event) {
+    /*form.mcUslType.onValueChange = function(event) {
         model.qUslugaById.cursor.usl_type = model.qUslTypes.cursor.usl_types_id;
-    };
+    };*/
 
 }

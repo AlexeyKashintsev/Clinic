@@ -7,8 +7,6 @@ function ContractPricesView() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    self.model = model;
-    
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
@@ -28,6 +26,14 @@ function ContractPricesView() {
         //model.revert();
         model.requery();
     };
+    
+    self.save = function() {
+        model.save();
+    };
+    
+    self.revert = function() {
+        model.revert();
+    }
     
     form.btnAdd.onActionPerformed = function(event) {
         if (!fmUslSel)
@@ -53,5 +59,9 @@ function ContractPricesView() {
                 model.qPricesByContract.cursor.usluga_id = aUslId;
             }
         });
+    };
+    form.btnReq.onActionPerformed = function(event) {
+        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?'))
+            model.qPricesByContract.requery();
     };
 }

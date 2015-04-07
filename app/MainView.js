@@ -44,10 +44,10 @@ function MainView() {
     };
     
     form.miHazards.onActionPerformed = function(event) {
-        if (!fmUslList) {
-            fmUslList = new HazardForm();
+        if (!fmHazards) {
+            fmHazards = new HazardForm();
         }
-        fmUslList.show(form.formDesktop);
+        fmHazards.show(form.formDesktop);
     };
     
     form.miUslugiList.onActionPerformed = function(event) {

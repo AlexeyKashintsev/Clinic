@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
-  <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="142358813809256" entityLocationX="395" entityLocationY="27" entityWidth="150" onAfterScroll="qUslugiByTypeOnScrolled" onRequeried="qUslugiByTypeOnRequeried" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
-  <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142358813604955" entityLocationX="212" entityLocationY="35" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
-  <relation leftEntityFieldName="usl_types_id" leftEntityId="142358813604955" rightEntityId="142358813809256" rightEntityParameterName="usl_type"/>
-  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142358813604955" rightEntityFieldName="usl_types_id" rightEntityId="142358813604955"/>
-  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142358813809256" rightEntityFieldName="usl_types_id" rightEntityId="142358813604955"/>
-</datamodel>
