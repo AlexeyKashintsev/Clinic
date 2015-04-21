@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="contract_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142959820516052" entityLocationX="538" entityLocationY="11" entityWidth="150" tableAlias="t2" tableName="usl_types" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142959805721975" entityLocationX="194" entityLocationY="15" entityWidth="150" tableAlias="t1" tableName="usl_cost" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142959816389737" entityLocationX="358" entityLocationY="13" entityWidth="150" tableAlias="t" tableName="usl_uslugi" tableSchemaName=""/>
+  <relation leftEntityFieldName="usl_type" leftEntityId="142959816389737" rightEntityFieldName="usl_types_id" rightEntityId="142959820516052"/>
+  <relation leftEntityFieldName="usluga_id" leftEntityId="142959805721975" rightEntityFieldName="usl_uslugi_id" rightEntityId="142959816389737"/>
+  <relation leftEntityId="-1" leftEntityParameterName="contract_id" rightEntityFieldName="contract_id" rightEntityId="142959805721975"/>
+</datamodel>

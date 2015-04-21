@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qUslTypesByPrice" Title="" entityHeight="200" entityIconified="false" entityId="142960411094913" entityLocationX="113" entityLocationY="74" entityWidth="150" queryId="qUslTypesByPrice" tableName="" tableSchemaName=""/>
+  <entity Name="qPricesByContractByType" Title="" entityHeight="200" entityIconified="false" entityId="142960411214451" entityLocationX="357" entityLocationY="83" entityWidth="150" queryId="qPricesByContractByType" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="142960411214451" rightEntityFieldName="usl_uslugi_id" rightEntityId="142960411214451"/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142960411214451" rightEntityFieldName="usl_types_id" rightEntityId="142960411094913"/>
+  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142960411094913" rightEntityFieldName="usl_types_id" rightEntityId="142960411094913"/>
+</datamodel>

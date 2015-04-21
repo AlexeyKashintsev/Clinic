@@ -23,7 +23,7 @@ function MainView() {
     ];
     
     var fmUslTypes, fmUslList, fmUslContents;
-    var fmContragents;
+    var fmContragents, fmContracts;
     var fmHazards;
     var fmUsers;
     var fmPatients;
@@ -97,5 +97,10 @@ function MainView() {
         if (!fmUsiLimAgeType)
             fmUsiLimAgeType = new UsiLimAgeTypeForm();
         fmUsiLimAgeType.show(form.formDesktop);
+    };
+    form.mContracts.onActionPerformed = function(event) {
+        if (!fmContracts)
+            fmContracts = new AllContractsView();
+        fmContracts.show(form.formDesktop);
     };
 }

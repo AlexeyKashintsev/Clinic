@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="422px" prefWidth="607px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="40px" prefWidth="350px">
+    <AnchorsPaneConstraints height="40px" left="0px" right="257px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="40px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
+  <ModelGrid cursor="0" data="qContracts" deletable="false" editable="false" insertable="false" name="modelGrid" parent="view" prefHeight="382px" prefWidth="605px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="2px" top="40px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="companyId" name="colCompany" title="Контрагент" width="171px">
+      <ModelCombo displayField="company_name" displayList="qAllFirms"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="contr_name" name="colContr_name" title="Название" width="171px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="с_active" maxWidth="25px" name="colС_active" preferredWidth="25px" title="Активный" width="25px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn field="start_date" maxWidth="100px" name="colStart_date" preferredWidth="100px" title="Дата начала" width="100px">
+      <ModelDate dateFormat="dd.MM.yyyy"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="end_date" maxWidth="100px" name="colEnd_date" preferredWidth="100px" title="Дата окончания" width="100px">
+      <ModelDate dateFormat="dd.MM.yyyy"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="40px" prefWidth="260px">
+    <AnchorsPaneConstraints height="40px" right="0px" top="0px" width="260px"/>
+  </AnchorsPane>
+  <ModelCheckBox cursor="0" field="cursor.с_active" name="cbActive" nullable="false" parent="panel" prefHeight="20px" prefWidth="20px">
+    <AnchorsPaneConstraints height="20px" right="0px" top="10px" width="20px"/>
+  </ModelCheckBox>
+  <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="60px" text="Активные">
+    <AnchorsPaneConstraints height="20px" right="30px" top="10px" width="60px"/>
+  </Label>
+</layout>
