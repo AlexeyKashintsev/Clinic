@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="mkb_find" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="mkb_class" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+    <parameter description="" name="use_class" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="16" typeName="BOOLEAN"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143047038583979" entityLocationX="221" entityLocationY="5" entityWidth="150" tableAlias="t1" tableName="mkb_deseases" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="mkb_class" rightEntityFieldName="mkb_class" rightEntityId="143047038583979"/>
+  <relation leftEntityFieldName="mkb_name" leftEntityId="143047038583979" rightEntityId="-1" rightEntityParameterName="mkb_find"/>
+  <relation leftEntityFieldName="mkb_deseases_id" leftEntityId="143047038583979" rightEntityId="-1" rightEntityParameterName="mkb_find"/>
+</datamodel>

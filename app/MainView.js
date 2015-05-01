@@ -29,6 +29,7 @@ function MainView() {
     var fmPatients;
     var fmPrcieList;
     var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType;
+    var fmMkbDeseases;
     
     form.miUsers.onActionPerformed = function(event) {
         if (!fmUsers) {
@@ -103,6 +104,11 @@ function MainView() {
         if (!fmContracts)
             fmContracts = new AllContractsView();
         fmContracts.show(form.formDesktop);
+    };    
+    form.miMkbDeseases.onActionPerformed = function(event) {
+        if (!fmMkbDeseases)
+            fmMkbDeseases = new MkbDeseasesForm();
+        fmMkbDeseases.show(form.formDesktop);
     };
     form.miPriceList.onActionPerformed = function(event) {
         if (!fmPrcieList)

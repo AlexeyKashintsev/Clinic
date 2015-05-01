@@ -1,0 +1,6 @@
+Select * 
+From mkb_deseases t1
+ Where (:mkb_class = t1.mkb_class or :use_class is null or :use_class = false)
+ and (t1.mkb_name ilike '%' || :mkb_find || '%'
+ or t1.mkb_deseases_id ilike '%' || :mkb_find || '%'
+ or :mkb_find is null)

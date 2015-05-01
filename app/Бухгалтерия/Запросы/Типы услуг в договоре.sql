@@ -2,6 +2,7 @@
  * @public
  * @author Алексей
  * @name qUslTypesByPrice
+ * @public
  */ 
 Select t2.usl_types_id, t2.type_name, t2.type_parent
 From usl_cost t1
