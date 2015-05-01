@@ -27,6 +27,7 @@ function MainView() {
     var fmHazards;
     var fmUsers;
     var fmPatients;
+    var fmPrcieList;
     var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType;
     var fmMkbDeseases;
     
@@ -108,5 +109,10 @@ function MainView() {
         if (!fmMkbDeseases)
             fmMkbDeseases = new MkbDeseasesForm();
         fmMkbDeseases.show(form.formDesktop);
+    };
+    form.miPriceList.onActionPerformed = function(event) {
+        if (!fmPrcieList)
+            fmPrcieList = new PriceListForm();
+        fmPrcieList.show(form.formDesktop);
     };
 }

@@ -17,6 +17,9 @@ function AllContractsView() {
     form.title = "Все договора";
     model.qContracts.requery();
     
+    self.setSelect = function(aSelect){
+        form.btnSelect.visible = aSelect;
+    };
     
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
@@ -24,6 +27,10 @@ function AllContractsView() {
     
     self.showOnPanel = function (aPanel) {
         aPanel.add(form.view);
+    };
+    
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
     };
     
     self.setCompany = function(aCompanyId) {
@@ -66,6 +73,7 @@ function AllContractsView() {
     };
     
     form.cbActive.onMouseClicked = function(event) {
+        alert(form.cbActive.value);
         if(form.cbActive.value)
             model.qContracts.params.c_act = true;
         else
@@ -75,13 +83,18 @@ function AllContractsView() {
     
     form.modelGrid.onMouseClicked = function(evt){
         if(evt.clickCount > 1){
-          //  model.save(function() {
-                var contractDetailsView = new PricesByContract();
-//                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id);
+            model.save(function() {
+                //var contractDetailsView = new PricesByContract();
+                var contractDetailsView = new ContractDetailsView();
+                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id);
                 contractDetailsView.showModal(function(a){
                     model.qContracts.execute();
                 });
-         //   });
+            });
+            //form.close(model.qContracts.cursor);
         }
+    };
+    form.btnSelect.onActionPerformed = function(event) {
+        form.close(model.qContracts.cursor);
     };
 }
