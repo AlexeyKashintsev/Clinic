@@ -11,7 +11,9 @@ function CompanySelectorView() {
         form.show();
     };
     
-    // TODO : place your code here
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
     
     model.requery(function () {
         // TODO : place your code here

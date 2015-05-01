@@ -12,6 +12,14 @@ function HazardForm() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
+    self.getHazardName = function(aHazardId) {
+       return model.qHazards.findByKey(aHazardId).haz_short_name;
+    };
+    
     form.tfHazardSearch.onValueChange = function() {
       model.qHazards.params.hazard_find = form.tfHazardSearch.text;
         model.qHazards.execute();  

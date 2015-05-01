@@ -11,7 +11,9 @@ function ManJobForm() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
-    // TODO : place your code here
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
     
     model.requery(function () {
         // TODO : place your code here
@@ -38,6 +40,8 @@ function ManJobForm() {
             });
     };
     form.button.onActionPerformed = function(event) {
+        if (model.modified && confirm('Сохранить изменения'))
+            model.save();
         form.close(model.qManJob.cursor.man_job_id);
     };
 }

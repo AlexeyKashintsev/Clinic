@@ -48,7 +48,7 @@ function PatientsForm() {
     
     form.mgPatients.onMouseClicked = function(event) {
         if (event.clickCount === 2)
-            form.button1.onActionPerformed();
+            form.btnEditPatient.onActionPerformed();
         form.lbSelectedCount.text = form.mgPatients.selected.length;
     };
 }
