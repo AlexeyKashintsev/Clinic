@@ -13,8 +13,8 @@ function HazardForm() {
     };
     
     form.tfHazardSearch.onValueChange = function() {
-        model.qHazards.params.hazard_find = form.tfHazardSearch.text;
-        model.qHazards.execute();
+      model.qHazards.params.hazard_find = form.tfHazardSearch.text;
+        model.qHazards.execute();  
     };
     
     form.modelCombo.onValueChange = function() {
