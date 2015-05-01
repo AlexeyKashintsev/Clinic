@@ -13,8 +13,9 @@
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiContents" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Назначения по услугам"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miHazards" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Справочник вредности"/>
   <Menu cursor="0" name="mnuCompanies" parent="menuBar" prefHeight="23px" prefWidth="75px" text="Бухгалтерия"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Справочник контрагенты"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="mContracts" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Все договора"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Справочник контрагенты"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="mContracts" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Все договора"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miPriceList" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Прайс лист"/>
   <Menu cursor="0" name="mnuPacients" parent="menuBar" prefHeight="23px" prefWidth="81px" text="Регистратура"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miPatients" parent="mnuPacients" prefHeight="0px" prefWidth="0px" text="Пациенты"/>
   <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="23px" prefWidth="95px" text="Администратор"/>

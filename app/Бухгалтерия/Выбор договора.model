@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="143047988727013" entityLocationX="287" entityLocationY="15" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
+  <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="143047990119394" entityLocationX="49" entityLocationY="18" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="company_id" leftEntityId="143047988727013" rightEntityFieldName="buh_companies_id" rightEntityId="143047990119394"/>
+</datamodel>
