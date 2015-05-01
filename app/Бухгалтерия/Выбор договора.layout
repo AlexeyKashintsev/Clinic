@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="Выбор договора" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="345px" prefWidth="589px"/>
+  <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="310px" prefWidth="589px" rightComponent="modelGrid1">
+    <font family="Tahoma" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="35px" left="0px" right="0px" top="0px"/>
+  </SplitPane>
+  <ModelGrid cursor="0" data="qAllFirms" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" prefHeight="308px" prefWidth="249px">
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="company_name" name="colCompany_name" title="Контрагенты" width="208px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ModelGrid cursor="0" data="qContracts" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="splitPane" prefHeight="308px" prefWidth="335px">
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="contr_name" name="colContr_name" title="Номер договора" width="147px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="с_active" name="colС_active" title="Активный" width="147px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnSelect" parent="view" prefHeight="20px" prefWidth="100px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="5px" height="20px" right="9px" width="100px"/>
+  </Button>
+</layout>

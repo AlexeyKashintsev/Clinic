@@ -27,6 +27,7 @@ function MainView() {
     var fmHazards;
     var fmUsers;
     var fmPatients;
+    var fmPrcieList;
     var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType;
     
     form.miUsers.onActionPerformed = function(event) {
@@ -102,5 +103,10 @@ function MainView() {
         if (!fmContracts)
             fmContracts = new AllContractsView();
         fmContracts.show(form.formDesktop);
+    };
+    form.miPriceList.onActionPerformed = function(event) {
+        if (!fmPrcieList)
+            fmPrcieList = new PriceListForm();
+        fmPrcieList.show(form.formDesktop);
     };
 }

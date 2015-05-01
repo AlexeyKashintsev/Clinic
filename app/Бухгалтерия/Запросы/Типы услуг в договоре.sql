@@ -1,5 +1,5 @@
 /**
- *
+ * @public
  * @author Алексей
  * @name qUslTypesByPrice
  */ 
