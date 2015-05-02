@@ -41,4 +41,8 @@ function SelectContractForm() {
             contract_id  : model.qContracts.cursor.buh_contracts_id
         });
     };
+    
+    form.btnReq.onActionPerformed = function(event) {
+        model.requery();
+    };
 }

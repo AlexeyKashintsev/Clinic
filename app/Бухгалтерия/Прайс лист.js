@@ -21,7 +21,8 @@ function PriceListForm() {
     
     form.button.onActionPerformed = function(event) {
         selectContractForm.showModal(function(aResult){
-            form.lbContract.text = "Контрагент:" +aResult.company_name + " Договор №:" + aResult.contract_name;
+            form.lbContragent.text = aResult.company_name;
+            form.lbContract.text = aResult.contract_name;
             model.qPricesByContractByType.params.contract_id = aResult.contract_id;
             model.qPricesByContractByType.requery();
             
@@ -43,8 +44,14 @@ function PriceListForm() {
     };
 
     form.btnDel.onActionPerformed = function(event) {
-        if(confirm("Удалить?")){
-            model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
+        if(confirm("Удалить запись? \nЭту операцию невозможно отменить!")){
+           // model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
+           model.qDelUslCost.params.cost_id = model.qPricesByContractByType.cursor.usl_cost_id;
+           model.qDelUslCost.execute(function(){
+                    model.qPricesByContractByType.requery();
+                }, function(){
+                    model.qPricesByContractByType.requery();
+            });
         }
     };
     form.btnReq.onActionPerformed = function(event) {
@@ -54,6 +61,7 @@ function PriceListForm() {
     form.btnSave.onActionPerformed = function(event) {
         model.save();
     };
+    
     var fmUslSel;
     form.btnAdd.onActionPerformed = function(event) {
         if (!fmUslSel)
@@ -67,7 +75,31 @@ function PriceListForm() {
             }
         });
     };
+    
+    form.lbContragent.onMouseClicked = function(event) {
+        form.button.onActionPerformed(event);
+    };
+    form.label.onMouseClicked = function(event) {
+        form.button.onActionPerformed(event);
+    };
+    form.label1.onMouseClicked = function(event) {
+        form.button.onActionPerformed(event);
+    };
+    
+    
     form.btnImport.onActionPerformed = function(event) {
-        alert("Временно недоступно!");
+        //alert("Временно недоступно!");
+        selectContractForm.showModal(function(aResult){
+            if(confirm("Вы уверены что хотите загрузить список услуг из " + aResult.company_name + " " + aResult.contract_name)){
+                model.qCopyUslCost.params.contract_select = aResult.contract_id;
+                model.qCopyUslCost.params.contract_target = model.qPricesByContractByType.params.contract_id;
+                model.qCopyUslCost.execute(function(){
+                    model.qPricesByContractByType.requery();
+                }, function(){
+                    model.qPricesByContractByType.requery();
+                });
+                
+            }
+        });
     };
 }

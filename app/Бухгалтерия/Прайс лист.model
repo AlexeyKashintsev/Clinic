@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="143047026225878" entityLocationX="63" entityLocationY="25" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
-  <entity Name="qSex" Title="" entityHeight="104" entityIconified="false" entityId="143048534850240" entityLocationX="546" entityLocationY="226" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
-  <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="143048376308028" entityLocationX="469" entityLocationY="13" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
-  <entity Name="qPeriodic" Title="" entityHeight="200" entityIconified="false" entityId="143048626073879" entityLocationX="233" entityLocationY="237" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>
+  <entity Name="qUslTypes" Title="" entityHeight="99" entityIconified="false" entityId="143047026225878" entityLocationX="57" entityLocationY="25" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
+  <entity Name="qSex" Title="" entityHeight="88" entityIconified="false" entityId="143048534850240" entityLocationX="546" entityLocationY="226" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugiByType" Title="" entityHeight="125" entityIconified="false" entityId="143048376308028" entityLocationX="469" entityLocationY="13" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
+  <entity Name="qDelUslCost" Title="" entityHeight="50" entityIconified="false" entityId="143057246726561" entityLocationX="628" entityLocationY="85" entityWidth="150" queryId="qDelUslCost" tableName="" tableSchemaName=""/>
+  <entity Name="qPeriodic" Title="" entityHeight="68" entityIconified="false" entityId="143048626073879" entityLocationX="67" entityLocationY="235" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>
+  <entity Name="qCopyUslCost" Title="" entityHeight="69" entityIconified="false" entityId="143056877560522" entityLocationX="553" entityLocationY="145" entityWidth="150" queryId="qCopyUslCost" tableName="" tableSchemaName=""/>
   <entity Name="qPricesByContractByType" Title="" entityHeight="200" entityIconified="false" entityId="143048335742012" entityLocationX="274" entityLocationY="25" entityWidth="181" queryId="qPricesByContractByType" tableName="" tableSchemaName=""/>
+  <entity Name="qUsiLimAgeType" Title="" entityHeight="72" entityIconified="false" entityId="143055730417162" entityLocationX="61" entityLocationY="139" entityWidth="150" queryId="qUsiLimAgeType" tableName="" tableSchemaName=""/>
+  <referenceRelation collectionPropertyName="sex" leftEntityFieldName="sex" leftEntityId="143048335742012" rightEntityFieldName="man_sex_id" rightEntityId="143048534850240" scalarPropertyName="usl_sex"/>
   <referenceRelation collectionPropertyName="child" leftEntityFieldName="type_parent" leftEntityId="143047026225878" rightEntityFieldName="usl_types_id" rightEntityId="143047026225878" scalarPropertyName="parent"/>
   <referenceRelation collectionPropertyName="periods" leftEntityFieldName="per_type" leftEntityId="143048335742012" rightEntityFieldName="usl_periodic_type_id" rightEntityId="143048626073879" scalarPropertyName="usl_per_type"/>
-  <referenceRelation collectionPropertyName="uslugi" leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048376308028" scalarPropertyName="usl_id"/>
-  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048335742012"/>
   <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143048376308028" rightEntityFieldName="usl_types_id" rightEntityId="143047026225878"/>
-  <referenceRelation collectionPropertyName="sex" leftEntityFieldName="sex" leftEntityId="143048335742012" rightEntityFieldName="man_sex_id" rightEntityId="143048534850240" scalarPropertyName="usl_sex"/>
-  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143048335742012" rightEntityFieldName="usl_types_id" rightEntityId="143047026225878"/>
+  <referenceRelation collectionPropertyName="usltypes" leftEntityFieldName="usl_type" leftEntityId="143048335742012" rightEntityFieldName="usl_types_id" rightEntityId="143047026225878" scalarPropertyName="q_usl_types"/>
+  <referenceRelation collectionPropertyName="limages" leftEntityFieldName="limitation_age_type" leftEntityId="143048335742012" rightEntityFieldName="usl_lim_age_type_id" rightEntityId="143055730417162" scalarPropertyName="lim_age_type"/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048335742012"/>
+  <referenceRelation collectionPropertyName="uslugi" leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048376308028" scalarPropertyName="usl_id"/>
 </datamodel>
