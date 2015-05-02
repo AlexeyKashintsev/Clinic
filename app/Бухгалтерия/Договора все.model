@@ -2,6 +2,6 @@
   <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="142815203477337" entityLocationX="31" entityLocationY="27" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
   <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142815194125098" entityLocationX="239" entityLocationY="31" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
   <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="142959764679693" entityLocationX="441" entityLocationY="19" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
-  <referenceRelation collectionPropertyName="companies" leftEntityFieldName="company_id" leftEntityId="142815203477337" rightEntityFieldName="buh_companies_id" rightEntityId="142959764679693" scalarPropertyName="companyId"/>
   <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142815194125098" rightEntityFieldName="usl_types_id" rightEntityId="142815194125098"/>
+  <referenceRelation collectionPropertyName="companies" leftEntityFieldName="company_id" leftEntityId="142815203477337" rightEntityFieldName="buh_companies_id" rightEntityId="142959764679693" scalarPropertyName="companyId"/>
 </datamodel>

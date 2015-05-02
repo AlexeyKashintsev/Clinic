@@ -60,4 +60,12 @@ function ContractDetailsView() {
         fmCosts.revert();
         form.close(false);
     };
+    
+    form.lbCompany.onMouseClicked = function(event) {
+        var companiesList = new CompaniesList();
+        companiesList.showModal(function(res){
+            form.lbCompany.text = res.name;
+            model.qContract.cursor.company_id = res.id;
+        });
+    };
 }

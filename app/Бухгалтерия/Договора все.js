@@ -73,7 +73,7 @@ function AllContractsView() {
     };
     
     form.cbActive.onMouseClicked = function(event) {
-        alert(form.cbActive.value);
+        //alert(form.cbActive.value);
         if(form.cbActive.value)
             model.qContracts.params.c_act = true;
         else
@@ -86,7 +86,7 @@ function AllContractsView() {
             model.save(function() {
                 //var contractDetailsView = new PricesByContract();
                 var contractDetailsView = new ContractDetailsView();
-                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id);
+                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id, model.qContracts.cursor.company_id);
                 contractDetailsView.showModal(function(a){
                     model.qContracts.execute();
                 });

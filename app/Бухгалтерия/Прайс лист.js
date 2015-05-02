@@ -11,6 +11,10 @@ function PriceListForm() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     var selectContractForm = new SelectContractForm();
     
     var contractPricesView = new ContractPricesView();
@@ -86,7 +90,6 @@ function PriceListForm() {
         form.button.onActionPerformed(event);
     };
     
-    
     form.btnImport.onActionPerformed = function(event) {
         //alert("Временно недоступно!");
         selectContractForm.showModal(function(aResult){
@@ -101,5 +104,9 @@ function PriceListForm() {
                 
             }
         });
+    };
+    
+    form.btnSelect.onActionPerformed = function(event) {
+        form.close(model.qPricesByContractByType.cursor);
     };
 }

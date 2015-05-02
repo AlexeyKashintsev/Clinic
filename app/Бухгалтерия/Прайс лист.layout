@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Прайс лист" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="387px" prefWidth="757px"/>
-  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="pnlTypes" name="splitPane" parent="view" prefHeight="347px" prefWidth="757px" rightComponent="pnlUsl">
+  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="pnlTypes" name="splitPane" parent="view" prefHeight="310px" prefWidth="757px" rightComponent="pnlUsl">
     <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="40px"/>
+    <AnchorsPaneConstraints bottom="37px" left="0px" right="0px" top="40px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlTypes" parent="splitPane" prefHeight="345px" prefWidth="199px"/>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" name="modelGrid" parent="pnlTypes" parentField="parent" prefHeight="345px" prefWidth="199px">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlTypes" parent="splitPane" prefHeight="308px" prefWidth="199px"/>
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" name="modelGrid" parent="pnlTypes" parentField="parent" prefHeight="308px" prefWidth="199px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="158px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlUsl" parent="splitPane" prefHeight="345px" prefWidth="553px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlUsl" parent="splitPane" prefHeight="308px" prefWidth="553px"/>
   <ToolBar cursor="0" name="toolBar" parent="pnlUsl" prefHeight="30px" prefWidth="558px">
     <AnchorsPaneConstraints height="30px" left="0px" right="-5px" top="0px"/>
   </ToolBar>
@@ -21,7 +21,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/gtk-convert.png" name="btnImport" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Загрузить список из шаблона" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qPricesByContractByType" name="modelGrid1" parent="pnlUsl" prefHeight="314px" prefWidth="556px">
+  <ModelGrid cursor="0" data="qPricesByContractByType" name="modelGrid1" parent="pnlUsl" prefHeight="277px" prefWidth="556px">
     <AnchorsPaneConstraints bottom="1px" left="0px" right="-3px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="86px">
@@ -50,7 +50,7 @@
   <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="90px" text="Выбрать">
     <AnchorsPaneConstraints height="30px" right="7px" top="4px" width="90px"/>
   </Button>
-  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="90px" text="Контрагент">
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="90px" text="Компания">
     <font family="Monospaced" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="10px" top="0px" width="90px"/>
   </Label>
@@ -62,4 +62,7 @@
     <font family="Monospaced" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="120px" right="117px" top="0px"/>
   </Label>
+  <Button cursor="0" name="btnSelect" parent="view" prefHeight="20px" prefWidth="90px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="7px" height="20px" right="7px" width="90px"/>
+  </Button>
 </layout>

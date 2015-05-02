@@ -13,6 +13,10 @@ function CompaniesList() {
         DESKTOP ? form.showInternalFrame(DESKTOP) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     var fmCompany;
     
     model.requery(function () {
@@ -56,4 +60,10 @@ function CompaniesList() {
         }
     };
 
+    form.button.onActionPerformed = function(event) {
+        form.close({
+            id: model.qAllFirms.cursor.buh_companies_id,
+            name: model.qAllFirms.cursor.company_name
+        });
+    };
 }
