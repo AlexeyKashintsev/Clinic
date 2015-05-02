@@ -20,7 +20,14 @@ function ManJobForm() {
     });
     
     form.btnAdd.onActionPerformed = function(event) {
-        model.qManJob.push({});
+        if(form.mgJobs.data.length == 0 && form.tfManJobSearch.text!== '')
+        {
+            model.qManJob.push({job_title: form.tfManJobSearch.text});             
+            form.mgJobs.data = model.qManJob;
+            model.save(function(){});
+        }
+        else if(form.mgJobs.data.length != 0)
+            model.qManJob.push({});
     };
     form.btnDel.onActionPerformed = function(event) {
         if (confirm("Удалить?"))
@@ -43,5 +50,24 @@ function ManJobForm() {
         if (model.modified && confirm('Сохранить изменения'))
             model.save();
         form.close(model.qManJob.cursor.man_job_id);
+    };
+    
+    form.tfManJobSearch.onValueChange = function() {
+//        model.qManJob.params.job_find = form.tfManJobSearch.text ? form.tfManJobSearch.text : null;        
+//        model.qManJob.execute();  
+        if (form.tfManJobSearch.text !== '') {
+            var myRe = form.tfManJobSearch.text; 
+            var newArr = model.qManJob.filter(function(element, index, array) {
+                if(element.job_title.match(new RegExp(myRe, "i")))
+                    return true;
+            });            
+            form.mgJobs.data = newArr;   
+            
+//            if(form.mgJobs.data.length == 0)
+//                console.log("null");
+            
+        } else {
+            form.mgJobs.data = model.qManJob;
+        }
     };
 }
