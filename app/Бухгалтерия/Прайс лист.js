@@ -44,8 +44,14 @@ function PriceListForm() {
     };
 
     form.btnDel.onActionPerformed = function(event) {
-        if(confirm("Удалить?")){
-            model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
+        if(confirm("Удалить запись? \nЭту операцию невозможно отменить!")){
+           // model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
+           model.qDelUslCost.params.cost_id = model.qPricesByContractByType.cursor.usl_cost_id;
+           model.qDelUslCost.execute(function(){
+                    model.qPricesByContractByType.requery();
+                }, function(){
+                    model.qPricesByContractByType.requery();
+            });
         }
     };
     form.btnReq.onActionPerformed = function(event) {
