@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Справочник &quot;Должности&quot;" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="464px"/>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="150px">
-    <AnchorsPaneConstraints height="30px" left="310px" right="4px" top="0px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="439px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="120px">
+    <AnchorsPaneConstraints height="30px" left="310px" right="9px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qManJob" name="mgJobs" parent="view" prefHeight="230px" prefWidth="464px">
+  <ModelGrid cursor="0" data="qManJob" name="mgJobs" parent="view" prefHeight="230px" prefWidth="439px">
     <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="job_title" name="colJob_title" title="Наименование" width="423px">
+    <ModelGridColumn field="job_title" name="colJob_title" title="Наименование" width="398px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
@@ -18,9 +17,9 @@
     <AnchorsPaneConstraints bottom="10px" height="20px" right="20px" width="80px"/>
   </Button>
   <ModelFormattedField cursor="0" field="cursor.haz_to_find" format="" name="tfManJobSearch" parent="view" prefHeight="28px" prefWidth="250px">
-    <AnchorsPaneConstraints height="28px" left="50px" right="164px" top="1px"/>
+    <AnchorsPaneConstraints height="28px" left="50px" right="139px" top="1px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="40px" text="Поиск:">
-    <AnchorsPaneConstraints height="16px" left="10px" right="414px" top="7px"/>
+    <AnchorsPaneConstraints height="16px" left="10px" right="389px" top="7px"/>
   </Label>
 </layout>
