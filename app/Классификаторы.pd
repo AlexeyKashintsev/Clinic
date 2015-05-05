@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142875812812035" entityLocationX="240" entityLocationY="6" entityWidth="150" tableName="MKB_DESEASES"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143047415497335" entityLocationX="41" entityLocationY="212" entityWidth="150" tableName="oth_addresses"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142875675905142" entityLocationX="39" entityLocationY="4" entityWidth="150" tableName="MKB_CLASSES"/>
+</datamodel>

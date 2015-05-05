@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="contract_select" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+    <parameter description="" name="contract_target" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="162"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143056811984330" entityLocationX="269" entityLocationY="6" entityWidth="150" tableAlias="" tableName="usl_cost" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="contract_select" rightEntityFieldName="contract_id" rightEntityId="143056811984330"/>
+</datamodel>

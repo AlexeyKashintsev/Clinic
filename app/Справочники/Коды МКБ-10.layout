@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><layout resizable="false" title="Коды МКБ-10" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="395px" prefWidth="907px"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="86px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="15px" height="20px" right="21px" width="86px"/>
+  </Button>
+  <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="170px" text="Поиск по заболеваниям:">
+    <AnchorsPaneConstraints height="16px" left="20px" top="16px" width="170px"/>
+  </Label>
+  <ModelFormattedField cursor="0" field="cursor.haz_to_find" format="" name="tfDeseasesSearch" parent="view" prefHeight="28px" prefWidth="330px">
+    <AnchorsPaneConstraints height="28px" left="190px" top="10px" width="330px"/>
+  </ModelFormattedField>
+  <SplitPane cursor="0" dividerLocation="450" foreground="#000000" leftComponent="modelGrid1" name="splitPane" parent="view" prefHeight="300px" prefWidth="911px" rightComponent="modelGrid">
+    <font family="Monospaced" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="45px" left="0px" right="-4px" top="50px"/>
+  </SplitPane>
+  <ModelGrid childrenField="childs" cursor="0" data="qMkbClasses" name="modelGrid1" parent="splitPane" parentField="parent" prefHeight="298px" prefWidth="449px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="class_name" name="Классификатор МКБ" title="Классификатор МКБ" width="408px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ModelGrid cursor="0" data="qMkbDeseases" name="modelGrid" parent="splitPane" prefHeight="298px" prefWidth="457px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="mkb_deseases_id" name="colMkb_deseases_id" preferredWidth="40px" title="Код МКБ" width="103px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="mkb_name" name="colMkb_name" preferredWidth="250px" title="Наименование заболевания" width="313px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ModelCheckBox cursor="0" data="qMkbDeseases" field="params.use_class" name="modelCheckBox" nullable="false" parent="view" prefHeight="20px" prefWidth="40px">
+    <AnchorsPaneConstraints height="20px" left="560px" top="14px" width="40px"/>
+  </ModelCheckBox>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="110px" text="Поиск по классам">
+    <AnchorsPaneConstraints height="20px" left="590px" top="14px" width="110px"/>
+  </Label>
+</layout>

@@ -11,7 +11,9 @@ function UslTypesView() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
-    // TODO : place your code here
+    self.showOnPanel = function (aPanel) {
+        aPanel.add(form.view);
+    };
     
     model.requery(function () {
         // TODO : place your code here

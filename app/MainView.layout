@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Управление клиникой" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Управление клиникой" view="view">
   <AnchorsPane cursor="0" name="view" prefHeight="451px" prefWidth="720px"/>
   <DesktopPane background="#464f5c" cursor="0" foreground="#000000" name="formDesktop" parent="view" prefHeight="426px" prefWidth="720px">
     <font family="Monospaced" size="11" style="0"/>
@@ -13,15 +13,18 @@
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiContents" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Назначения по услугам"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miHazards" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Справочник вредности"/>
   <Menu cursor="0" name="mnuCompanies" parent="menuBar" prefHeight="23px" prefWidth="75px" text="Бухгалтерия"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Справочник контрагенты"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Справочник контрагенты"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="mContracts" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Все договора"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miPriceList" parent="mnuCompanies" prefHeight="22px" prefWidth="265px" text="Прайс лист"/>
   <Menu cursor="0" name="mnuPacients" parent="menuBar" prefHeight="23px" prefWidth="81px" text="Регистратура"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miPatients" parent="mnuPacients" prefHeight="0px" prefWidth="0px" text="Пациенты"/>
   <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="23px" prefWidth="95px" text="Администратор"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsers" parent="mnuAdmin" prefHeight="0px" prefWidth="0px" text="Пользователи"/>
   <Menu cursor="0" name="mnuCatalog" parent="menuBar" prefHeight="23px" prefWidth="83px" text="Справочники"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miManJob" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник должности"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriod" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник периодичности"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miObrStatus" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник статус обращения"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник типа периодичности"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник типы ограничений по возрасту"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miManJob" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник должности"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriod" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник периодичности"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miObrStatus" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник статус обращения"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник типа периодичности"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник типы ограничений по возрасту"/>
+  <MenuItem name="miMkbDeseases" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник коды МКБ-10"/>
 </layout>

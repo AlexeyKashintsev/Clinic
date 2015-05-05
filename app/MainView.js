@@ -23,11 +23,13 @@ function MainView() {
     ];
     
     var fmUslTypes, fmUslList, fmUslContents;
-    var fmContragents;
+    var fmContragents, fmContracts;
     var fmHazards;
     var fmUsers;
     var fmPatients;
+    var fmPrcieList;
     var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType;
+    var fmMkbDeseases;
     
     form.miUsers.onActionPerformed = function(event) {
         if (!fmUsers) {
@@ -97,5 +99,20 @@ function MainView() {
         if (!fmUsiLimAgeType)
             fmUsiLimAgeType = new UsiLimAgeTypeForm();
         fmUsiLimAgeType.show(form.formDesktop);
+    };
+    form.mContracts.onActionPerformed = function(event) {
+        if (!fmContracts)
+            fmContracts = new AllContractsView();
+        fmContracts.show(form.formDesktop);
+    };    
+    form.miMkbDeseases.onActionPerformed = function(event) {
+        if (!fmMkbDeseases)
+            fmMkbDeseases = new MkbDeseasesForm();
+        fmMkbDeseases.show(form.formDesktop);
+    };
+    form.miPriceList.onActionPerformed = function(event) {
+        if (!fmPrcieList)
+            fmPrcieList = new PriceListForm();
+        fmPrcieList.show(form.formDesktop);
     };
 }

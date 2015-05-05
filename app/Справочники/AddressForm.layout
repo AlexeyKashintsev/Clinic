@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="100px" prefWidth="545px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="60px" text="Область">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="60px"/>
+  </Label>
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="60px" text="Нас. пункт">
+    <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="60px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="44px" text="Район">
+    <AnchorsPaneConstraints height="20px" right="268px" top="10px" width="44px"/>
+  </Label>
+  <Label cursor="0" name="label3" parent="view" prefHeight="20px" prefWidth="70px" text="Улица">
+    <AnchorsPaneConstraints height="20px" left="320px" top="40px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label4" parent="view" prefHeight="20px" prefWidth="70px" text="Дом">
+    <AnchorsPaneConstraints height="20px" left="10px" top="70px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label5" parent="view" prefHeight="20px" prefWidth="70px" text="Корпус">
+    <AnchorsPaneConstraints height="20px" left="180px" top="70px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label6" parent="view" prefHeight="20px" prefWidth="70px" text="Квартира">
+    <AnchorsPaneConstraints height="20px" left="330px" top="70px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label7" parent="view" prefHeight="20px" prefWidth="50px" text="Индекс">
+    <AnchorsPaneConstraints height="20px" right="92px" top="10px" width="50px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_state" format="" name="tfState" parent="view" prefHeight="20px" prefWidth="143px">
+    <AnchorsPaneConstraints height="20px" left="80px" right="322px" top="10px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_area" format="" name="tfArea" parent="view" prefHeight="20px" prefWidth="119px">
+    <AnchorsPaneConstraints height="20px" right="153px" top="10px" width="119px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_zip" format="" name="tfZip" parent="view" prefHeight="20px" prefWidth="79px">
+    <AnchorsPaneConstraints height="20px" right="13px" top="10px" width="79px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_city" format="" name="tfCity" parent="view" prefHeight="20px" prefWidth="230px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="40px" width="230px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_street" format="" name="tfStreet" parent="view" prefHeight="20px" prefWidth="172px">
+    <AnchorsPaneConstraints height="20px" left="360px" right="13px" top="40px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_home" format="" name="tfHouse" parent="view" prefHeight="20px" prefWidth="90px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="70px" width="90px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_building" format="" name="tfBuilding" parent="view" prefHeight="20px" prefWidth="90px">
+    <AnchorsPaneConstraints height="20px" left="230px" top="70px" width="90px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qAddress" field="cursor.a_flat" format="" name="tfFlat" parent="view" prefHeight="20px" prefWidth="90px">
+    <AnchorsPaneConstraints height="20px" left="390px" top="70px" width="90px"/>
+  </ModelFormattedField>
+</layout>

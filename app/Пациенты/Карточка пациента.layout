@@ -1,97 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Карта пациента" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="451px" prefWidth="400px"/>
-  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="50px" text="Фамилия">
-    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="50px"/>
-  </Label>
-  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="50px" text="Имя">
-    <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="50px"/>
-  </Label>
-  <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="50px" text="Отчество">
-    <AnchorsPaneConstraints height="20px" left="10px" top="70px" width="50px"/>
-  </Label>
-  <Label cursor="0" name="label3" parent="view" prefHeight="20px" prefWidth="50px" text="Пол">
-    <AnchorsPaneConstraints height="20px" right="120px" top="10px" width="50px"/>
-  </Label>
-  <Label cursor="0" name="label4" parent="view" prefHeight="20px" prefWidth="90px" text="Дата рождения">
-    <AnchorsPaneConstraints height="20px" right="80px" top="40px" width="90px"/>
-  </Label>
-  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.surname" format="" name="tfSurname" parent="view" prefHeight="20px" prefWidth="150px">
-    <AnchorsPaneConstraints height="20px" left="70px" right="180px" top="10px"/>
-  </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.firstname" format="" name="tfName" parent="view" prefHeight="20px" prefWidth="150px">
-    <AnchorsPaneConstraints height="20px" left="70px" right="180px" top="40px"/>
-  </ModelFormattedField>
-  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.patronymic" format="" name="tfPatronymic" parent="view" prefHeight="20px" prefWidth="150px">
-    <AnchorsPaneConstraints height="20px" left="70px" right="180px" top="70px"/>
-  </ModelFormattedField>
-  <ModelCombo cursor="0" data="qPatientById" displayField="sex_short" displayList="qSex" field="cursor.sex_list" name="ddSex" parent="view" prefHeight="20px" prefWidth="120px">
-    <AnchorsPaneConstraints height="20px" right="10px" top="10px" width="120px"/>
-  </ModelCombo>
-  <ModelDate cursor="0" data="qPatientById" dateFormat="dd MMM yyyy" field="cursor.date_oft_birth" name="mdDateOfBirth" parent="view" prefHeight="20px" prefWidth="160px">
-    <AnchorsPaneConstraints height="20px" right="10px" top="70px" width="160px"/>
-  </ModelDate>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="452px" prefWidth="570px"/>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
     <AnchorsPaneConstraints bottom="12px" height="30px" right="100px" width="100px"/>
   </Button>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="80px" text="Отмена">
     <AnchorsPaneConstraints bottom="12px" height="30px" right="10px" width="80px"/>
   </Button>
-  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="299px" prefWidth="380px">
-    <AnchorsPaneConstraints bottom="52px" left="10px" right="10px" top="100px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="400px" prefWidth="569px" selectedComponent="pnlCommon">
+    <AnchorsPaneConstraints bottom="52px" left="0px" right="1px" top="0px"/>
   </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlTreats" parent="tabbedPane" prefHeight="271px" prefWidth="375px" visible="true">
-    <TabbedPaneConstraints tabTitle="Обращения"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlCommon" parent="tabbedPane" prefHeight="372px" prefWidth="564px">
+    <TabbedPaneConstraints tabTitle="Основное"/>
   </AnchorsPane>
-  <ToolBar cursor="0" name="toolBar" parent="pnlTreats" prefHeight="33px" prefWidth="375px">
-    <AnchorsPaneConstraints height="33px" left="0px" right="0px" top="0px"/>
-  </ToolBar>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/appointment-new.png" name="btnNewTreat" parent="toolBar" prefHeight="33px" prefWidth="40px" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="mgTreats" parent="pnlTreats" prefHeight="237px" prefWidth="375px">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="34px"/>
-    <ModelGridColumn field="treat_date" name="colTreatDate" title="Дата" width="120px">
-      <ModelDate dateFormat="DD MMM YYYY"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_string" name="colUslugi" title="Услуга" width="120px">
-      <ModelFormattedField/>
-    </ModelGridColumn>
-    <ModelGridColumn field="treat_status" name="colStatus" title="Состояние" width="119px">
-      <ModelCombo displayField="status_name" displayList="qObrStatus"/>
-    </ModelGridColumn>
-  </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlWorkplace" parent="tabbedPane" prefHeight="271px" prefWidth="375px">
+  <BorderPane background="#ffffff" cursor="0" name="pnlAddress" parent="pnlCommon" prefHeight="100px" prefWidth="564px">
+    <AnchorsPaneConstraints height="100px" left="0px" right="0px" top="120px"/>
+  </BorderPane>
+  <ModelDate cursor="0" data="qPatientById" dateFormat="dd MMM yyyy" field="cursor.date_oft_birth" name="mdDateOfBirth" parent="pnlCommon" prefHeight="20px" prefWidth="160px">
+    <AnchorsPaneConstraints height="20px" left="230px" top="70px" width="160px"/>
+  </ModelDate>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.surname" format="" name="tfSurname" parent="pnlCommon" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="70px" top="10px" width="150px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.firstname" format="" name="tfName" parent="pnlCommon" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="70px" top="40px" width="150px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.patronymic" format="" name="tfPatronymic" parent="pnlCommon" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="70px" top="70px" width="150px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.inshurance_number" format="" name="tfOMSNumber" parent="pnlCommon" prefHeight="20px" prefWidth="152px">
+    <AnchorsPaneConstraints height="20px" left="140px" top="260px" width="152px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" field="cursor.drug_intolerance" format="" name="tfDrugIntolerance" parent="pnlCommon" prefHeight="20px" prefWidth="320px">
+    <AnchorsPaneConstraints height="20px" left="230px" top="290px" width="320px"/>
+  </ModelFormattedField>
+  <Label cursor="0" name="label3" parent="pnlCommon" prefHeight="20px" prefWidth="40px" text="Пол">
+    <AnchorsPaneConstraints height="20px" left="230px" top="10px" width="40px"/>
+  </Label>
+  <ModelCombo cursor="0" data="qPatientById" displayField="blood_type" displayList="qManBloodType" field="cursor.b_type" name="ddBlood" parent="pnlCommon" prefHeight="20px" prefWidth="120px">
+    <AnchorsPaneConstraints height="20px" left="110px" top="320px" width="120px"/>
+  </ModelCombo>
+  <Label cursor="0" name="label7" parent="pnlCommon" prefHeight="20px" prefWidth="130px" text="!!!Страховая компания">
+    <AnchorsPaneConstraints height="20px" left="10px" top="230px" width="130px"/>
+  </Label>
+  <Label cursor="0" name="label4" parent="pnlCommon" prefHeight="20px" prefWidth="90px" text="Дата рождения">
+    <AnchorsPaneConstraints height="20px" left="230px" top="40px" width="90px"/>
+  </Label>
+  <Label cursor="0" name="label6" parent="pnlCommon" prefHeight="20px" prefWidth="150px" text="Адрес места жительства">
+    <AnchorsPaneConstraints height="20px" left="10px" top="100px" width="150px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="pnlCommon" prefHeight="20px" prefWidth="50px" text="Отчество">
+    <AnchorsPaneConstraints height="20px" left="10px" top="70px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label1" parent="pnlCommon" prefHeight="20px" prefWidth="50px" text="Имя">
+    <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label" parent="pnlCommon" prefHeight="20px" prefWidth="50px" text="Фамилия">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label8" parent="pnlCommon" prefHeight="20px" prefWidth="130px" text="Номер полиса ОМС">
+    <AnchorsPaneConstraints height="20px" left="10px" top="260px" width="130px"/>
+  </Label>
+  <Label cursor="0" name="label9" parent="pnlCommon" prefHeight="20px" prefWidth="220px" text="Лекарственная непереносимость">
+    <AnchorsPaneConstraints height="20px" left="10px" top="290px" width="220px"/>
+  </Label>
+  <Label cursor="0" name="label10" parent="pnlCommon" prefHeight="20px" prefWidth="130px" text="Группа крови">
+    <AnchorsPaneConstraints height="20px" left="10px" top="320px" width="130px"/>
+  </Label>
+  <ModelCombo cursor="0" data="qPatientById" displayField="sex_short" displayList="qSex" field="cursor.sex_list" name="ddSex" parent="pnlCommon" prefHeight="20px" prefWidth="120px">
+    <AnchorsPaneConstraints height="20px" left="270px" top="10px" width="120px"/>
+  </ModelCombo>
+  <Button cursor="0" name="button" parent="pnlCommon" prefHeight="20px" prefWidth="70px" text="button">
+    <AnchorsPaneConstraints bottom="32px" height="20px" left="240px" width="70px"/>
+  </Button>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlWorkplace" parent="tabbedPane" prefHeight="372px" prefWidth="564px" visible="false">
     <TabbedPaneConstraints tabTitle="Работа и вредность"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" data="qWorkPlaceByPatient" name="mgWorkPlace" parent="pnlWorkplace" prefHeight="100px" prefWidth="375px">
-    <AnchorsPaneConstraints bottom="134px" left="0px" right="0px" top="37px"/>
-    <ModelGridColumn field="company_id" name="colCompany" title="Компания" width="167px">
+  <SplitPane cursor="0" dividerLocation="150" foreground="#000000" leftComponent="panel" name="splitPane" orientation="0" parent="pnlWorkplace" prefHeight="372px" prefWidth="564px" rightComponent="panel1">
+    <font family="Monospaced" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+  </SplitPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="149px" prefWidth="562px"/>
+  <ModelGrid cursor="0" data="qWorkPlaceByPatient" name="mgWorkPlace" parent="panel" prefHeight="99px" prefWidth="562px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="50px"/>
+    <ModelGridColumn field="company" name="colCompany" title="Компания" width="261px">
       <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="job_id" name="colJobTitle" title="Должность" width="167px">
+    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="260px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
     <ModelGridColumn field="active" maxWidth="25px" minWidth="25px" name="colActive" preferredWidth="25px" title="Текущее" width="25px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
-  <Label cursor="0" name="label5" parent="pnlWorkplace" prefHeight="20px" prefWidth="90px" text="Место работы">
-    <AnchorsPaneConstraints height="20px" left="10px" top="6px" width="90px"/>
-  </Label>
-  <Button cursor="0" icon="icons/22x22/actions/insert-object.png" name="btnAddWorkPlace" parent="pnlWorkplace" prefHeight="30px" prefWidth="210px" text="Новое место работы">
-    <AnchorsPaneConstraints height="30px" right="5px" top="1px" width="210px"/>
+  <Button cursor="0" icon="icons/22x22/actions/insert-object.png" name="btnAddWorkPlace" parent="panel" prefHeight="30px" prefWidth="186px" text="Новое место работы">
+    <AnchorsPaneConstraints height="30px" right="8px" top="8px" width="186px"/>
   </Button>
-  <Label cursor="0" name="label6" parent="pnlWorkplace" prefHeight="20px" prefWidth="70px" text="Вредности">
-    <AnchorsPaneConstraints bottom="103px" height="20px" left="10px" width="70px"/>
+  <Label cursor="0" name="label5" parent="panel" prefHeight="20px" prefWidth="200px" text="Место работы">
+    <AnchorsPaneConstraints height="20px" left="10px" top="15px" width="200px"/>
   </Label>
-  <ModelGrid cursor="0" data="qHazardsByManJob" name="modelGrid" parent="pnlWorkplace" prefHeight="91px" prefWidth="375px">
-    <AnchorsPaneConstraints bottom="0px" height="91px" left="0px" right="0px"/>
-    <ModelGridColumn field="haz_short_name" name="column" width="359px">
-      <ModelFormattedField/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="216px" prefWidth="562px"/>
+  <ModelGrid cursor="0" data="qHazardsByManJob" name="mgHazards" parent="panel1" prefHeight="216px" prefWidth="522px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="40px" top="0px"/>
+    <ModelGridColumn field="haz_short_name" name="colHazardName" preferredWidth="20px" readonly="true" title="Вредность" width="506px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" icon="icons/22x22/actions/insert-object.png" name="btnAddHazard" parent="pnlWorkplace" prefHeight="30px" prefWidth="30px">
-    <AnchorsPaneConstraints bottom="98px" height="30px" right="35px" width="30px"/>
+  <Button cursor="0" icon="icons/22x22/actions/insert-object.png" name="btnAddHazard" parent="panel1" prefHeight="30px" prefWidth="30px">
+    <AnchorsPaneConstraints height="30px" right="4px" top="4px" width="30px"/>
   </Button>
-  <Button cursor="0" icon="icons/22x22/actions/list-remove.png" name="btnDelHazard" parent="pnlWorkplace" prefHeight="30px" prefWidth="30px">
-    <AnchorsPaneConstraints bottom="98px" height="30px" right="5px" width="30px"/>
+  <Button cursor="0" icon="icons/22x22/actions/list-remove.png" name="btnDelHazard" parent="panel1" prefHeight="30px" prefWidth="30px">
+    <AnchorsPaneConstraints height="30px" right="4px" top="36px" width="30px"/>
   </Button>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlTreats" parent="tabbedPane" prefHeight="372px" prefWidth="564px" visible="false">
+    <TabbedPaneConstraints tabTitle="Обращения"/>
+  </AnchorsPane>
+  <ToolBar cursor="0" name="toolBar" parent="pnlTreats" prefHeight="33px" prefWidth="564px">
+    <AnchorsPaneConstraints height="33px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/appointment-new.png" name="btnNewTreat" parent="toolBar" prefHeight="33px" prefWidth="40px" verticalTextPosition="3"/>
+  <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="mgTreats" parent="pnlTreats" prefHeight="338px" prefWidth="564px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="34px"/>
+    <ModelGridColumn field="treat_date" name="colTreatDate" title="Дата" width="183px">
+      <ModelDate dateFormat="DD MMM YYYY"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="usl_string" name="colUslugi" title="Услуга" width="183px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="treat_status" name="colStatus" title="Состояние" width="182px">
+      <ModelCombo displayField="status_name" displayList="qObrStatus"/>
+    </ModelGridColumn>
+  </ModelGrid>
 </layout>
