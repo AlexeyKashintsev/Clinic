@@ -113,4 +113,8 @@ function PatientForm() {
     self.tabProcessor = new TabProcessor(form, ['tfSurname', 'tfName'
         , 'tfPatronymic', 'mdDateOfBirth', address,'tfOMSNumber', 'tfDrugIntolerance'
         , 'btnSave']);
+    
+    form.button.onActionPerformed = function(event) {
+        model.qPatientById.cursor.b_type = model.qManBloodType[4];
+    };
 }
