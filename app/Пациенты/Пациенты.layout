@@ -44,13 +44,13 @@
       <ModelTextArea/>
     </ModelGridColumn>
     <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="112px">
-      <ModelDate dateFormat="dd MMMM yyyy" datePicker="false"/>
+      <ModelDate dateFormat="dd MMMM yyyy"/>
     </ModelGridColumn>
-    <ModelGridColumn field="company_id" name="colCompany" readonly="true" title="Компания" width="112px">
-      <ModelCombo/>
+    <ModelGridColumn field="p_company" name="colCompany" readonly="true" title="Компания" width="112px">
+      <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="job_id" name="colJobTitle" readonly="true" title="Должность" width="112px">
-      <ModelCombo/>
+    <ModelGridColumn field="p_job" name="colJobTitle" readonly="true" title="Должность" width="112px">
+      <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="710px">

@@ -36,7 +36,7 @@
   <Label cursor="0" name="label3" parent="pnlCommon" prefHeight="20px" prefWidth="40px" text="Пол">
     <AnchorsPaneConstraints height="20px" left="240px" top="10px" width="40px"/>
   </Label>
-  <ModelCombo cursor="0" data="qPatientById" displayField="blood_type" displayList="qManBloodType" field="cursor.blood" name="ddBlood" parent="pnlCommon" prefHeight="20px" prefWidth="120px">
+  <ModelCombo cursor="0" data="qPatientById" displayField="blood_type" displayList="qManBloodType" field="cursor.p_blood" name="ddBlood" parent="pnlCommon" prefHeight="20px" prefWidth="120px">
     <AnchorsPaneConstraints height="20px" left="110px" top="320px" width="120px"/>
   </ModelCombo>
   <Label cursor="0" name="label7" parent="pnlCommon" prefHeight="20px" prefWidth="130px" text="Страховая компания">
@@ -66,13 +66,13 @@
   <Label cursor="0" name="label10" parent="pnlCommon" prefHeight="20px" prefWidth="130px" text="Группа крови">
     <AnchorsPaneConstraints height="20px" left="10px" top="320px" width="130px"/>
   </Label>
-  <ModelCombo cursor="0" data="qPatientById" displayField="sex_short" displayList="qSex" field="cursor.sex_list" name="ddSex" parent="pnlCommon" prefHeight="20px" prefWidth="120px">
+  <ModelCombo cursor="0" data="qPatientById" displayField="sex_short" displayList="qSex" field="cursor.p_sex" name="ddSex" parent="pnlCommon" prefHeight="20px" prefWidth="120px">
     <AnchorsPaneConstraints height="20px" left="280px" top="10px" width="120px"/>
   </ModelCombo>
   <Button cursor="0" name="button" parent="pnlCommon" prefHeight="20px" prefWidth="90px" text="Выбрать">
     <AnchorsPaneConstraints height="20px" left="310px" top="230px" width="90px"/>
   </Button>
-  <ModelCombo cursor="0" data="qPatientById" displayField="inshurance_company_name" displayList="qBuh_inshurance_company" field="cursor.inshuranceCompany" name="ddBuhIinshuranceCompany" parent="pnlCommon" prefHeight="20px" prefWidth="150px">
+  <ModelCombo cursor="0" data="qPatientById" displayField="inshurance_company_name" displayList="qBuh_inshurance_company" field="cursor.p_inshurance" name="ddBuhIinshuranceCompany" parent="pnlCommon" prefHeight="20px" prefWidth="150px">
     <AnchorsPaneConstraints height="20px" left="140px" top="230px" width="150px"/>
   </ModelCombo>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlWorkplace" parent="tabbedPane" prefHeight="372px" prefWidth="564px" visible="false">
