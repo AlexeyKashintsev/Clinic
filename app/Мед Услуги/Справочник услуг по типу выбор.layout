@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="378px" prefWidth="570px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="373px" prefWidth="570px"/>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="570px">
     <AnchorsPaneConstraints height="30px" left="0px" right="-57px" top="0px" width="570px"/>
   </ToolBar>
@@ -8,26 +8,32 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
-  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="300px" prefWidth="570px" rightComponent="mgUsl">
+  <SplitPane cursor="0" dividerLocation="201" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="300px" prefWidth="570px" rightComponent="panel">
     <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="48px" left="0px" right="0px" top="30px"/>
+    <AnchorsPaneConstraints bottom="43px" left="0px" right="0px" top="30px"/>
   </SplitPane>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" parentField="parent" prefHeight="298px" prefWidth="199px">
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" parentField="parent" prefHeight="298px" prefWidth="200px">
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="158px">
+    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="159px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="splitPane" prefHeight="298px" prefWidth="364px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="298px" prefWidth="363px"/>
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="298px" prefWidth="364px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="-1px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="323px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
+  <Label cursor="0" name="lbLoading" parent="panel" prefHeight="20px" prefWidth="210px" text="Загрузка..." visible="false">
+    <font family="Tahoma" size="18" style="1"/>
+    <AnchorsPaneConstraints bottom="158px" right="53px" top="120px" width="210px"/>
+  </Label>
   <Button cursor="0" name="btnSelect" parent="view" prefHeight="30px" prefWidth="100px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="8px" height="30px" right="10px" width="100px"/>
+    <AnchorsPaneConstraints bottom="8px" height="30px" left="360px" width="100px"/>
   </Button>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="90px" text="Отмена">
-    <AnchorsPaneConstraints bottom="8px" height="30px" left="360px" width="90px"/>
+    <AnchorsPaneConstraints bottom="8px" height="30px" right="10px" width="90px"/>
   </Button>
 </layout>
