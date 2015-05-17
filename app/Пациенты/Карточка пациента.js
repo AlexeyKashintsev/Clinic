@@ -36,16 +36,6 @@ function PatientForm() {
 
     model.requery();
     
-    form.ddSex.onValueChange = function(event) {
-        model.qPatientById.cursor.sex_id = 
-                model.qSex.cursor.man_sex_id;
-    };
-    
-    form.ddBlood.onValueChange = function(event) {
-        model.qPatientById.cursor.blood_type = 
-                model.qManBloodType.cursor.blood_type_id;
-    };
-    
     form.btnSave.onActionPerformed = function(event) {
         model.save(function() {
             address.save();
@@ -122,7 +112,7 @@ function PatientForm() {
         buhIinshuranceCompanyForm.showModal(function(anInshuranceCompany){
             if (anInshuranceCompany)
                 model.qPatientById.cursor.inshurance_company = anInshuranceCompany;
-            form.ddBuhIinshuranceCompany.redraw();
+            //form.ddBuhIinshuranceCompany.redraw();
         });
     };
 }
