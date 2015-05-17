@@ -101,7 +101,6 @@ function PriceListForm() {
                 }, function(){
                     model.qPricesByContractByType.requery();
                 });
-                
             }
         });
     };

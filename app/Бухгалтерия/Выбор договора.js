@@ -45,4 +45,7 @@ function SelectContractForm() {
     form.btnReq.onActionPerformed = function(event) {
         model.requery();
     };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close(false);
+    };
 }
