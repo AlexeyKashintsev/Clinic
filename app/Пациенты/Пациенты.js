@@ -51,4 +51,13 @@ function PatientsForm() {
             form.btnEditPatient.onActionPerformed();
         form.lbSelectedCount.text = form.mgPatients.selected.length;
     };
+    form.btnSelAll.onActionPerformed = function(event) {
+        if (form.mgPatients.selected.length === model.qPatientsByParams.length)
+            form.mgPatients.clearSelection();
+        else
+            model.qPatientsByParams.forEach(function(aCursor) {
+                form.mgPatients.select(aCursor);
+            });
+        form.lbSelectedCount.text = form.mgPatients.selected.length;
+    };
 }
