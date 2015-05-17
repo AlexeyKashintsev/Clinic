@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Выбор договора" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="345px" prefWidth="589px"/>
-  <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="310px" prefWidth="589px" rightComponent="modelGrid1">
-    <font family="Tahoma" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="35px" left="0px" right="0px" top="0px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="367px" prefWidth="589px"/>
+  <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="320px" prefWidth="589px" rightComponent="modelGrid1">
+    <font family="Monospaced" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="47px" left="0px" right="0px" top="0px"/>
   </SplitPane>
-  <ModelGrid cursor="0" data="qAllFirms" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" prefHeight="308px" prefWidth="249px">
-    <ServiceGridColumn name="colService"/>
+  <ModelGrid cursor="0" data="qAllFirms" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" prefHeight="318px" prefWidth="249px">
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="company_name" name="colCompany_name" title="Контрагенты" width="208px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qContracts" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="splitPane" prefHeight="308px" prefWidth="335px">
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="contr_name" name="colContr_name" title="Номер договора" width="147px">
-      <ModelFormattedField/>
+  <ModelGrid cursor="0" data="qContracts" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="splitPane" prefHeight="318px" prefWidth="333px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="contr_name" name="colContr_name" title="Номер договора" width="146px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="с_active" name="colС_active" title="Активный" width="147px">
+    <ModelGridColumn field="с_active" name="colС_active" title="Активный" width="146px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="btnSelect" parent="view" prefHeight="20px" prefWidth="100px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="5px" height="20px" right="9px" width="100px"/>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="35px" prefWidth="120px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="5px" height="35px" right="9px" width="120px"/>
   </Button>
-  <Button cursor="0" name="btnReq" parent="view" prefHeight="20px" prefWidth="90px" text="Обновить">
-    <AnchorsPaneConstraints bottom="5px" height="20px" left="380px" width="90px"/>
+  <Button cursor="0" icon="icons/22x22/actions/new-view-refresh.png" iconTextGap="2" name="btnReq" parent="view" prefHeight="35px" prefWidth="120px" text="Обновить">
+    <AnchorsPaneConstraints bottom="5px" height="35px" left="10px" width="120px"/>
+  </Button>
+  <Button cursor="0" icon="icons/22x22/actions/gtk-no.png" name="btnCancel" parent="view" prefHeight="35px" prefWidth="120px" text="Отмена">
+    <AnchorsPaneConstraints bottom="5px" height="35px" left="330px" width="120px"/>
   </Button>
 </layout>

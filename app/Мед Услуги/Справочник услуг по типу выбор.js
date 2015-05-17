@@ -58,12 +58,16 @@ function Uslugi4SelectView() {
 
     
     form.btnAdd.onActionPerformed = function(event) {
-        var uslName = prompt("Введите название новой услуги:");
-        if(uslName){
-            model.qUslugiByType.push({
-                usl_type: model.qUslTypes.cursor.usl_types_id,
-                usl_name: uslName
-            });
+        if(model.qUslTypes.cursor.usl_types_id === 0){
+            alert("Невозможно создать услугу в категории 'Все услуги'\nВыберите другую категорию!");
+        } else {
+            var uslName = prompt("Введите название новой услуги:");
+            if(uslName){
+                model.qUslugiByType.push({
+                    usl_type: model.qUslTypes.cursor.usl_types_id,
+                    usl_name: uslName
+                });
+            }
         }
     };
     

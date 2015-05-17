@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Прайс лист" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="387px" prefWidth="757px"/>
-  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="pnlTypes" name="splitPane" parent="view" prefHeight="310px" prefWidth="757px" rightComponent="pnlUsl">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="380px" prefWidth="757px"/>
+  <SplitPane cursor="0" dividerLocation="200" foreground="#000000" leftComponent="pnlTypes" name="splitPane" parent="view" prefHeight="290px" prefWidth="757px" rightComponent="pnlUsl">
     <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="37px" left="0px" right="0px" top="40px"/>
+    <AnchorsPaneConstraints bottom="50px" left="0px" right="0px" top="40px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlTypes" parent="splitPane" prefHeight="308px" prefWidth="199px"/>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" name="modelGrid" parent="pnlTypes" parentField="parent" prefHeight="308px" prefWidth="199px">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlTypes" parent="splitPane" prefHeight="288px" prefWidth="199px"/>
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" name="modelGrid" parent="pnlTypes" parentField="parent" prefHeight="288px" prefWidth="199px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="158px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlUsl" parent="splitPane" prefHeight="308px" prefWidth="553px"/>
-  <ToolBar cursor="0" name="toolBar" parent="pnlUsl" prefHeight="30px" prefWidth="558px">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlUsl" parent="splitPane" prefHeight="288px" prefWidth="551px"/>
+  <ToolBar cursor="0" name="toolBar" parent="pnlUsl" prefHeight="30px" prefWidth="556px">
     <AnchorsPaneConstraints height="30px" left="0px" right="-5px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
@@ -21,19 +21,19 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/gtk-convert.png" name="btnImport" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Загрузить список из шаблона" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qPricesByContractByType" name="modelGrid1" parent="pnlUsl" prefHeight="277px" prefWidth="556px">
+  <ModelGrid cursor="0" data="qPricesByContractByType" name="modelGrid1" parent="pnlUsl" prefHeight="257px" prefWidth="554px">
     <AnchorsPaneConstraints bottom="1px" left="0px" right="-3px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="86px">
       <ModelCombo displayField="usl_name" displayList="qPricesByContractByType" list="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_sex" name="colSex" title="Пол" width="86px">
+    <ModelGridColumn field="usl_sex" name="colSex" title="Пол" width="85px">
       <ModelCombo displayField="man_sex_id" displayList="qSex"/>
     </ModelGridColumn>
     <ModelGridColumn field="usl_per_type" name="colPer_type" title="Переодичность" width="86px">
       <ModelCombo displayField="type_name" displayList="qPeriodic"/>
     </ModelGridColumn>
-    <ModelGridColumn field="lim_age_type" name="colVozrastType" title="Тип Возраста" width="86px">
+    <ModelGridColumn field="lim_age_type" name="colVozrastType" title="Тип Возраста" width="85px">
       <ModelCombo displayField="description" displayList="qUsiLimAgeType"/>
     </ModelGridColumn>
     <ModelGridColumn field="limitation_age" name="colVozrast" title="Возраст" width="86px">
@@ -43,26 +43,26 @@
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
-  <Label cursor="0" name="lbContract" parent="view" prefHeight="20px" prefWidth="520px" text="Выберите договор">
+  <Label cursor="0" name="lbContract" parent="view" prefHeight="20px" prefWidth="400px" text="...">
     <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="120px" right="117px" top="20px"/>
+    <AnchorsPaneConstraints height="20px" left="320px" top="20px" width="400px"/>
   </Label>
-  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="90px" text="Выбрать">
-    <AnchorsPaneConstraints height="30px" right="7px" top="4px" width="90px"/>
+  <Button cursor="0" icon="icons/22x22/actions/document-preview.png" name="button" parent="view" prefHeight="30px" prefWidth="196px" text="Выбрать Договор">
+    <AnchorsPaneConstraints height="30px" left="4px" top="4px" width="196px"/>
   </Button>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="90px" text="Компания">
     <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="10px" top="0px" width="90px"/>
+    <AnchorsPaneConstraints height="20px" left="210px" top="0px" width="90px"/>
   </Label>
   <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="90px" text="Договор №">
     <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="10px" top="20px" width="90px"/>
+    <AnchorsPaneConstraints height="20px" left="210px" top="20px" width="90px"/>
   </Label>
-  <Label cursor="0" name="lbContragent" parent="view" prefHeight="20px" prefWidth="520px" text="">
+  <Label cursor="0" name="lbContragent" parent="view" prefHeight="20px" prefWidth="400px" text="...">
     <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="120px" right="117px" top="0px"/>
+    <AnchorsPaneConstraints height="20px" left="320px" top="0px" width="400px"/>
   </Label>
-  <Button cursor="0" name="btnSelect" parent="view" prefHeight="20px" prefWidth="90px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="7px" height="20px" right="7px" width="90px"/>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="37px" prefWidth="130px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="7px" height="37px" right="7px" width="130px"/>
   </Button>
 </layout>
