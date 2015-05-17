@@ -38,8 +38,8 @@ function UslTypesView() {
     form.btnDel.onActionPerformed = function(event) {
         if (model.qUslTypes.cursor.usl_types_id) {
             if (confirm('Внимание! Так же будут удалены услуги с данным типом!\nУдалить данный тип услуги?')) {
-                model.qUslTypes.deleteRow();
-            }
+                model.qUslTypes.delete();//.remove(model.qUslTypes.cursorPos);
+            };
         } else {
             alert('Невозможно удалить данный тип услуг!');
         }
