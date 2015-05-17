@@ -22,14 +22,14 @@ function Uslugi4SelectView() {
     
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
-        form.lbLoading.visible = true;
-        form.mgUsl.visible = false;
-        model.qUslugiByType.requery(function(){
-            form.lbLoading.visible = false;
-            form.mgUsl.visible = true;
-        });
-//        if(!loaderGrid) loaderGrid = new LoaderGrid();
-//        loaderGrid.loader(form, form.mgUsl, model.qUslugiByType);
+//        form.lbLoading.visible = true;
+//        form.mgUsl.visible = false;
+//        model.qUslugiByType.requery(function(){
+//            form.lbLoading.visible = false;
+//            form.mgUsl.visible = true;
+//        });
+        if(!loaderGrid) loaderGrid = new LoaderGrid();
+        loaderGrid.loader(form, form.mgUsl, model.qUslugiByType);
         
     };
     

@@ -11,15 +11,19 @@ function tesst() {
         form.show();
     };
     
-    form.view.lb = new P.Label("ляля");
-    form.view.lb.visible = true;
-    form.view.lb.width = 200;
-    form.view.lb.height = 200;
-    form.view.lb.top = 100;
-    form.view.lb.left = 100;
+    var testLB = new P.Label("ляля");
+    form.panel.add(testLB, new P.Anchors(20,20,20,20,20,20));
+//    testLB.visible = true;
+//    testLB.width = 50;
+//    testLB.height = 50;
+//    testLB.top = 100;
+//    testLB.left = 100;
     
     model.requery(function () {
         // TODO : place your code here
     });
     
+    form.button.onActionPerformed = function(event) {
+        var a = 3;
+    };
 }

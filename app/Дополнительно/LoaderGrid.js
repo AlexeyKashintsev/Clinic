@@ -10,16 +10,15 @@ function LoaderGrid() {
      * 
      */
     self.loader = function(aForm, aGrid, aQuery){
+        var lbLoad = new P.Label("Загрузка...");
+        //lbLoad.icon = new P.Icon.load("icons/loader200x200.gif");
         var parent = aGrid.parent;
-        aForm.lbLoad = new P.Label("12345");
-        aForm.lbLoad.parent = parent;
-        aForm.lbLoad.left = aGrid.left + 40;
-        aForm.lbLoad.top = aGrid.top + 40;
-        console.log(aGrid.left + " " + aGrid.top);
+        parent.add(lbLoad, new P.Anchors(100,100,100,100,100,100));
+
         aGrid.visible = false;
         aQuery.requery(function(){
             aGrid.visible = true;
-            aForm.lbLoad.visible = false;
+            lbLoad.visible = false;
         });
     };
 }
