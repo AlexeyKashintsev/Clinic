@@ -85,10 +85,10 @@
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="149px" prefWidth="562px"/>
   <ModelGrid cursor="0" data="qWorkPlaceByPatient" name="mgWorkPlace" parent="panel" prefHeight="99px" prefWidth="562px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="50px"/>
-    <ModelGridColumn field="company" name="colCompany" title="Компания" width="261px">
+    <ModelGridColumn field="company" name="colCompany" title="Компания" width="259px">
       <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="260px">
+    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="259px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
     <ModelGridColumn field="active" maxWidth="25px" minWidth="25px" name="colActive" preferredWidth="25px" title="Текущее" width="25px">
@@ -104,7 +104,7 @@
   <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="216px" prefWidth="562px"/>
   <ModelGrid cursor="0" data="qHazardsByManJob" name="mgHazards" parent="panel1" prefHeight="216px" prefWidth="522px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="40px" top="0px"/>
-    <ModelGridColumn field="haz_short_name" name="colHazardName" preferredWidth="20px" readonly="true" title="Вредность" width="506px">
+    <ModelGridColumn field="haz_short_name" name="colHazardName" preferredWidth="20px" readonly="true" title="Вредность" width="503px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
@@ -123,13 +123,13 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/appointment-new.png" name="btnNewTreat" parent="toolBar" prefHeight="33px" prefWidth="40px" verticalTextPosition="3"/>
   <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="mgTreats" parent="pnlTreats" prefHeight="338px" prefWidth="564px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="34px"/>
-    <ModelGridColumn field="treat_date" name="colTreatDate" title="Дата" width="183px">
+    <ModelGridColumn field="treat_date" name="colTreatDate" title="Дата" width="182px">
       <ModelDate dateFormat="DD MMM YYYY"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_string" name="colUslugi" title="Услуга" width="183px">
+    <ModelGridColumn field="usl_string" name="colUslugi" title="Услуга" width="182px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="treat_status" name="colStatus" title="Состояние" width="182px">
+    <ModelGridColumn field="treat_status" name="colStatus" title="Состояние" width="181px">
       <ModelCombo displayField="status_name" displayList="qObrStatus"/>
     </ModelGridColumn>
   </ModelGrid>
