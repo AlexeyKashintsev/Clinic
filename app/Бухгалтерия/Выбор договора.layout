@@ -20,12 +20,12 @@
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="35px" prefWidth="120px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="5px" height="35px" right="9px" width="120px"/>
+    <AnchorsPaneConstraints bottom="5px" height="35px" left="330px" width="120px"/>
   </Button>
-  <Button cursor="0" icon="icons/22x22/actions/new-view-refresh.png" iconTextGap="2" name="btnReq" parent="view" prefHeight="35px" prefWidth="120px" text="Обновить">
-    <AnchorsPaneConstraints bottom="5px" height="35px" left="10px" width="120px"/>
+  <Button cursor="0" icon="icons/22x22/actions/new-view-refresh.png" iconTextGap="1" name="btnReq" parent="view" prefHeight="40px" prefWidth="120px" text="Обновить">
+    <AnchorsPaneConstraints bottom="5px" height="40px" left="10px" width="120px"/>
   </Button>
   <Button cursor="0" icon="icons/22x22/actions/gtk-no.png" name="btnCancel" parent="view" prefHeight="35px" prefWidth="120px" text="Отмена">
-    <AnchorsPaneConstraints bottom="5px" height="35px" left="330px" width="120px"/>
+    <AnchorsPaneConstraints bottom="5px" height="35px" right="9px" width="120px"/>
   </Button>
 </layout>

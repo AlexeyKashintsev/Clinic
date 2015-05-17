@@ -23,12 +23,22 @@ function PriceListForm() {
         // TODO : place your code here
     });
     
+    function reqUslTypes(){
+        var prevId = model.qUslTypesByPrice.cursor.usl_types_id;
+        model.qUslTypesByPrice.requery(function(){
+            model.qUslTypesByPrice.cursor.usl_types_id = prevId;
+        });
+    }
+    
     form.button.onActionPerformed = function(event) {
         selectContractForm.showModal(function(aResult){
             form.lbContragent.text = aResult.company_name;
             form.lbContract.text = aResult.contract_name;
             model.qPricesByContractByType.params.contract_id = aResult.contract_id;
             model.qPricesByContractByType.requery();
+            
+            model.qUslTypesByPrice.params.contract_id = aResult.contract_id;
+            model.qUslTypesByPrice.requery();
             
             model.qPricesByContractByType.params.usluga_type = 0;
             model.qPricesByContractByType.requery();
@@ -41,15 +51,15 @@ function PriceListForm() {
         form.button.onActionPerformed(event);
     };
     
-    model.qUslTypes.onScrolled = function(event) {
+    model.qUslTypesByPrice.onScrolled = function(event) {
         //contractPricesView.setUslType(model.qUslTypes.cursor.usl_types_id);
-        model.qPricesByContractByType.params.usluga_type = model.qUslTypes.cursor.usl_types_id ? model.qUslTypes.cursor.usl_types_id : 0;
+        model.qPricesByContractByType.params.usluga_type = model.qUslTypesByPrice.cursor.usl_types_id ? model.qUslTypesByPrice.cursor.usl_types_id : 0;
         model.qPricesByContractByType.requery();
     };
 
     form.btnDel.onActionPerformed = function(event) {
+        //model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
         if(confirm("Удалить запись? \nЭту операцию невозможно отменить!")){
-           // model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
            model.qDelUslCost.params.cost_id = model.qPricesByContractByType.cursor.usl_cost_id;
            model.qDelUslCost.execute(function(){
                     model.qPricesByContractByType.requery();
@@ -59,11 +69,14 @@ function PriceListForm() {
         }
     };
     form.btnReq.onActionPerformed = function(event) {
-        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?'))
+        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')){
             model.qPricesByContractByType.requery();
+            reqUslTypes();
+        }
     };
     form.btnSave.onActionPerformed = function(event) {
         model.save();
+        reqUslTypes();
     };
     
     var fmUslSel;
@@ -76,6 +89,7 @@ function PriceListForm() {
                     usluga_id   :   aUslId,
                     contract_id :   model.qPricesByContractByType.params.contract_id
                 });
+                //model.qUslTypesByPrice.
             }
         });
     };
@@ -93,14 +107,16 @@ function PriceListForm() {
     form.btnImport.onActionPerformed = function(event) {
         //alert("Временно недоступно!");
         selectContractForm.showModal(function(aResult){
-            if(confirm("Вы уверены что хотите загрузить список услуг из " + aResult.company_name + " " + aResult.contract_name)){
-                model.qCopyUslCost.params.contract_select = aResult.contract_id;
-                model.qCopyUslCost.params.contract_target = model.qPricesByContractByType.params.contract_id;
-                model.qCopyUslCost.execute(function(){
-                    model.qPricesByContractByType.requery();
-                }, function(){
-                    model.qPricesByContractByType.requery();
-                });
+            if(aResult){
+                if(confirm("Вы уверены что хотите загрузить список услуг из " + aResult.company_name + " " + aResult.contract_name)){
+                    model.qCopyUslCost.params.contract_select = aResult.contract_id;
+                    model.qCopyUslCost.params.contract_target = model.qPricesByContractByType.params.contract_id;
+                    model.qCopyUslCost.execute(function(){
+                        model.qPricesByContractByType.requery();
+                    }, function(){
+                        model.qPricesByContractByType.requery();
+                    });
+                }
             }
         });
     };

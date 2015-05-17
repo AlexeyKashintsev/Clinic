@@ -5,7 +5,7 @@
     <AnchorsPaneConstraints bottom="50px" left="0px" right="0px" top="40px"/>
   </SplitPane>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlTypes" parent="splitPane" prefHeight="288px" prefWidth="199px"/>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" name="modelGrid" parent="pnlTypes" parentField="parent" prefHeight="288px" prefWidth="199px">
+  <ModelGrid childrenField="c_child" cursor="0" data="qUslTypesByPrice" deletable="false" editable="false" insertable="false" name="modelGrid" parent="pnlTypes" parentField="p_parent" prefHeight="288px" prefWidth="199px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="158px">
@@ -21,7 +21,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/gtk-convert.png" name="btnImport" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Загрузить список из шаблона" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qPricesByContractByType" name="modelGrid1" parent="pnlUsl" prefHeight="257px" prefWidth="554px">
+  <ModelGrid cursor="0" data="qPricesByContractByType" deletable="false" name="modelGrid1" parent="pnlUsl" prefHeight="257px" prefWidth="554px">
     <AnchorsPaneConstraints bottom="1px" left="0px" right="-3px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="86px">
