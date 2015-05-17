@@ -10,6 +10,7 @@ function PatientForm() {
     var contAgSel, jobSel, hazSel, patientId;
     var address = new AddressForm();
     address.showOnPanel(form.pnlAddress);
+    var buhIinshuranceCompanyForm = false;
     
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
@@ -115,6 +116,13 @@ function PatientForm() {
         , 'btnSave']);
     
     form.button.onActionPerformed = function(event) {
-        model.qPatientById.cursor.b_type = model.qManBloodType[4];
+        if(!buhIinshuranceCompanyForm){
+            buhIinshuranceCompanyForm = new BuhIinshuranceCompanyForm();
+        }
+        buhIinshuranceCompanyForm.showModal(function(anInshuranceCompany){
+            if (anInshuranceCompany)
+                model.qPatientById.cursor.inshurance_company = anInshuranceCompany;
+            form.ddBuhIinshuranceCompany.redraw();
+        });
     };
 }
