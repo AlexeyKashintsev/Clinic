@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <Label cursor="0" icon="icons/loader200x200.gif" name="lbLoad" parent="view" prefHeight="200px" prefWidth="200px" text="label">
+  <Label cursor="0" icon="icons/loading5.gif" name="lbLoad" parent="view" prefHeight="200px" prefWidth="200px">
     <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="200px"/>
   </Label>
 </layout>

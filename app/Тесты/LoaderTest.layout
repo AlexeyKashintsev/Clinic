@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="250px" prefWidth="400px">
-    <AnchorsPaneConstraints height="250px" left="0px" top="0px" width="400px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="399px" prefWidth="643px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="340px" prefWidth="620px">
+    <AnchorsPaneConstraints height="340px" left="0px" top="0px" width="620px"/>
   </AnchorsPane>
   <ModelGrid cursor="0" data="qUslTypes" name="modelGrid" parent="panel" prefHeight="170px" prefWidth="240px">
-    <AnchorsPaneConstraints height="170px" left="150px" top="50px" width="240px"/>
+    <AnchorsPaneConstraints height="170px" left="370px" top="160px" width="240px"/>
     <ServiceGridColumn name="colService"/>
     <ModelGridColumn field="type_name" name="colType_name" title="colType_name" width="199px">
       <ModelFormattedField/>
