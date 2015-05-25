@@ -9,7 +9,7 @@ function Uslugi4SelectView() {
     
     var uslugaContent = new UslugaContent();
     
-    P.require(["Дополнительно/LoaderProcessor.js"]);
+    P.require(["Дополнительно/RequeryAnimate.js"]);
     
     form.title = "Выбор услуги";
     
@@ -23,7 +23,7 @@ function Uslugi4SelectView() {
     
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
-        LoaderProcessor(form.mgUsl, model.qUslugiByType);
+        RequeryAnimate(form.mgUsl, model.qUslugiByType);
         
     };
     

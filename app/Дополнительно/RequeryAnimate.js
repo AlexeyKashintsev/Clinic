@@ -2,7 +2,7 @@
  * 
  * @author minya92
  */
-function requeryAnimate(aGrid, aQuery) {  
+function RequeryAnimate(aGrid, aQuery) {  
     var parent = aGrid.parent;
     var lbLoad = new P.Label('null');
     P.Icon.load('icons/loading5.gif', function(data){

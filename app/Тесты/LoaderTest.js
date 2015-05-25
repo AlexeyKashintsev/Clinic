@@ -10,7 +10,7 @@ function LoaderTest() {
     self.show = function () {
         form.show();
     };
-    P.require(["Дополнительно/LoaderProcessor.js"]);
+    P.require(["Дополнительно/RequeryAnimate.js"]);
     var loaderProcessor;
     // TODO : place your code here
     
@@ -20,19 +20,6 @@ function LoaderTest() {
     
     form.button.onActionPerformed = function(event) {
         //if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
-        LoaderProcessor(form.modelGrid, model.qUslTypes);
-    };
-    form.button1.onActionPerformed = function(event) {
-        var lbLoad = new P.Label(null);
-    
-//        P.require("icons/loader200x200.gif", function(aResource) {
-//            console.log(aResource);
-//        });
-        lbLoad.width = 100;
-        lbLoad.height = 100;
-        P.Icon.load("icons/loader200x200.gif", );
-        form.pnlTest.add(lbLoad, new P.Anchors ('0', 0,'100%',1,'100%','100%'));
-        
-        
+        RequeryAnimate(form.modelGrid, model.qUslTypes);
     };
 }
