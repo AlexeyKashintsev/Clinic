@@ -10,7 +10,7 @@ function LoaderTest() {
     self.show = function () {
         form.show();
     };
-    
+    P.require(["Дополнительно/LoaderProcessor.js"]);
     var loaderProcessor;
     // TODO : place your code here
     
@@ -19,7 +19,7 @@ function LoaderTest() {
     });
     
     form.button.onActionPerformed = function(event) {
-        if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
-        loaderProcessor.loader(form, form.modelGrid, model.qUslTypes);
+        //if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
+        LoaderProcessor(form.modelGrid, model.qUslTypes);
     };
 }

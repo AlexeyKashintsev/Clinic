@@ -8,7 +8,8 @@ function Uslugi4SelectView() {
             , form = P.loadForm(this.constructor.name, model);
     
     var uslugaContent = new UslugaContent();
-    var loaderProcessor = false;
+    
+    P.require(["Дополнительно/LoaderProcessor.js"]);
     
     form.title = "Выбор услуги";
     
@@ -22,14 +23,7 @@ function Uslugi4SelectView() {
     
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
-//        form.lbLoading.visible = true;
-//        form.mgUsl.visible = false;
-//        model.qUslugiByType.requery(function(){
-//            form.lbLoading.visible = false;
-//            form.mgUsl.visible = true;
-//        });
-        if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
-        loaderProcessor.loader(form, form.mgUsl, model.qUslugiByType);
+        LoaderProcessor(form.mgUsl, model.qUslugiByType);
         
     };
     
