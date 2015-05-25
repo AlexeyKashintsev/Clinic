@@ -26,9 +26,9 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Label cursor="0" name="lbLoading" parent="panel" prefHeight="20px" prefWidth="210px" text="Загрузка..." visible="false">
-    <font family="Tahoma" size="18" style="1"/>
-    <AnchorsPaneConstraints bottom="158px" right="53px" top="120px" width="210px"/>
+  <Label cursor="0" icon="icons/loader200x200.gif" name="lbLoading" parent="panel" prefHeight="150px" prefWidth="210px" text="Загрузка..." visible="false">
+    <font family="Monospaced" size="18" style="1"/>
+    <AnchorsPaneConstraints bottom="48px" right="53px" top="100px" width="210px"/>
   </Label>
   <Button cursor="0" name="btnSelect" parent="view" prefHeight="30px" prefWidth="100px" text="Выбрать">
     <AnchorsPaneConstraints bottom="8px" height="30px" left="360px" width="100px"/>

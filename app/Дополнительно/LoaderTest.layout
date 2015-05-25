@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="250px" prefWidth="400px">
+    <AnchorsPaneConstraints height="250px" left="0px" top="0px" width="400px"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" data="qUslTypes" name="modelGrid" parent="panel" prefHeight="170px" prefWidth="240px">
+    <AnchorsPaneConstraints height="170px" left="150px" top="50px" width="240px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="type_name" name="colType_name" title="colType_name" width="199px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="130px" text="Test">
+    <AnchorsPaneConstraints bottom="10px" height="30px" right="0px" width="130px"/>
+  </Button>
+</layout>

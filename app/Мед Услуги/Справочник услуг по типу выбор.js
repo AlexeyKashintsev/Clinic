@@ -8,7 +8,7 @@ function Uslugi4SelectView() {
             , form = P.loadForm(this.constructor.name, model);
     
     var uslugaContent = new UslugaContent();
-    var loaderGrid = false;
+    var loaderProcessor = false;
     
     form.title = "Выбор услуги";
     
@@ -28,8 +28,8 @@ function Uslugi4SelectView() {
 //            form.lbLoading.visible = false;
 //            form.mgUsl.visible = true;
 //        });
-        if(!loaderGrid) loaderGrid = new LoaderGrid();
-        loaderGrid.loader(form, form.mgUsl, model.qUslugiByType);
+        if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
+        loaderProcessor.loader(form, form.mgUsl, model.qUslugiByType);
         
     };
     
