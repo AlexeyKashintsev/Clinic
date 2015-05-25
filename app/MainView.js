@@ -14,7 +14,11 @@ function MainView() {
     
     self.show = function (aDesktop) {
         //aDesktop ? form.showInternalFrame(aDesktop) : form.show();
-        form.view.showOn(document.getElementById('Main'));
+        try {
+            form.view.showOn(document.getElementById('Main'));
+        } catch(e) {
+            form.show();
+        }
     };
     
     var obj = [

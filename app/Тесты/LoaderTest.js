@@ -22,4 +22,17 @@ function LoaderTest() {
         if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
         loaderProcessor.loader(form, form.modelGrid, model.qUslTypes);
     };
+    form.button1.onActionPerformed = function(event) {
+        var lbLoad = new P.Label(null);
+    
+//        P.require("icons/loader200x200.gif", function(aResource) {
+//            console.log(aResource);
+//        });
+        lbLoad.width = 100;
+        lbLoad.height = 100;
+        P.Icon.load("icons/loader200x200.gif", );
+        form.pnlTest.add(lbLoad, new P.Anchors ('0', 0,'100%',1,'100%','100%'));
+        
+        
+    };
 }

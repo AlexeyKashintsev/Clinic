@@ -21,16 +21,16 @@ function Uslugi4SelectView() {
     };
     
     model.qUslTypes.onScrolled = function(){
-        model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
+//        model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
 //        form.lbLoading.visible = true;
 //        form.mgUsl.visible = false;
 //        model.qUslugiByType.requery(function(){
 //            form.lbLoading.visible = false;
 //            form.mgUsl.visible = true;
 //        });
-        if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
-        loaderProcessor.loader(form, form.mgUsl, model.qUslugiByType);
-        
+//        if(!loaderProcessor) loaderProcessor = new LoaderProcessor();
+//        loaderProcessor.loader(form, form.mgUsl, model.qUslugiByType);
+//        
     };
     
     model.requery(function () {

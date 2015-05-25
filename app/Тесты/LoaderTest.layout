@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="399px" prefWidth="643px"/>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="340px" prefWidth="620px">
-    <AnchorsPaneConstraints height="340px" left="0px" top="0px" width="620px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="190px" prefWidth="290px">
+    <AnchorsPaneConstraints height="190px" left="0px" top="0px" width="290px"/>
   </AnchorsPane>
   <ModelGrid cursor="0" data="qUslTypes" name="modelGrid" parent="panel" prefHeight="170px" prefWidth="240px">
-    <AnchorsPaneConstraints height="170px" left="370px" top="160px" width="240px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="colType_name" width="199px">
-      <ModelFormattedField/>
+    <AnchorsPaneConstraints height="170px" left="10px" top="10px" width="240px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="type_name" name="colType_name" title="colType_name" width="202px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="130px" text="Test">
     <AnchorsPaneConstraints bottom="10px" height="30px" right="0px" width="130px"/>
+  </Button>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlTest" parent="view" prefHeight="240px" prefWidth="250px">
+    <AnchorsPaneConstraints height="240px" left="300px" top="0px" width="250px"/>
+  </AnchorsPane>
+  <Button cursor="0" name="button1" parent="view" prefHeight="20px" prefWidth="70px" text="button1">
+    <AnchorsPaneConstraints height="20px" right="103px" top="260px" width="70px"/>
   </Button>
 </layout>

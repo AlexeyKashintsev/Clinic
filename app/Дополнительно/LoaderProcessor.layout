@@ -3,4 +3,7 @@
   <Label cursor="0" icon="icons/loading5.gif" name="lbLoad" parent="view" prefHeight="200px" prefWidth="200px">
     <AnchorsPaneConstraints height="200px" left="0px" top="0px" width="200px"/>
   </Label>
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="100px" prefWidth="100px">
+    <AnchorsPaneConstraints height="100px" right="10px" top="70px" width="100px"/>
+  </ModelGrid>
 </layout>

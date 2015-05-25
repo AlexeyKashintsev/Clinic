@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143187888426620" entityLocationX="66" entityLocationY="30" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143187888426620" rightEntityFieldName="buh_contracts_id" rightEntityId="143187888426620"/>
+</datamodel>

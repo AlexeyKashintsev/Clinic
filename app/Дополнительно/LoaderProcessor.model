@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<datamodel>
-    <parametersEntity Title="Параметры" entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150">
-    </parametersEntity>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qAddress" Title="" entityHeight="200" entityIconified="false" entityId="143254616821903" entityLocationX="219" entityLocationY="225" entityWidth="150" queryId="qAddress" tableName="" tableSchemaName=""/>
 </datamodel>
