@@ -8,9 +8,7 @@ function Uslugi4SelectView() {
             , form = P.loadForm(this.constructor.name, model);
     
     var uslugaContent = new UslugaContent();
-    
-    P.require(["Дополнительно/RequeryAnimate.js"]);
-    
+
     form.title = "Выбор услуги";
     
     self.show = function (aDesktop) {

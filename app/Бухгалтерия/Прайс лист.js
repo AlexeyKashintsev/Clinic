@@ -54,18 +54,20 @@ function PriceListForm() {
     model.qUslTypesByPrice.onScrolled = function(event) {
         //contractPricesView.setUslType(model.qUslTypes.cursor.usl_types_id);
         model.qPricesByContractByType.params.usluga_type = model.qUslTypesByPrice.cursor.usl_types_id ? model.qUslTypesByPrice.cursor.usl_types_id : 0;
-        model.qPricesByContractByType.requery();
+        
+        RequeryAnimate(form.modelGrid1, model.qPricesByContractByType);
+        //model.qPricesByContractByType.requery();
     };
 
     form.btnDel.onActionPerformed = function(event) {
         //model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
         if(confirm("Удалить запись? \nЭту операцию невозможно отменить!")){
            model.qDelUslCost.params.cost_id = model.qPricesByContractByType.cursor.usl_cost_id;
-           model.qDelUslCost.execute(function(){
-                    model.qPricesByContractByType.requery();
-                }, function(){
-                    model.qPricesByContractByType.requery();
-            });
+           model.qDelUslCost.enqueueUpdate();// ()//(function(){
+//                    model.qPricesByContractByType.requery();
+//                }, function(){
+//                    model.qPricesByContractByType.requery();
+//            });
         }
     };
     form.btnReq.onActionPerformed = function(event) {
@@ -81,17 +83,20 @@ function PriceListForm() {
     
     var fmUslSel;
     form.btnAdd.onActionPerformed = function(event) {
-        if (!fmUslSel)
-            fmUslSel = new Uslugi4SelectView();
-        fmUslSel.showModal(function(aUslId) {
-            if (aUslId) {
-                model.qPricesByContractByType.push({
-                    usluga_id   :   aUslId,
-                    contract_id :   model.qPricesByContractByType.params.contract_id
-                });
-                //model.qUslTypesByPrice.
-            }
-        });
+        if(model.qPricesByContractByType.params.contract_id){
+            if (!fmUslSel)
+                fmUslSel = new Uslugi4SelectView();
+            fmUslSel.showModal(function(aUslId) {
+                if (aUslId) {
+                    model.qPricesByContractByType.push({
+                        usluga_id   :   aUslId,
+                        contract_id :   model.qPricesByContractByType.params.contract_id
+                    });
+                    //model.qUslTypesByPrice.
+                }
+            });
+        } else
+            alert("Вы не выбрали договор!");
     };
     
     form.lbContragent.onMouseClicked = function(event) {

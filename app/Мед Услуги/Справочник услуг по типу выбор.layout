@@ -27,7 +27,7 @@
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnSelect" parent="view" prefHeight="30px" prefWidth="100px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="8px" height="30px" left="360px" width="100px"/>
+    <AnchorsPaneConstraints bottom="8px" height="30px" right="110px" width="100px"/>
   </Button>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="90px" text="Отмена">
     <AnchorsPaneConstraints bottom="8px" height="30px" right="10px" width="90px"/>
