@@ -71,10 +71,14 @@ function PriceListForm() {
         }
     };
     form.btnReq.onActionPerformed = function(event) {
-        if (!model.modified || confirm('Изменения будут потеряны.\nЗагрузить новые данные?')){
-            model.qPricesByContractByType.requery();
-            reqUslTypes();
+        if(model.modified){
+            if(!confirm("Внесенные изменения будут потеряны.\nОбновить?")){
+                //break;
+            }
         }
+        model.qPricesByContractByType.requery();
+        reqUslTypes();
+        alert("Вася");
     };
     form.btnSave.onActionPerformed = function(event) {
         model.save();
