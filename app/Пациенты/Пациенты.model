@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="qManJob" Title="" entityHeight="200" entityIconified="false" entityId="143187143598379" entityLocationX="484" entityLocationY="263" entityWidth="150" queryId="qManJob" tableName="" tableSchemaName=""/>
   <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="142816396875860" entityLocationX="477" entityLocationY="48" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
-  <entity Name="qPatientsByParams" Title="" entityHeight="200" entityIconified="false" entityId="142808019007170" entityLocationX="200" entityLocationY="203" entityWidth="150" queryId="qPatientsByParams" tableName="" tableSchemaName=""/>
+  <entity Name="qPatientsByParams" Title="" entityHeight="225" entityIconified="false" entityId="142808019007170" entityLocationX="200" entityLocationY="203" entityWidth="150" queryId="qPatientsByParams" tableName="" tableSchemaName=""/>
   <referenceRelation collectionPropertyName="j_patient" leftEntityFieldName="job_id" leftEntityId="142808019007170" rightEntityFieldName="man_job_id" rightEntityId="143187143598379" scalarPropertyName="p_job"/>
   <referenceRelation collectionPropertyName="c_patient" leftEntityFieldName="company_id" leftEntityId="142808019007170" rightEntityFieldName="buh_companies_id" rightEntityId="142816396875860" scalarPropertyName="p_company"/>
 </datamodel>

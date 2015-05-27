@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qPatientById" Title="" entityHeight="276" entityIconified="false" entityId="143275118277115" entityLocationX="71" entityLocationY="48" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
+  <entity Name="qWorkPlaceByPatient" Title="" entityHeight="137" entityIconified="false" entityId="143275119127006" entityLocationX="260" entityLocationY="47" entityWidth="150" queryId="qWorkPlaceByPatient" tableName="" tableSchemaName=""/>
+  <entity Name="qHazardsByManJob" Title="" entityHeight="224" entityIconified="false" entityId="143275123947785" entityLocationX="457" entityLocationY="47" entityWidth="150" queryId="qHazardsByManJob" tableName="" tableSchemaName=""/>
+  <referenceRelation collectionPropertyName="workplace" leftEntityFieldName="workplace_id" leftEntityId="143275123947785" rightEntityFieldName="man_workplace_id" rightEntityId="143275119127006" scalarPropertyName="hazards"/>
+  <referenceRelation collectionPropertyName="patient" leftEntityFieldName="man_id" leftEntityId="143275119127006" rightEntityFieldName="man_patient_id" rightEntityId="143275118277115" scalarPropertyName="workplace"/>
+  <referenceRelation leftEntityFieldName="hazard_id" leftEntityId="143275123947785" rightEntityFieldName="hazards_id" rightEntityId="143275123947785"/>
+</datamodel>

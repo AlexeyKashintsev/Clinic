@@ -10,11 +10,4 @@ function AppointmentForm() {
     self.show = function () {
         form.show();
     };
-    
-    // TODO : place your code here
-    
-    model.requery(function () {
-        // TODO : place your code here
-    });
-    
 }
