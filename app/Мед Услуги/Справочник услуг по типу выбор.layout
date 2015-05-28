@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="373px" prefWidth="570px"/>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="570px">
-    <AnchorsPaneConstraints height="30px" left="0px" right="-57px" top="0px" width="570px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="423px" prefWidth="724px"/>
+  <SplitPane cursor="0" dividerLocation="251" foreground="#000000" leftComponent="panel1" name="splitPane" parent="view" prefHeight="380px" prefWidth="724px" rightComponent="panel">
+    <font family="Monospaced" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="43px" left="0px" right="0px" top="0px"/>
+  </SplitPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="378px" prefWidth="467px"/>
+  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="470px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="470px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
-  <SplitPane cursor="0" dividerLocation="201" foreground="#000000" leftComponent="modelGrid" name="splitPane" parent="view" prefHeight="300px" prefWidth="570px" rightComponent="panel">
-    <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="43px" left="0px" right="0px" top="30px"/>
-  </SplitPane>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="splitPane" parentField="parent" prefHeight="298px" prefWidth="200px">
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="350px" prefWidth="470px">
+    <AnchorsPaneConstraints bottom="-2px" left="0px" right="-3px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="159px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="429px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="298px" prefWidth="363px"/>
-  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="298px" prefWidth="364px">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="-1px" top="0px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="378px" prefWidth="250px"/>
+  <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="250px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="250px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-folder-new.png" name="btnAddParent" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить вложенный элемент" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel1" parentField="parent" prefHeight="350px" prefWidth="250px">
+    <AnchorsPaneConstraints bottom="-2px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="323px">
+    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="209px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
