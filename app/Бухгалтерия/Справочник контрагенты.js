@@ -7,10 +7,14 @@ function CompaniesList() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    form.title = "Справочник компании";
+    form.title = "Справочник контрагенты";
     
     self.show = function () {
-        DESKTOP ? form.showInternalFrame(DESKTOP) : form.show();
+        if(DESKTOP){
+            form.showInternalFrame(DESKTOP);
+            form.button.visible = false;
+        } else
+            form.show();
     };
     
     self.showModal = function(aCallback) {
@@ -49,14 +53,7 @@ function CompaniesList() {
     
     form.modelGrid.onMouseClicked = function(evt) {
         if (evt.clickCount > 1) {
-            if (!fmCompany)
-                fmCompany = new CompanyCard;
-            fmCompany.setCompany(model.qAllFirms.cursor.buh_companies_id);
-            fmCompany.showModal(function(a){
-                model.qAllFirms.requery(function(){
-                    model.requery();
-                });
-            });
+            form.btnEdit.onActionPerformed();
         }
     };
 
@@ -64,6 +61,17 @@ function CompaniesList() {
         form.close({
             id: model.qAllFirms.cursor.buh_companies_id,
             name: model.qAllFirms.cursor.company_name
+        });
+    };
+    
+    form.btnEdit.onActionPerformed = function(event) {
+        if (!fmCompany)
+            fmCompany = new CompanyCard;
+        fmCompany.setCompany(model.qAllFirms.cursor.buh_companies_id);
+        fmCompany.showModal(function(a){
+            model.qAllFirms.requery(function(){
+                model.requery();
+            });
         });
     };
 }

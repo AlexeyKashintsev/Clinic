@@ -43,6 +43,13 @@ function ContractDetailsView() {
         }
     };
     
+    self.setComapny = function(aId, aName){
+        model.qAllFirms.params.company_id = aId;
+        model.qAllFirms.requery(function(){
+            form.lbCompany.text = model.qAllFirms.cursor.company_name;
+        });
+    };
+    
     model.requery();
     
     form.btnSave.onActionPerformed = function(event) {
@@ -64,8 +71,7 @@ function ContractDetailsView() {
     form.lbCompany.onMouseClicked = function(event) {
         var companiesList = new CompaniesList();
         companiesList.showModal(function(res){
-            form.lbCompany.text = res.name;
-            model.qContract.cursor.company_id = res.id;
+            self.setCompany(res.id);
         });
     };
 }
