@@ -35,4 +35,8 @@ function UslugiContentsView() {
     fmUslContent.showOnPanel(form.pnlUslContent);
     
     model.requery();
+    form.btnOk.onActionPerformed = function(event) {
+        model.qUslugiByType.params.search = form.tfFilter.text;
+        model.qUslugiByType.requery();
+    };
 }

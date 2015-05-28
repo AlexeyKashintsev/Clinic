@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="602px" prefWidth="870px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="605px" prefWidth="870px"/>
   <SplitPane cursor="0" dividerLocation="350" foreground="#000000" leftComponent="splitPane" name="splitPane1" parent="view" prefHeight="602px" prefWidth="870px" rightComponent="pnlUslContent">
     <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <AnchorsPaneConstraints bottom="3px" left="0px" right="0px" top="0px"/>
   </SplitPane>
-  <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="grdTypes" name="splitPane" orientation="0" parent="splitPane1" prefHeight="600px" prefWidth="349px" rightComponent="grdUslugi">
+  <SplitPane cursor="0" dividerLocation="245" foreground="#000000" leftComponent="grdTypes" name="splitPane" orientation="0" parent="splitPane1" prefHeight="600px" prefWidth="349px" rightComponent="panel">
     <font family="Monospaced" size="11" style="0"/>
   </SplitPane>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="grdTypes" parent="splitPane" parentField="parent" prefHeight="249px" prefWidth="347px">
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="grdTypes" parent="splitPane" parentField="parent" prefHeight="244px" prefWidth="347px">
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="309px">
+    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="306px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="grdUslugi" parent="splitPane" prefHeight="346px" prefWidth="347px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="349px" prefWidth="347px"/>
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="grdUslugi" parent="panel" prefHeight="310px" prefWidth="347px">
+    <AnchorsPaneConstraints height="310px" left="0px" top="40px" width="347px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование услуги" width="309px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование услуги" width="306px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <BorderPane background="#ffffff" cursor="0" name="pnlUslContent" parent="splitPane1" prefHeight="600px" prefWidth="516px"/>
+  <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="60px" text="Фильтр">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="60px"/>
+  </Label>
+  <TextField name="tfFilter" parent="panel" prefHeight="20px" prefWidth="210px">
+    <AnchorsPaneConstraints height="20px" left="70px" top="10px" width="210px"/>
+  </TextField>
+  <Button cursor="0" name="btnOk" parent="panel" prefHeight="20px" prefWidth="50px" text="ок">
+    <AnchorsPaneConstraints height="20px" right="7px" top="10px" width="50px"/>
+  </Button>
+  <BorderPane background="#ffffff" cursor="0" name="pnlUslContent" parent="splitPane1" prefHeight="600px" prefWidth="514px"/>
 </layout>
