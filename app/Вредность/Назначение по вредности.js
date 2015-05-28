@@ -15,15 +15,16 @@ function HazardContent() {
         form.showModal(aCallback);
     };
     
-    form.mcHazard.onValueChange = function(aEvt) {
-        self.setHazard(form.mcHazard.value.hazards_id);
-    };
+//    form.mcHazard.onValueChange = function(aEvt) {
+//        self.setHazard(form.mcHazard.value.hazards_id);
+//    };
     
-    self.setHazard = function(aHazardID){
+    self.setHazard = function(aHazardID, aHazardName){
         if (model.modified && confirm('Сохранить изменения?')) {
             model.save();
         }
         model.qHazardContents.params.hazard_id = aHazardID;
+        form.lbUsl.text = aHazardName;
         model.qHazardContents.execute();
         
     };

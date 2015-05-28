@@ -5,28 +5,28 @@
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="btnContents" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Назначения" verticalTextPosition="3"/>
-  <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="156px" text="Поиск по вредностям">
-    <AnchorsPaneConstraints height="16px" left="12px" top="36px" width="156px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="24px" prefWidth="156px" text="Поиск по вредностям">
+    <AnchorsPaneConstraints height="24px" left="12px" top="33px" width="156px"/>
   </Label>
   <ModelFormattedField cursor="0" field="cursor.haz_to_find" format="" name="tfHazardSearch" parent="view" prefHeight="28px" prefWidth="191px">
     <AnchorsPaneConstraints height="28px" left="168px" top="30px" width="191px"/>
   </ModelFormattedField>
-  <Label cursor="0" name="label1" parent="view" prefHeight="16px" prefWidth="38px" text="Тип">
-    <AnchorsPaneConstraints height="16px" left="391px" top="36px" width="38px"/>
+  <Label cursor="0" name="label1" parent="view" prefHeight="24px" prefWidth="38px" text="Тип">
+    <AnchorsPaneConstraints height="24px" left="391px" top="33px" width="38px"/>
   </Label>
   <ModelCombo cursor="0" displayField="type_name" displayList="qHazardTypesList" field="cursor.hazard_type" name="modelCombo" parent="view" prefHeight="28px" prefWidth="252px">
     <AnchorsPaneConstraints height="28px" left="427px" top="30px" width="252px"/>
   </ModelCombo>
   <ModelGrid cursor="0" data="qHazards" name="modelGrid" parent="view" prefHeight="261px" prefWidth="696px">
     <AnchorsPaneConstraints bottom="36px" left="0px" right="2px" top="60px"/>
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="haz_code" maxWidth="75px" name="colHaz_code" title="Код" width="75px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="haz_type" maxWidth="100px" name="colHazard_type" title="Тип" width="75px">
       <ModelCombo displayField="type_name" displayList="qHazardTypesList"/>
     </ModelGridColumn>
-    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Наименование" width="433px">
+    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Наименование" width="430px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="per_type" maxWidth="100px" name="colPeriod_type" title="Периодичность" width="75px">

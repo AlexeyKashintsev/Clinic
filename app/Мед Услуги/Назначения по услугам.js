@@ -7,7 +7,7 @@ function UslugiContentsView() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    form.title = "Назначение по услугам";
+    form.title = "Назначения по услугам";
     var fmUslContent = new UslugaContent();
     
     self.show = function (aDesktop) {

@@ -18,17 +18,17 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/gtk-floppy.png" name="btnReq1" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnReq1" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="view" prefHeight="220px" prefWidth="600px">
     <AnchorsPaneConstraints bottom="6px" left="10px" right="14px" top="140px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="187px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="186px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="Пол" width="188px">
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="187px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="187px">
+    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="186px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>

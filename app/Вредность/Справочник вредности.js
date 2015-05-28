@@ -9,7 +9,11 @@ function HazardForm() {
     var fmHazardContent;
         
     self.show = function (aDesktop) {
-        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
+        if(aDesktop){
+            form.showInternalFrame(aDesktop);
+            form.button.visible = false;
+        } else
+            form.show();
     };
     
     self.showModal = function(aCallback) {
@@ -51,7 +55,7 @@ function HazardForm() {
         if (model.qHazards.cursor.hazards_id) {
             if (!fmHazardContent)
                 fmHazardContent = new HazardContent();
-            fmHazardContent.setHazard(model.qHazards.cursor.hazards_id);
+            fmHazardContent.setHazard(model.qHazards.cursor.hazards_id, model.qHazards.cursor.haz_short_name);
             fmHazardContent.showModal();
         }
     };
