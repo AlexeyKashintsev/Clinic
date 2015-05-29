@@ -1,3 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel datamodelDbId="null">
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142363463922474" entityLocationX="71" entityLocationY="37" entityWidth="150" tableName="adm_roles"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143290748879599" entityLocationX="301" entityLocationY="84" entityWidth="150" tableName="mtd_users"/>
 </datamodel>
