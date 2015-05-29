@@ -121,4 +121,11 @@ function MainView() {
             fmPrcieList = new PriceListForm();
         fmPrcieList.show(form.formDesktop);
     };
+    form.miLogout.onActionPerformed = function (evt){
+        if(confirm("Выйти из системы?")){
+            P.logout(function(){
+                window.location.reload();
+            });
+        }
+    }
 }
