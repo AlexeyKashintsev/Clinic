@@ -8,11 +8,11 @@
   <entity Name="qPricesByContractByType" Title="" entityHeight="200" entityIconified="false" entityId="143048335742012" entityLocationX="274" entityLocationY="25" entityWidth="181" queryId="qPricesByContractByType" tableName="" tableSchemaName=""/>
   <entity Name="qUsiLimAgeType" Title="" entityHeight="72" entityIconified="false" entityId="143055730417162" entityLocationX="61" entityLocationY="139" entityWidth="150" queryId="qUsiLimAgeType" tableName="" tableSchemaName=""/>
   <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048335742012"/>
-  <referenceRelation collectionPropertyName="periods" leftEntityFieldName="per_type" leftEntityId="143048335742012" rightEntityFieldName="usl_periodic_type_id" rightEntityId="143048626073879" scalarPropertyName="usl_per_type"/>
-  <referenceRelation collectionPropertyName="limages" leftEntityFieldName="limitation_age_type" leftEntityId="143048335742012" rightEntityFieldName="usl_lim_age_type_id" rightEntityId="143055730417162" scalarPropertyName="lim_age_type"/>
-  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143048335742012" rightEntityFieldName="usl_types_id" rightEntityId="143186888060439"/>
-  <referenceRelation collectionPropertyName="sex" leftEntityFieldName="sex" leftEntityId="143048335742012" rightEntityFieldName="man_sex_id" rightEntityId="143048534850240" scalarPropertyName="usl_sex"/>
-  <referenceRelation collectionPropertyName="uslugi" leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048376308028" scalarPropertyName="usl_id"/>
   <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143048376308028" rightEntityFieldName="usl_types_id" rightEntityId="143186888060439"/>
+  <referenceRelation collectionPropertyName="uslugi" leftEntityFieldName="usluga_id" leftEntityId="143048335742012" rightEntityFieldName="usl_uslugi_id" rightEntityId="143048376308028" scalarPropertyName="usl_id"/>
   <referenceRelation collectionPropertyName="c_child" leftEntityFieldName="type_parent" leftEntityId="143186888060439" rightEntityFieldName="usl_types_id" rightEntityId="143186888060439" scalarPropertyName="p_parent"/>
+  <referenceRelation collectionPropertyName="limages" leftEntityFieldName="limitation_age_type" leftEntityId="143048335742012" rightEntityFieldName="usl_lim_age_type_id" rightEntityId="143055730417162" scalarPropertyName="lim_age_type"/>
+  <referenceRelation collectionPropertyName="sex" leftEntityFieldName="sex" leftEntityId="143048335742012" rightEntityFieldName="man_sex_id" rightEntityId="143048534850240" scalarPropertyName="usl_sex"/>
+  <referenceRelation collectionPropertyName="periods" leftEntityFieldName="per_type" leftEntityId="143048335742012" rightEntityFieldName="usl_periodic_type_id" rightEntityId="143048626073879" scalarPropertyName="usl_per_type"/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143048335742012" rightEntityFieldName="usl_types_id" rightEntityId="143186888060439"/>
 </datamodel>

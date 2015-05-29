@@ -84,8 +84,8 @@ function PriceListForm() {
             });
         } else {
             alert("Для начала выберите договор!");
-            form.button.onActionPerformed();
-            form.btnAdd.onActionPerformed();
+//            form.button.onActionPerformed();
+//            form.btnAdd.onActionPerformed();
         }
     };
     
