@@ -42,4 +42,12 @@ function ResultsForm() {
         if (confirm("Удалить? Данная операция необратима!"))
         model.qResultsDefForm.remove(model.qResultsDefForm.cursorPos);
     };
+    
+        form.tfParamRezSearch.onValueChange = function() {
+      model.qResultsForm.params.usl_find = form.tfParamRezSearch.text ? form.tfParamRezSearch.text : null;        
+        model.qResultsForm.execute();  
+    };
+    form.button.onActionPerformed = function(event) {
+       form.close(model.qResultsForm.cursor.usl_params_list_id);
+    };
 }

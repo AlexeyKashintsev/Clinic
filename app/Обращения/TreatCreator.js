@@ -2,6 +2,7 @@
  * 
  * @author Алексей
  * @constructor
+ * @public
  */ 
 function TreatCreator() {
     var self = this, model = P.loadModel(this.constructor.name);
