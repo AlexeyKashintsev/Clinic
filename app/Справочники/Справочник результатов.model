@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qResultsForm" Title="" entityHeight="200" entityIconified="false" entityId="143298105518141" entityLocationX="253" entityLocationY="32" entityWidth="315" queryId="qResultsForm" tableName="" tableSchemaName=""/>
-  <entity Name="qResultsDefForm" Title="" entityHeight="200" entityIconified="false" entityId="143298105341510" entityLocationX="28" entityLocationY="34" entityWidth="187" queryId="qResultsDefForm" tableName="" tableSchemaName=""/>
+  <entity Name="qResultsForm" Title="" entityHeight="120" entityIconified="false" entityId="143298105518141" entityLocationX="29" entityLocationY="33" entityWidth="315" queryId="qResultsForm" tableName="" tableSchemaName=""/>
+  <entity Name="qResultsDefForm" Title="" entityHeight="132" entityIconified="false" entityId="143298105341510" entityLocationX="390" entityLocationY="24" entityWidth="187" queryId="qResultsDefForm" tableName="" tableSchemaName=""/>
   <relation leftEntityFieldName="usl_params_list_id" leftEntityId="143298105518141" rightEntityId="143298105341510" rightEntityParameterName="usl_params_list_id"/>
   <referenceRelation leftEntityFieldName="param_id" leftEntityId="143298105341510" rightEntityFieldName="usl_params_list_id" rightEntityId="143298105518141"/>
 </datamodel>
