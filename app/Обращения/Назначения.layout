@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Назначения" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="407px" prefWidth="524px"/>
-  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="407px" prefWidth="524px" selectedComponent="pnlUslugi">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="377px" prefWidth="524px" selectedComponent="pnlUslugi">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
   </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="tabbedPane" prefHeight="380px" prefWidth="519px">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="tabbedPane" prefHeight="349px" prefWidth="519px">
     <TabbedPaneConstraints tabTitle="Услуги"/>
   </AnchorsPane>
   <ToolBar cursor="0" name="toolBar" parent="pnlUslugi" prefHeight="30px" prefWidth="520px">
@@ -13,19 +13,34 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" name="mgUsl" parent="pnlUslugi" prefHeight="351px" prefWidth="520px">
+  <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="320px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="30px"/>
+    <ModelGridColumn field="usluga_id" name="colUslName" title="Услуга" width="168px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="contract_id" name="colContract" title="Договор" width="168px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="usl_cost" name="colUslCost" title="Цена" visible="false" width="168px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutes" parent="tabbedPane" prefHeight="380px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutes" parent="tabbedPane" prefHeight="349px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Маршрут"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" name="mgPout" parent="pnlRoutes" prefHeight="381px" prefWidth="520px">
+  <ModelGrid cursor="0" name="mgPout" parent="pnlRoutes" prefHeight="350px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="0px"/>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlHazards" parent="tabbedPane" prefHeight="380px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlHazards" parent="tabbedPane" prefHeight="349px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Вредности"/>
   </AnchorsPane>
   <ModelGrid cursor="0" name="mgHaz" parent="pnlHazards" prefHeight="380px" prefWidth="520px">
     <AnchorsPaneConstraints height="380px" left="0px" top="0px" width="520px"/>
   </ModelGrid>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Пациентов выбрано:">
+    <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="140px"/>
+  </Label>
+  <ModelFormattedField cursor="0" editable="false" name="mtPatientsCount" nullable="false" parent="view" prefHeight="20px" prefWidth="50px" selectOnly="true" text="modelFormattedField">
+    <AnchorsPaneConstraints height="20px" left="150px" top="5px" width="50px"/>
+  </ModelFormattedField>
 </layout>

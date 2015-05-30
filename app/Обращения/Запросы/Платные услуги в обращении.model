@@ -3,11 +3,6 @@
     <parameter description="" name="treatId" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="6" entityWidth="150"/>
-  <entity Title="" entityHeight="209" entityIconified="false" entityId="142815589352874" entityLocationX="408" entityLocationY="23" entityWidth="150" tableAlias="t2" tableName="usl_cost" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="142815582887582" entityLocationX="195" entityLocationY="6" entityWidth="150" tableAlias="t1" tableName="obr_uslugi" tableSchemaName=""/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="142815587515122" entityLocationX="195" entityLocationY="213" entityWidth="150" tableAlias="t" tableName="buh_contracts" tableSchemaName=""/>
   <relation leftEntityId="-1" leftEntityParameterName="treatId" rightEntityFieldName="treat_id" rightEntityId="142815582887582"/>
-  <relation leftEntityFieldName="contract_id" leftEntityId="142815582887582" rightEntityFieldName="buh_contracts_id" rightEntityId="142815587515122"/>
-  <relation leftEntityFieldName="usluga_id" leftEntityId="142815582887582" rightEntityFieldName="usluga_id" rightEntityId="142815589352874"/>
-  <relation leftEntityFieldName="contract_id" leftEntityId="142815589352874" rightEntityFieldName="contract_id" rightEntityId="142815582887582"/>
 </datamodel>

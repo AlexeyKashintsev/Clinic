@@ -5,4 +5,4 @@
  */ 
 Select * 
 From obr_route t1
- Where :treatId = t1.treat_id
+ Where :treat_id = t1.treat_id

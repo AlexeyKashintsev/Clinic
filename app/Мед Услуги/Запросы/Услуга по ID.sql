@@ -6,4 +6,4 @@
  */ 
 Select * 
 From usl_uslugi t1
- Where :usluga_id = t1.usl_uslugi_id
+ Where :usluga_id = t1.usl_uslugi_id or :usluga_id is null

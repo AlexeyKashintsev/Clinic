@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="qTreatById" Title="" entityHeight="200" entityIconified="false" entityId="143275040769047" entityLocationX="41" entityLocationY="36" entityWidth="150" queryId="qTreatById" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143297806416232" entityLocationX="207" entityLocationY="36" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
+  <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143298613978737" entityLocationX="383" entityLocationY="39" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143298613978737" rightEntityFieldName="usl_uslugi_id" rightEntityId="143297806416232"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298613978737" rightEntityFieldName="obr_treatment_id" rightEntityId="143275040769047"/>
 </datamodel>

@@ -1,6 +1,6 @@
 /**
  * 
- * @author root
+ * @author Alexey
  * @constructor
  */ 
 function TreatCalculator() {
@@ -73,9 +73,25 @@ function TreatCalculator() {
             patient.route = self.calculateRoute4Person(patient, anUslugi);
             patients.push(patient);
             patient.route.forEach(function(routeUsl) {
-                //TODO HERE
+                if (!uslugi[routeUsl.usl_id]) {
+                    uslugi[routeUsl.usl_id] = {
+                        usl_id: routeUsl.usl_id,
+                        people: 0,
+                        usl_content: 0,
+                        hazard: 0
+                    };
+                }
+                uslugi[routeUsl.usl_id].people++;
+                if (routeUsl.usl_content) 
+                    uslugi[routeUsl.usl_id].usl_content++;
+                if (routeUsl.hazard) 
+                    uslugi[routeUsl.usl_id].hazard++;
             });
         });
+        return {
+            patients: patients,
+            uslugi: uslugi
+        };
     };
     
     self.calculateRoute4Person = function(aPatient, anUslugi) {
