@@ -1,10 +1,14 @@
 /**
- * @author stipjey
+ * @author minya92
  * @public
  * @module
  */ 
 function UserModule() {
-    var self = this, model = this.model;
+    var self = this, model = P.loadModel(this.constructor.name);
+    
+    self.getUserRole = function(){
+        P.Logger.warning(P.principal.hasRole("admin"));
+    };
     //var adminFunctions = new _AdminFunctions();
 
     //TODO сделать проверку может ли пользователь создавать пользователя с такой ролью    

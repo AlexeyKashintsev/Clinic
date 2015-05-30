@@ -2,6 +2,6 @@
  * @name qUsers
  * @public
 */ 
-Select *
-From MTD_USERS t
- Where :usr_name = t.usr_name or :usr_name is null
+Select t.usr_name, t.usr_passwd, t1.group_name 
+From mtd_users t
+ Inner Join mtd_groups t1 on t.usr_name = t1.usr_name
