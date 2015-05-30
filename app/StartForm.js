@@ -16,9 +16,10 @@ function StartForm() {
                 f.show();
             });
         } else {
-            P.logout(function(){
-                window.location.reload();
-            });
+            alert('Нет анонимного доступа!');
+//            P.logout(function(){
+//                window.location.reload();
+//            });
         }
     };
     
