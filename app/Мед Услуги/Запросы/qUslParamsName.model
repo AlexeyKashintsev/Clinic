@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="p_usl_uslugi_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="25" entityLocationY="30" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143300372281150" entityLocationX="232" entityLocationY="30" entityWidth="150" tableAlias="t" tableName="usl_params" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143300371335027" entityLocationX="435" entityLocationY="29" entityWidth="150" tableAlias="t1" tableName="usl_params_list" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="p_usl_uslugi_id" rightEntityFieldName="usluga_id" rightEntityId="143300372281150"/>
+  <relation leftEntityFieldName="param_id" leftEntityId="143300372281150" rightEntityFieldName="usl_params_list_id" rightEntityId="143300371335027"/>
+</datamodel>

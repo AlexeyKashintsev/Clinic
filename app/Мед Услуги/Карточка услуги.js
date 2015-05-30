@@ -7,7 +7,7 @@ function UslugaContent() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    form.title = "Карточка услуги";
+    form.title = "Карточка услуги";    
     
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
@@ -25,14 +25,18 @@ function UslugaContent() {
         form.close(true);
     };
     
+    var resultsForm;
     var fmUslSelect;
     var uslContainer;
     var uslTypeId;
+    var aUslugaID;
     
     self.setUsluga = function(aUslugaID, aUslTypeID, aUslName) {
         uslContainer = aUslugaID;
+        model.qUslParamsName.params.p_usl_uslugi_id = aUslugaID;
         model.qUslugaById.params.usluga_id = aUslugaID;
         model.qUslugaContents.params.usluga_id = aUslugaID;
+        model.qUslParamsName.requery();
         model.qUslugaById.requery();
         model.qUslugaContents.requery();
         model.qUslTypes.requery();
@@ -68,7 +72,7 @@ function UslugaContent() {
         });
     };
 
-    form.btnReq1.onActionPerformed = function(event) {
+    form.btnSave.onActionPerformed = function(event) {
         model.save();
     };
     
@@ -86,4 +90,30 @@ function UslugaContent() {
         model.qUslugaById.cursor.usl_type = model.qUslTypes.cursor.usl_types_id;
     };*/
 
+    form.btnAdd1.onActionPerformed = function(event) {
+         if (!resultsForm)
+            resultsForm = new ResultsForm();
+        resultsForm.showModal(function(usl_params_list_id) {
+            model.qUslParamsName.push({
+                param_id : usl_params_list_id,
+                usluga_id : uslContainer
+            });
+            model.qUslParamsName.params.p_usl_uslugi_id = uslContainer;
+            model.save(function(){
+                model.qUslParamsName.requery();
+            });
+        });
+        //model.qUslPeriodicType.push({});
+    };
+    form.btnDel1.onActionPerformed = function(event) {
+        if(confirm("Удалить выбранный параметр?")){
+            model.qUslParamsName.remove(model.qUslParamsName.cursorPos); // deleteRow();
+        }
+    };
+    form.btnReq1.onActionPerformed = function(event) {
+        form.btnReq.onActionPerformed();
+    };
+    form.btnSave1.onActionPerformed = function(event) {
+        form.btnSave.onActionPerformed();
+    };
 }

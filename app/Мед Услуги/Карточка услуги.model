@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="142729765147901" entityLocationX="633" entityLocationY="49" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
-  <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="142729765951112" entityLocationX="399" entityLocationY="306" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
-  <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142729767127142" entityLocationX="180" entityLocationY="268" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
-  <entity Name="qPeriodic" Title="" entityHeight="200" entityIconified="false" entityId="142729768596705" entityLocationX="616" entityLocationY="267" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>
-  <entity Name="qUslugaContents" Title="" entityHeight="288" entityIconified="false" entityId="142729764439772" entityLocationX="396" entityLocationY="4" entityWidth="150" queryId="qUslugaContents" tableName="" tableSchemaName=""/>
-  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="142729763872829" entityLocationX="177" entityLocationY="33" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142729764439772" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729765951112"/>
-  <referenceRelation leftEntityFieldName="periodic_type" leftEntityId="142729764439772" rightEntityFieldName="usl_periodic_type_id" rightEntityId="142729768596705"/>
-  <referenceRelation collectionPropertyName="type_list" leftEntityFieldName="usl_type" leftEntityId="142729763872829" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142" scalarPropertyName="type_id"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729764439772"/>
-  <referenceRelation leftEntityFieldName="sex" leftEntityId="142729764439772" rightEntityFieldName="man_sex_id" rightEntityId="142729765147901"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729763872829"/>
-  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142729767127142" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729763872829"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729764439772"/>
+  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="142729765147901" entityLocationX="880" entityLocationY="33" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugiByType" Title="" entityHeight="200" entityIconified="false" entityId="142729765951112" entityLocationX="626" entityLocationY="354" entityWidth="150" queryId="qUslugiByType" tableName="" tableSchemaName=""/>
+  <entity Name="qUslTypes" Title="" entityHeight="95" entityIconified="false" entityId="142729767127142" entityLocationX="263" entityLocationY="33" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
+  <entity Name="qUslParamsName" Title="" entityHeight="200" entityIconified="false" entityId="143300503314980" entityLocationX="47" entityLocationY="231" entityWidth="150" queryId="qUslParamsName" tableName="" tableSchemaName=""/>
+  <entity Name="qPeriodic" Title="" entityHeight="200" entityIconified="false" entityId="142729768596705" entityLocationX="891" entityLocationY="269" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaContents" Title="" entityHeight="288" entityIconified="false" entityId="142729764439772" entityLocationX="608" entityLocationY="13" entityWidth="150" queryId="qUslugaContents" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="177" entityIconified="false" entityId="142729763872829" entityLocationX="313" entityLocationY="288" entityWidth="195" queryId="qUslugaById" tableName="" tableSchemaName=""/>
   <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729765951112"/>
+  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142729767127142" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142"/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142729764439772" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729763872829"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729764439772"/>
   <referenceRelation leftEntityFieldName="usl_type" leftEntityId="142729765951112" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729764439772"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729763872829"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142729764439772" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729765951112"/>
+  <referenceRelation collectionPropertyName="type_list" leftEntityFieldName="usl_type" leftEntityId="142729763872829" rightEntityFieldName="usl_types_id" rightEntityId="142729767127142" scalarPropertyName="type_id"/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143300503314980" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729764439772"/>
+  <referenceRelation leftEntityFieldName="periodic_type" leftEntityId="142729764439772" rightEntityFieldName="usl_periodic_type_id" rightEntityId="142729768596705"/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143300503314980" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729765951112"/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143300503314980" rightEntityFieldName="usl_uslugi_id" rightEntityId="142729763872829"/>
+  <referenceRelation leftEntityFieldName="sex" leftEntityId="142729764439772" rightEntityFieldName="man_sex_id" rightEntityId="142729765147901"/>
+  <referenceRelation leftEntityFieldName="param_id" leftEntityId="143300503314980" rightEntityFieldName="usl_params_list_id" rightEntityId="143300503314980"/>
 </datamodel>
