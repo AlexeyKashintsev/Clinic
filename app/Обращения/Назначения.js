@@ -84,7 +84,8 @@ function AppointmentForm() {
         
     };
     
-    form.button.onActionPerformed = function(event) {
+    var uslStat  = [];
+    function calculate() {
         var uslugi = [];
         model.qUslInTreat.forEach(function(usl) {
             uslugi.push(usl.usluga_id);
@@ -95,9 +96,21 @@ function AppointmentForm() {
         });
             
         treatCalculator.calculateRoute4Group(pcs, uslugi, function(res) {
+            uslStat = [];
+            for (var j in res.uslugi) {
+                uslStat.push(res.uslugi[j]);
+                uslStat[uslStat.length-1].usl_name = model.qUslugaById.findById(j).usl_name;
+            }
+            form.mgUslugiStat.data = uslStat;
+            form.mgUslugiStat.colUslName.field = "usl_name";
+            form.mgUslugiStat.colCount.field = "people";
+            form.mgUslugiStat.colCountByRoute.field = "usl_content";
+            form.mgUslugiStat.colCountByHazard.field = "hazard";
             console.log(res);
         });
-    };
+    }
+    
+    form.button.onActionPerformed = calculate;
     
     function testData() {
         self.setPatients([143186739536219, 142808473476141, 142808237417447], function() {
@@ -105,23 +118,15 @@ function AppointmentForm() {
                                         treat_id: curTreat,
                                         usluga_id: 39
                                     });
+                model.qUslInTreat.push({
+                                        treat_id: curTreat,
+                                        usluga_id: 42
+                                    });
+                model.qUslInTreat.push({
+                                        treat_id: curTreat,
+                                        usluga_id: 98
+                                    });
             });
     }
     testData();
 }
-
-//    var rue = {
-//        usluga: "usluga_id",
-//        people_count: "people_count",
-//        usl_route_count: "---",
-//        hazards_count: "---"
-//    };
-//    var routeUsl = [];
-//    
-//    var sue = {
-//        usluga: "usluga_id",
-//        usl_cost: "usl_cost",
-//        contract: "contract_id"
-//    };
-//    var selectedUsl = [];
-//    form.mgUsl.data = selectedUsl;

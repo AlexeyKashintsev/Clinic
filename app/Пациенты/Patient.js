@@ -33,12 +33,12 @@ function Patient() {
     };
     
     self.getPatientSync = function(aPatientId) {
-        P.Logger.info('Getting patient ' + aPatientId);
+//        P.Logger.info('Getting patient ' + aPatientId);
         model.qPatientById.params.patient_id =
                 model.qWorkPlaceByPatient.params.patient_id = aPatientId;
         model.qPatientById.requery();
         model.qWorkPlaceByPatient.requery();
-        P.Logger.info('Data loaded ' + model.qPatientById.length + ' | ' + model.qWorkPlaceByPatient.length);
+//        P.Logger.info('Data loaded ' + model.qPatientById.length + ' | ' + model.qWorkPlaceByPatient.length);
         model.qHazardsByManJob.params.workplaceId = model.qWorkPlaceByPatient.length > 0 ?
             model.qWorkPlaceByPatient.cursor.man_workplace_id : null;
         model.qHazardsByManJob.requery();
