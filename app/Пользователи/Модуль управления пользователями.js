@@ -3,7 +3,7 @@
  * @public
  * @module
  */ 
-function UserModule() {
+function UserModule____() {
     var self = this, model = P.loadModel(this.constructor.name);
     
     self.getUserRole = function(){
