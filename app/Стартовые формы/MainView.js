@@ -14,6 +14,8 @@ function MainView() {
     
     P.require(["Дополнительно/RequeryAnimate.js"]);
     
+    
+    
     self.show = function (aDesktop) {
         //aDesktop ? form.showInternalFrame(aDesktop) : form.show();
         try {
