@@ -55,14 +55,16 @@ function UslugaContent() {
         if (!fmUslSelect)
             fmUslSelect = new Uslugi4SelectView();
         fmUslSelect.showModal(function(aRouteId) {
-            model.qUslugaContents.push({
-                route_usl       : aRouteId,
-                usl_container   : uslContainer,
-                usl_type        : uslTypeId
-            });
-            model.save(function(){
-                model.qUslugaContents.requery();
-            });
+            if(aRouteId){
+                model.qUslugaContents.push({
+                    route_usl       : aRouteId,
+                    usl_container   : uslContainer,
+                    usl_type        : uslTypeId
+                });
+                model.save(function(){
+                    model.qUslugaContents.requery();
+                });
+            }
         });
     };
 
