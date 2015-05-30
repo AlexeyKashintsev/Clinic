@@ -11,6 +11,7 @@ function PatientsForm() {
             , form = P.loadForm(this.constructor.name, model);
     
     var fmPatient = new PatientForm();
+    var fmAppointment;
     
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
@@ -59,5 +60,17 @@ function PatientsForm() {
                 form.mgPatients.select(aCursor);
             });
         form.lbSelectedCount.text = form.mgPatients.selected.length;
+    };
+    
+    form.btnAddTreat.onActionPerformed = function(event) {
+        if (!fmAppointment)
+            P.require(['AppointmentForm'], function() {
+                fmAppointment = new AppointmentForm();
+                form.btnAddTreat.onActionPerformed();
+            });
+        else {
+            fmAppointment.setPatients(form.mgPatients.selected);
+            fmAppointment.showModal();
+        }
     };
 }
