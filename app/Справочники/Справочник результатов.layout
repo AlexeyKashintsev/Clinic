@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="447px" prefWidth="682px"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="91px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="16px" height="30px" right="10px" width="91px"/>
+  </Button>
+  <SplitPane cursor="0" dividerLocation="380" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="395px" prefWidth="681px" rightComponent="panel1">
+    <font family="Monospaced" size="11" style="0"/>
+    <AnchorsPaneConstraints bottom="52px" left="0px" right="1px" top="0px"/>
+  </SplitPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="393px" prefWidth="379px"/>
+  <ModelGrid cursor="0" data="qResultsForm" name="modelGrid" parent="panel" prefHeight="355px" prefWidth="380px">
+    <AnchorsPaneConstraints bottom="8px" left="0px" right="-1px" top="30px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="param_name" name="colParam_name" title="Наименование результата" width="339px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Label cursor="0" name="label" parent="panel" prefHeight="16px" prefWidth="44px" text="Поиск:">
+    <AnchorsPaneConstraints height="16px" left="80px" top="7px" width="44px"/>
+  </Label>
+  <ModelFormattedField cursor="0" field="cursor.haz_to_find" format="" name="tfParamRezSearch" parent="panel" prefHeight="30px" prefWidth="250px">
+    <AnchorsPaneConstraints height="30px" left="130px" top="0px" width="250px"/>
+  </ModelFormattedField>
+  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="80px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="80px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="393px" prefWidth="295px"/>
+  <ModelGrid cursor="0" data="qResultsDefForm" name="modelGrid1" parent="panel1" prefHeight="355px" prefWidth="300px">
+    <AnchorsPaneConstraints bottom="8px" left="0px" right="-5px" top="30px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="params_value" name="colParams_value" title="Параметры результата" width="259px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="80px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="80px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+</layout>

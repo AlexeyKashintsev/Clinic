@@ -1,27 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <BorderPane cursor="0" name="view" prefHeight="388px" prefWidth="469px"/>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="469px">
-    <BorderPaneConstraints place="1"/>
+  <AnchorsPane cursor="0" name="pnlWorkSpace" parent="view" prefHeight="388px" prefWidth="469px">
+    <BorderPaneConstraints place="0"/>
+  </AnchorsPane>
+  <ToolBar cursor="0" name="toolBar" parent="pnlWorkSpace" prefHeight="30px" prefWidth="469px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="469px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/contact-new.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-edit.png" name="btnEdit" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Изменить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/edit-delete.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Изменить" verticalTextPosition="3"/>
-  <AnchorsPane cursor="0" name="pnlWorkSpace" parent="view" prefHeight="358px" prefWidth="469px">
-    <BorderPaneConstraints place="0"/>
-  </AnchorsPane>
-  <ModelGrid cursor="0" data="qUsers" deletable="false" editable="false" insertable="false" name="modelGrid" parent="pnlWorkSpace" prefHeight="342px" prefWidth="470px">
-    <AnchorsPaneConstraints height="342px" left="0px" top="0px" width="470px"/>
-    <ServiceGridColumn name="rows-header-service"/>
-    <ModelGridColumn field="usr_name" name="colUsr_name" readonly="true" title="Имя" width="143px">
-      <ModelFormattedField format=""/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usr_phone" name="colUsr_phone" title="Телефон" width="143px">
-      <ModelFormattedField format=""/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usr_email" name="colUsr_email" title="Email" width="143px">
-      <ModelFormattedField format=""/>
-    </ModelGridColumn>
+  <ModelGrid cursor="0" name="modelGrid" parent="pnlWorkSpace" prefHeight="360px" prefWidth="470px">
+    <AnchorsPaneConstraints height="360px" left="0px" top="30px" width="470px"/>
   </ModelGrid>
 </layout>
