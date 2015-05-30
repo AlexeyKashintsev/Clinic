@@ -1,0 +1,2 @@
+Update mtd_groups SET  group_name = :usr_role
+Where usr_name = :usr_name

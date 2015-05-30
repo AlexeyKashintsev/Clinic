@@ -14,7 +14,11 @@ function PatientsForm() {
     var fmAppointment;
     
     self.show = function (aDesktop) {
-        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
+         try {
+            form.view.showOn(document.getElementById('Main'));
+        } catch(e) {
+            form.show();
+        }
     };
     
     model.requery();
@@ -63,14 +67,25 @@ function PatientsForm() {
     };
     
     form.btnAddTreat.onActionPerformed = function(event) {
-        if (!fmAppointment)
-            P.require(['AppointmentForm'], function() {
-                fmAppointment = new AppointmentForm();
-                form.btnAddTreat.onActionPerformed();
+        if (form.mgPatients.selected.length > 0)
+            if (!fmAppointment) {
+//                P.require(['AppointmentForm'], function() {
+                    fmAppointment = new AppointmentForm();
+                    form.btnAddTreat.onActionPerformed();
+//                });
+            } else {
+                fmAppointment.setPatients(form.mgPatients.selected);
+                fmAppointment.showModal();
+            }
+        else
+            alert('Необходимо выбрать хотя бы одного пациента!');
+                
+    };
+    form.btnAddTreat1.onActionPerformed = function(event) {
+        if(confirm("Выйти из системы?")){
+            P.logout(function(){
+                window.location.reload();
             });
-        else {
-            fmAppointment.setPatients(form.mgPatients.selected);
-            fmAppointment.showModal();
         }
     };
 }

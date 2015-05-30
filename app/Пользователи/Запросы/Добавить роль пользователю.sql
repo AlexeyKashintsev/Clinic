@@ -1,5 +1,5 @@
 /**
- *
+ * @manual
  * @author Alexey
  * @name qUserAddRole
  * @public

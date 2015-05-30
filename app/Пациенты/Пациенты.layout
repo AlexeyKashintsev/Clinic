@@ -37,24 +37,24 @@
     <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="112px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="112px">
+    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="111px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="112px">
       <ModelTextArea/>
     </ModelGridColumn>
-    <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="112px">
+    <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="111px">
       <ModelDate dateFormat="dd MMMM yyyy"/>
     </ModelGridColumn>
     <ModelGridColumn field="p_company" name="colCompany" readonly="true" title="Компания" width="112px">
       <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="p_job" name="colJobTitle" readonly="true" title="Должность" width="112px">
+    <ModelGridColumn field="p_job" name="colJobTitle" readonly="true" title="Должность" width="111px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
   </ModelGrid>
-  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="710px">
-    <AnchorsPaneConstraints height="80px" left="230px" right="0px" top="0px"/>
+  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="620px">
+    <AnchorsPaneConstraints height="80px" left="230px" right="90px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/list-add-user.png" name="btnAddPatient" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-edit.png" name="btnEditPatient" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Карточка" verticalTextPosition="3"/>
@@ -76,5 +76,8 @@
   </Label>
   <Button cursor="0" name="btnSelAll" parent="panel1" prefHeight="20px" prefWidth="110px" text="Выбрать все">
     <AnchorsPaneConstraints height="20px" left="410px" top="0px" width="110px"/>
+  </Button>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/application-exit.png" name="btnAddTreat1" parent="view" prefHeight="80px" prefWidth="90px" text="Выход" verticalTextPosition="3">
+    <AnchorsPaneConstraints height="80px" right="0px" top="0px" width="90px"/>
   </Button>
 </layout>

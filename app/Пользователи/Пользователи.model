@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <parameters>
-    <parameter description="" name="franchazi_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
-    <parameter description="" name="trade_point_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
-    <parameter description="" name="user_roles" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
-  </parameters>
-  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150"/>
-  <entity Name="qUsers" Title="" entityHeight="200" entityIconified="false" entityId="140489862821608" entityLocationX="294" entityLocationY="12" entityWidth="240" queryId="qUsers" tableName="" tableSchemaName=""/>
+  <entity Name="qRoles" Title="" entityHeight="200" entityIconified="false" entityId="143300170313241" entityLocationX="45" entityLocationY="25" entityWidth="150" queryId="qRoles" tableName="" tableSchemaName=""/>
+  <entity Name="qUsers" Title="" entityHeight="200" entityIconified="false" entityId="143299892008229" entityLocationX="282" entityLocationY="23" entityWidth="150" queryId="qUsers" tableName="" tableSchemaName=""/>
+  <entity Name="qDelUser" Title="" entityHeight="53" entityIconified="false" entityId="143300770936148" entityLocationX="54" entityLocationY="243" entityWidth="150" queryId="qDelUser" tableName="" tableSchemaName=""/>
+  <referenceRelation collectionPropertyName="q_Roles" leftEntityFieldName="group_name" leftEntityId="143299892008229" rightEntityFieldName="role_name" rightEntityId="143300170313241" scalarPropertyName="q_Users"/>
 </datamodel>
