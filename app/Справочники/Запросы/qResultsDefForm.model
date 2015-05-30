@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="usl_params_list_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="246"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143298101991071" entityLocationX="319" entityLocationY="5" entityWidth="318" tableAlias="t1" tableName="usl_params_def_values" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="usl_params_list_id" rightEntityFieldName="param_id" rightEntityId="143298101991071"/>
+</datamodel>
