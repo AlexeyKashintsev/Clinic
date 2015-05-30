@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="189px" prefWidth="242px"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="25px" prefWidth="220px" text="Изменить роль">
+    <AnchorsPaneConstraints bottom="14px" height="25px" left="10px" right="12px"/>
+  </Button>
+  <ModelGrid cursor="0" data="qRoles" name="modelGrid" parent="view" prefHeight="140px" prefWidth="240px">
+    <AnchorsPaneConstraints bottom="49px" left="0px" right="2px" top="0px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="role_full_name" name="colRole_full_name" title="Роль пользователя" width="199px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>

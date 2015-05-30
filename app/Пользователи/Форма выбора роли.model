@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qUserAddRole" Title="" entityHeight="200" entityIconified="false" entityId="143300312235393" entityLocationX="46" entityLocationY="23" entityWidth="150" queryId="qUserAddRole" tableName="" tableSchemaName=""/>
+  <entity Name="qRoles" Title="" entityHeight="200" entityIconified="false" entityId="143300318778971" entityLocationX="473" entityLocationY="25" entityWidth="150" queryId="qRoles" tableName="" tableSchemaName=""/>
+  <entity Name="qUserEditRole" Title="" entityHeight="200" entityIconified="false" entityId="143300311242239" entityLocationX="230" entityLocationY="27" entityWidth="150" queryId="qUserEditRole" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="group_name" leftEntityId="143300311242239" rightEntityFieldName="role_name" rightEntityId="143300318778971"/>
+  <referenceRelation leftEntityFieldName="group_name" leftEntityId="143300312235393" rightEntityFieldName="role_name" rightEntityId="143300318778971"/>
+</datamodel>

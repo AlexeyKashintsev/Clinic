@@ -3,7 +3,7 @@
  * @author Mikhail
  * @module
  */ 
-function AutorizerModule() {
+function UserModule() {
     var self = this, model = P.loadModel(this.constructor.name);
     
     var roles = {
@@ -16,7 +16,7 @@ function AutorizerModule() {
     var forms = {
         0: "MainView",
         1: "BuhView",
-        2: "RegView",
+        2: "PatientsForm",
         3: "ProfView"
     };
         

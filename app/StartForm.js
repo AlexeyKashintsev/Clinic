@@ -8,12 +8,18 @@ function StartForm() {
             , form = P.loadForm(this.constructor.name, model);
     
     self.show = function () {
-        var um = new P.ServerModule("AutorizerModule");
+        var um = new P.ServerModule("UserModule");
         var formName = um.getStartForm(um.getUserRole());
-        P.require([formName], function(){
-            var f = new (eval(formName));
-            f.show();
-        });
+        if(formName){
+            P.require([formName], function(){
+                var f = new (eval(formName));
+                f.show();
+            });
+        } else {
+            P.logout(function(){
+                window.location.reload();
+            });
+        }
     };
     
     

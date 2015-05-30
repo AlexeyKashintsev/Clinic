@@ -14,7 +14,11 @@ function PatientsForm() {
     var fmAppointment;
     
     self.show = function (aDesktop) {
-        aDesktop ? form.showInternalFrame(aDesktop) : form.show();
+         try {
+            form.view.showOn(document.getElementById('Main'));
+        } catch(e) {
+            form.show();
+        }
     };
     
     model.requery();
@@ -71,6 +75,13 @@ function PatientsForm() {
         else {
             fmAppointment.setPatients(form.mgPatients.selected);
             fmAppointment.showModal();
+        }
+    };
+    form.btnAddTreat1.onActionPerformed = function(event) {
+        if(confirm("Выйти из системы?")){
+            P.logout(function(){
+                window.location.reload();
+            });
         }
     };
 }
