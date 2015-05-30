@@ -13,10 +13,11 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="toolBar" prefHeight="30px" prefWidth="70px" text="button" verticalTextPosition="3"/>
   <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="320px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="30px"/>
-    <ModelGridColumn field="usluga_id" name="colUslName" title="Услуга" width="168px">
-      <ModelFormattedField/>
+    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="168px">
+      <ModelCombo displayField="usl_name" displayList="qUslugaById"/>
     </ModelGridColumn>
     <ModelGridColumn field="contract_id" name="colContract" title="Договор" width="168px">
       <ModelFormattedField/>

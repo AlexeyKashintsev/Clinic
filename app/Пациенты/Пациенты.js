@@ -63,14 +63,18 @@ function PatientsForm() {
     };
     
     form.btnAddTreat.onActionPerformed = function(event) {
-        if (!fmAppointment)
-            P.require(['AppointmentForm'], function() {
-                fmAppointment = new AppointmentForm();
-                form.btnAddTreat.onActionPerformed();
-            });
-        else {
-            fmAppointment.setPatients(form.mgPatients.selected);
-            fmAppointment.showModal();
-        }
+        if (form.mgPatients.selected.length > 0)
+            if (!fmAppointment) {
+//                P.require(['AppointmentForm'], function() {
+                    fmAppointment = new AppointmentForm();
+                    form.btnAddTreat.onActionPerformed();
+//                });
+            } else {
+                fmAppointment.setPatients(form.mgPatients.selected);
+                fmAppointment.showModal();
+            }
+        else
+            alert('Необходимо выбрать хотя бы одного пациента!');
+                
     };
 }

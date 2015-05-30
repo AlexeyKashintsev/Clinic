@@ -2,16 +2,16 @@
   <entity Name="qHazardContents" Title="" entityHeight="200" entityIconified="false" entityId="143275670504982" entityLocationX="516" entityLocationY="26" entityWidth="150" queryId="qHazardContents" tableName="" tableSchemaName=""/>
   <entity Name="qUslugaContents" Title="" entityHeight="293" entityIconified="false" entityId="143275613766288" entityLocationX="90" entityLocationY="53" entityWidth="150" queryId="qUslugaContents" tableName="" tableSchemaName=""/>
   <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143275656704655" entityLocationX="284" entityLocationY="63" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275656704655"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275656704655"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
   <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275656704655"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275656704655"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275656704655"/>
   <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275656704655"/>
   <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275670504982"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
   <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275670504982" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143275613766288" rightEntityFieldName="usl_uslugi_id" rightEntityId="143275613766288"/>
 </datamodel>
