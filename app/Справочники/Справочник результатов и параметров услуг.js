@@ -11,6 +11,10 @@ function ResultsForm() {
         form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     model.requery();
     
     form.btnAdd.onActionPerformed = function(event) {
