@@ -14,11 +14,15 @@ function PatientsForm() {
     var fmAppointment;
     
     self.show = function (aDesktop) {
-         try {
-            form.view.showOn(document.getElementById('Main'));
-        } catch(e) {
-            form.show();
-        }
+        if(aDesktop){
+            form.showInternalFrame(aDesktop);
+        } else{
+           try {
+               form.view.showOn(document.getElementById('Main'));
+           } catch(e) {
+               form.show();
+           }
+       }
     };
     
     model.requery();
