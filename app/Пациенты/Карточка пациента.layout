@@ -124,13 +124,13 @@
   <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="mgTreats" parent="pnlTreats" prefHeight="338px" prefWidth="564px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="34px"/>
     <ModelGridColumn field="treat_date" name="colTreatDate" title="Дата" width="182px">
-      <ModelDate dateFormat="DD MMM YYYY"/>
+      <ModelDate/>
     </ModelGridColumn>
     <ModelGridColumn field="usl_string" name="colUslugi" title="Услуга" width="182px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="treat_status" name="colStatus" title="Состояние" width="181px">
-      <ModelCombo displayField="status_name" displayList="qObrStatus"/>
+    <ModelGridColumn field="q_Treat_Pacient" name="colStatus" title="Состояние" width="181px">
+      <ModelCombo displayField="status_name" displayList="qObrStatus" list="false"/>
     </ModelGridColumn>
   </ModelGrid>
 </layout>
