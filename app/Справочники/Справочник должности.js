@@ -46,12 +46,7 @@ function ManJobForm() {
         });
         form.tfManJobSearch.text = '';
     };
-    form.button.onActionPerformed = function (event) {
-        if (model.modified && confirm('Сохранить изменения'))
-            model.save();
-        form.close(form.mgJobs.selected[0].man_job_id);
-    };
-
+    
     form.tfManJobSearch.onValueChange = function () {
         if (form.tfManJobSearch.text !== '') {
             var myRe = form.tfManJobSearch.text;
@@ -71,4 +66,12 @@ function ManJobForm() {
         model.qManJob.remove(model.qManJob.findByKey(form.mgJobs.selected[0].man_job_id));
     };
 
+    form.btnSelect.onActionPerformed = function(event) {
+        if (model.modified && confirm('Сохранить изменения'))
+            model.save();
+        form.close(form.mgJobs.selected[0].man_job_id);
+    };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close(false);
+    };
 }

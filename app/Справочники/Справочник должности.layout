@@ -7,20 +7,23 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qManJob" name="mgJobs" parent="view" prefHeight="230px" prefWidth="454px">
-    <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="30px"/>
+  <ModelGrid cursor="0" data="qManJob" name="mgJobs" parent="view" prefHeight="220px" prefWidth="454px">
+    <AnchorsPaneConstraints bottom="50px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="job_title" name="colJob_title" title="Наименование" width="413px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="80px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="10px" height="20px" right="20px" width="80px"/>
-  </Button>
   <ModelFormattedField cursor="0" field="cursor.haz_to_find" format="" name="tfManJobSearch" parent="view" prefHeight="28px" prefWidth="250px">
     <AnchorsPaneConstraints height="28px" left="200px" top="1px" width="250px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="80px" text="Поиск:">
     <AnchorsPaneConstraints height="16px" left="150px" top="7px" width="80px"/>
   </Label>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="30px" prefWidth="125px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="200px" width="125px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="30px" right="14px" width="100px"/>
+  </Button>
 </layout>
