@@ -11,8 +11,6 @@
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="toolBar" prefHeight="30px" prefWidth="70px" text="button" verticalTextPosition="3"/>
   <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="320px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="30px"/>
@@ -26,11 +24,23 @@
       <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutes" parent="tabbedPane" prefHeight="349px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesData" parent="tabbedPane" prefHeight="349px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Маршрут"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" name="mgPout" parent="pnlRoutes" prefHeight="350px" prefWidth="520px">
+  <ModelGrid cursor="0" name="mgUslugiStat" parent="pnlRoutesData" prefHeight="350px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="0px"/>
+    <ModelGridColumn name="colUslName" preferredWidth="200px" title="Услуга" width="223px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colCount" title="Количество" width="98px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colCountByRoute" title="По назначению" width="99px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colCountByHazard" title="По вредности" width="98px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlHazards" parent="tabbedPane" prefHeight="349px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Вредности"/>
