@@ -1,15 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="230px" prefWidth="350px">
     <AnchorsPaneConstraints height="230px" left="30px" top="50px" width="350px"/>
     <ModelGridColumn field="id" name="column" title="column" width="116px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="parent" name="column1" title="column" width="116px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="name" name="column2" title="column" width="116px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
+  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="70px" text="button">
+    <AnchorsPaneConstraints height="20px" left="30px" top="20px" width="70px"/>
+  </Button>
+  <TextField cursor="2" name="textField" parent="view" prefHeight="20px" prefWidth="48px" text="39">
+    <AnchorsPaneConstraints height="20px" left="130px" top="20px" width="48px"/>
+  </TextField>
 </layout>
