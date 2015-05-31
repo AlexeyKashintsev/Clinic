@@ -27,6 +27,7 @@
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник типа периодичности"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник типы ограничений по возрасту"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miMkbDeseases" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник коды МКБ-10"/>
+  <MenuItem name="miResultsParams" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник результатов и параметров услуг"/>
   <Menu cursor="0" name="mnuLogout" parent="menuBar" prefHeight="23px" prefWidth="109px" text="Выйти из системы"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miLogout" parent="mnuLogout" prefHeight="23px" prefWidth="265px" text="Выход"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miLogout" parent="mnuLogout" prefHeight="0px" prefWidth="0px" text="Выход"/>
 </layout>

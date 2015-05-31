@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Справочник результатов и параметров услуг" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="447px" prefWidth="682px"/>
   <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="91px" text="Выбрать">
     <AnchorsPaneConstraints bottom="16px" height="30px" right="10px" width="91px"/>
