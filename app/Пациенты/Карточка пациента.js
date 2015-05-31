@@ -101,7 +101,7 @@ function PatientForm() {
         });
     };
     form.btnDelHazard.onActionPerformed = function(event) {
-        model.qHazardsByManJob.deleteRow();
+        model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
     };
     
     self.tabProcessor = new TabProcessor(form, ['tfSurname', 'tfName'

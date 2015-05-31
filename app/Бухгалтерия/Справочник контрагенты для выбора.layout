@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Справочник контрагенты для выбора" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="30px" prefWidth="125px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="10px" height="30px" left="170px" width="125px"/>
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="160px" width="125px"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="view" prefHeight="30px" prefWidth="35px" toolTipText="Обновить" verticalTextPosition="3">
     <AnchorsPaneConstraints bottom="10px" height="30px" left="10px" width="35px"/>
@@ -17,6 +17,6 @@
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
-    <AnchorsPaneConstraints bottom="10px" height="30px" right="0px" width="100px"/>
+    <AnchorsPaneConstraints bottom="10px" height="30px" right="10px" width="100px"/>
   </Button>
 </layout>

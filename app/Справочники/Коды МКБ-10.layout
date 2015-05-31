@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout resizable="false" title="Спарвочник &quot;Коды МКБ-10&quot;" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout resizable="false" title="Справочник &quot;Коды МКБ-10&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="395px" prefWidth="907px"/>
   <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="86px" text="Выбрать">
     <AnchorsPaneConstraints bottom="15px" height="20px" right="21px" width="86px"/>
@@ -28,7 +28,7 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelCheckBox cursor="0" data="qMkbDeseases" field="params.use_class" name="modelCheckBox" parent="view" prefHeight="20px" prefWidth="40px">
+  <ModelCheckBox cursor="0" data="qMkbDeseases" field="params.use_class" name="modelCheckBox" nullable="false" parent="view" prefHeight="20px" prefWidth="40px">
     <AnchorsPaneConstraints height="20px" left="560px" top="14px" width="40px"/>
   </ModelCheckBox>
   <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="110px" text="Поиск по классам">
