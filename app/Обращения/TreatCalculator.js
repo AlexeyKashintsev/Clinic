@@ -11,6 +11,7 @@ function TreatCalculator() {
 //    Возможно, нужно сделать рекурсивный обход
     var uslRoutes = {};
     function getUslRoute(anUslugaId) {
+        P.Logger.info('Получение маршрута для услуги ' + anUslugaId);
         if (!uslRoutes[anUslugaId]) {
             model.qUslugaContents.params.usluga_id = anUslugaId;
             model.qUslugaContents.requery();
@@ -21,13 +22,19 @@ function TreatCalculator() {
                 useHazards: model.qUslugaById.cursor.use_hazards
             };
             
+//            P.Logger.info('Маршрут получен ' + model.qUslugaContents.length);
             if (model.qUslugaContents.length === 0)
-                uslRoutes[anUslugaId].route.push(anUslugaId);
+                uslRoutes[anUslugaId].route.push(function() {
+                    model.qUslugaById.params.usluga_id = anUslugaId;
+                    model.qUslugaById.requery();
+                    return model.qUslugaById.cursor;
+                }());
             else
                 model.qUslugaContents.forEach(function(routeUsl) {
                     uslRoutes[anUslugaId].route.push(routeUsl);
                 });
         }
+        P.Logger.info('Маршрут получен ' + anUslugaId);
         return uslRoutes[anUslugaId];
     }
     
@@ -48,6 +55,7 @@ function TreatCalculator() {
     
     function checkIfUslIsApplicable(aPatient, anUsluga) {
         var applicable = true;
+         P.Logger.info('Проверяем возможность применения услуги к пациенту' + anUsluga);
         if (anUsluga.sex && anUsluga.sex !== aPatient.sex) applicable = false;
         if (anUsluga.limitation_age) {
             var patientAgeYears = (new Date).getFullYear() - aPatient.date_oft_birth.getFullYear();
@@ -78,19 +86,20 @@ function TreatCalculator() {
             patient.route = self.calculateRoute4Person(patient, anUslugi);
             patients.push(patient);
             for (var j in patient.route) {
-                if (!uslugi[patient.route[j].usl_id]) {
-                    uslugi[patient.route[j].usl_id] = {
-                        usl_id: patient.route[j].usl_id,
+                if (!uslugi[j]) {
+                    uslugi[j] = {
+                        usl_id: j,
                         people: 0,
                         usl_content: 0,
                         hazard: 0
                     };
                 }
-                uslugi[patient.route[j].usl_id].people++;
+                uslugi[j].people++;
                 if (patient.route[j].usl_content) 
-                    uslugi[patient.route[j].usl_id].usl_content++;
+                    uslugi[j].usl_content++;
                 if (patient.route[j].hazard) 
-                    uslugi[patient.route[j].usl_id].hazard++;
+                    uslugi[j].hazard++;
+                P.Logger.info('Usluga_id: ' + j + ', people: ' + uslugi[j].people + ', usl_content: ' + uslugi[j].usl_content + ', hazard: ' + uslugi[j].hazard);
             };
         });
         var res = {
@@ -104,43 +113,49 @@ function TreatCalculator() {
     self.calculateRoute4Person = function(aPatient, anUslugi) {
         var patient = typeof aPatient === 'object' ? aPatient : patientM.getPatientSync(aPatient);
         patient.route = {};
-//        P.Logger.info('Получаем маршрут по слугам');
+        P.Logger.info('Получаем маршрут по слугам');
         anUslugi.forEach(function(uslId) {
-//            P.Logger.info('Обработка услуги ' + uslId);
+            P.Logger.info('Обработка услуги ' + uslId);
             var uslRoute = getUslRoute(uslId);
-//            P.Logger.info('Маршрут получен ' + uslId);
             patient.doHazards = uslRoute.useHazards;
             uslRoute.route.forEach(function(routeUsl) {
                 if (checkIfUslIsApplicable(patient, routeUsl)) {
-                    patient.route[routeUsl.usl_uslugi_id] = {
-                        usl_id: routeUsl.usl_uslugi_id,
-                        usl_content: true,
-                        hazard: false
-                    };
+                    P.Logger.info('Добавление услуги ' + routeUsl.usl_uslugi_id);
+                    if (!patient.route[routeUsl.usl_uslugi_id]) {
+                        patient.route[routeUsl.usl_uslugi_id] = {
+                            usl_id: routeUsl.usl_uslugi_id,
+                            usl_content: true,
+                            hazard: false
+                        };
+                    } else {
+                        patient.route[routeUsl.usl_uslugi_id].usl_content = true;
+                    }
                 }
             });
         });
 //      если в услугах встретилась услуга с обработкой вредностей
         if (patient.doHazards) {
-            P.Logger.info('В услугах встретилась обработка вредностей');
+//            P.Logger.info('В услугах встретилась обработка вредностей');
             patient.hazards.forEach(function(hazard) {
-                P.Logger.info('Обработка вредности ' + hazard);
+//                P.Logger.info('Обработка вредности ' + hazard);
                 var hazRoute = getHazardRoute(hazard);
                 hazRoute.forEach(function(routeUsl) {
                     if (checkIfUslIsApplicable(patient, routeUsl)) {
-                        if (!patient.route[routeUsl.usl_uslugi_id])
+                        P.Logger.info('Добавление услуги ' + routeUsl.usl_uslugi_id);
+                        if (!patient.route[routeUsl.usl_uslugi_id]) {
                             patient.route[routeUsl.usl_uslugi_id] = {
                                 usl_id: routeUsl.usl_uslugi_id,
                                 usl_content: false,
                                 hazard: true
                             };
-                        else
+                        } else {
                             patient.route[routeUsl.usl_uslugi_id].hazard = true;
+                        }
                     }
                 });
             });
         }
-        P.Logger.info('Patient data: ' + patient.route);
+        P.Logger.info('Patient data ready');
         return patient.route;
     };
 }
