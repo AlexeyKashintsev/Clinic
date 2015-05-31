@@ -124,9 +124,9 @@ function AppointmentForm() {
                                     });
                 model.qUslInTreat.push({
                                         treat_id: curTreat,
-                                        usluga_id: 98
+                                        usluga_id: 143048593295042
                                     });
             });
     }
-//    testData();
+    testData();
 }
