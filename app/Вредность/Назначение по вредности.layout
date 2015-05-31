@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Назначение по вредности" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="448px" prefWidth="500px"/>
-  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="130px" text="Состав мед услуг для">
-    <AnchorsPaneConstraints height="20px" left="10px" top="13px" width="130px"/>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Состав мед услуг для">
+    <AnchorsPaneConstraints height="20px" left="10px" top="15px" width="140px"/>
   </Label>
   <ModelGrid cursor="0" data="qHazardContents" name="modelGrid" parent="view" prefHeight="400px" prefWidth="501px">
     <AnchorsPaneConstraints bottom="-2px" left="0px" right="-1px" top="50px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" minWidth="75px" movable="false" name="colUsl_name" preferredWidth="180px" title="Назначения" width="180px">
-      <ModelFormattedField format=""/>
+    <ModelGridColumn field="h_usluga" minWidth="75px" movable="false" name="colUsl_name" preferredWidth="180px" title="Назначения" width="180px">
+      <ModelCombo displayField="usl_name" displayList="qUslugaById"/>
     </ModelGridColumn>
     <ModelGridColumn field="sex_id" name="colSex" title="Пол" width="75px">
       <ModelCombo displayField="sex_short" displayList="qSex"/>
@@ -22,7 +22,7 @@
       <ModelCombo displayField="period_name" displayList="qUslPeriod"/>
     </ModelGridColumn>
   </ModelGrid>
-  <Label cursor="0" name="lbUsl" parent="view" prefHeight="50px" prefWidth="340px" text="...">
-    <AnchorsPaneConstraints height="50px" left="140px" top="0px" width="340px"/>
+  <Label cursor="0" name="lbUsl" parent="view" prefHeight="50px" prefWidth="330px" text="...">
+    <AnchorsPaneConstraints height="50px" left="150px" top="0px" width="330px"/>
   </Label>
 </layout>

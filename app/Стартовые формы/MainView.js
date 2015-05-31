@@ -36,7 +36,7 @@ function MainView() {
     var fmUsers;
     var fmPatients;
     var fmPrcieList;
-    var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType;
+    var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType, fmResults;
     var fmMkbDeseases;
     
     form.miUsers.onActionPerformed = function(event) {
@@ -130,4 +130,9 @@ function MainView() {
             });
         }
     }
+    form.miResultsParams.onActionPerformed = function(event) {
+        if (!fmResults)
+            fmResults = new ResultsForm();
+        fmResults.show(form.formDesktop);
+    };
 }
