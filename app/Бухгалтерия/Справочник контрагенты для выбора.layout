@@ -12,8 +12,8 @@
     <ModelGridColumn field="company_name" name="colCompany_name" title="Наименование" width="180px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colInn" title="Инн" width="179px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    <ModelGridColumn field="inn" name="colInn1" title="Инн" width="179px">
+      <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
