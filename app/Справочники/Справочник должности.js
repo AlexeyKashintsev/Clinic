@@ -49,7 +49,7 @@ function ManJobForm() {
     form.button.onActionPerformed = function (event) {
         if (model.modified && confirm('Сохранить изменения'))
             model.save();
-        form.close(model.qManJob.cursor.man_job_id);
+        form.close(form.mgJobs.selected[0].man_job_id);
     };
 
     form.tfManJobSearch.onValueChange = function () {
@@ -66,4 +66,9 @@ function ManJobForm() {
             form.mgJobs.data = model.qManJob;
         }
     };
+    
+    form.btnDel.onActionPerformed = function(event) {
+        model.qManJob.remove(model.qManJob.findByKey(form.mgJobs.selected[0].man_job_id));
+    };
+
 }
