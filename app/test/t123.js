@@ -10,19 +10,48 @@ function t123() {
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
-    var a = [
-        {id: "1", parent:"0", name:"p"},
-        {id: "2", parent:"1", name:"ch1"},
-        {id: "3", parent:"1", name:"ch2"}
-    ];
-//    a.parent = "parent";
-//    a.children = "id";
-    form.modelGrid.data = a;
     
-    // TODO : place your code here
+    var uslRoutes = {};
+    function getUslRoute(anUslugaId) {
+        P.Logger.info('Получение маршрута для услуги ' + anUslugaId);
+//        if (!uslRoutes[anUslugaId]) {
+            model.qUslugaContents.params.usluga_id = anUslugaId;
+            model.qUslugaContents.requery(function() {          
+                
+                model.qUslugaById.params.usluga_id = anUslugaId;
+                model.qUslugaById.requery(function() {
+                    uslRoutes[anUslugaId] = {
+                        route: [],
+                        useHazards: model.qUslugaById.cursor.use_hazards
+                    };
+
+                    P.Logger.info('Маршрут получен, длина маршрута ' + model.qUslugaContents.length);
+                    if (model.qUslugaContents.length === 0)
+                        uslRoutes[anUslugaId].route.push(function() {
+                            model.qUslugaById.params.usluga_id = anUslugaId;
+                            model.qUslugaById.requery();
+                            return model.qUslugaById.cursor;
+                        }());
+                    else
+                        model.qUslugaContents.forEach(function(routeUsl) {
+                            uslRoutes[anUslugaId].route.push(routeUsl);
+                        });
+  
+                    P.Logger.info('Услуги в маршруте: ' + function() {
+                        var res = '';
+                        for (var j in uslRoutes[anUslugaId].route)
+                            res += 'usl: ' + uslRoutes[anUslugaId].route[j];
+                        return res;
+                    }());
+  
+                });
+            });
+//        }
+
+//        return uslRoutes[anUslugaId];
+    }
     
-    model.requery(function () {
-        // TODO : place your code here
-    });
-    
+    form.button.onActionPerformed = function(event) {
+        getUslRoute(form.textField.text);
+    };
 }

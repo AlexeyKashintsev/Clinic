@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="142659279149475" entityLocationX="326" entityLocationY="63" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
-  <entity Name="qTest" Title="" entityHeight="200" entityIconified="false" entityId="142659007867244" entityLocationX="116" entityLocationY="46" entityWidth="150" queryId="qTest" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143307524463124" entityLocationX="554" entityLocationY="342" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaContents" Title="" entityHeight="200" entityIconified="false" entityId="143307519831289" entityLocationX="781" entityLocationY="122" entityWidth="150" queryId="qUslugaContents" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143307519831289" rightEntityFieldName="usl_types_id" rightEntityId="142659279149475"/>
+  <referenceRelation leftEntityFieldName="usl_type" leftEntityId="143307524463124" rightEntityFieldName="usl_types_id" rightEntityId="142659279149475"/>
   <referenceRelation leftEntityFieldName="type_parent" leftEntityId="142659279149475" rightEntityFieldName="usl_types_id" rightEntityId="142659279149475"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143307519831289" rightEntityFieldName="usl_uslugi_id" rightEntityId="143307519831289"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143307519831289" rightEntityFieldName="usl_uslugi_id" rightEntityId="143307519831289"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143307519831289" rightEntityFieldName="usl_uslugi_id" rightEntityId="143307524463124"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="143307519831289" rightEntityFieldName="usl_uslugi_id" rightEntityId="143307524463124"/>
 </datamodel>

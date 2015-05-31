@@ -14,7 +14,10 @@ function PatientForm() {
     
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
-        model.qPatientById.requery(function() {
+        model.qTreatByPatient.params.patient_id = aPatientId;
+        model.qWorkPlaceByPatient.params.patient_id = aPatientId;
+        
+        model.requery(function() {
             if (!patientId) {
                 model.qPatientById.push({});
                 patientId = model.qPatientById.cursor.man_patient_id;

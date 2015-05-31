@@ -4,8 +4,8 @@
   <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143297806416232" entityLocationX="406" entityLocationY="37" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
   <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143298613978737" entityLocationX="220" entityLocationY="39" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
   <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="143299445326962" entityLocationX="578" entityLocationY="35" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143298613978737" rightEntityFieldName="buh_contracts_id" rightEntityId="143299445326962"/>
+  <referenceRelation leftEntityFieldName="patient" leftEntityId="143275040769047" rightEntityFieldName="man_patient_id" rightEntityId="143300101288533"/>
   <referenceRelation collectionPropertyName="u_treat" leftEntityFieldName="usluga_id" leftEntityId="143298613978737" rightEntityFieldName="usl_uslugi_id" rightEntityId="143297806416232" scalarPropertyName="t_usluga"/>
   <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298613978737" rightEntityFieldName="obr_treatment_id" rightEntityId="143275040769047"/>
-  <referenceRelation leftEntityFieldName="patient" leftEntityId="143275040769047" rightEntityFieldName="man_patient_id" rightEntityId="143300101288533"/>
+  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143298613978737" rightEntityFieldName="buh_contracts_id" rightEntityId="143299445326962"/>
 </datamodel>

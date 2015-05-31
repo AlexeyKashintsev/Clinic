@@ -85,8 +85,10 @@ function AppointmentForm() {
     };
     
     var uslStat  = [];
+    var naznacheniya = [];
     function calculate() {
         var uslugi = [];
+        naznacheniya = [];
         model.qUslInTreat.forEach(function(usl) {
             uslugi.push(usl.usluga_id);
         });
@@ -106,7 +108,59 @@ function AppointmentForm() {
             form.mgUslugiStat.colCount.field = "people";
             form.mgUslugiStat.colCountByRoute.field = "usl_content";
             form.mgUslugiStat.colCountByHazard.field = "hazard";
-            console.log(res);
+            
+            res.patients.forEach(function(patient) {
+                var rec = {
+                    n_name: patient.surname + ' ' + patient.firstname + ' ' + patient.patronymic,
+                    n_parent: null,
+                    n_children: [],
+                    n_by_hazard: null,
+                    n_by_content: null
+                };
+                if (patient.hazards !== {}) { 
+                var hazards = {
+                    n_name: "Вредности",
+                    n_parent: rec,
+                    n_children: []
+                };
+                for (var j in patient.hazards) {
+                        if (j !== 'length') {
+                            var hazard = patient.hazards[j];
+                            hazards.n_children.push({
+                                n_name: hazard.haz_code + " " + hazard.haz_name,
+                                n_parent: hazards,
+                                n_children: []
+                            });
+                        }
+                    };
+                    rec.n_children.push(hazards);
+                }
+                var route = {
+                    n_name: "Назначения",
+                    n_parent: rec,
+                    n_children: []
+                };
+                for (var j in patient.route) {
+                    route.n_children.push({
+                        n_name: model.qUslugaById.findByKey(j).usl_name,
+                        n_by_hazard: patient.route[j].hazard,
+                        n_by_content: patient.route[j].usl_content,
+                        n_parent: hazards,
+                        n_children: []
+                    });
+                }
+                rec.n_children.push(route);
+                
+                naznacheniya.push(rec);
+            });
+            
+            form.mgRoutes.data = naznacheniya;
+            form.mgRoutes.childrenField = "n_children";
+            form.mgRoutes.parentField = "n_parent";
+            form.mgRoutes.colName.field = "n_name";
+            form.mgRoutes.colByRoute.field = "n_by_content";
+            form.mgRoutes.colByHazard.field = "n_by_hazard";
+            
         });
     }
     
@@ -128,5 +182,5 @@ function AppointmentForm() {
                                     });
             });
     }
-    testData();
+    //testData();
 }
