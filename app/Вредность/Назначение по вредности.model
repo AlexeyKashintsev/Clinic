@@ -2,15 +2,16 @@
   <entity Name="qSex" Title="" entityHeight="83" entityIconified="false" entityId="142816900865314" entityLocationX="606" entityLocationY="83" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
   <entity Name="qUslPeriodicType" Title="" entityHeight="64" entityIconified="false" entityId="142816913271844" entityLocationX="668" entityLocationY="197" entityWidth="150" queryId="qUslPeriodicType" tableName="" tableSchemaName=""/>
   <entity Name="qUsiLimAgeType" Title="" entityHeight="65" entityIconified="false" entityId="142816914008107" entityLocationX="621" entityLocationY="280" entityWidth="150" queryId="qUsiLimAgeType" tableName="" tableSchemaName=""/>
-  <entity Name="qHazards" Title="" entityHeight="200" entityIconified="false" entityId="142805372611620" entityLocationX="51" entityLocationY="40" entityWidth="150" queryId="qHazards" tableName="" tableSchemaName=""/>
-  <entity Name="qHazardContents" Title="" entityHeight="304" entityIconified="false" entityId="142805200880028" entityLocationX="343" entityLocationY="94" entityWidth="203" queryId="qHazardContents" tableName="" tableSchemaName=""/>
-  <entity Name="qUslPeriod" Title="" entityHeight="67" entityIconified="false" entityId="142816913026967" entityLocationX="102" entityLocationY="269" entityWidth="150" queryId="qUslPeriod" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142805200880028" rightEntityFieldName="usl_uslugi_id" rightEntityId="142805200880028"/>
-  <referenceRelation collectionPropertyName="lim_ages" leftEntityFieldName="limitation_age_type" leftEntityId="142805200880028" rightEntityFieldName="usl_lim_age_type_id" rightEntityId="142816914008107" scalarPropertyName="lim_age_id"/>
-  <referenceRelation collectionPropertyName="periods" leftEntityFieldName="period" leftEntityId="142805200880028" rightEntityFieldName="usl_period_id" rightEntityId="142816913026967" scalarPropertyName="period_id"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="142805200880028" rightEntityFieldName="usl_uslugi_id" rightEntityId="142805200880028"/>
+  <entity Name="qHazards" Title="" entityHeight="200" entityIconified="false" entityId="142805372611620" entityLocationX="15" entityLocationY="53" entityWidth="150" queryId="qHazards" tableName="" tableSchemaName=""/>
+  <entity Name="qHazardContents" Title="" entityHeight="245" entityIconified="false" entityId="142805200880028" entityLocationX="374" entityLocationY="94" entityWidth="203" queryId="qHazardContents" tableName="" tableSchemaName=""/>
+  <entity Name="qUslPeriod" Title="" entityHeight="67" entityIconified="false" entityId="142816913026967" entityLocationX="117" entityLocationY="300" entityWidth="150" queryId="qUslPeriod" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143307164985713" entityLocationX="196" entityLocationY="23" entityWidth="151" queryId="qUslugaById" tableName="" tableSchemaName=""/>
   <referenceRelation collectionPropertyName="sex_list" leftEntityFieldName="sex" leftEntityId="142805200880028" rightEntityFieldName="man_sex_id" rightEntityId="142816900865314" scalarPropertyName="sex_id"/>
-  <referenceRelation collectionPropertyName="q_hazards" leftEntityFieldName="hazard" leftEntityId="142805200880028" rightEntityFieldName="hazards_id" rightEntityId="142805372611620" scalarPropertyName="q_contents"/>
-  <referenceRelation leftEntityFieldName="period_type" leftEntityId="142805372611620" rightEntityFieldName="usl_period_id" rightEntityId="142816913026967"/>
+  <referenceRelation leftEntityFieldName="usl_container" leftEntityId="142805200880028" rightEntityFieldName="usl_uslugi_id" rightEntityId="143307164985713"/>
+  <referenceRelation collectionPropertyName="periods" leftEntityFieldName="period" leftEntityId="142805200880028" rightEntityFieldName="usl_period_id" rightEntityId="142816913026967" scalarPropertyName="period_id"/>
   <referenceRelation collectionPropertyName="periodic_types" leftEntityFieldName="periodic_type" leftEntityId="142805200880028" rightEntityFieldName="usl_periodic_type_id" rightEntityId="142816913271844" scalarPropertyName="periodic_type_id"/>
+  <referenceRelation collectionPropertyName="lim_ages" leftEntityFieldName="limitation_age_type" leftEntityId="142805200880028" rightEntityFieldName="usl_lim_age_type_id" rightEntityId="142816914008107" scalarPropertyName="lim_age_id"/>
+  <referenceRelation collectionPropertyName="u_route_hazard" leftEntityFieldName="route_usl" leftEntityId="142805200880028" rightEntityFieldName="usl_uslugi_id" rightEntityId="143307164985713" scalarPropertyName="h_usluga"/>
+  <referenceRelation collectionPropertyName="q_hazards" leftEntityFieldName="hazard" leftEntityId="142805200880028" rightEntityFieldName="hazards_id" rightEntityId="142805372611620" scalarPropertyName="q_contents"/>
+  <referenceRelation leftEntityFieldName="period_type" leftEntityId="142805372611620" polyline="171;157 171;254 273;254 273;335" rightEntityFieldName="usl_period_id" rightEntityId="142816913026967"/>
 </datamodel>

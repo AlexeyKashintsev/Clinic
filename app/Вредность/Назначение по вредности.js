@@ -25,8 +25,7 @@ function HazardContent() {
         }
         model.qHazardContents.params.hazard_id = aHazardID;
         form.lbUsl.text = aHazardName;
-        model.qHazardContents.execute();
-        
+        model.qHazardContents.execute(); 
     };
     
     model.requery();
