@@ -23,14 +23,15 @@ function ResultsForm() {
             model.qResultsForm.push({                
                 param_name : name
             });
-            model.save(function(){
-                model.requery();
-            });
+            //model.save(function(){
+            //    model.requery();
+            //});
         }
     };
     form.btnDel.onActionPerformed = function(event) {
-        if (confirm("Удалить?"))
-        model.qResultsForm.remove(model.qResultsForm.cursorPos);
+        if (confirm("Удалить? После удадения необходимо сохранение!"))
+            model.qResultsForm.remove(model.qResultsForm.findByKey(form.mgResults.selected[0].usl_params_list_id));
+            //model.qResultsForm.remove(model.qResultsForm.cursorPos);
     }; 
     form.btnAdd1.onActionPerformed = function(event) {
         var name =  prompt("Введите имя параметра");
@@ -43,8 +44,9 @@ function ResultsForm() {
         }
     };
     form.btnDel1.onActionPerformed = function(event) {
-        if (confirm("Удалить? Данная операция необратима!"))
-        model.qResultsDefForm.remove(model.qResultsDefForm.cursorPos);
+        if (confirm("Удалить? После удадения необходимо сохранение!"))
+            model.qResultsDefForm.remove(model.qResultsDefForm.findByKey(form.mgResultsDef.selected[0].usl_params_def_values_id));
+        //model.qResultsDefForm.remove(model.qResultsDefForm.cursorPos);        
     };
     
         form.tfParamRezSearch.onValueChange = function() {
@@ -52,6 +54,20 @@ function ResultsForm() {
         model.qResultsForm.execute();  
     };
     form.button.onActionPerformed = function(event) {
-       form.close(model.qResultsForm.cursor.usl_params_list_id);
+       if (model.modified && confirm('Сохранить изменения'))
+            model.save();
+        form.close(form.mgResults.selected[0].usl_params_list_id);        
+        //form.close(model.qResultsForm.cursor.usl_params_list_id);
+    };
+    form.btnSave.onActionPerformed = function(event) {
+        model.save();
+    };
+    form.btnReq.onActionPerformed = function(event) {
+        if (model.modified && confirm("Сохранить изменения?"))
+            model.save(function () {
+                model.requery();
+            });
+        else
+            model.requery();
     };
 }

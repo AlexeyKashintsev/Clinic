@@ -9,7 +9,7 @@
   <ModelFormattedField cursor="0" field="cursor.haz_to_find" format="" name="tfDeseasesSearch" parent="view" prefHeight="28px" prefWidth="330px">
     <AnchorsPaneConstraints height="28px" left="190px" top="10px" width="330px"/>
   </ModelFormattedField>
-  <SplitPane cursor="0" dividerLocation="450" foreground="#000000" leftComponent="modelGrid1" name="splitPane" parent="view" prefHeight="300px" prefWidth="911px" rightComponent="modelGrid">
+  <SplitPane cursor="0" dividerLocation="450" foreground="#000000" leftComponent="modelGrid1" name="splitPane" parent="view" prefHeight="300px" prefWidth="911px" rightComponent="mgDeseases">
     <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="45px" left="0px" right="-4px" top="50px"/>
   </SplitPane>
@@ -19,7 +19,7 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qMkbDeseases" name="modelGrid" parent="splitPane" prefHeight="298px" prefWidth="455px">
+  <ModelGrid cursor="0" data="qMkbDeseases" name="mgDeseases" parent="splitPane" prefHeight="298px" prefWidth="455px">
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="mkb_deseases_id" name="colMkb_deseases_id" preferredWidth="40px" title="Код МКБ" width="102px">
       <ModelFormattedField format=""/>

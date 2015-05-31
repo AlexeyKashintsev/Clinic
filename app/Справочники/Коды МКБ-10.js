@@ -20,7 +20,9 @@ function MkbDeseasesForm() {
     model.qMkbClasses.requery();
     
     form.button.onActionPerformed = function(event) {
-        form.close(model.qMkbDeseases.cursor.mkb_deseases_id);
+        if (model.modified && confirm('Сохранить изменения'))
+            model.save();
+        form.close(form.mgDeseases.selected[0].mkb_deseases_id);
     };
     
     form.tfDeseasesSearch.onValueChange = function() {

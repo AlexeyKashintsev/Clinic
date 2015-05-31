@@ -8,7 +8,7 @@
     <AnchorsPaneConstraints bottom="37px" left="0px" right="1px" top="0px"/>
   </SplitPane>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="408px" prefWidth="379px"/>
-  <ModelGrid cursor="0" data="qResultsForm" name="modelGrid" parent="panel" prefHeight="370px" prefWidth="380px">
+  <ModelGrid cursor="0" data="qResultsForm" name="mgResults" parent="panel" prefHeight="370px" prefWidth="380px">
     <AnchorsPaneConstraints bottom="8px" left="0px" right="-1px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="param_name" name="colParam_name" title="Наименование результата" width="339px">
@@ -27,16 +27,18 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="408px" prefWidth="295px"/>
-  <ModelGrid cursor="0" data="qResultsDefForm" name="modelGrid1" parent="panel1" prefHeight="370px" prefWidth="300px">
+  <ModelGrid cursor="0" data="qResultsDefForm" name="mgResultsDef" parent="panel1" prefHeight="370px" prefWidth="300px">
     <AnchorsPaneConstraints bottom="8px" left="0px" right="-5px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="params_value" name="colParams_value" title="Параметры результата" width="259px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="80px">
-    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="80px"/>
+  <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="150px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="150px"/>
   </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
 </layout>

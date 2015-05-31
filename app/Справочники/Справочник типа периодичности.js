@@ -34,7 +34,7 @@ function UslPeriodicTypeForm() {
     };
     form.btnSave.onActionPerformed = function(event) {
         model.save(function(){
-                model.requery();
+                //model.requery();
             });
     };
     form.button.onActionPerformed = function(event) {

@@ -42,7 +42,7 @@ function ManJobForm() {
     };
     form.btnSave.onActionPerformed = function (event) {
         model.save(function () {
-            model.requery();
+            //model.requery();
         });
         form.tfManJobSearch.text = '';
     };
