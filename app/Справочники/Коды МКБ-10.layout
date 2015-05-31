@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout resizable="false" title="Коды МКБ-10" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout resizable="false" title="Спарвочник &quot;Коды МКБ-10&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="395px" prefWidth="907px"/>
   <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="86px" text="Выбрать">
     <AnchorsPaneConstraints bottom="15px" height="20px" right="21px" width="86px"/>
@@ -19,16 +19,16 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelGrid cursor="0" data="qMkbDeseases" name="modelGrid" parent="splitPane" prefHeight="298px" prefWidth="457px">
+  <ModelGrid cursor="0" data="qMkbDeseases" name="modelGrid" parent="splitPane" prefHeight="298px" prefWidth="455px">
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="mkb_deseases_id" name="colMkb_deseases_id" preferredWidth="40px" title="Код МКБ" width="103px">
+    <ModelGridColumn field="mkb_deseases_id" name="colMkb_deseases_id" preferredWidth="40px" title="Код МКБ" width="102px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="mkb_name" name="colMkb_name" preferredWidth="250px" title="Наименование заболевания" width="313px">
+    <ModelGridColumn field="mkb_name" name="colMkb_name" preferredWidth="250px" title="Наименование заболевания" width="312px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelCheckBox cursor="0" data="qMkbDeseases" field="params.use_class" name="modelCheckBox" nullable="false" parent="view" prefHeight="20px" prefWidth="40px">
+  <ModelCheckBox cursor="0" data="qMkbDeseases" field="params.use_class" name="modelCheckBox" parent="view" prefHeight="20px" prefWidth="40px">
     <AnchorsPaneConstraints height="20px" left="560px" top="14px" width="40px"/>
   </ModelCheckBox>
   <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="110px" text="Поиск по классам">

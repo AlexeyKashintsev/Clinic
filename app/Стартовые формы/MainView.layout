@@ -21,13 +21,13 @@
   <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="23px" prefWidth="95px" text="Администратор"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsers" parent="mnuAdmin" prefHeight="0px" prefWidth="0px" text="Пользователи"/>
   <Menu cursor="0" name="mnuCatalog" parent="menuBar" prefHeight="23px" prefWidth="83px" text="Справочники"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miManJob" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник должности"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriod" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник периодичности"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miObrStatus" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник статус обращения"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник типа периодичности"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник типы ограничений по возрасту"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miMkbDeseases" parent="mnuCatalog" prefHeight="22px" prefWidth="367px" text="Справочник коды МКБ-10"/>
-  <MenuItem name="miResultsParams" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник результатов и параметров услуг"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miManJob" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Должности&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriod" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Периодичность&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miObrStatus" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Cтатус обращения&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Тип периодичности&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Типы ограничений по возрасту&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miMkbDeseases" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Коды МКБ-10&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miResultsParams" parent="mnuCatalog" prefHeight="22px" prefWidth="373px" text="Справочник &quot;Результаты и параметры услуг&quot;"/>
   <Menu cursor="0" name="mnuLogout" parent="menuBar" prefHeight="23px" prefWidth="109px" text="Выйти из системы"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miLogout" parent="mnuLogout" prefHeight="0px" prefWidth="0px" text="Выход"/>
 </layout>

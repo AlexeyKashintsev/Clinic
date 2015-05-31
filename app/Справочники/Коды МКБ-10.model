@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <entity Name="qMkbDeseases" Title="" entityHeight="200" entityIconified="false" entityId="143047049296002" entityLocationX="19" entityLocationY="27" entityWidth="150" queryId="qMkbDeseases" tableName="" tableSchemaName=""/>
   <entity Name="qMkbClasses" Title="" entityHeight="200" entityIconified="false" entityId="143047222089501" entityLocationX="235" entityLocationY="28" entityWidth="150" queryId="qMkbClasses" tableName="" tableSchemaName=""/>
-  <referenceRelation collectionPropertyName="childs" leftEntityFieldName="class_parent" leftEntityId="143047222089501" rightEntityFieldName="mkb_classes_id" rightEntityId="143047222089501" scalarPropertyName="parent"/>
   <referenceRelation leftEntityFieldName="mkb_class" leftEntityId="143047049296002" rightEntityFieldName="mkb_classes_id" rightEntityId="143047222089501"/>
+  <referenceRelation collectionPropertyName="childs" leftEntityFieldName="class_parent" leftEntityId="143047222089501" rightEntityFieldName="mkb_classes_id" rightEntityId="143047222089501" scalarPropertyName="parent"/>
 </datamodel>
