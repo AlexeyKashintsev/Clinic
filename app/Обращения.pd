@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
-  <fieldsEntity entityHeight="92" entityIconified="false" entityId="142641957742147" entityLocationX="353" entityLocationY="115" entityWidth="150" tableName="obr_additional"/>
-  <fieldsEntity entityHeight="155" entityIconified="false" entityId="142641921948460" entityLocationX="661" entityLocationY="428" entityWidth="150" tableName="buh_contracts"/>
-  <fieldsEntity entityHeight="206" entityIconified="false" entityId="143298094032107" entityLocationX="179" entityLocationY="375" entityWidth="150" tableName="obr_group"/>
-  <fieldsEntity entityHeight="103" entityIconified="false" entityId="142641888807406" entityLocationX="560" entityLocationY="188" entityWidth="150" tableName="usl_uslugi"/>
-  <fieldsEntity entityHeight="80" entityIconified="false" entityId="143297631671895" entityLocationX="816" entityLocationY="5" entityWidth="150" tableName="usl_params_list"/>
-  <fieldsEntity entityHeight="96" entityIconified="false" entityId="142641931387629" entityLocationX="353" entityLocationY="17" entityWidth="150" tableName="obr_route"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="801" entityLocationY="193" entityWidth="150" tableName="usl_cost"/>
-  <fieldsEntity entityHeight="124" entityIconified="false" entityId="142641909834871" entityLocationX="354" entityLocationY="212" entityWidth="150" tableName="obr_uslugi"/>
-  <fieldsEntity entityHeight="92" entityIconified="false" entityId="143297645571172" entityLocationX="814" entityLocationY="94" entityWidth="150" tableName="usl_params_def_values"/>
+  <fieldsEntity entityHeight="92" entityIconified="false" entityId="142641957742147" entityLocationX="357" entityLocationY="175" entityWidth="150" tableName="obr_additional"/>
+  <fieldsEntity entityHeight="132" entityIconified="false" entityId="142641921948460" entityLocationX="548" entityLocationY="388" entityWidth="150" tableName="buh_contracts"/>
+  <fieldsEntity entityHeight="80" entityIconified="false" entityId="143298094032107" entityLocationX="176" entityLocationY="371" entityWidth="150" tableName="obr_group"/>
+  <fieldsEntity entityHeight="142" entityIconified="false" entityId="143317109549917" entityLocationX="564" entityLocationY="3" entityWidth="150" tableName="obr_payable"/>
+  <fieldsEntity entityHeight="103" entityIconified="false" entityId="142641888807406" entityLocationX="560" entityLocationY="208" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="169" entityIconified="false" entityId="142641931387629" entityLocationX="356" entityLocationY="2" entityWidth="150" tableName="obr_route"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="765" entityLocationY="208" entityWidth="150" tableName="usl_cost"/>
+  <fieldsEntity entityHeight="124" entityIconified="false" entityId="142641909834871" entityLocationX="356" entityLocationY="274" entityWidth="150" tableName="obr_uslugi"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142807979855640" entityLocationX="11" entityLocationY="380" entityWidth="150" tableName="obr_status"/>
-  <fieldsEntity entityHeight="105" entityIconified="false" entityId="142641969026538" entityLocationX="552" entityLocationY="312" entityWidth="150" tableName="buh_oplata"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="176" entityLocationY="140" entityWidth="150" tableName="obr_treatment"/>
+  <fieldsEntity entityHeight="105" entityIconified="false" entityId="142641969026538" entityLocationX="935" entityLocationY="3" entityWidth="150" tableName="buh_oplata"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="177" entityLocationY="140" entityWidth="150" tableName="obr_treatment"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807003" entityLocationX="12" entityLocationY="133" entityWidth="150" tableName="man_patient"/>
-  <fieldsEntity entityHeight="149" entityIconified="false" entityId="143297633393889" entityLocationX="569" entityLocationY="5" entityWidth="150" tableName="obr_result"/>
+  <fieldsEntity entityHeight="99" entityIconified="false" entityId="143297633393889" entityLocationX="157" entityLocationY="11" entityWidth="150" tableName="obr_result"/>
 </datamodel>

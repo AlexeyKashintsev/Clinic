@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143316261637025" entityLocationX="13" entityLocationY="18" entityWidth="150" tableName="obr_uslugi_status"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905045250" entityLocationX="622" entityLocationY="9" entityWidth="150" tableName="usl_params_list"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143316271152878" entityLocationX="241" entityLocationY="227" entityWidth="150" tableName="obr_diagnosis"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905041662" entityLocationX="414" entityLocationY="14" entityWidth="150" tableName="obr_result"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905044937" entityLocationX="238" entityLocationY="16" entityWidth="150" tableName="obr_uslugi"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905045050" entityLocationX="624" entityLocationY="216" entityWidth="150" tableName="usl_params_def_values"/>
+  <fieldsEntity entityHeight="81" entityIconified="false" entityId="143316278243437" entityLocationX="411" entityLocationY="283" entityWidth="150" tableName="mkb_deseases"/>
+</datamodel>
