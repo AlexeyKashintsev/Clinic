@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qObrStatus" Title="" entityHeight="200" entityIconified="false" entityId="143315734170017" entityLocationX="711" entityLocationY="54" entityWidth="150" queryId="qObrStatus" tableName="" tableSchemaName=""/>
   <entity Name="qManJob" Title="" entityHeight="200" entityIconified="false" entityId="143187143598379" entityLocationX="484" entityLocationY="263" entityWidth="150" queryId="qManJob" tableName="" tableSchemaName=""/>
   <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="142816396875860" entityLocationX="477" entityLocationY="48" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
   <entity Name="qPatientsByParams" Title="" entityHeight="225" entityIconified="false" entityId="142808019007170" entityLocationX="200" entityLocationY="203" entityWidth="150" queryId="qPatientsByParams" tableName="" tableSchemaName=""/>

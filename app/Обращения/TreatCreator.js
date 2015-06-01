@@ -30,7 +30,7 @@ function TreatCreator() {
         model.qTreatById.push({
             treatment_group_id: model.qTreatGroup.cursor.obr_group_id,
             treat_date: new Date(),
-            treat_status: 0,
+            treat_status: 100,
             group_data: true
         });
 //        model.save();
@@ -43,7 +43,7 @@ function TreatCreator() {
         model.qTreatById.push({
             patient: aPatientId,
             treat_date: new Date(),
-            treat_status: 0,
+            treat_status: 100,
             treatment_group_id: aTreatGroup
         });
 //        model.save();
@@ -80,7 +80,7 @@ function TreatCreator() {
                 addUslugi(anUslugi, aTreat);//Добавление услуг к групповому маршруту
                 routeData.patients.forEach(function(patient) {
                     P.Logger.info('Добавляем назначения по пациенту ' + patient.surname);
-                    var cTreat = self.createSingleTreatment(patient, model.qTreatGroup.cursor.obr_group_id);
+                    var cTreat = self.createSingleTreatment(patient.man_patient_id, model.qTreatGroup.cursor.obr_group_id);
                     addUslugi(anUslugi, cTreat);
                     addRoute(patient.route, cTreat);
                 });

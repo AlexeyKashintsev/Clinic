@@ -7,30 +7,57 @@
     <AnchorsPaneConstraints height="20px" left="10px" top="60px" width="210px"/>
   </ModelCombo>
   <ModelFormattedField cursor="0" format="" name="tfFirstName" parent="panel" prefHeight="20px" prefWidth="210px">
-    <AnchorsPaneConstraints height="20px" left="10px" top="160px" width="210px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="250px" width="210px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" format="" name="tfSurname" parent="panel" prefHeight="20px" prefWidth="210px">
-    <AnchorsPaneConstraints height="20px" left="10px" top="210px" width="210px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="290px" width="210px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="70px" text="Компания">
+    <font family="Tahoma" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="70px"/>
   </Label>
   <Label cursor="0" name="label2" parent="panel" prefHeight="20px" prefWidth="70px" text="Имя">
-    <AnchorsPaneConstraints height="20px" left="10px" top="140px" width="70px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="230px" width="70px"/>
   </Label>
   <Label cursor="0" name="label3" parent="panel" prefHeight="20px" prefWidth="70px" text="Фамилия">
-    <AnchorsPaneConstraints height="20px" left="10px" top="190px" width="70px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="270px" width="70px"/>
   </Label>
-  <Button cursor="0" name="btnApply" parent="panel" prefHeight="30px" prefWidth="110px" text="Применить">
-    <AnchorsPaneConstraints height="30px" left="110px" top="250px" width="110px"/>
+  <Button cursor="0" name="btnApplyFilter" parent="panel" prefHeight="30px" prefWidth="110px" text="Применить">
+    <AnchorsPaneConstraints height="30px" left="10px" top="340px" width="110px"/>
   </Button>
   <Label cursor="0" name="label4" parent="panel" prefHeight="40px" prefWidth="210px" text="Фильтр:">
     <font family="Monospaced" size="18" style="0"/>
     <AnchorsPaneConstraints height="40px" left="10px" top="0px" width="210px"/>
   </Label>
   <Label cursor="0" name="label6" parent="panel" prefHeight="20px" prefWidth="70px" text="Назначения">
+    <font family="Tahoma" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="10px" top="90px" width="70px"/>
   </Label>
+  <Label cursor="0" name="label7" parent="panel" prefHeight="20px" prefWidth="50px" text="Статус">
+    <AnchorsPaneConstraints height="20px" left="10px" top="120px" width="50px"/>
+  </Label>
+  <ModelCombo cursor="0" displayField="status_name" displayList="qObrStatus" name="mcTreatStatus" parent="panel" prefHeight="20px" prefWidth="160px">
+    <AnchorsPaneConstraints height="20px" left="60px" top="120px" width="160px"/>
+  </ModelCombo>
+  <Label cursor="0" name="label8" parent="panel" prefHeight="20px" prefWidth="50px" text="С">
+    <AnchorsPaneConstraints height="20px" left="10px" top="150px" width="50px"/>
+  </Label>
+  <Label cursor="0" name="label9" parent="panel" prefHeight="20px" prefWidth="50px" text="По">
+    <AnchorsPaneConstraints height="20px" left="10px" top="180px" width="50px"/>
+  </Label>
+  <ModelDate cursor="0" name="mdTreatStart" parent="panel" prefHeight="20px" prefWidth="160px">
+    <AnchorsPaneConstraints height="20px" left="60px" top="150px" width="160px"/>
+  </ModelDate>
+  <ModelDate cursor="0" name="mdTreatEnd" parent="panel" prefHeight="20px" prefWidth="160px">
+    <AnchorsPaneConstraints height="20px" left="60px" top="180px" width="160px"/>
+  </ModelDate>
+  <Label cursor="0" name="label10" parent="panel" prefHeight="20px" prefWidth="210px" text="Фильтр по ФИО">
+    <font family="Tahoma" size="11" style="1"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="210px" width="210px"/>
+  </Label>
+  <Button cursor="0" name="btnClearFilter" parent="panel" prefHeight="30px" prefWidth="90px" text="Сбросить">
+    <AnchorsPaneConstraints height="30px" left="130px" top="340px" width="90px"/>
+  </Button>
   <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="620px">
     <AnchorsPaneConstraints height="80px" left="230px" right="90px" top="0px"/>
   </ToolBar>
@@ -41,11 +68,11 @@
     <AnchorsPaneConstraints height="80px" right="0px" top="0px" width="90px"/>
   </Button>
   <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="panel2" name="splitPane" orientation="0" parent="view" prefHeight="406px" prefWidth="710px" rightComponent="panel3">
-    <font family="Tahoma" size="11" style="0"/>
+    <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="0px" left="230px" right="0px" top="80px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="splitPane" prefHeight="209px" prefWidth="708px"/>
-  <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="panel2" prefHeight="189px" prefWidth="708px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="splitPane" prefHeight="249px" prefWidth="708px"/>
+  <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="panel2" prefHeight="229px" prefWidth="708px">
     <AnchorsPaneConstraints bottom="20px" left="0px" right="0px" top="0px"/>
     <CheckGridColumn name="colCheck" resizable="true"/>
     <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="112px">
@@ -85,5 +112,5 @@
   <Button cursor="0" name="btnSelAll" parent="panel1" prefHeight="20px" prefWidth="110px" text="Выбрать все">
     <AnchorsPaneConstraints height="20px" left="410px" top="0px" width="110px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="splitPane" prefHeight="190px" prefWidth="708px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="splitPane" prefHeight="150px" prefWidth="708px"/>
 </layout>

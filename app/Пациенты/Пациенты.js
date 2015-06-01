@@ -42,11 +42,16 @@ function PatientsForm() {
         });
         //model.qPatientsByParams.push({});
     };
-    form.btnApply.onActionPerformed = function(event) {
+    
+    form.btnApplyFilter.onActionPerformed = function(event) {
         model.qPatientsByParams.params.company_id = form.mcWorkPlace.value ? 
                 form.mcWorkPlace.value.buh_companies_id : null;
         model.qPatientsByParams.params.firstname = form.tfFirstName.text;
         model.qPatientsByParams.params.surname = form.tfSurname.text;
+        model.qPatientsByParams.params.treat_status = form.mcTreatStatus.value ? form.mcTreatStatus.value[0] : null;
+        model.qPatientsByParams.params.start_date = form.mdTreatStart.value;
+        model.qPatientsByParams.params.end_date = form.mdTreatEnd.value;
+        
         model.qPatientsByParams.requery();
     };
     
@@ -91,5 +96,15 @@ function PatientsForm() {
                 window.location.reload();
             });
         }
+    };
+    form.btnClearFilter.onActionPerformed = function(event) {
+        form.mcWorkPlace.value = null;
+        form.tfFirstName.text = null;
+        form.tfSurname.text = null;
+        form.mcTreatStatus.value = null;
+        form.mdTreatStart.value = null;
+        form.mdTreatEnd.value = null;
+        
+        form.btnApplyFilter.onActionPerformed();
     };
 }
