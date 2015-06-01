@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qObrStatus" Title="" entityHeight="200" entityIconified="false" entityId="143314427545372" entityLocationX="13" entityLocationY="252" entityWidth="150" queryId="qObrStatus" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugiInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143315652768921" entityLocationX="232" entityLocationY="244" entityWidth="150" queryId="qUslugiInTreat" tableName="" tableSchemaName=""/>
+  <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143315530339675" entityLocationX="231" entityLocationY="22" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="143314421429055" entityLocationX="24" entityLocationY="23" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143315562862066" entityLocationX="431" entityLocationY="21" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
+  <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314421429055" rightEntityId="143315652768921" rightEntityParameterName="treat_id"/>
+  <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314421429055" rightEntityId="143315530339675" rightEntityParameterName="treatId"/>
+  <referenceRelation collectionPropertyName="q_USLUGA_BY_ID" leftEntityFieldName="usluga_id" leftEntityId="143315530339675" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_USL_IN_TREAT"/>
+  <referenceRelation collectionPropertyName="q_STATUS" leftEntityFieldName="treat_status" leftEntityId="143314421429055" rightEntityFieldName="obr_status_id" rightEntityId="143314427545372" scalarPropertyName="q_TREAT"/>
+  <referenceRelation collectionPropertyName="q_USL_ID" leftEntityFieldName="usluga_id" leftEntityId="143315652768921" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_USLUGI_TREAT"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143315652768921" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143315530339675" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
+</datamodel>

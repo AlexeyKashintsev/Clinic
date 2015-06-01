@@ -12,6 +12,17 @@ function PatientsForm() {
     
     var fmPatient = new PatientForm();
     var fmAppointment;
+    var fmTreatmentDetail = new TreatmentDetailForm();
+    
+    model.requery(function(){
+        fmTreatmentDetail.setPacient(model.qPatientsByParams.cursor.man_patient_id);
+        fmTreatmentDetail.showOnPanel(form.pnlObr);
+    });
+    
+    model.qPatientsByParams.onScrolled = function(event) {
+        fmTreatmentDetail.setPacient(model.qPatientsByParams.cursor.man_patient_id);
+    };
+
     
     self.show = function (aDesktop) {
         if(aDesktop){
@@ -25,7 +36,7 @@ function PatientsForm() {
        }
     };
     
-    model.requery();
+    
     
     form.btnEditPatient.onActionPerformed = function(event) {
         fmPatient.setParams(model.qPatientsByParams.cursor.man_patient_id);
