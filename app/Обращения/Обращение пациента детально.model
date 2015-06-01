@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qObrStatus" Title="" entityHeight="200" entityIconified="false" entityId="143314427545372" entityLocationX="223" entityLocationY="22" entityWidth="150" queryId="qObrStatus" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="143314421429055" entityLocationX="24" entityLocationY="23" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
+  <referenceRelation collectionPropertyName="q_STATUS" leftEntityFieldName="treat_status" leftEntityId="143314421429055" rightEntityFieldName="obr_status_id" rightEntityId="143314427545372" scalarPropertyName="q_TREAT"/>
+</datamodel>

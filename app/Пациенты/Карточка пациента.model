@@ -10,15 +10,15 @@
   <entity Name="qManJob" Title="" entityHeight="84" entityIconified="false" entityId="142814955397042" entityLocationX="26" entityLocationY="385" entityWidth="150" queryId="qManJob" tableName="" tableSchemaName=""/>
   <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="142814760638095" entityLocationX="411" entityLocationY="14" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
   <relation leftEntityFieldName="man_workplace_id" leftEntityId="142814774378783" rightEntityId="142815056972508" rightEntityParameterName="workplaceId"/>
-  <referenceRelation collectionPropertyName="jobs" leftEntityFieldName="job_id" leftEntityId="142814774378783" rightEntityFieldName="man_job_id" rightEntityId="142814955397042" scalarPropertyName="job"/>
-  <referenceRelation leftEntityFieldName="treat_status" leftEntityId="142814760638095" rightEntityFieldName="obr_status_id" rightEntityId="142814935793249"/>
-  <referenceRelation collectionPropertyName="c_inshurance" leftEntityFieldName="inshurance_company" leftEntityId="142808343601814" rightEntityFieldName="buh_inshurance_company_id" rightEntityId="143186352626953" scalarPropertyName="p_inshurance"/>
-  <referenceRelation leftEntityFieldName="patient" leftEntityId="142814760638095" rightEntityFieldName="man_patient_id" rightEntityId="142808343601814"/>
-  <referenceRelation collectionPropertyName="p_job" leftEntityFieldName="man_id" leftEntityId="142814774378783" rightEntityFieldName="man_patient_id" rightEntityId="142808343601814" scalarPropertyName="j_job"/>
   <referenceRelation collectionPropertyName="companies" leftEntityFieldName="company_id" leftEntityId="142814774378783" rightEntityFieldName="buh_companies_id" rightEntityId="142814958434969" scalarPropertyName="company"/>
-  <referenceRelation leftEntityFieldName="hazard_id" leftEntityId="142815056972508" rightEntityFieldName="hazards_id" rightEntityId="142815056972508"/>
-  <referenceRelation leftEntityFieldName="workplace_id" leftEntityId="142815056972508" rightEntityFieldName="man_workplace_id" rightEntityId="142814774378783"/>
-  <referenceRelation leftEntityFieldName="buh_companies" leftEntityId="143186352626953" rightEntityFieldName="buh_companies_id" rightEntityId="142814958434969"/>
-  <referenceRelation collectionPropertyName="t_blood" leftEntityFieldName="blood_type" leftEntityId="142808343601814" rightEntityFieldName="blood_type_id" rightEntityId="143048746294757" scalarPropertyName="p_blood"/>
+  <referenceRelation collectionPropertyName="jobs" leftEntityFieldName="job_id" leftEntityId="142814774378783" rightEntityFieldName="man_job_id" rightEntityId="142814955397042" scalarPropertyName="job"/>
   <referenceRelation collectionPropertyName="t_sex" leftEntityFieldName="sex" leftEntityId="142808343601814" rightEntityFieldName="man_sex_id" rightEntityId="142808371015377" scalarPropertyName="p_sex"/>
+  <referenceRelation leftEntityFieldName="patient" leftEntityId="142814760638095" rightEntityFieldName="man_patient_id" rightEntityId="142808343601814"/>
+  <referenceRelation leftEntityFieldName="workplace_id" leftEntityId="142815056972508" rightEntityFieldName="man_workplace_id" rightEntityId="142814774378783"/>
+  <referenceRelation collectionPropertyName="t_blood" leftEntityFieldName="blood_type" leftEntityId="142808343601814" rightEntityFieldName="blood_type_id" rightEntityId="143048746294757" scalarPropertyName="p_blood"/>
+  <referenceRelation collectionPropertyName="c_inshurance" leftEntityFieldName="inshurance_company" leftEntityId="142808343601814" rightEntityFieldName="buh_inshurance_company_id" rightEntityId="143186352626953" scalarPropertyName="p_inshurance"/>
+  <referenceRelation leftEntityFieldName="hazard_id" leftEntityId="142815056972508" rightEntityFieldName="hazards_id" rightEntityId="142815056972508"/>
+  <referenceRelation leftEntityFieldName="buh_companies" leftEntityId="143186352626953" rightEntityFieldName="buh_companies_id" rightEntityId="142814958434969"/>
+  <referenceRelation collectionPropertyName="q_Obr_Status" leftEntityFieldName="treat_status" leftEntityId="142814760638095" rightEntityFieldName="obr_status_id" rightEntityId="142814935793249" scalarPropertyName="q_Treat_by_Pacient"/>
+  <referenceRelation collectionPropertyName="p_job" leftEntityFieldName="man_id" leftEntityId="142814774378783" rightEntityFieldName="man_patient_id" rightEntityId="142808343601814" scalarPropertyName="j_job"/>
 </datamodel>
