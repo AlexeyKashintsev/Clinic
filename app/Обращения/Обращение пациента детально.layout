@@ -54,4 +54,11 @@
   <AnchorsPane background="#ffffff" cursor="0" name="pnlDop" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
     <TabbedPaneConstraints tabTitle="Допы"/>
   </AnchorsPane>
+  <ModelGrid cursor="0" data="qObrAdditional" name="modelGrid3" parent="pnlDop" prefHeight="367px" prefWidth="497px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="q_ADD_USLUGA" name="colUsluga_id" title="Наименование услуги" width="456px">
+      <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    </ModelGridColumn>
+  </ModelGrid>
 </layout>
