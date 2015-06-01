@@ -15,12 +15,12 @@ function PatientsForm() {
     var fmTreatmentDetail = new TreatmentDetailForm();
     
     model.requery(function(){
-        fmTreatmentDetail.setPacient(model.qPatientsByParams.cursor.man_patient_id);
+        fmTreatmentDetail.setPatient(model.qPatientsByParams.cursor.man_patient_id);
         fmTreatmentDetail.showOnPanel(form.pnlObr);
     });
     
     model.qPatientsByParams.onScrolled = function(event) {
-        fmTreatmentDetail.setPacient(model.qPatientsByParams.cursor.man_patient_id);
+        fmTreatmentDetail.setPatient(model.qPatientsByParams.cursor.man_patient_id);
     };
 
     

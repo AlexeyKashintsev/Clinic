@@ -4,5 +4,5 @@
  * @name qTreatRoute
  */ 
 Select * 
-From obr_route t1
+From obr_uslugi t1
  Where :treat_id = t1.treat_id

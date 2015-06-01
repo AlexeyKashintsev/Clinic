@@ -11,7 +11,7 @@
   <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314421429055" rightEntityId="143315530339675" rightEntityParameterName="treatId"/>
   <referenceRelation collectionPropertyName="q_ROUTE" leftEntityFieldName="route_status" leftEntityId="143315652768921" rightEntityFieldName="obr_route_status_id" rightEntityId="143316294269351" scalarPropertyName="q_USL_ROUTE"/>
   <referenceRelation collectionPropertyName="q_USL_BYID" leftEntityFieldName="usluga_id" leftEntityId="143316488509167" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_ADD_USLUGA"/>
-  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143315652768921" rightEntityFieldName="obr_route_id" rightEntityId="143315652768921"/>
+  <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143315652768921" rightEntityFieldName="obr_uslugi_id" rightEntityId="143315652768921"/>
   <referenceRelation collectionPropertyName="q_STATUS" leftEntityFieldName="treat_status" leftEntityId="143314421429055" rightEntityFieldName="obr_status_id" rightEntityId="143314427545372" scalarPropertyName="q_TREAT"/>
   <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143315652768921" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
   <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143315530339675" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>

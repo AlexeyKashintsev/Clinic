@@ -3,6 +3,6 @@
     <parameter description="" name="treat_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="143316462600734" entityLocationX="180" entityLocationY="12" entityWidth="150" tableAlias="t1" tableName="obr_additional" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143316462600734" entityLocationX="180" entityLocationY="12" entityWidth="150" tableAlias="t1" tableName="obr_uslugi" tableSchemaName=""/>
   <relation leftEntityId="-1" leftEntityParameterName="treat_id" rightEntityFieldName="treat_id" rightEntityId="143316462600734"/>
 </datamodel>

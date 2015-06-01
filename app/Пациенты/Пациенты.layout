@@ -68,7 +68,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/application-exit.png" name="btnAddTreat1" parent="view" prefHeight="80px" prefWidth="90px" text="Выход" verticalTextPosition="3">
     <AnchorsPaneConstraints height="80px" right="0px" top="0px" width="90px"/>
   </Button>
-  <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="panel2" name="splitPane" orientation="0" parent="view" prefHeight="406px" prefWidth="710px" rightComponent="panel3">
+  <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="panel2" name="splitPane" orientation="0" parent="view" prefHeight="406px" prefWidth="710px" rightComponent="pnlObr">
     <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="0px" left="230px" right="0px" top="80px"/>
   </SplitPane>
@@ -113,5 +113,5 @@
   <Button cursor="0" name="btnSelAll" parent="panel1" prefHeight="20px" prefWidth="110px" text="Выбрать все">
     <AnchorsPaneConstraints height="20px" left="410px" top="0px" width="110px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="splitPane" prefHeight="150px" prefWidth="708px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlObr" parent="splitPane" prefHeight="150px" prefWidth="708px"/>
 </layout>

@@ -4,5 +4,5 @@
  * @name qObrAdditional
  */ 
 Select * 
-From obr_additional t1
+From obr_uslugi t1
  Where :treat_id = t1.treat_id

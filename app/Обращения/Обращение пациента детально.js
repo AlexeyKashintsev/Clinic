@@ -15,7 +15,7 @@ function TreatmentDetailForm() {
         aPanel.add(form.view);
     };
     
-    self.setPacient = function (aPacientId){
+    self.setPatient = function (aPacientId){
         model.qTreatByPatient.params.patient_id = aPacientId;
         model.qTreatByPatient.requery();
     };
