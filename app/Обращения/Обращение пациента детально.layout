@@ -19,12 +19,23 @@
   <AnchorsPane background="#ffffff" cursor="0" name="pnlUsl" parent="tabbedPane" prefHeight="367px" prefWidth="497px">
     <TabbedPaneConstraints tabTitle="Услуги"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" name="modelGrid1" parent="pnlUsl" prefHeight="370px" prefWidth="500px">
-    <AnchorsPaneConstraints bottom="-3px" left="0px" right="-3px" top="0px"/>
+  <ModelGrid cursor="0" data="qUslInTreat" name="modelGrid1" parent="pnlUsl" prefHeight="367px" prefWidth="497px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="q_USL_IN_TREAT" name="colUsluga_id" title="Наименование услуги" width="456px">
+      <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlNazn" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
     <TabbedPaneConstraints tabTitle="Назначение"/>
   </AnchorsPane>
+  <ModelGrid cursor="0" data="qUslugiInTreat" name="modelGrid2" parent="pnlNazn" prefHeight="370px" prefWidth="500px">
+    <AnchorsPaneConstraints bottom="-3px" left="0px" right="-3px" top="0px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="q_USLUGI_TREAT" name="colUsluga_id" title="colUsluga_id" width="459px">
+      <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    </ModelGridColumn>
+  </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlPayment" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
     <TabbedPaneConstraints tabTitle="Оплата"/>
   </AnchorsPane>
