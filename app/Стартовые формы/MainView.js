@@ -38,6 +38,7 @@ function MainView() {
     var fmPrcieList;
     var fmManJob, fmUslPeriod, fmObrStatus, fmUslPeriodicType, fmUsiLimAgeType, fmResults;
     var fmMkbDeseases;
+    var fmRouteStatus;
     
     form.miUsers.onActionPerformed = function(event) {
         if (!fmUsers) {
@@ -134,5 +135,10 @@ function MainView() {
         if (!fmResults)
             fmResults = new ResultsForm();
         fmResults.show(form.formDesktop);
+    };
+    form.miRouteStatus.onActionPerformed = function(event) {
+        if (!fmRouteStatus)
+            fmRouteStatus = new ObrRouteStatusForm();
+        fmRouteStatus.show(form.formDesktop);
     };
 }
