@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
   <fieldsEntity entityHeight="134" entityIconified="false" entityId="142342740151218" entityLocationX="594" entityLocationY="320" entityWidth="150" tableName="buh_contracts"/>
   <fieldsEntity entityHeight="68" entityIconified="false" entityId="142642007334869" entityLocationX="130" entityLocationY="85" entityWidth="150" tableName="usl_lim_age_type"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143297606102223" entityLocationX="791" entityLocationY="3" entityWidth="150" tableName="usl_params"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143297606102223" entityLocationX="786" entityLocationY="8" entityWidth="150" tableName="usl_params"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143297616224899" entityLocationX="965" entityLocationY="8" entityWidth="150" tableName="usl_params_list"/>
   <fieldsEntity entityHeight="213" entityIconified="false" entityId="142281294671140" entityLocationX="364" entityLocationY="225" entityWidth="150" tableName="usl_cost"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142281274896011" entityLocationX="594" entityLocationY="13" entityWidth="150" tableName="usl_uslugi"/>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qPriceSource" Title="" entityHeight="221" entityIconified="false" entityId="143318700958975" entityLocationX="298" entityLocationY="45" entityWidth="150" queryId="qPricesByContract" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugiByContract" Title="" entityHeight="200" entityIconified="false" entityId="143318579568452" entityLocationX="54" entityLocationY="46" entityWidth="150" queryId="qUslugiByContract" tableName="" tableSchemaName=""/>
+</datamodel>

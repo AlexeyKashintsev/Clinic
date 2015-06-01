@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
-  <fieldsEntity entityHeight="156" entityIconified="false" entityId="142641921948460" entityLocationX="548" entityLocationY="388" entityWidth="150" tableName="buh_contracts"/>
-  <fieldsEntity entityHeight="80" entityIconified="false" entityId="143298094032107" entityLocationX="176" entityLocationY="371" entityWidth="150" tableName="obr_group"/>
-  <fieldsEntity entityHeight="149" entityIconified="false" entityId="142641888807406" entityLocationX="544" entityLocationY="209" entityWidth="150" tableName="usl_uslugi"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="765" entityLocationY="208" entityWidth="150" tableName="usl_cost"/>
-  <fieldsEntity entityHeight="124" entityIconified="false" entityId="142641909834871" entityLocationX="352" entityLocationY="137" entityWidth="150" tableName="obr_uslugi"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142807979855640" entityLocationX="11" entityLocationY="380" entityWidth="150" tableName="obr_status"/>
-  <fieldsEntity entityHeight="105" entityIconified="false" entityId="142641969026538" entityLocationX="935" entityLocationY="3" entityWidth="150" tableName="buh_oplata"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="177" entityLocationY="140" entityWidth="150" tableName="obr_treatment"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807003" entityLocationX="12" entityLocationY="133" entityWidth="150" tableName="man_patient"/>
-  <fieldsEntity entityHeight="99" entityIconified="false" entityId="143297633393889" entityLocationX="157" entityLocationY="11" entityWidth="150" tableName="obr_result"/>
+  <fieldsEntity entityHeight="155" entityIconified="false" entityId="142641921948460" entityLocationX="269" entityLocationY="360" entityWidth="160" tableName="buh_contracts"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="810" entityLocationY="432" entityWidth="150" tableName="usl_cost"/>
+  <fieldsEntity entityHeight="188" entityIconified="false" entityId="142641909834871" entityLocationX="574" entityLocationY="28" entityWidth="160" tableName="obr_uslugi"/>
+  <fieldsEntity entityHeight="76" entityIconified="false" entityId="142807979855640" entityLocationX="63" entityLocationY="257" entityWidth="150" tableName="obr_status"/>
+  <fieldsEntity entityHeight="154" entityIconified="false" entityId="142641969026538" entityLocationX="480" entityLocationY="301" entityWidth="150" tableName="buh_oplata"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641900177099" entityLocationX="267" entityLocationY="113" entityWidth="150" tableName="obr_treatment"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807003" entityLocationX="61" entityLocationY="22" entityWidth="150" tableName="man_patient"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143317815214834" entityLocationX="671" entityLocationY="226" entityWidth="272" tableName="obr_uslugi_commercial"/>
 </datamodel>

@@ -7,7 +7,7 @@ function TreatCalculator() {
     var self = this, model = P.loadModel(this.constructor.name);
     var patientM = new Patient();
     var jsl = new jslFormatter();
-    var errors = false;
+    var errors = [];
 //    Возможно, нужно сделать рекурсивный обход
     var uslRoutes = {};
     function getUslRoute(anUslugaId) {
@@ -27,10 +27,13 @@ function TreatCalculator() {
                 uslRoutes[anUslugaId].route.push(function() {
                     model.qUslugaById.params.usluga_id = anUslugaId;
                     model.qUslugaById.requery();
-                    return model.qUslugaById.cursor;
+                    var res = model.qUslugaById.cursor;
+                    res.selected = true;
+                    return res;
                 }());
             else
                 model.qUslugaContents.forEach(function(routeUsl) {
+                    routeUsl.selected = false;
                     uslRoutes[anUslugaId].route.push(routeUsl);
                 });
         }
@@ -85,6 +88,14 @@ function TreatCalculator() {
                 }
             }
         } catch (e) {
+            errors.push({
+                errorType: 'patientDataMiss',
+                data: {
+                    patient_id: aPatient.man_patient_id,
+                    error: (!aPatient.sex ? 'не указан пол '  : '')
+                         + (!aPatient.date_oft_birth ? 'не указана дата рождения' : '')
+                }
+            });
             P.Logger.warning('Невозможно проверить примененимость услуги к пациенту ' + aPatient.surname + ' ' + aPatient.firstname
                     + (!aPatient.sex ? ', не указан пол пациента'  : '')
                     + (!aPatient.date_oft_birth ? ', не указана дата рождения' : ''));
@@ -96,7 +107,7 @@ function TreatCalculator() {
         var patients = [];
         var uslugi = {};
         aPatients.forEach(function(aPatient) {
-            var patient = self.calculateRoute4Person(aPatient, anUslugi);
+            var patient = calculateRoute4Person(aPatient, anUslugi);
 //            logIt(patient);
             patients.push(patient);
 //            logIt(patients);
@@ -107,10 +118,13 @@ function TreatCalculator() {
                         usl_id: j,
                         people: 0,
                         usl_content: 0,
-                        hazard: 0
+                        hazard: 0,
+                        selected: false
                     };
                 }
                 uslugi[j].people++;
+                if (patient.route[j].selected)
+                    uslugi[j].selected = true;
                 if (patient.route[j].usl_content) 
                     uslugi[j].usl_content++;
                 if (patient.route[j].hazard) 
@@ -119,14 +133,15 @@ function TreatCalculator() {
         });
         var res = {
             patients: patients,
-            uslugi: uslugi
+            uslugi: uslugi,
+            errors: errors
         };
 //        logIt(res);
         P.Logger.info('Построение маршрутов завершено! ' + res);
         return res;
     };
     
-    self.calculateRoute4Person = function(aPatient, anUslugi) {
+    function calculateRoute4Person(aPatient, anUslugi) {
         var patient = typeof aPatient === 'object' ? aPatient : patientM.getPatientSync(aPatient);
         patient.route = {};
         P.Logger.info('Расчет маршрута для пациента');
@@ -136,16 +151,20 @@ function TreatCalculator() {
             patient.doHazards = uslRoute.useHazards;
             uslRoute.route.forEach(function(routeUsl) {
                 if (checkIfUslIsApplicable(patient, routeUsl)) {
-                    var uslId = routeUsl.route_usl ? routeUsl.route_usl : routeUsl.usl_uslugi_id;
-                    P.Logger.info('Добавление услуги ' + uslId);
-                    if (!patient.route[uslId]) {
-                        patient.route[uslId] = {
-                            usl_id: uslId,
+                    var routeUslId = routeUsl.route_usl ? routeUsl.route_usl : routeUsl.usl_uslugi_id;
+                    P.Logger.info('Добавление услуги ' + routeUslId);
+                    if (!patient.route[routeUslId]) {
+                        patient.route[routeUslId] = {
+                            usl_id: routeUslId,
                             usl_content: true,
-                            hazard: false
+                            hazard: false,
+                            usl_contents: [uslId],
+                            hazards: [],
+                            selected: routeUsl.selected
                         };
                     } else {
                         patient.route[routeUsl.route_usl].usl_content = true;
+                        patient.route[routeUsl.route_usl].usl_contents.push(uslId);
                     }
                 }
             });
@@ -164,10 +183,13 @@ function TreatCalculator() {
                             patient.route[routeUsl.route_usl] = {
                                 usl_id: routeUsl.route_usl,
                                 usl_content: false,
-                                hazard: true
+                                hazard: true,
+                                usl_contents: [],
+                                hazards: [hazard]
                             };
                         } else {
                             patient.route[routeUsl.route_usl].hazard = true;
+                            patient.route[routeUsl.route_usl].hazards.push(hazard);
                         }
                     }
                 });
