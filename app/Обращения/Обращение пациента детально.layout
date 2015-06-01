@@ -5,35 +5,47 @@
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
   </SplitPane>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="395px" prefWidth="269px"/>
-  <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel" prefHeight="397px" prefWidth="270px">
-    <AnchorsPaneConstraints bottom="-2px" left="0px" right="-1px" top="0px"/>
+  <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel" prefHeight="364px" prefWidth="269px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="31px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="treat_date" name="colTreat_date" title="Дата обращения" width="115px">
+    <ModelGridColumn field="treat_date" name="colTreat_date" title="Дата обращения" width="114px">
       <ModelDate dateFormat="dd.MM.yyyy HH:mm:ss.SSS"/>
     </ModelGridColumn>
     <ModelGridColumn field="q_TREAT" name="colTreat_status" title="Статус" width="114px">
       <ModelCombo displayField="status_name" displayList="qObrStatus" list="false"/>
     </ModelGridColumn>
   </ModelGrid>
-  <TabbedPane cursor="0" name="tabbedPane" parent="splitPane" prefHeight="395px" prefWidth="502px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="splitPane" prefHeight="395px" prefWidth="502px" selectedComponent="pnlUsl"/>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlUsl" parent="tabbedPane" prefHeight="367px" prefWidth="497px">
     <TabbedPaneConstraints tabTitle="Услуги"/>
   </AnchorsPane>
   <ModelGrid cursor="0" data="qUslInTreat" name="modelGrid1" parent="pnlUsl" prefHeight="367px" prefWidth="497px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="q_USL_IN_TREAT" name="colUsluga_id" title="Наименование услуги" width="456px">
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="q_USL_IN_TREAT" name="colUsluga_id" title="Наименование услуги" width="152px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="contr_name" name="colContract" title="Договор" width="152px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="cost" name="colCost" title="Цена" width="152px">
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlNazn" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
     <TabbedPaneConstraints tabTitle="Назначение"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" data="qUslugiInTreat" name="modelGrid2" parent="pnlNazn" prefHeight="370px" prefWidth="500px">
-    <AnchorsPaneConstraints bottom="-3px" left="0px" right="-3px" top="0px"/>
-    <ServiceGridColumn name="colService"/>
-    <ModelGridColumn field="q_USLUGI_TREAT" name="colUsluga_id" title="colUsluga_id" width="459px">
+  <ModelGrid cursor="0" data="qUslugiInTreat" name="modelGrid2" parent="pnlNazn" prefHeight="367px" prefWidth="497px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="q_USLUGI_TREAT" name="colUsluga_id" title="Наименование услуги" width="152px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="q_USL_ROUTE" name="colStatus" title="Статус" width="152px">
+      <ModelCombo displayField="status_name" displayList="qRouteStatus" list="false"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="result_value" name="colResult" title="Результат" width="152px">
+      <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlPayment" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">

@@ -4,5 +4,7 @@
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="143315634957434" entityLocationX="204" entityLocationY="4" entityWidth="150" tableAlias="t1" tableName="obr_route" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143316391521716" entityLocationX="406" entityLocationY="5" entityWidth="150" tableAlias="t" tableName="obr_result" tableSchemaName=""/>
   <relation leftEntityId="-1" leftEntityParameterName="treat_id" rightEntityFieldName="treat_id" rightEntityId="143315634957434"/>
+  <relation leftEntityFieldName="obr_route_id" leftEntityId="143315634957434" rightEntityFieldName="route_usl" rightEntityId="143316391521716"/>
 </datamodel>
