@@ -4,7 +4,7 @@
   <fieldsEntity entityHeight="206" entityIconified="false" entityId="143298094032107" entityLocationX="179" entityLocationY="375" entityWidth="150" tableName="obr_group"/>
   <fieldsEntity entityHeight="103" entityIconified="false" entityId="142641888807406" entityLocationX="560" entityLocationY="188" entityWidth="150" tableName="usl_uslugi"/>
   <fieldsEntity entityHeight="80" entityIconified="false" entityId="143297631671895" entityLocationX="816" entityLocationY="5" entityWidth="150" tableName="usl_params_list"/>
-  <fieldsEntity entityHeight="93" entityIconified="false" entityId="142641931387629" entityLocationX="353" entityLocationY="17" entityWidth="150" tableName="obr_route"/>
+  <fieldsEntity entityHeight="96" entityIconified="false" entityId="142641931387629" entityLocationX="353" entityLocationY="17" entityWidth="150" tableName="obr_route"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="142641888807254" entityLocationX="801" entityLocationY="193" entityWidth="150" tableName="usl_cost"/>
   <fieldsEntity entityHeight="124" entityIconified="false" entityId="142641909834871" entityLocationX="354" entityLocationY="212" entityWidth="150" tableName="obr_uslugi"/>
   <fieldsEntity entityHeight="92" entityIconified="false" entityId="143297645571172" entityLocationX="814" entityLocationY="94" entityWidth="150" tableName="usl_params_def_values"/>
