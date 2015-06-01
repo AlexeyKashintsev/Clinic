@@ -2,7 +2,6 @@
  * 
  * @author Alexey
  * @constructor
- * @public
  */ 
 function TreatCalculator() {
     var self = this, model = P.loadModel(this.constructor.name);

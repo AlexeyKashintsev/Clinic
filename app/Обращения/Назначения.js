@@ -7,7 +7,6 @@ function AppointmentForm() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     var treatCreator = new P.ServerModule('TreatCreator');
-    var treatCalculator = new P.ServerModule('TreatCalculator');
     model.qUslugaById.requery();
     model.qContracts.params.c_act = true;
     model.qContracts.requery();
@@ -64,7 +63,9 @@ function AppointmentForm() {
                 createTreat(callback);
             });
         }
-        
+        uslStat  = [];
+        naznacheniya = [];
+        fullData = [];
     };
     
     var fmUslugiSelect = new Uslugi4SelectView();
@@ -84,8 +85,9 @@ function AppointmentForm() {
         
     };
     
-    var uslStat  = [];
-    var naznacheniya = [];
+    var uslStat  = [],
+        naznacheniya = [],
+        fullData = [];
     function calculate() {
         var uslugi = [];
         naznacheniya = [];
@@ -97,7 +99,8 @@ function AppointmentForm() {
             pcs.push(patient.man_patient_id);
         });
             
-        treatCalculator.calculateRoute4Group(pcs, uslugi, function(res) {
+        treatCreator.calculateRoute4Group(pcs, uslugi, function(res) {
+            fullData = res;
             uslStat = [];
             for (var j in res.uslugi) {
                 uslStat.push(res.uslugi[j]);
@@ -163,6 +166,22 @@ function AppointmentForm() {
             
         });
     }
+    
+    function applyTreatment() {
+        treatCreator.applyTreatment(curTreat
+                                    , function() {
+                                        var res = [];
+                                        model.qUslInTreat.forEach(function(usl) {
+                                            res.push(usl.usluga_id);
+                                        });
+                                        return res;
+                                    }());
+    }
+    
+    form.btnApply.onActionPerformed = function(event) {
+        applyTreatment();
+        form.close();
+    };
     
     form.button.onActionPerformed = calculate;
     
