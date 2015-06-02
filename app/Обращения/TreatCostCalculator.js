@@ -104,6 +104,7 @@ function TreatCostCalculator() {
                     cost: null
                 });
             });
+            P.Logger.info(aRouteData.errors);
             if (!aRouteData.errors)
                 aRouteData.errors = [];
             aRouteData.errors.push({

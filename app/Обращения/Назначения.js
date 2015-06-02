@@ -23,6 +23,7 @@ function AppointmentForm() {
 
     function setCurTreat(aTreatmentId, callback) {
         model.revert();
+        console.log('Curtreat = ' + aTreatmentId);
         curTreat = aTreatmentId;
         model.qUslInTreat.params.treat_id = curTreat;
         model.qUslInTreat.requery();
@@ -33,7 +34,7 @@ function AppointmentForm() {
     function createTreat(aContract, callback) {
         form.mtPatientsCount.text = patients.length;
         treatCreator.createTreatment(patients.length > 1 ? null : patients[0].man_patient_id
-                , aContract, function (res) {
+                , aContract, null, function (res) {
                     setCurTreat(res, callback);
                 });
     }
@@ -50,14 +51,14 @@ function AppointmentForm() {
         });
     }
 
-    self.setPatients = function (aPatients, aContract) {
+    self.setPatients = function (aPatients, aContract, aCallback) {
         if (typeof aPatients[0] === 'object') {
             patients = aPatients;
-            createTreat(aContract);
+            createTreat(aContract, aCallback);
         } else {
             patients = [];
             getPatientsData(aPatients, 0, function () {
-                createTreat(aContract);
+                createTreat(aContract, aCallback);
             });
         }
         uslStat = [];
@@ -107,7 +108,7 @@ function AppointmentForm() {
                 }
                 form.mgUslugiStat.data = uslStat;
                 form.mgUslugiStat.colUslName.field = "usl_name";
-                form.mgUslugiStat.colCount.field = "people";
+                form.mgUslugiStat.colCount.field = "treatments";
                 form.mgUslugiStat.colCountByRoute.field = "usl_content";
                 form.mgUslugiStat.colCountByHazard.field = "hazard";
 
@@ -183,7 +184,7 @@ function AppointmentForm() {
     form.button.onActionPerformed = calculate;
 
     function testData() {
-        self.setPatients([143186739536219, 142808473476141, 142808237417447], function () {
+        self.setPatients([143186739536219, 142808473476141, 142808237417447], null, function () {
             model.qUslInTreat.push({
                 treat_id: curTreat,
                 usluga_id: 39

@@ -11,21 +11,24 @@ function TreatCreator() {
     
     var routeData;
     self.calculateRoute = function(aPatients, anUslugi, aPricesSource, calculateAllRoute) {
-        routeData = treatCalculator.calculateRoute4Group(aPatients, anUslugi)
-        routeData = treatCostCalculator.calculateRoute(routeData, aPricesSource, calculateAllRoute);
+        routeData = treatCalculator.calculateRoute4Group(aPatients, anUslugi);
+        if (aPricesSource)
+            routeData = treatCostCalculator.calculateRoute(routeData, aPricesSource, calculateAllRoute);
         return routeData;
     };
     
-    self.createTreatment = function(aPatientId, aContractId) {
+    self.createTreatment = function(aPatientId, aContractId, aTreatGroup) {
         if (!aContractId) model.revert();
         model.qTreatById.params.treat_id = null;
         model.qTreatById.push({
             patient: aPatientId ? aPatientId : null,
             treat_date: new Date(),
             treat_status: 100,
+            group_treat: aTreatGroup,
             contract_id: aContractId ? aContractId : null,
             contract_data: !aPatientId && aContractId
         });
+        P.Logger.info('Новое назначение id ' + model.qTreatById.cursor.obr_treatment_id);
 //        model.save();
         return model.qTreatById.cursor.obr_treatment_id;
     };
@@ -47,7 +50,7 @@ function TreatCreator() {
             model.qTreatRoute.push({
                 treat_id: aTreatment,
                 usluga_id: j,
-                route: true,
+                route: aRoute[j].route,
                 selected: aRoute[j].selected
             });
             aRoute[j].hazards.forEach(function(hazard_id) {
@@ -65,8 +68,8 @@ function TreatCreator() {
         }
     }
     
-    self.applyTreatment = function(aTreat, anUslugi) {
-        if (aTreat === model.qTreatById.cursor.obr_treatment_id) {
+    self.applyTreatment = function(aTreat, anUslugi, aContract) {
+        if (aTreat == model.qTreatById.cursor.obr_treatment_id) {
             P.Logger.info('Добавляем назначение');
             if (model.qTreatById.cursor.contract_data) {
                 P.Logger.info('Групповое назначение');
@@ -76,7 +79,7 @@ function TreatCreator() {
             
             routeData.patients.forEach(function(patient) {
                 P.Logger.info('Добавляем назначения по пациенту ' + patient.surname);
-                var cTreat = self.createSingleTreatment(patient.man_patient_id, model.qTreatGroup.cursor.obr_group_id);
+                var cTreat = self.createTreatment(patient.man_patient_id, aContract, aTreat);
                 addRoute(patient.route, cTreat);
             });
             
@@ -84,6 +87,8 @@ function TreatCreator() {
             model.save();
             return true;
         } else {
+            P.Logger.info('Назначение на сервере отличается от значения на клиенте! На сервере '
+                    + model.qTreatById.cursor.obr_treatment_id + ', на клиенте ' + aTreat);
             model.revert();
             return false;
         }

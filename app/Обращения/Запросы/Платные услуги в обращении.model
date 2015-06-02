@@ -3,10 +3,12 @@
     <parameter description="" name="treatId" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="6" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="143316104598811" entityLocationX="609" entityLocationY="11" entityWidth="150" tableAlias="t2" tableName="usl_cost" tableSchemaName=""/>
-  <entity Title="" entityHeight="152" entityIconified="false" entityId="143316102504108" entityLocationX="409" entityLocationY="57" entityWidth="150" tableAlias="t" tableName="buh_contracts" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143316104598811" entityLocationX="593" entityLocationY="28" entityWidth="150" tableAlias="t2" tableName="usl_cost" tableSchemaName=""/>
+  <entity Title="" entityHeight="152" entityIconified="false" entityId="143316102504108" entityLocationX="776" entityLocationY="21" entityWidth="150" tableAlias="t" tableName="buh_contracts" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143323671894735" entityLocationX="388" entityLocationY="10" entityWidth="150" tableAlias="t3" tableName="obr_uslugi_commercial" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="142815582887582" entityLocationX="195" entityLocationY="6" entityWidth="150" tableAlias="t1" tableName="obr_uslugi" tableSchemaName=""/>
-  <relation leftEntityFieldName="contract_id" leftEntityId="142815582887582" rightEntityFieldName="contract_id" rightEntityId="143316104598811"/>
-  <relation leftEntityFieldName="contract_id" leftEntityId="142815582887582" rightEntityFieldName="buh_contracts_id" rightEntityId="143316102504108"/>
+  <relation leftEntityFieldName="obr_uslugi_commercial_id" leftEntityId="143323671894735" rightEntityFieldName="obr_uslugi_id" rightEntityId="142815582887582"/>
+  <relation leftEntityFieldName="usl_cost" leftEntityId="143323671894735" rightEntityFieldName="usl_cost_id" rightEntityId="143316104598811"/>
+  <relation leftEntityFieldName="contract_id" leftEntityId="143323671894735" rightEntityFieldName="buh_contracts_id" rightEntityId="143316102504108"/>
   <relation leftEntityId="-1" leftEntityParameterName="treatId" rightEntityFieldName="treat_id" rightEntityId="142815582887582"/>
 </datamodel>
