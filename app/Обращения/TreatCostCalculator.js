@@ -77,13 +77,16 @@ function TreatCostCalculator() {
         aPatientsData.forEach(function(patient) {
             for (var j in patient.route) {
                 if (patient.route[j].selected || calculateAllRoute) {
+                    patient.route[j].payable = true;
                     var usl_cost = getUslPrice(patient, patient.route[j].usl_id);
                     if (usl_cost) {
-                        if (!pricesData[usl_cost.usl_cost_id])
+                        if (!pricesData[usl_cost.usl_cost_id]) {
                             pricesData[usl_cost.usl_cost_id] = usl_cost;
-
+                            pricesData[usl_cost.usl_cost_id].patients_count++;
+                        }
                         patient.route[j].usl_cost = usl_cost.cost;
-                    }
+                    } else
+                        patient.route[j].usl_cost = null;
                 }
             };
         });

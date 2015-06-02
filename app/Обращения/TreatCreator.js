@@ -18,7 +18,7 @@ function TreatCreator() {
     };
     
     self.createTreatment = function(aPatientId, aContractId, aTreatGroup) {
-        if (!aContractId) model.revert();
+        if (!aContractId || !aTreatGroup) model.revert();
         model.qTreatById.params.treat_id = null;
         model.qTreatById.push({
             patient: aPatientId ? aPatientId : null,
