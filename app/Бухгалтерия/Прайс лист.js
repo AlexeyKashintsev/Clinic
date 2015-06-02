@@ -15,7 +15,7 @@ function PriceListForm() {
         form.showModal(aCallback);
     };
     
-    var selectContractForm = new SelectContractForm();
+    var selectPriceListView = new SelectPriceListView();
     
     var contractPricesView = new ContractPricesView();
     
@@ -29,8 +29,7 @@ function PriceListForm() {
 //    }
     
     form.button.onActionPerformed = function(event) {
-        selectContractForm.showModal(function(aResult){
-            form.lbContragent.text = aResult.company_name;
+        selectPriceListView.showModal(function(aResult){
             form.lbContract.text = aResult.contract_name;
             model.qPricesByContractByType.params.contract_id = aResult.contract_id;
             model.qPricesByContractByType.requery();
@@ -83,25 +82,19 @@ function PriceListForm() {
                 }
             });
         } else {
-            alert("Для начала выберите договор!");
+            alert("Для начала выберите прайс лист!");
 //            form.button.onActionPerformed();
 //            form.btnAdd.onActionPerformed();
         }
     };
     
-    form.lbContragent.onMouseClicked = function(event) {
-        form.button.onActionPerformed(event);
-    };
-    form.label.onMouseClicked = function(event) {
-        form.button.onActionPerformed(event);
-    };
     form.label1.onMouseClicked = function(event) {
         form.button.onActionPerformed(event);
     };
     
     form.btnImport.onActionPerformed = function(event) {
         if(model.qPricesByContractByType.params.contract_id){
-            selectContractForm.showModal(function(aResult){
+            selectPriceListView.showModal(function(aResult){
                 if(aResult){
                     if(confirm("Вы уверены что хотите загрузить список услуг из " + aResult.company_name + " " + aResult.contract_name)){
                         model.qCopyUslCost.params.contract_select = aResult.contract_id;

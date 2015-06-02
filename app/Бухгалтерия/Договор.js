@@ -15,6 +15,11 @@ function ContractDetailsView() {
         form.showModal(aCallback);
     };
     
+    self.cancelSelectCompany = function(){
+        form.lbCompany.visible = false;
+        form.label.visible = false;
+    };
+            
     var fmCosts = new ContractPricesView();
     fmCosts.showOnPanel(form.pnlCosts);
     var newContract = false;
