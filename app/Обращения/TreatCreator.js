@@ -53,10 +53,11 @@ function TreatCreator() {
                 route: aRoute[j].route,
                 selected: aRoute[j].selected
             });
-            aRoute[j].hazards.forEach(function(hazard_id) {
+            aRoute[j].hazards.forEach(function(hazard) {
+                P.Logger.info('New hazard: ' + hazard);
                 model.qTreatRouteSources.push({
                     route_usl: model.qTreatRoute.cursor.obr_uslugi_id,
-                    hazard: hazard_id
+                    hazard: hazard.hazard_id
                 });
             });
             aRoute[j].usl_contents.forEach(function(usl_id) {

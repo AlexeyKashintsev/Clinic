@@ -21,7 +21,7 @@ function TreatmentDetailForm() {
     };
     
     model.requery(function () {
-        // TODO : place your code here
+        
     });
     
 }

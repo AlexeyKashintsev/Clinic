@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143317755464526" entityLocationX="881" entityLocationY="154" entityWidth="150" tableName="obr_result_param"/>
   <fieldsEntity entityHeight="156" entityIconified="false" entityId="143317965273203" entityLocationX="44" entityLocationY="89" entityWidth="150" tableName="hazards"/>
+  <fieldsEntity entityHeight="69" entityIconified="false" entityId="143324500159605" entityLocationX="648" entityLocationY="349" entityWidth="150" tableName="obr_route_status"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905045250" entityLocationX="1107" entityLocationY="41" entityWidth="150" tableName="usl_params_list"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143317839256088" entityLocationX="358" entityLocationY="427" entityWidth="150" tableName="man_patient"/>
   <fieldsEntity entityHeight="124" entityIconified="false" entityId="143316271152878" entityLocationX="458" entityLocationY="217" entityWidth="150" tableName="obr_diagnosis"/>
@@ -9,5 +10,5 @@
   <fieldsEntity entityHeight="162" entityIconified="false" entityId="143315905044937" entityLocationX="668" entityLocationY="171" entityWidth="150" tableName="obr_uslugi"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905045050" entityLocationX="1111" entityLocationY="275" entityWidth="150" tableName="usl_params_def_values"/>
   <fieldsEntity entityHeight="81" entityIconified="false" entityId="143316278243437" entityLocationX="208" entityLocationY="230" entityWidth="150" tableName="mkb_deseases"/>
-  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143317839257585" entityLocationX="667" entityLocationY="420" entityWidth="150" tableName="obr_treatment"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="143317839257585" entityLocationX="699" entityLocationY="426" entityWidth="150" tableName="obr_treatment"/>
 </datamodel>

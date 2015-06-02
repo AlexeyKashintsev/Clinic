@@ -4,12 +4,14 @@
   <entity Name="qTreatRouteSources" Title="" entityHeight="200" entityIconified="false" entityId="143318252669572" entityLocationX="729" entityLocationY="35" entityWidth="150" queryId="qTreatRouteSources" tableName="" tableSchemaName=""/>
   <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="143298577201025" entityLocationX="383" entityLocationY="35" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
   <entity Name="qTreatRoute" Title="" entityHeight="200" entityIconified="false" entityId="143298609428573" entityLocationX="551" entityLocationY="34" entityWidth="150" queryId="qTreatRoute" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="appointment_usl" leftEntityId="143318252669572" rightEntityFieldName="obr_uslugi_id" rightEntityId="143298611514675"/>
-  <referenceRelation leftEntityFieldName="appointment_usl" leftEntityId="143318252669572" rightEntityFieldName="obr_uslugi_id" rightEntityId="143298609428573"/>
   <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143318252669572" rightEntityFieldName="obr_uslugi_id" rightEntityId="143298611514675"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298611514675" rightEntityFieldName="obr_treatment_id" rightEntityId="143298577201025"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298609428573" rightEntityFieldName="obr_treatment_id" rightEntityId="143298576497881"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298609428573" rightEntityFieldName="obr_treatment_id" rightEntityId="143298577201025"/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143298576497881" rightEntityFieldName="obr_treatment_id" rightEntityId="143298577201025"/>
   <referenceRelation leftEntityFieldName="route_usl" leftEntityId="143318252669572" rightEntityFieldName="obr_uslugi_id" rightEntityId="143298609428573"/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143298577201025" rightEntityFieldName="obr_treatment_id" rightEntityId="143298577201025"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298609428573" rightEntityFieldName="obr_treatment_id" rightEntityId="143298576497881"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298611514675" rightEntityFieldName="obr_treatment_id" rightEntityId="143298577201025"/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143298576497881" rightEntityFieldName="obr_treatment_id" rightEntityId="143298576497881"/>
   <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298611514675" rightEntityFieldName="obr_treatment_id" rightEntityId="143298576497881"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298609428573" rightEntityFieldName="obr_treatment_id" rightEntityId="143298577201025"/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143298577201025" rightEntityFieldName="obr_treatment_id" rightEntityId="143298576497881"/>
 </datamodel>
