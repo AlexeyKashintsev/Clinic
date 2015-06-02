@@ -38,6 +38,10 @@ function HazardForm() {
         // TODO : place your code here
     });
     
+    self.setFilter = function(aText){
+        form.tfHazardSearch.text = aText;
+    };
+    
     form.button.onActionPerformed = function(event) {
         form.close(model.qHazards.cursor.hazards_id);
     };
