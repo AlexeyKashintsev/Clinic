@@ -47,10 +47,10 @@
     <font family="Monospaced" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="320px" top="20px" width="400px"/>
   </Label>
-  <Button cursor="0" icon="icons/22x22/actions/document-preview.png" name="button" parent="view" prefHeight="30px" prefWidth="196px" text="Выбрать Договор">
+  <Button cursor="0" icon="icons/22x22/actions/document-preview.png" name="button" parent="view" prefHeight="30px" prefWidth="196px" text="Выбрать прайс лист">
     <AnchorsPaneConstraints height="30px" left="4px" top="4px" width="196px"/>
   </Button>
-  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="90px" text="Компания">
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="90px" text="Компания" visible="false">
     <font family="Monospaced" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="210px" top="0px" width="90px"/>
   </Label>
@@ -58,7 +58,7 @@
     <font family="Monospaced" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="210px" top="20px" width="90px"/>
   </Label>
-  <Label cursor="0" name="lbContragent" parent="view" prefHeight="20px" prefWidth="400px" text="...">
+  <Label cursor="0" name="lbContragent" parent="view" prefHeight="20px" prefWidth="400px" text="..." visible="false">
     <font family="Monospaced" size="11" style="1"/>
     <AnchorsPaneConstraints height="20px" left="320px" top="0px" width="400px"/>
   </Label>

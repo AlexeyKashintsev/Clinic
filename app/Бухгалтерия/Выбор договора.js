@@ -15,6 +15,8 @@ function SelectContractForm() {
         form.showModal(aCallback);
     };
     
+    model.qContracts.params.price = false;
+    
     model.requery(function () {
         // TODO : place your code here
     });
