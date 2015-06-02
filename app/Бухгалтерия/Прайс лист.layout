@@ -43,24 +43,16 @@
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
-  <Label cursor="0" name="lbContract" parent="view" prefHeight="20px" prefWidth="400px" text="...">
+  <Label cursor="0" name="lbContract" parent="view" prefHeight="20px" prefWidth="380px" text="...">
     <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="320px" top="20px" width="400px"/>
+    <AnchorsPaneConstraints height="20px" left="340px" top="10px" width="380px"/>
   </Label>
   <Button cursor="0" icon="icons/22x22/actions/document-preview.png" name="button" parent="view" prefHeight="30px" prefWidth="196px" text="Выбрать прайс лист">
     <AnchorsPaneConstraints height="30px" left="4px" top="4px" width="196px"/>
   </Button>
-  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="90px" text="Компания" visible="false">
+  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="120px" text="Прайс лист №">
     <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="210px" top="0px" width="90px"/>
-  </Label>
-  <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="90px" text="Договор №">
-    <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="210px" top="20px" width="90px"/>
-  </Label>
-  <Label cursor="0" name="lbContragent" parent="view" prefHeight="20px" prefWidth="400px" text="..." visible="false">
-    <font family="Monospaced" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="320px" top="0px" width="400px"/>
+    <AnchorsPaneConstraints height="20px" left="210px" top="10px" width="120px"/>
   </Label>
   <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSelect" parent="view" prefHeight="37px" prefWidth="130px" text="Выбрать">
     <AnchorsPaneConstraints bottom="7px" height="37px" right="7px" width="130px"/>

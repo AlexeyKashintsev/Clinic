@@ -30,7 +30,6 @@ function PriceListForm() {
     
     form.button.onActionPerformed = function(event) {
         selectPriceListView.showModal(function(aResult){
-            form.lbContragent.text = aResult.company_name;
             form.lbContract.text = aResult.contract_name;
             model.qPricesByContractByType.params.contract_id = aResult.contract_id;
             model.qPricesByContractByType.requery();
@@ -89,12 +88,6 @@ function PriceListForm() {
         }
     };
     
-    form.lbContragent.onMouseClicked = function(event) {
-        form.button.onActionPerformed(event);
-    };
-    form.label.onMouseClicked = function(event) {
-        form.button.onActionPerformed(event);
-    };
     form.label1.onMouseClicked = function(event) {
         form.button.onActionPerformed(event);
     };

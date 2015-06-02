@@ -57,6 +57,7 @@ function SelectPriceListView() {
                 price: true,
                 company_id: model.qContracts.params.comp_id
             });
+            model.save();
         }
     };
     
@@ -87,16 +88,17 @@ function SelectPriceListView() {
     
     form.modelGrid.onMouseClicked = function(evt){
         if(evt.clickCount > 1){
-            model.save(function() {
-                //var contractDetailsView = new PricesByContract();
-                var contractDetailsView = new ContractDetailsView();
-                contractDetailsView.cancelSelectCompany();
-                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id, model.qContracts.cursor.company_id);
-                contractDetailsView.showModal(function(a){
-                    model.qContracts.execute();
-                });
-            });
+//            model.save(function() {
+//                //var contractDetailsView = new PricesByContract();
+//                var contractDetailsView = new ContractDetailsView();
+//                contractDetailsView.cancelSelectCompany();
+//                contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id, model.qContracts.cursor.company_id);
+//                contractDetailsView.showModal(function(a){
+//                    model.qContracts.execute();
+//                });
+//            });
             //form.close(model.qContracts.cursor);
+            form.btnSelect.onActionPerformed();
         }
     };
     
