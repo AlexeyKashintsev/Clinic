@@ -68,7 +68,7 @@ function TreatCostCalculator() {
         return res;
     }
     
-    function calculatePrices(aPatientsData, aPricesSource, calculateAllRoute) {
+    function calculatePrices(aPatientsData, aPricesSource, calculateRoute) {
         P.Logger.info('Calculating cost for services');
         model.qPriceSource.params.contract_id = aPricesSource;
         model.qPriceSource.requery();
@@ -76,7 +76,7 @@ function TreatCostCalculator() {
         
         aPatientsData.forEach(function(patient) {
             for (var j in patient.route) {
-                if (patient.route[j].selected || calculateAllRoute) {
+                if (patient.route[j].selected && !calculateRoute || calculateRoute && patient.route[j].route) {
                     patient.route[j].payable = true;
                     var usl_cost = getUslPrice(patient, patient.route[j].usl_id);
                     if (usl_cost) {
