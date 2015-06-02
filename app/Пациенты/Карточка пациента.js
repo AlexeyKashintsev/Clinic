@@ -29,6 +29,8 @@ function PatientForm() {
         });
     };
     
+    
+    
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
@@ -91,6 +93,10 @@ function PatientForm() {
     form.btnAddHazard.onActionPerformed = function(event) {
         if (!hazSel)
             hazSel = new HazardForm();
+        
+        var filter = prompt("Быстрый поиск вредности:");
+        hazSel.setFilter(filter);
+        
         hazSel.showModal(function(aHazard) {
             if (aHazard)
                 model.qHazardsByManJob.push({

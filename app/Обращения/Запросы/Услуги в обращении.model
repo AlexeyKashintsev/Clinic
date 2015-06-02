@@ -3,8 +3,8 @@
     <parameter description="" name="treat_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="143315634957434" entityLocationX="204" entityLocationY="4" entityWidth="150" tableAlias="t1" tableName="obr_uslugi" tableSchemaName=""/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="143316391521716" entityLocationX="406" entityLocationY="5" entityWidth="150" tableAlias="t" tableName="obr_result" tableSchemaName=""/>
-  <relation leftEntityId="-1" leftEntityParameterName="treat_id" rightEntityFieldName="treat_id" rightEntityId="143315634957434"/>
-  <relation leftEntityFieldName="obr_uslugi_id" leftEntityId="143315634957434" rightEntityFieldName="route_usl" rightEntityId="143316391521716"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143323543086864" entityLocationX="194" entityLocationY="7" entityWidth="150" tableAlias="t1" tableName="obr_treatment" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143323545251612" entityLocationX="387" entityLocationY="9" entityWidth="150" tableAlias="t" tableName="obr_uslugi" tableSchemaName=""/>
+  <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143323543086864" rightEntityFieldName="treat_id" rightEntityId="143323545251612"/>
+  <relation leftEntityId="-1" leftEntityParameterName="treat_id" rightEntityFieldName="obr_treatment_id" rightEntityId="143323543086864"/>
 </datamodel>

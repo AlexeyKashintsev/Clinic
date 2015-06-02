@@ -1,8 +1,7 @@
 /**
- *
+ * @public
  * @author Алексей
  * @name qUslInTreat
- * @public
  * @writable obr_uslugi
  */ 
 Select t1.obr_uslugi_id, t1.treat_id, t1.usluga_id
