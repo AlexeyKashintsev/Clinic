@@ -38,14 +38,11 @@
   <ModelGrid cursor="0" data="qUslugiInTreat" name="modelGrid2" parent="pnlNazn" prefHeight="367px" prefWidth="497px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="q_USLUGI_TREAT" name="colUsluga_id" title="Наименование услуги" width="152px">
+    <ModelGridColumn field="q_USLUGI_TREAT" name="colUsluga_id" title="Наименование услуги" width="228px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="q_USL_ROUTE" name="colStatus" title="Статус" width="152px">
+    <ModelGridColumn field="q_USL_STATUS" name="colStatus" title="Статус" width="228px">
       <ModelCombo displayField="status_name" displayList="qRouteStatus" list="false"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="result_value" name="colResult" title="Результат" width="152px">
-      <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlPayment" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
@@ -56,7 +53,7 @@
   </AnchorsPane>
   <ModelGrid cursor="0" data="qObrAdditional" name="modelGrid3" parent="pnlDop" prefHeight="367px" prefWidth="497px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
-    <ServiceGridColumn name="colService"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="q_ADD_USLUGA" name="colUsluga_id" title="Наименование услуги" width="456px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
     </ModelGridColumn>
