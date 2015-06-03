@@ -48,7 +48,7 @@ function ContractDetailsView() {
         }
     };
     
-    self.setComapny = function(aId, aName){
+    self.setCompany = function(aId, aName){
         model.qAllFirms.params.company_id = aId;
         model.qAllFirms.requery(function(){
             form.lbCompany.text = model.qAllFirms.cursor.company_name;

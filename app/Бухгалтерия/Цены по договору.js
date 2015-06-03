@@ -33,11 +33,12 @@ function ContractPricesView() {
     
     self.revert = function() {
         model.revert();
-    }
+    };
     
     form.btnAdd.onActionPerformed = function(event) {
         if (!fmUslSel)
             fmUslSel = new Uslugi4SelectView();
+        fmUslSel.readOnly();
         fmUslSel.showModal(function(aUslId) {
             if (aUslId) {
                 model.qPricesByContract.push({

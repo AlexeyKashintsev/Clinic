@@ -87,6 +87,7 @@ function AllContractsView() {
                 //var contractDetailsView = new PricesByContract();
                 var contractDetailsView = new ContractDetailsView();
                 contractDetailsView.setContractID(model.qContracts.cursor.buh_contracts_id, model.qContracts.cursor.company_id);
+                contractDetailsView.setCompany(model.qContracts.cursor.company_id);
                 contractDetailsView.showModal(function(a){
                     model.qContracts.execute();
                 });
