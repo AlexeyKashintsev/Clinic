@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qTreatById" Title="" entityHeight="200" entityIconified="false" entityId="143275040769047" entityLocationX="41" entityLocationY="36" entityWidth="150" queryId="qTreatById" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatById" Title="" entityHeight="200" entityIconified="false" entityId="143275040769047" entityLocationX="11" entityLocationY="19" entityWidth="150" queryId="qTreatById" tableName="" tableSchemaName=""/>
   <entity Name="qUslPeriodicType" Title="" entityHeight="65" entityIconified="false" entityId="143325393998793" entityLocationX="909" entityLocationY="243" entityWidth="150" queryId="qUslPeriodicType" tableName="" tableSchemaName=""/>
-  <entity Name="qPatientById" Title="" entityHeight="200" entityIconified="false" entityId="143300101288533" entityLocationX="794" entityLocationY="32" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
-  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143297806416232" entityLocationX="406" entityLocationY="37" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
+  <entity Name="qPriceLists" Title="" entityHeight="200" entityIconified="false" entityId="143350081248009" entityLocationX="371" entityLocationY="241" entityWidth="150" queryId="qPriceLists" tableName="" tableSchemaName=""/>
+  <entity Name="qPatientById" Title="" entityHeight="200" entityIconified="false" entityId="143300101288533" entityLocationX="517" entityLocationY="17" entityWidth="150" queryId="qPatientById" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143297806416232" entityLocationX="351" entityLocationY="17" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
+  <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="143350069076180" entityLocationX="185" entityLocationY="243" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
   <entity Name="qUsiLimAgeType" Title="" entityHeight="115" entityIconified="false" entityId="143325394701055" entityLocationX="907" entityLocationY="323" entityWidth="150" queryId="qUsiLimAgeType" tableName="" tableSchemaName=""/>
-  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="143325390342921" entityLocationX="975" entityLocationY="22" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
-  <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143298613978737" entityLocationX="220" entityLocationY="39" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
-  <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="143299445326962" entityLocationX="578" entityLocationY="35" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
+  <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="143325390342921" entityLocationX="690" entityLocationY="18" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
+  <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143298613978737" entityLocationX="180" entityLocationY="20" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
+  <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="143299445326962" entityLocationX="12" entityLocationY="238" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143275040769047" rightEntityFieldName="buh_contracts_id" rightEntityId="143350081248009"/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143275040769047" rightEntityFieldName="obr_treatment_id" rightEntityId="143275040769047"/>
+  <referenceRelation leftEntityFieldName="company_id" leftEntityId="143299445326962" rightEntityFieldName="buh_companies_id" rightEntityId="143350069076180"/>
+  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143298613978737" rightEntityFieldName="buh_contracts_id" rightEntityId="143299445326962"/>
   <referenceRelation collectionPropertyName="u_treat" leftEntityFieldName="usluga_id" leftEntityId="143298613978737" rightEntityFieldName="usl_uslugi_id" rightEntityId="143297806416232" scalarPropertyName="t_usluga"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298613978737" rightEntityFieldName="obr_treatment_id" rightEntityId="143275040769047"/>
+  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143275040769047" rightEntityFieldName="buh_contracts_id" rightEntityId="143299445326962"/>
   <referenceRelation leftEntityFieldName="patient" leftEntityId="143275040769047" rightEntityFieldName="man_patient_id" rightEntityId="143300101288533"/>
   <referenceRelation leftEntityFieldName="sex" leftEntityId="143300101288533" rightEntityFieldName="man_sex_id" rightEntityId="143325390342921"/>
-  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143275040769047" rightEntityFieldName="obr_treatment_id" rightEntityId="143275040769047"/>
-  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143298613978737" rightEntityFieldName="buh_contracts_id" rightEntityId="143299445326962"/>
-  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143275040769047" rightEntityFieldName="buh_contracts_id" rightEntityId="143299445326962"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143298613978737" rightEntityFieldName="obr_treatment_id" rightEntityId="143275040769047"/>
+  <referenceRelation leftEntityFieldName="company_id" leftEntityId="143350081248009" rightEntityFieldName="buh_companies_id" rightEntityId="143350069076180"/>
+  <referenceRelation leftEntityFieldName="contract_id" leftEntityId="143298613978737" rightEntityFieldName="buh_contracts_id" rightEntityId="143350081248009"/>
 </datamodel>

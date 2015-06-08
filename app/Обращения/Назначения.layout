@@ -23,6 +23,28 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlContract" parent="tabbedPane" prefHeight="252px" prefWidth="519px" visible="false">
+    <TabbedPaneConstraints tabTitle="Договор"/>
+  </AnchorsPane>
+  <Label cursor="0" name="label2" parent="pnlContract" prefHeight="20px" prefWidth="60px" text="Компания">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="60px"/>
+  </Label>
+  <ModelCombo cursor="0" displayField="contr_name" displayList="qContracts" name="mcContract" parent="pnlContract" prefHeight="19px" prefWidth="440px">
+    <font family="Monospaced" size="12" style="0"/>
+    <AnchorsPaneConstraints height="19px" left="70px" top="40px" width="440px"/>
+  </ModelCombo>
+  <CheckBox cursor="0" name="checkBox" parent="pnlContract" prefHeight="20px" prefWidth="180px" text="Создать новый договор:">
+    <AnchorsPaneConstraints height="20px" left="70px" top="70px" width="180px"/>
+  </CheckBox>
+  <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="mcCompany" parent="pnlContract" prefHeight="20px" prefWidth="440px">
+    <AnchorsPaneConstraints height="20px" left="70px" right="9px" top="10px"/>
+  </ModelCombo>
+  <Label cursor="0" name="label4" parent="pnlContract" prefHeight="20px" prefWidth="60px" text="Договор">
+    <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="60px"/>
+  </Label>
+  <TextField name="tfNewContractName" parent="pnlContract" prefHeight="20px" prefWidth="270px">
+    <AnchorsPaneConstraints height="20px" left="240px" top="70px" width="270px"/>
+  </TextField>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesStat" parent="tabbedPane" prefHeight="252px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Статистика"/>
   </AnchorsPane>
@@ -57,31 +79,31 @@
       <ModelCheckBox/>
     </ModelGridColumn>
     <ModelGridColumn name="colPrice" preferredWidth="50px" title="Цена" width="86px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlCosts" parent="tabbedPane" prefHeight="252px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Цены на услуги"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" data="qPricesByContractByType" deletable="false" name="mgCosts" parent="pnlCosts" prefHeight="252px" prefWidth="519px">
+  <ModelGrid cursor="0" deletable="false" name="mgCosts" parent="pnlCosts" prefHeight="252px" prefWidth="519px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="80px">
+    <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="83px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_sex" name="colSex" title="Пол" width="80px">
+    <ModelGridColumn field="usl_sex" name="colSex" title="Пол" width="82px">
       <ModelCombo displayField="man_sex_id" displayList="qSex"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_per_type" name="colPer_type" title="Переодичность" width="80px">
-      <ModelCombo displayField="type_name" displayList="qPeriodic"/>
+    <ModelGridColumn field="usl_per_type" name="colPer_type" title="Переодичность" width="83px">
+      <ModelCombo displayField="type_name"/>
     </ModelGridColumn>
-    <ModelGridColumn field="lim_age_type" name="colVozrastType" title="Тип Возраста" width="80px">
+    <ModelGridColumn field="lim_age_type" name="colVozrastType" title="Тип Возраста" width="82px">
       <ModelCombo displayField="description" displayList="qUsiLimAgeType"/>
     </ModelGridColumn>
-    <ModelGridColumn field="limitation_age" name="colVozrast" title="Возраст" width="81px">
+    <ModelGridColumn field="limitation_age" name="colVozrast" title="Возраст" width="83px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="cost" name="colCost" title="Цена" width="80px">
+    <ModelGridColumn field="cost" name="colCost" title="Цена" width="82px">
       <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
     </ModelGridColumn>
   </ModelGrid>
@@ -91,13 +113,13 @@
   <ModelGrid cursor="0" name="mgWarnings" parent="pnlWarnings" prefHeight="252px" prefWidth="519px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ModelGridColumn name="colDescription" title="Ошибка/предупреждение" width="517px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Пациентов выбрано:">
     <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="140px"/>
   </Label>
-  <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" nullable="false" parent="view" prefHeight="20px" prefWidth="50px" selectOnly="true" text="modelFormattedField">
+  <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" nullable="false" parent="view" prefHeight="20px" prefWidth="50px" text="?">
     <AnchorsPaneConstraints height="20px" left="150px" top="6px" width="50px"/>
   </ModelFormattedField>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Посчитать" verticalTextPosition="3">
@@ -112,19 +134,12 @@
   <ModelCheckBox cursor="0" name="mcAllRoute" nullable="false" parent="view" prefHeight="19px" prefWidth="20px">
     <AnchorsPaneConstraints height="19px" left="210px" top="6px" width="20px"/>
   </ModelCheckBox>
-  <ModelCombo cursor="0" displayField="contr_name" displayList="qContracts" name="mcContract" parent="view" prefHeight="19px" prefWidth="170px" selectOnly="true">
+  <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="view" prefHeight="19px" prefWidth="390px">
     <font family="Monospaced" size="12" style="0"/>
-    <AnchorsPaneConstraints height="19px" left="340px" right="14px" top="41px"/>
-  </ModelCombo>
-  <ModelCombo cursor="0" displayField="contr_name" displayList="qContracts" name="mcPriceSource" parent="view" prefHeight="19px" prefWidth="150px">
-    <font family="Monospaced" size="12" style="0"/>
-    <AnchorsPaneConstraints height="19px" left="120px" top="41px" width="150px"/>
+    <AnchorsPaneConstraints height="19px" left="120px" top="41px" width="390px"/>
   </ModelCombo>
   <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="100px" text="Прайс лист">
     <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="100px"/>
-  </Label>
-  <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="60px" text="Договор">
-    <AnchorsPaneConstraints height="20px" left="280px" top="40px" width="60px"/>
   </Label>
   <Label cursor="0" name="label3" parent="view" prefHeight="20px" prefWidth="280px" text="Рассчитывать цену по отдельным услугам">
     <AnchorsPaneConstraints height="20px" left="230px" top="5px" width="280px"/>
