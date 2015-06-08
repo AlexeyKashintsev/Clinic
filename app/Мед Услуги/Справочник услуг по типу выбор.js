@@ -8,7 +8,7 @@ function Uslugi4SelectView() {
             , form = P.loadForm(this.constructor.name, model);
     
     var uslugaContent = new UslugaContent();
-
+    var readonly = false;
     form.title = "Выбор услуги";
     
     self.show = function (aDesktop) {
@@ -17,6 +17,11 @@ function Uslugi4SelectView() {
     
     self.showModal = function(aCallback) {
         form.showModal(aCallback);
+    };
+    
+    self.readOnly = function(){
+        readonly = true;
+        form.button.visible = false;
     };
     
     model.qUslTypes.onScrolled = function(){
@@ -44,12 +49,16 @@ function Uslugi4SelectView() {
     };
     
     form.button.onActionPerformed = function(event) {
-        uslugaContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id, 
-                                model.qUslugiByType.cursor.usl_type, 
-                                model.qUslugiByType.cursor.usl_name);
-        uslugaContent.showModal(function(){
-            model.qUslugiByType.requery();
-        });
+        if(!readonly){
+            uslugaContent.setUsluga(model.qUslugiByType.cursor.usl_uslugi_id, 
+                                    model.qUslugiByType.cursor.usl_type, 
+                                    model.qUslugiByType.cursor.usl_name);
+            uslugaContent.showModal(function(){
+                model.qUslugiByType.requery();
+            });
+        } else 
+            form.btnSelect.onActionPerformed();
+            
     };
     
     form.mgUsl.onMouseClicked = function(event) {
