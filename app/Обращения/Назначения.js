@@ -10,6 +10,8 @@ function AppointmentForm() {
     model.qUslugaById.requery();
     model.qContracts.params.c_act = true;
     model.qContracts.requery();
+    model.qAllFirms.requery();
+    model.qPriceLists.requery();
 
     var patients = [];
     var curTreat;
@@ -253,6 +255,13 @@ function AppointmentForm() {
     form.mcContract.onSelect = function(evt) {
         alert('Select!');
     };
+    
+    form.cbNewContract.onActionPerformed = function(event) {
+        form.tfNewContractName.enabled = form.cbNewContract.selected;
+        form.mcContract.enabled = !form.cbNewContract.selected;
+        fullData.newContract = form.cbNewContract.selected;
+    };
+
     
     function testData() {
         self.setPatients([143186739536219, 142808473476141, 142808237417447], null, function () {

@@ -29,11 +29,11 @@
   <Label cursor="0" name="label2" parent="pnlContract" prefHeight="20px" prefWidth="60px" text="Компания">
     <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="60px"/>
   </Label>
-  <ModelCombo cursor="0" displayField="contr_name" displayList="qContracts" name="mcContract" parent="pnlContract" prefHeight="19px" prefWidth="440px">
+  <ModelCombo cursor="0" displayField="contr_name" displayList="qContracts" enabled="false" name="mcContract" parent="pnlContract" prefHeight="19px" prefWidth="440px">
     <font family="Monospaced" size="12" style="0"/>
     <AnchorsPaneConstraints height="19px" left="70px" top="40px" width="440px"/>
   </ModelCombo>
-  <CheckBox cursor="0" name="checkBox" parent="pnlContract" prefHeight="20px" prefWidth="180px" text="Создать новый договор:">
+  <CheckBox cursor="0" name="cbNewContract" parent="pnlContract" prefHeight="20px" prefWidth="180px" selected="true" text="Создать новый договор:">
     <AnchorsPaneConstraints height="20px" left="70px" top="70px" width="180px"/>
   </CheckBox>
   <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="mcCompany" parent="pnlContract" prefHeight="20px" prefWidth="440px">
@@ -42,7 +42,7 @@
   <Label cursor="0" name="label4" parent="pnlContract" prefHeight="20px" prefWidth="60px" text="Договор">
     <AnchorsPaneConstraints height="20px" left="10px" top="40px" width="60px"/>
   </Label>
-  <TextField name="tfNewContractName" parent="pnlContract" prefHeight="20px" prefWidth="270px">
+  <TextField cursor="0" name="tfNewContractName" parent="pnlContract" prefHeight="20px" prefWidth="270px">
     <AnchorsPaneConstraints height="20px" left="240px" top="70px" width="270px"/>
   </TextField>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesStat" parent="tabbedPane" prefHeight="252px" prefWidth="519px" visible="false">
@@ -119,7 +119,7 @@
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Пациентов выбрано:">
     <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="140px"/>
   </Label>
-  <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" nullable="false" parent="view" prefHeight="20px" prefWidth="50px" text="?">
+  <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" parent="view" prefHeight="20px" prefWidth="50px" text="?">
     <AnchorsPaneConstraints height="20px" left="150px" top="6px" width="50px"/>
   </ModelFormattedField>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Посчитать" verticalTextPosition="3">
@@ -131,7 +131,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="110px" text="Отмена" verticalTextPosition="3">
     <AnchorsPaneConstraints bottom="7px" height="30px" right="14px" width="110px"/>
   </Button>
-  <ModelCheckBox cursor="0" name="mcAllRoute" nullable="false" parent="view" prefHeight="19px" prefWidth="20px">
+  <ModelCheckBox cursor="0" name="mcAllRoute" parent="view" prefHeight="19px" prefWidth="20px">
     <AnchorsPaneConstraints height="19px" left="210px" top="6px" width="20px"/>
   </ModelCheckBox>
   <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="view" prefHeight="19px" prefWidth="390px">

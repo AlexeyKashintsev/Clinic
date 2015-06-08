@@ -15,9 +15,8 @@ function SelectPriceListView() {
     };
     
     //Показывать только прайс листы
-    model.qContracts.params.price = true;
     
-    form.title = "Прайс листы все";
+    form.title = "Прайс листы";
     model.qContracts.requery();
     
     self.setSelect = function(aSelect){
