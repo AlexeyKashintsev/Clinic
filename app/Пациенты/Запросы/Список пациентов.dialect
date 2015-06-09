@@ -18,4 +18,4 @@ From man_patient t1
  and (:company_id = t.company_id or :company_id is null)
 ) q
  where (:start_date is null and :end_date is null or q.patient_status <> '')
- and (:treat_status ilike '%' || q.patient_status || '%' or :treat_status is null)
+ and (q.patient_status ilike '%' || :treat_status || '%' or :treat_status is null)
