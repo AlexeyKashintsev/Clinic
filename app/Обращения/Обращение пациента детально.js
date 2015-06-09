@@ -24,4 +24,19 @@ function TreatmentDetailForm() {
         
     });
     
+    var tabUslugi = new TabUslugi();
+    tabUslugi.setData(model.qUslugiInTreat);
+    tabUslugi.showOnPanel(form.pnlUsl);
+    
+    var tabNazn = new TabNazn();
+    tabNazn.setData(model.qNaznach);
+    tabNazn.showOnPanel(form.pnlNazn);
+    
+    var tabPrices = new TabPrices();
+    tabPrices.setData(model.qUslInTreat);
+    tabPrices.showOnPanel(form.pnlPrices);
+    
+    var tabAdditional = new TabAdditional();
+    tabAdditional.setData(model.qObrAdditional);
+    tabAdditional.showOnPanel(form.pnlDop);
 }
