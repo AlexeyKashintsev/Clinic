@@ -2,7 +2,7 @@
  * 
  * @author Mikhail
  */
-function TreatmentDetailForm() {
+function TabUslugi() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
@@ -15,16 +15,11 @@ function TreatmentDetailForm() {
         aPanel.add(form.view);
     };
     
-    self.setPatient = function (aPacientId){
-        model.qTreatByPatient.params.patient_id = aPacientId;
-        model.qTreatByPatient.requery();
-    };
-    
     model.requery(function () {
-        
+        // TODO : place your code here
     });
     
-    var tabUslugi = new TabUslugi();
-    tabUslugi.showOnPanel(form.pnlUsl);
-    tabUslugi.setData(model.qUslInTreat);
+    self.setData = function(aData){
+        form.mgUsl.data = aData;
+    };
 }
