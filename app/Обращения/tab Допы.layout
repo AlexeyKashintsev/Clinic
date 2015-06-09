@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <ModelGrid cursor="0" data="qObrAdditional" deletable="false" editable="false" insertable="false" name="mgDops" parent="view" prefHeight="300px" prefWidth="400px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="q_ADD_USLUGA" name="colUsluga_id" title="Наименование услуги" width="359px">
+      <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>
