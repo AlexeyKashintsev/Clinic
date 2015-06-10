@@ -273,4 +273,9 @@ function AppointmentForm() {
         });
     }
     testData();
+    form.btnDoublePrice.onActionPerformed = function(event) {
+        if (form.mgCosts.selected[0])
+            form.mgCosts.data.push(form.mgCosts.selected[0]);
+//        form.mgCosts.redraw();
+    };
 }
