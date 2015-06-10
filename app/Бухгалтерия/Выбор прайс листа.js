@@ -105,7 +105,9 @@ function SelectPriceListView() {
         form.close({
             company_name : model.qAllFirms.cursor.company_name,
             contract_name: model.qContracts.cursor.contr_name,
-            contract_id  : model.qContracts.cursor.buh_contracts_id
+            contr_name: model.qContracts.cursor.contr_name,
+            contract_id  : model.qContracts.cursor.buh_contracts_id,
+            buh_contracts_id  : model.qContracts.cursor.buh_contracts_id
         });
     };
 }

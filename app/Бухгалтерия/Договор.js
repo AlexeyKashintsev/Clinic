@@ -60,7 +60,7 @@ function ContractDetailsView() {
     form.btnSave.onActionPerformed = function(event) {
         model.save();
         fmCosts.save();
-        form.close(model.qContract.cursor.buh_contracts_id);
+        form.close(model.qContract.cursor);
     };
     
     form.btnCancel.onActionPerformed = function(event) {

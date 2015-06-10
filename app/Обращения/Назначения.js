@@ -249,11 +249,22 @@ function AppointmentForm() {
     form.button.onActionPerformed = calculate;
     
     form.mcPriceSource.onSelect = function(evt) {
-        alert('Select!');
+        var selectPriceListView = new SelectPriceListView();
+        selectPriceListView.showModal(function(row){
+           form.mcPriceSource.value = row; 
+        });
     };
     
     form.mcContract.onSelect = function(evt) {
-        alert('Select!');
+        var allContractsView = new AllContractsView();
+        allContractsView.setSelect(true);
+        allContractsView.showModal(function(row){
+            form.mcContract.value = row;
+            model.qAllFirms.params.company_id = row.company_id;
+            model.qAllFirms.requery(function(){
+                form.mcCompany.value = model.qAllFirms.cursor;
+            });
+        });
     };
     
     function testData() {
@@ -278,8 +289,9 @@ function AppointmentForm() {
             var contractDetailsView = new ContractDetailsView();
             contractDetailsView.setContractID(null, form.mcCompany.value.buh_companies_id);
             contractDetailsView.setCompany(form.mcCompany.value.buh_companies_id);
-            contractDetailsView.showModal(function(a){
-                form.mcCompany.onValueChange();
+            contractDetailsView.showModal(function(row){
+                //form.mcCompany.onValueChange();
+                form.mcContract.value = row;
             });
         } else {
             alert("Выберите компанию!");
@@ -291,21 +303,5 @@ function AppointmentForm() {
         model.qContracts.execute();
     };
 
-    form.btnCreatePriceList.onActionPerformed = function(event) {
-        var selectPriceListView = new SelectPriceListView();
-        selectPriceListView.showModal(function(a){
-           model.qPriceLists.requery(); 
-        });
-//        
-//        TODO! Непонятно почему этот код не работает? rolled back
-//        var aName = prompt("Введите название:");
-//        if(aName) {
-//            model.qContracts.push({
-//                contr_name: aName,
-//                с_active: true,
-//                price: true
-//            });
-//            model.save();
-//        }
-    };
+
 }

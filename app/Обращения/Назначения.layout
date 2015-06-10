@@ -64,9 +64,6 @@
   <Button cursor="0" name="btnCreateContract" parent="panel" prefHeight="20px" prefWidth="80px" text="Новый">
     <AnchorsPaneConstraints height="20px" right="10px" top="30px" width="80px"/>
   </Button>
-  <Button cursor="0" name="btnCreatePriceList" parent="pnlContract" prefHeight="20px" prefWidth="80px" text="Новый">
-    <AnchorsPaneConstraints height="20px" right="9px" top="10px" width="80px"/>
-  </Button>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesStat" parent="tabbedPane" prefHeight="302px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Статистика"/>
   </AnchorsPane>
