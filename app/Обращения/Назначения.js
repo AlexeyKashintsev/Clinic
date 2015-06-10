@@ -273,9 +273,44 @@ function AppointmentForm() {
         });
     }
     testData();
+    form.btnCreateContract.onActionPerformed = function(event) {
+        if(form.mcCompany.value){
+            var contractDetailsView = new ContractDetailsView();
+            contractDetailsView.setContractID(null, form.mcCompany.value.buh_companies_id);
+            contractDetailsView.setCompany(form.mcCompany.value.buh_companies_id);
+            contractDetailsView.showModal(function(a){
+                form.mcCompany.onValueChange();
+            });
+        } else {
+            alert("Выберите компанию!");
+        }
+    };
+    
+    form.mcCompany.onValueChange = function(event) {
+        model.qContracts.params.comp_id = form.mcCompany.value.buh_companies_id;
+        model.qContracts.execute();
+    };
+
     form.btnDoublePrice.onActionPerformed = function(event) {
         if (form.mgCosts.selected[0])
             form.mgCosts.data.push(form.mgCosts.selected[0]);
-//        form.mgCosts.redraw();
+    };
+
+    form.btnCreatePriceList.onActionPerformed = function(event) {
+        var selectPriceListView = new SelectPriceListView();
+        selectPriceListView.showModal(function(a){
+           model.qPriceLists.requery(); 
+        });
+//        
+//        TODO! Непонятно почему этот код не работает? rolled back
+//        var aName = prompt("Введите название:");
+//        if(aName) {
+//            model.qContracts.push({
+//                contr_name: aName,
+//                с_active: true,
+//                price: true
+//            });
+//            model.save();
+//        }
     };
 }
