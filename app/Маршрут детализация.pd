@@ -4,7 +4,7 @@
   <fieldsEntity entityHeight="69" entityIconified="false" entityId="143324500159605" entityLocationX="648" entityLocationY="349" entityWidth="150" tableName="obr_route_status"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143315905045250" entityLocationX="1107" entityLocationY="41" entityWidth="150" tableName="usl_params_list"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143317839256088" entityLocationX="358" entityLocationY="427" entityWidth="150" tableName="man_patient"/>
-  <fieldsEntity entityHeight="124" entityIconified="false" entityId="143316271152878" entityLocationX="458" entityLocationY="217" entityWidth="150" tableName="obr_diagnosis"/>
+  <fieldsEntity entityHeight="142" entityIconified="false" entityId="143316271152878" entityLocationX="458" entityLocationY="217" entityWidth="150" tableName="obr_diagnosis"/>
   <fieldsEntity entityHeight="200" entityIconified="false" entityId="143323719547799" entityLocationX="255" entityLocationY="26" entityWidth="150" tableName="usl_uslugi"/>
   <fieldsEntity entityHeight="172" entityIconified="false" entityId="143317768612356" entityLocationX="473" entityLocationY="31" entityWidth="150" tableName="obr_uslugi_source"/>
   <fieldsEntity entityHeight="162" entityIconified="false" entityId="143315905044937" entityLocationX="668" entityLocationY="171" entityWidth="150" tableName="obr_uslugi"/>
