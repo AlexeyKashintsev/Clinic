@@ -17,6 +17,7 @@ function AppointmentForm() {
     var curTreat;
     var errorsLog = [];
     var canApply = false;
+    var contractConstructor = new P.ServerModule('ContractConstructor');
     
     self.show = function () {
         form.show();
@@ -68,7 +69,8 @@ function AppointmentForm() {
         }
         uslStat = [];
         naznacheniya = [];
-        fullData = [];
+        fullData = {};
+        
     };
 
     var fmUslugiSelect = new Uslugi4SelectView();
@@ -83,14 +85,135 @@ function AppointmentForm() {
                 }
             });
     };
+    
+    var uslStat = [],
+        naznacheniya = [],
+        fullData = {},
+        gridAppliance = false;
 
-    form.mgUsl.colContract.onSelect = function () {
+    function applyDataToGrids() {
+        form.mgUslugiStat.data = uslStat;
+        form.mgUslugiStat.colUslName.field = "usl_name";
+        form.mgUslugiStat.colCount.field = "treatments";
+        form.mgUslugiStat.colCountByRoute.field = "usl_content";
+        form.mgUslugiStat.colCountByHazard.field = "hazard";
 
+        form.mgRoutes.data = naznacheniya;
+        form.mgRoutes.childrenField = "n_children";
+        form.mgRoutes.parentField = "n_parent";
+        form.mgRoutes.colName.field = "n_name";
+        form.mgRoutes.colSelected.field = "selected";
+        form.mgRoutes.colRoute.field = "route";
+        form.mgRoutes.colPrice.field = "cost";
+
+        form.mgWarnings.data = errorsLog;
+        form.mgWarnings.colDescription.field = "text";
+        form.mgWarnings.childrenField = "e_children";
+        form.mgWarnings.parentField = "e_parent";
+
+
+        form.mgCosts.data = fullData.priceData;
+        form.mgCosts.colUsl_name.field = "usluga";
+        form.mgCosts.colSex.field = "sex_t";
+        form.mgCosts.colPer_type.field = "periodic_type";
+        form.mgCosts.colVozrastType.field = "age_type";
+        form.mgCosts.colVozrast.field = "limitation_age";
+
+        form.mgCosts.onRender = function(event) {
+            if (event.object.missed)
+                event.cell.background = new P.Color('#FFCCCC');
+        };
+//        gridAppliance = true;
+    }
+    
+    function prepareStatData(aStatData) {
+        for (var j in aStatData) {
+            uslStat.push(aStatData[j]);
+            uslStat[uslStat.length - 1].usl_name = model.qUslugaById.findByKey(j).usl_name;
+        }
+    }
+
+    function preaprePatientData(patient) {
+        var rec = {
+            n_name: patient.surname + ' ' + patient.firstname + ' ' + patient.patronymic,
+            n_parent: null,
+            n_children: [],
+            n_by_hazard: null,
+            n_by_content: null,
+            cost: null,
+            selected: null,
+            route: null
+        };
+        if (patient.hazards !== {}) {
+            var hazards = {
+                n_name: "Вредности",
+                n_parent: rec,
+                n_children: []
+            };
+            for (var j in patient.hazards) {
+                if (j !== 'length') {
+                    var hazard = patient.hazards[j];
+                    hazards.n_children.push({
+                        n_name: hazard.haz_code + " " + hazard.haz_name,
+                        n_parent: hazards,
+                        n_children: []
+                    });
+                }
+            }
+            ;
+            rec.n_children.push(hazards);
+        }
+        var route = {
+            n_name: "Назначения",
+            n_parent: rec,
+            n_children: []
+        };
+        for (var j in patient.route) {
+            route.n_children.push({
+                n_name: model.qUslugaById.findByKey(j).usl_name,
+                n_by_hazard: patient.route[j].hazard,
+                n_by_content: patient.route[j].usl_content,
+                n_parent: hazards,
+                n_children: [],
+                cost: patient.route[j].usl_cost,
+                selected: patient.route[j].selected,
+                route: patient.route[j].route
+            });
+        }
+        rec.n_children.push(route);
+
+        naznacheniya.push(rec);
     };
 
-    var uslStat = [],
-            naznacheniya = [],
-            fullData = [];
+    function preparePriceData(price) {
+        price.usluga = model.qUslugaById.findByKey(price.usluga_id);
+        price.periodic_type = model.qUslPeriodicType.findByKey(price.per_type);
+        price.sex_t = model.qSex.findByKey(price.sex);
+        price.age_type = model.qSex.findByKey(price.limitation_age_type);
+    }
+
+    function prepareErrorData(error) {
+        switch (error.errorType) {
+            case 'missedPrices': {
+                    canApply = false;
+                    var erLog = {
+                        e_parent: null,
+                        text: 'Не указана цена',
+                        e_children: []
+                    };
+                    error.data.forEach(function(missedPrice) {
+                        erLog.e_children.push({
+                            e_parent: erLog,
+                            text: model.qUslugaById.findByKey(missedPrice).usl_name,
+                            e_children: null,
+                            data: missedPrice
+                        });
+                    });
+                    errorsLog.push(erLog);
+            }
+        };
+    }
+
     function calculate() {
         var uslugi = [];
         naznacheniya = [];
@@ -101,133 +224,37 @@ function AppointmentForm() {
         patients.forEach(function (patient) {
             pcs.push(patient.man_patient_id);
         });
+        
+        var priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id : 
+                (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
 
-        treatCreator.calculateRoute(pcs, uslugi, form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id : null
-            , form.mcAllRoute.value
+        treatCreator.calculateRoute(pcs, uslugi
             , function (res) {
                 canApply = true;
                 fullData = res;
                 uslStat = [];
-                for (var j in res.uslugi) {
-                    uslStat.push(res.uslugi[j]);
-                    uslStat[uslStat.length - 1].usl_name = model.qUslugaById.findByKey(j).usl_name;
-                }
-                form.mgUslugiStat.data = uslStat;
-                form.mgUslugiStat.colUslName.field = "usl_name";
-                form.mgUslugiStat.colCount.field = "treatments";
-                form.mgUslugiStat.colCountByRoute.field = "usl_content";
-                form.mgUslugiStat.colCountByHazard.field = "hazard";
-
-                res.patients.forEach(function (patient) {
-                    var rec = {
-                        n_name: patient.surname + ' ' + patient.firstname + ' ' + patient.patronymic,
-                        n_parent: null,
-                        n_children: [],
-                        n_by_hazard: null,
-                        n_by_content: null,
-                        cost: null,
-                        selected: null,
-                        route: null
-                    };
-                    if (patient.hazards !== {}) {
-                        var hazards = {
-                            n_name: "Вредности",
-                            n_parent: rec,
-                            n_children: []
-                        };
-                        for (var j in patient.hazards) {
-                            if (j !== 'length') {
-                                var hazard = patient.hazards[j];
-                                hazards.n_children.push({
-                                    n_name: hazard.haz_code + " " + hazard.haz_name,
-                                    n_parent: hazards,
-                                    n_children: []
-                                });
-                            }
-                        }
-                        ;
-                        rec.n_children.push(hazards);
-                    }
-                    var route = {
-                        n_name: "Назначения",
-                        n_parent: rec,
-                        n_children: []
-                    };
-                    for (var j in patient.route) {
-                        route.n_children.push({
-                            n_name: model.qUslugaById.findByKey(j).usl_name,
-                            n_by_hazard: patient.route[j].hazard,
-                            n_by_content: patient.route[j].usl_content,
-                            n_parent: hazards,
-                            n_children: [],
-                            cost: patient.route[j].usl_cost,
-                            selected: patient.route[j].selected,
-                            route: patient.route[j].route
-                        });
-                    }
-                    rec.n_children.push(route);
-
-                    naznacheniya.push(rec);
-                });
-
-                form.mgRoutes.data = naznacheniya;
-                form.mgRoutes.childrenField = "n_children";
-                form.mgRoutes.parentField = "n_parent";
-                form.mgRoutes.colName.field = "n_name";
-                form.mgRoutes.colSelected.field = "selected";
-                form.mgRoutes.colRoute.field = "route";
-                form.mgRoutes.colPrice.field = "cost";
-                
                 errorsLog = [];
-                res.errors.forEach(function(error) {
-                    switch (error.errorType) {
-                        case 'missedPrices': {
-                                canApply = false;
-                                var erLog = {
-                                    e_parent: null,
-                                    text: 'Не указана цена',
-                                    e_children: []
-                                };
-                                error.data.forEach(function(missedPrice) {
-                                    erLog.e_children.push({
-                                        e_parent: erLog,
-                                        text: model.qUslugaById.findByKey(missedPrice).usl_name,
-                                        e_children: null,
-                                        data: missedPrice
-                                    });
-                                });
-                                errorsLog.push(erLog);
-                        }
-                    };
-                });
-                form.mgWarnings.data = errorsLog;
-                form.mgWarnings.colDescription.field = "text";
-                form.mgWarnings.childrenField = "e_children";
-                form.mgWarnings.parentField = "e_parent";
                 
-                fullData.priceData.forEach(function(price) {
-                    price.usluga = model.qUslugaById.findByKey(price.usluga_id);
-                    price.periodic_type = model.qUslPeriodicType.findByKey(price.per_type);
-                    price.sex_t = model.qSex.findByKey(price.sex);
-                    price.age_type = model.qSex.findByKey(price.limitation_age_type);
-                });
+                prepareStatData(fullData.uslugi);
+                fullData.patients.forEach(preaprePatientData);
                 
-                form.mgCosts.data = fullData.priceData;
-                form.mgCosts.colUsl_name.field = "usluga";
-                form.mgCosts.colSex.field = "sex_t";
-                form.mgCosts.colPer_type.field = "periodic_type";
-                form.mgCosts.colVozrastType.field = "age_type";
-                form.mgCosts.colVozrast.field = "limitation_age";
-                form.mgCosts.onRender = function(event) {
-                    if (event.object.missed)
-                        event.cell.background = new P.Color('#FFCCCC');
-                };
-
+                res.errors.forEach(prepareErrorData);
+                if (!gridAppliance)
+                    applyDataToGrids();
             });
+            
+        if (priceSource) 
+            treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
+                , function (res) {
+                    fullData.priceData = res.priceData;
+                    fullData.priceData.forEach(preparePriceData);
+                    res.errors.forEach(prepareErrorData);
+                    if (!gridAppliance)
+                        applyDataToGrids();
+                });
     }
 
     function applyTreatment() {
-        
         treatCreator.applyTreatment(curTreat
             , function () {
                 var res = [];
@@ -236,6 +263,21 @@ function AppointmentForm() {
                 });
                 return res;
             }());
+    }
+    
+    function updateContractPrice() {
+        var contract_id;
+        if (form.mcContract.value) {
+            contract_id = form.mcContract.value.buh_contracts_id;
+            form.mcPriceSource.value = null;
+        } else {
+            if (form.mcPriceSource.value && confirm('Обновить прайс лист?'))
+                contract_id = form.mcPriceSource.value.buh_contracts_id;
+        }
+        if (contract_id)
+            contractConstructor.updateContractPrices(form.mcContract.value.buh_contract_id,
+                                                     form.mgCosts.data);
+        return !!contract_id;
     }
 
     form.btnApply.onActionPerformed = function (event) {
@@ -283,7 +325,8 @@ function AppointmentForm() {
             });
         });
     }
-    testData();
+//    testData();
+    
     form.btnCreateContract.onActionPerformed = function(event) {
         if(form.mcCompany.value){
             var contractDetailsView = new ContractDetailsView();
@@ -308,4 +351,7 @@ function AppointmentForm() {
             form.mgCosts.data.push(form.mgCosts.selected[0]);
     };
 
+    form.btnSaveToPrice.onActionPerformed = function(event) {
+        updateContractPrice();
+    };
 }

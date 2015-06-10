@@ -3,15 +3,15 @@
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="330px" prefWidth="524px" selectedComponent="pnlContract">
     <AnchorsPaneConstraints bottom="47px" left="0px" right="0px" top="30px"/>
   </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlContract" parent="tabbedPane" prefHeight="302px" prefWidth="519px">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlContract" parent="tabbedPane" prefHeight="285px" prefWidth="519px">
     <TabbedPaneConstraints tabTitle="Договор"/>
   </AnchorsPane>
   <Label cursor="0" name="label1" parent="pnlContract" prefHeight="20px" prefWidth="100px" text="Прайс лист">
     <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="100px"/>
   </Label>
-  <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="pnlContract" prefHeight="19px" prefWidth="300px">
+  <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="pnlContract" prefHeight="19px" prefWidth="390px">
     <font family="Monospaced" size="12" style="0"/>
-    <AnchorsPaneConstraints height="19px" left="120px" top="10px" width="300px"/>
+    <AnchorsPaneConstraints height="19px" left="120px" top="10px" width="390px"/>
   </ModelCombo>
   <ModelCheckBox cursor="0" name="cbNoContract" parent="pnlContract" prefHeight="20px" prefWidth="160px">
     <AnchorsPaneConstraints height="20px" right="9px" top="40px" width="160px"/>
@@ -25,7 +25,7 @@
   <Label cursor="0" name="label3" parent="pnlContract" prefHeight="20px" prefWidth="280px" text="Рассчитывать цену по отдельным услугам">
     <AnchorsPaneConstraints height="20px" left="30px" top="40px" width="280px"/>
   </Label>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="pnlContract" prefHeight="172px" prefWidth="519px">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="pnlContract" prefHeight="155px" prefWidth="519px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="130px"/>
   </AnchorsPane>
   <ToolBar cursor="0" name="toolBar" parent="pnlUslugi" prefHeight="30px" prefWidth="519px">
@@ -33,16 +33,10 @@
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="143px" prefWidth="520px">
+  <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="126px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="30px"/>
-    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="167px">
+    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="502px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="contract_id" name="colContract" title="Договор" width="167px">
-      <ModelFormattedField format=""/>
-    </ModelGridColumn>
-    <ModelGridColumn field="usl_cost" name="colUslCost" title="Цена" visible="false" width="167px">
-      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="pnlContract" prefHeight="50px" prefWidth="520px">
@@ -64,28 +58,31 @@
   <Button cursor="0" name="btnCreateContract" parent="panel" prefHeight="20px" prefWidth="80px" text="Новый">
     <AnchorsPaneConstraints height="20px" right="10px" top="30px" width="80px"/>
   </Button>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesStat" parent="tabbedPane" prefHeight="302px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesStat" parent="tabbedPane" prefHeight="285px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Статистика"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" name="mgUslugiStat" parent="pnlRoutesStat" prefHeight="303px" prefWidth="520px">
+  <ModelGrid cursor="0" name="mgUslugiStat" parent="pnlRoutesStat" prefHeight="286px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="0px"/>
-    <ModelGridColumn name="colUslName" preferredWidth="200px" title="Услуга" width="223px">
+    <ModelGridColumn name="colUslName" preferredWidth="200px" title="Услуга" width="213px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colCount" title="Количество" width="98px">
+    <ModelGridColumn name="colCount" title="Количество" width="88px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colCountByRoute" title="По назначению" width="99px">
+    <ModelGridColumn name="colCountByRoute" title="По назначению" width="89px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn name="colCountByHazard" title="По вредности" width="98px">
+    <ModelGridColumn name="colCountByHazard" title="По вредности" width="88px">
       <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colRoute" preferredWidth="25px" title="Вкл" width="39px">
+      <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutes" parent="tabbedPane" prefHeight="302px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutes" parent="tabbedPane" prefHeight="285px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Назначения"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" name="mgRoutes" parent="pnlRoutes" prefHeight="302px" prefWidth="519px">
+  <ModelGrid cursor="0" name="mgRoutes" parent="pnlRoutes" prefHeight="285px" prefWidth="519px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn name="colName" preferredWidth="250px" title="Пациент/Услуга" width="286px">
@@ -94,20 +91,20 @@
     <ModelGridColumn name="colSelected" preferredWidth="25px" title="Выбрана" width="61px">
       <ModelCheckBox/>
     </ModelGridColumn>
-    <ModelGridColumn name="colRoute" preferredWidth="25px" title="Назначена" width="62px">
+    <ModelGridColumn name="colRoute" preferredWidth="25px" title="Назначена" width="61px">
       <ModelCheckBox/>
     </ModelGridColumn>
     <ModelGridColumn name="colPrice" preferredWidth="50px" title="Цена" width="86px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlCosts" parent="tabbedPane" prefHeight="302px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlCosts" parent="tabbedPane" prefHeight="285px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Цены на услуги"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" deletable="false" name="mgCosts" parent="pnlCosts" prefHeight="271px" prefWidth="519px">
+  <ModelGrid cursor="0" deletable="false" name="mgCosts" parent="pnlCosts" prefHeight="254px" prefWidth="519px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="31px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="83px">
+    <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="82px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
     </ModelGridColumn>
     <ModelGridColumn field="usl_sex" name="colSex" title="Пол" width="82px">
@@ -131,19 +128,19 @@
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDoublePrice" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Дублировать" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnSaveToPrice" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Сохранить в прайс-лист" verticalTextPosition="3"/>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlWarnings" parent="tabbedPane" prefHeight="302px" prefWidth="519px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlWarnings" parent="tabbedPane" prefHeight="285px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Ошибки/предупреждения"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" name="mgWarnings" parent="pnlWarnings" prefHeight="302px" prefWidth="519px">
+  <ModelGrid cursor="0" name="mgWarnings" parent="pnlWarnings" prefHeight="285px" prefWidth="519px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
-    <ModelGridColumn name="colDescription" title="Ошибка/предупреждение" width="517px">
+    <ModelGridColumn name="colDescription" title="Ошибка/предупреждение" width="516px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="140px" text="Пациентов выбрано:">
     <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="140px"/>
   </Label>
-  <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" nullable="false" parent="view" prefHeight="20px" prefWidth="50px" text="?">
+  <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" parent="view" prefHeight="20px" prefWidth="50px" text="?">
     <AnchorsPaneConstraints height="20px" left="150px" top="6px" width="50px"/>
   </ModelFormattedField>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Посчитать" verticalTextPosition="3">

@@ -10,11 +10,20 @@ function TreatCreator() {
     var treatCostCalculator = new TreatCostCalculator();
     
     var routeData;
-    self.calculateRoute = function(aPatients, anUslugi, aPricesSource, calculateAllRoute) {
+    self.calculateRoute = function(aPatients, anUslugi) {//, aPricesSource, calculateAllRoute) {
         routeData = treatCalculator.calculateRoute4Group(aPatients, anUslugi);
-        if (aPricesSource)
-            routeData = treatCostCalculator.calculateRoute(routeData, aPricesSource, calculateAllRoute);
+//        if (aPricesSource)
+//            routeData = treatCostCalculator.calculateRoute(routeData, aPricesSource, calculateAllRoute);
         return routeData;
+    };
+    
+    self.calculatePrices = function(aPricesSource, calculateAllRoute) {
+        treatCostCalculator.calculateRoute(routeData, aPricesSource, calculateAllRoute);
+        return routeData;
+    };
+    
+    self.updateRoute = function(aNewRouteData) {
+//        TODO
     };
     
     self.createTreatment = function(aPatientId, aContractId, aTreatGroup) {
