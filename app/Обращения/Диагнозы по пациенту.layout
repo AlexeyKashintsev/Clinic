@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <ModelGrid cursor="0" data="qDiagnosesPacient" deletable="false" editable="false" insertable="false" name="mgPrice" parent="view" prefHeight="300px" prefWidth="400px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="mkb_name" name="colDiagnos" title="Диагноз" width="180px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="recommendations" name="colRecomendation" title="Рекомендации" width="179px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>

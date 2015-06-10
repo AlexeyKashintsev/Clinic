@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qDiagnosesPacient" Title="" entityHeight="200" entityIconified="false" entityId="143392574745965" entityLocationX="33" entityLocationY="16" entityWidth="150" queryId="qDiagnosesPacient" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="mkb_desease" leftEntityId="143392574745965" rightEntityFieldName="mkb_deseases_id" rightEntityId="143392574745965"/>
+</datamodel>

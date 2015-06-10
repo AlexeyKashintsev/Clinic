@@ -133,4 +133,7 @@
       <ModelCombo displayField="status_name" displayList="qObrStatus"/>
     </ModelGridColumn>
   </ModelGrid>
+  <BorderPane background="#ffffff" cursor="0" name="pnlDiagnoses" parent="tabbedPane" prefHeight="372px" prefWidth="564px" visible="false">
+    <TabbedPaneConstraints tabTitle="Диагнозы"/>
+  </BorderPane>
 </layout>

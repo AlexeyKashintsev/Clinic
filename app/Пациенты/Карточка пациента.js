@@ -10,12 +10,15 @@ function PatientForm() {
     var contAgSel, jobSel, hazSel, patientId;
     var address = new AddressForm();
     address.showOnPanel(form.pnlAddress);
+    var diagnosesForm = new DiagnosesForm();
+    diagnosesForm.showOnPanel(form.pnlDiagnoses);
     var buhIinshuranceCompanyForm = false;
     
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
         model.qTreatByPatient.params.patient_id = aPatientId;
         model.qWorkPlaceByPatient.params.patient_id = aPatientId;
+        diagnosesForm.setPacient(aPatientId);
         
         model.requery(function() {
             if (!patientId) {

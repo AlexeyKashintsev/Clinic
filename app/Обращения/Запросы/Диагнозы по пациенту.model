@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="pacient_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143392553968486" entityLocationX="180" entityLocationY="8" entityWidth="150" tableAlias="t1" tableName="obr_diagnosis" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143392571127702" entityLocationX="373" entityLocationY="9" entityWidth="150" tableAlias="t" tableName="mkb_deseases" tableSchemaName=""/>
+  <relation leftEntityFieldName="mkb_desease" leftEntityId="143392553968486" rightEntityFieldName="mkb_deseases_id" rightEntityId="143392571127702"/>
+  <relation leftEntityId="-1" leftEntityParameterName="pacient_id" rightEntityFieldName="patient_id" rightEntityId="143392553968486"/>
+</datamodel>
