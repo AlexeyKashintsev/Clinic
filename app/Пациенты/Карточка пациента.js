@@ -113,7 +113,7 @@ function PatientForm() {
         model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
     };
     
-    self.tabProcessor = new TabProcessor(form, ['tfSurname', 'tfName'
+    self.tabProcessor = new TabProcessor(form, ['tfCardNumber', 'tfSanitaryBook', 'tfSurname', 'tfName'
         , 'tfPatronymic', 'mdDateOfBirth', address, 'tfOMSNumber', 'tfDrugIntolerance'
         , 'btnSave']);
     
