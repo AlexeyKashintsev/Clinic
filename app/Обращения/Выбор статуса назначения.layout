@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="100px" prefWidth="232px"/>
+  <ModelCombo cursor="0" displayField="status_name" displayList="qRouteStatus" name="mcStatus" parent="view" prefHeight="30px" prefWidth="190px">
+    <AnchorsPaneConstraints height="30px" left="20px" top="10px" width="190px"/>
+  </ModelCombo>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="button" parent="view" prefHeight="30px" prefWidth="120px" text="Выбрать">
+    <AnchorsPaneConstraints height="30px" left="100px" top="60px" width="120px"/>
+  </Button>
+</layout>

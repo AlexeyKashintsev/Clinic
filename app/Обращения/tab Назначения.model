@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<datamodel>
-    <parametersEntity Title="Параметры" entityHeight="200" entityIconified="false" entityLocationX="12" entityLocationY="12" entityWidth="150">
-    </parametersEntity>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qRouteStatus" Title="" entityHeight="200" entityIconified="false" entityId="143400930025322" entityLocationX="237" entityLocationY="46" entityWidth="150" queryId="qRouteStatus" tableName="" tableSchemaName=""/>
+  <entity Name="qNaznach" Title="" entityHeight="200" entityIconified="false" entityId="143400999087326" entityLocationX="37" entityLocationY="45" entityWidth="150" queryId="qNaznach" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="143400999087326" rightEntityFieldName="usl_uslugi_id" rightEntityId="143400999087326"/>
+  <referenceRelation collectionPropertyName="obrNaznach" leftEntityFieldName="route_status" leftEntityId="143400999087326" rightEntityFieldName="obr_route_status_id" rightEntityId="143400930025322" scalarPropertyName="routeStatus"/>
 </datamodel>

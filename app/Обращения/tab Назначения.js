@@ -8,7 +8,7 @@ function TabNazn() {
             , form = P.loadForm(this.constructor.name, model);
     
     self.show = function () {
-        form.show();
+        form.show(); 
     };
     
     self.showOnPanel = function (aPanel) {
@@ -20,6 +20,23 @@ function TabNazn() {
     });
     
     self.setData = function(aData){
-        form.mgNazn.data = aData;
+        model.qNaznach.params.treatId = aData;
+        model.qNaznach.requery();
+    };
+   
+    form.btnChangeStatus.onActionPerformed = function(event) {
+        var selectStatusForm = new SelectStatusForm();
+        selectStatusForm.showModal(function(a){
+            if(a){
+                model.qNaznach.forEach(function(row) {
+                    row.route_status = a;
+                });
+                model.save();
+            }
+        });
+    };
+    
+    form.btnSave.onActionPerformed = function(event) {
+        model.save();
     };
 }
