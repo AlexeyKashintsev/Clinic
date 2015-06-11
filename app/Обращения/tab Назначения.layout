@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ModelGrid cursor="0" deletable="false" editable="false" insertable="false" name="mgNazn" parent="view" prefHeight="300px" prefWidth="400px">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+  <ModelGrid cursor="0" data="qNaznach" deletable="false" insertable="false" name="mgNazn" parent="view" prefHeight="270px" prefWidth="400px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="q_NAZNACH_USLUGA" name="colUsluga_id" title="Наименование услуги" width="188px">
-      <ModelCombo displayField="usl_name" list="false"/>
+    <ModelGridColumn field="usl_name" name="colUsluga_id" readonly="true" title="Наименование услуги" width="180px">
+      <ModelFormattedField/>
     </ModelGridColumn>
-    <ModelGridColumn field="q_NAZNACH_STATUS" name="colStatus" title="Статус" width="188px">
-      <ModelCombo displayField="status_name" list="false"/>
+    <ModelGridColumn field="routeStatus" name="colStatus" title="Статус" width="179px">
+      <ModelCombo displayField="status_name" displayList="qRouteStatus"/>
     </ModelGridColumn>
   </ModelGrid>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/edit-select-all.png" name="btnChangeStatus" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Изменить статус всем назначениям" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Изменить статус" verticalTextPosition="3"/>
 </layout>

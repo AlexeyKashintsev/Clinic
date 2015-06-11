@@ -20,16 +20,17 @@ function TreatmentDetailForm() {
         model.qTreatByPatient.requery();
     };
     
-    model.requery(function () {
-        
-    });
+    model.requery(function () {});
+    
+    self.saveModel = function(){
+        model.save();
+    };
     
     var tabUslugi = new TabUslugi();
     tabUslugi.setData(model.qUslugiInTreat);
     tabUslugi.showOnPanel(form.pnlUsl);
     
     var tabNazn = new TabNazn();
-    tabNazn.setData(model.qNaznach);
     tabNazn.showOnPanel(form.pnlNazn);
     
     var tabPrices = new TabPrices();
@@ -39,4 +40,15 @@ function TreatmentDetailForm() {
     var tabAdditional = new TabAdditional();
     tabAdditional.setData(model.qObrAdditional);
     tabAdditional.showOnPanel(form.pnlDop);
+    
+    model.qTreatByPatient.onScrolled = function(event) {
+        tabNazn.setData(model.qTreatByPatient.cursor.obr_treatment_id);
+    };
+    
+    model.qTreatByPatient.onRequeried = function(event) {
+        if(model.qTreatByPatient.cursor)
+            tabNazn.setData(model.qTreatByPatient.cursor.obr_treatment_id);
+    };
+
+
 }
