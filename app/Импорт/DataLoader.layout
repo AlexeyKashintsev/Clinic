@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="124px" prefWidth="400px"/>
+  <TextField name="textField" parent="view" prefHeight="28px" prefWidth="380px">
+    <AnchorsPaneConstraints height="28px" left="10px" right="10px" top="30px"/>
+  </TextField>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="150px" text="Наименование файла">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="150px"/>
+  </Label>
+  <Button cursor="0" name="btnChooseFile" parent="view" prefHeight="20px" prefWidth="70px" text="Выбрать">
+    <AnchorsPaneConstraints height="20px" right="10px" top="60px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="20px" prefWidth="70px" text="Отмена">
+    <AnchorsPaneConstraints bottom="13px" height="20px" right="10px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btnImport" parent="view" prefHeight="20px" prefWidth="90px" text="Загрузить">
+    <AnchorsPaneConstraints bottom="13px" height="20px" right="100px" width="90px"/>
+  </Button>
+</layout>
