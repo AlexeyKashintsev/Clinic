@@ -55,9 +55,13 @@ function ContractDetailsView() {
         });
     };
     
-    model.requery();
+    model.requery(function(){
+       
+    });
     
     form.btnSave.onActionPerformed = function(event) {
+        if(model.qAllFirms.params.company_id)
+            model.qContract.cursor.company_id = model.qAllFirms.params.company_id;
         model.save();
         fmCosts.save();
         form.close(model.qContract.cursor);
@@ -78,5 +82,8 @@ function ContractDetailsView() {
         companiesList.showModal(function(res){
             self.setCompany(res.id);
         });
+    };
+    form.btnSelect.onActionPerformed = function(event) {
+        form.lbCompany.onMouseClicked();
     };
 }

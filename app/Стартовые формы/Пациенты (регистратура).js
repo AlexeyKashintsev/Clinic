@@ -11,7 +11,7 @@ function PatientsForm() {
             , form = P.loadForm(this.constructor.name, model);
     
     var fmPatient = new PatientForm();
-    var fmAppointment;
+    var fmAppointment, fmDataLoader;
     var fmTreatmentDetail = new TreatmentDetailForm();
     
     model.requery(function(){
@@ -117,5 +117,10 @@ function PatientsForm() {
         form.mdTreatEnd.value = null;
         
         form.btnApplyFilter.onActionPerformed();
+    };
+    form.btnLoadData.onActionPerfomed = function(event) {
+        if (!fmDataLoader)
+            fmDataLoader = new DataLoader();
+        fmDataLoader.showModal();
     };
 }
