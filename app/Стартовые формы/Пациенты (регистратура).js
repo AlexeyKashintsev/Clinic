@@ -118,7 +118,7 @@ function PatientsForm() {
         
         form.btnApplyFilter.onActionPerformed();
     };
-    form.btnLoadData.onActionPerfomed = function(event) {
+    form.btnLoadData.onActionPerformed = function(event) {
         if (!fmDataLoader)
             fmDataLoader = new DataLoader();
         fmDataLoader.showModal();

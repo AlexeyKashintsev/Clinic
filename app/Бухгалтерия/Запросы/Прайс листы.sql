@@ -1,7 +1,6 @@
 /**
  * @author Алексей
  * @name qPriceLists
- * @manual
  * @public
  */ 
 Select * 
