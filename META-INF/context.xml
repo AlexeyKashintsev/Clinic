@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><Context path="">
-  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="clinic" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
-  <Resource driverClassName="org.postgresql.Driver" name="clinic" password="Rem000Dev" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://localhost:5432/clinic" username="remotedev"/>
-</Context>
