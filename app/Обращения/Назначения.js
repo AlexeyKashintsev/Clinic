@@ -7,18 +7,19 @@ function AppointmentForm() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     var treatCreator = new P.ServerModule('TreatCreator');
-    model.qUslugaById.requery();
     model.qContracts.params.c_act = true;
-    model.qContracts.requery();
-    model.qAllFirms.requery();
-    model.qPriceLists.requery();
+//    model.qUslugaById.requery();
+//    model.qContracts.requery();
+//    model.qAllFirms.requery();
+//    model.qPriceLists.requery();
+    model.requery();
 
     var patients = [];
-    var curTreat;
+    var curTreat, priceSource, contract;
     var errorsLog = [];
     var canApply = false;
     var contractConstructor = new P.ServerModule('ContractConstructor');
-    
+
     self.show = function () {
         form.show();
     };
@@ -37,7 +38,6 @@ function AppointmentForm() {
     }
 
     function createTreat(aContract, callback) {
-        form.mtPatientsCount.text = patients.length;
         treatCreator.createTreatment(patients.length > 1 ? null : patients[0].man_patient_id
                 , aContract, null, function (res) {
                     setCurTreat(res, callback);
@@ -60,22 +60,24 @@ function AppointmentForm() {
         form.mcAllRoute.value = false;
         if (typeof aPatients[0] === 'object') {
             patients = aPatients;
-            createTreat(aContract, aCallback);
+            form.mtPatientsCount.text = patients.length;
+            setCurTreat(null, aCallback);
         } else {
             patients = [];
             getPatientsData(aPatients, 0, function () {
-                createTreat(aContract, aCallback);
+                form.mtPatientsCount.text = patients.length;
+                setCurTreat(null, aCallback);
             });
         }
         uslStat = [];
         naznacheniya = [];
         fullData = {};
-        
+
     };
 
     var fmUslugiSelect = new Uslugi4SelectView();
     form.btnAdd.onActionPerformed = function (event) {
-        if (curTreat)
+//        if (curTreat)
             fmUslugiSelect.showModal(function (anUsluga) {
                 if (anUsluga) {
                     model.qUslInTreat.push({
@@ -85,11 +87,11 @@ function AppointmentForm() {
                 }
             });
     };
-    
+
     var uslStat = [],
-        naznacheniya = [],
-        fullData = {},
-        gridAppliance = false;
+            naznacheniya = [],
+            fullData = {},
+            gridAppliance = false;
 
     function applyDataToGrids() {
         form.mgUslugiStat.data = uslStat;
@@ -119,13 +121,13 @@ function AppointmentForm() {
         form.mgCosts.colVozrastType.field = "age_type";
         form.mgCosts.colVozrast.field = "limitation_age";
 
-        form.mgCosts.onRender = function(event) {
+        form.mgCosts.onRender = function (event) {
             if (event.object.missed)
                 event.cell.background = new P.Color('#FFCCCC');
         };
 //        gridAppliance = true;
     }
-    
+
     function prepareStatData(aStatData) {
         for (var j in aStatData) {
             uslStat.push(aStatData[j]);
@@ -183,7 +185,8 @@ function AppointmentForm() {
         rec.n_children.push(route);
 
         naznacheniya.push(rec);
-    };
+    }
+    ;
 
     function preparePriceData(price) {
         price.usluga = model.qUslugaById.findByKey(price.usluga_id);
@@ -194,24 +197,26 @@ function AppointmentForm() {
 
     function prepareErrorData(error) {
         switch (error.errorType) {
-            case 'missedPrices': {
-                    canApply = false;
-                    var erLog = {
-                        e_parent: null,
-                        text: 'Не указана цена',
-                        e_children: []
-                    };
-                    error.data.forEach(function(missedPrice) {
-                        erLog.e_children.push({
-                            e_parent: erLog,
-                            text: model.qUslugaById.findByKey(missedPrice).usl_name,
-                            e_children: null,
-                            data: missedPrice
-                        });
+            case 'missedPrices':
+            {
+                canApply = false;
+                var erLog = {
+                    e_parent: null,
+                    text: 'Не указана цена',
+                    e_children: []
+                };
+                error.data.forEach(function (missedPrice) {
+                    erLog.e_children.push({
+                        e_parent: erLog,
+                        text: model.qUslugaById.findByKey(missedPrice).usl_name,
+                        e_children: null,
+                        data: missedPrice
                     });
-                    errorsLog.push(erLog);
+                });
+                errorsLog.push(erLog);
             }
-        };
+        }
+        ;
     }
 
     function calculate() {
@@ -224,91 +229,146 @@ function AppointmentForm() {
         patients.forEach(function (patient) {
             pcs.push(patient.man_patient_id);
         });
-        
-        var priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id : 
+
+        priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
                 (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
 
         treatCreator.calculateRoute(pcs, uslugi
-            , function (res) {
-                canApply = true;
-                fullData = res;
-                uslStat = [];
-                errorsLog = [];
-                
-                prepareStatData(fullData.uslugi);
-                fullData.patients.forEach(preaprePatientData);
-                
-                res.errors.forEach(prepareErrorData);
-                if (!gridAppliance)
-                    applyDataToGrids();
-            });
-            
-        if (priceSource) 
-            treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
                 , function (res) {
-                    fullData.priceData = res.priceData;
-                    fullData.priceData.forEach(preparePriceData);
+                    canApply = true;
+                    fullData = res;
+                    uslStat = [];
+                    errorsLog = [];
+
+                    prepareStatData(fullData.uslugi);
+                    fullData.patients.forEach(preaprePatientData);
+
                     res.errors.forEach(prepareErrorData);
-                    if (!gridAppliance)
-                        applyDataToGrids();
+
+                    if (priceSource)
+                        treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
+                                , function (res) {
+                                    fullData.priceData = res.priceData;
+                                    fullData.priceData.forEach(preparePriceData);
+                                    res.errors.forEach(prepareErrorData);
+                                    if (!gridAppliance)
+                                        applyDataToGrids();
+                                });
+                    else {
+                        if (!gridAppliance)
+                            applyDataToGrids();
+                    }
                 });
+
     }
 
     function applyTreatment() {
         treatCreator.applyTreatment(curTreat
-            , function () {
-                var res = [];
-                model.qUslInTreat.forEach(function (usl) {
-                    res.push(usl.usluga_id);
-                });
-                return res;
-            }());
+                , function () {
+                    var res = [];
+                    model.qUslInTreat.forEach(function (usl) {
+                        res.push(usl.usluga_id);
+                    });
+                    return res;
+                }()
+                , form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
     }
-    
-    function updateContractPrice() {
+
+    function getCosts() {
+        var costs = [];
+        form.mgCosts.data.forEach(function (s) {
+            costs.push({
+                limitation_age_type: s.age_type ? s.age_type.usl_lim_age_type_id : null,
+                cost: s.cost,
+                per_type: s.periodic_type ? s.periodic_type.usl_periodic_type_id : null,
+                sex: s.sex_t ? s.sex_t.man_sex_id : null,
+                usluga_id: s.usluga ? s.usluga.usl_uslugi_id : null
+            });
+        });
+        return costs;
+    }
+
+    function updatePrice() {
+        var contract_id;
+        if (form.mcPriceSource.value && confirm('Обновить прайс лист?'))
+            contract_id = form.mcPriceSource.value.buh_contracts_id;
+        if (contract_id)
+            contractConstructor.updateContractPrices(contract_id, getCosts());
+        return !!contract_id;
+    }
+
+    function updateContract(aCallback) {
         var contract_id;
         if (form.mcContract.value) {
             contract_id = form.mcContract.value.buh_contracts_id;
             form.mcPriceSource.value = null;
-        } else {
-            if (form.mcPriceSource.value && confirm('Обновить прайс лист?'))
-                contract_id = form.mcPriceSource.value.buh_contracts_id;
         }
         if (contract_id)
-            contractConstructor.updateContractPrices(form.mcContract.value.buh_contract_id,
-                                                     form.mgCosts.data);
+            contractConstructor.updateContractPrices(contract_id, getCosts(), aCallback);
         return !!contract_id;
     }
 
+    function checkAppliance(onSuccess, onFailure) {
+        if (form.mcContract.value) {
+            updateContract(function (aRes) {
+                if (aRes) {
+                    treatCreator.calculatePrices(form.mcContract.value.buh_contracts_id
+                            , form.mcAllRoute.value
+                            , function (res) {
+                                if (res.errors.length > 0) {
+                                    fullData.priceData = res.priceData;
+                                    fullData.priceData.forEach(preparePriceData);
+                                    res.errors.forEach(prepareErrorData);
+                                    if (!gridAppliance)
+                                        applyDataToGrids();
+                                    onFailure();
+                                } else {
+                                    onSuccess();
+                                }
+                            });
+                } else {
+                    onFailure();
+                }
+            });
+        } else {
+            if (canApply) {
+                    onSuccess();
+            } else {
+                onFailure();
+            }
+        }
+    }
+
     form.btnApply.onActionPerformed = function (event) {
-        if (canApply) {
+        checkAppliance(function () {
             applyTreatment();
             form.close();
-        } else 
-        alert('Невозможно применить, сначала исправьте все ошибки');
+        }, function () {
+            alert('Невозможно применить, сначала исправьте все ошибки');
+        });
     };
 
     form.button.onActionPerformed = calculate;
-    
-    form.mcPriceSource.onSelect = function(evt) {
+
+    form.mcPriceSource.onSelect = function (evt) {
         var selectPriceListView = new SelectPriceListView();
-        selectPriceListView.showModal(function(row){
-           form.mcPriceSource.value = row; 
+        selectPriceListView.showModal(function (row) {
+            form.mcPriceSource.value = row;
         });
     };
-    
-    form.mcContract.onSelect = function(evt) {
+
+    form.mcContract.onSelect = function (evt) {
         var allContractsView = new AllContractsView();
         allContractsView.setSelect(true);
-        allContractsView.showModal(function(row){
+        allContractsView.showModal(function (row) {
             form.mcContract.value = row;
             model.qAllFirms.params.company_id = row.company_id;
-            model.qAllFirms.requery(function(){
+            model.qAllFirms.requery(function () {
                 form.mcCompany.value = model.qAllFirms.cursor;
             });
         });
     };
-    
+
     function testData() {
         self.setPatients([143186739536219, 142808473476141, 142808237417447], null, function () {
             model.qUslInTreat.push({
@@ -326,13 +386,13 @@ function AppointmentForm() {
         });
     }
 //    testData();
-    
-    form.btnCreateContract.onActionPerformed = function(event) {
-        if(form.mcCompany.value){
+
+    form.btnCreateContract.onActionPerformed = function (event) {
+        if (form.mcCompany.value) {
             var contractDetailsView = new ContractDetailsView();
             contractDetailsView.setContractID(null, form.mcCompany.value.buh_companies_id);
             contractDetailsView.setCompany(form.mcCompany.value.buh_companies_id);
-            contractDetailsView.showModal(function(row){
+            contractDetailsView.showModal(function (row) {
                 //form.mcCompany.onValueChange();
                 form.mcContract.value = row;
             });
@@ -340,18 +400,40 @@ function AppointmentForm() {
             alert("Выберите компанию!");
         }
     };
-    
-    form.mcCompany.onValueChange = function(event) {
+
+    form.mcCompany.onValueChange = function (event) {
         model.qContracts.params.comp_id = form.mcCompany.value.buh_companies_id;
         model.qContracts.execute();
     };
 
-    form.btnDoublePrice.onActionPerformed = function(event) {
-        if (form.mgCosts.selected[0])
-            form.mgCosts.data.push(form.mgCosts.selected[0]);
+    form.btnDoublePrice.onActionPerformed = function (event) {
+        if (form.mgCosts.selected[0]) {
+            var s = form.mgCosts.selected[0];
+            form.mgCosts.data.push({
+                limitation_age_type: s.limitation_age_type,
+                cost: s.cost,
+                missed: s.missed,
+                per_type: s.per_type,
+                sex: s.sex,
+                usluga_id: s.usluga_id,
+                usluga: s.usluga,
+                age_type: s.age_type,
+                sex_t: s.sex_t,
+                periodic_type: s.periodic_type
+            });
+        }
     };
 
-    form.btnSaveToPrice.onActionPerformed = function(event) {
-        updateContractPrice();
+    form.btnSaveToPrice.onActionPerformed = function (event) {
+        if (!updatePrice())
+            alert('Не выбран прайс-лист');
+    };
+    form.btnSaveToContract.onActionPerformed = function (event) {
+        if (!updateContract())
+            alert('Не выбран договор!');
+    };
+    form.btnCancel.onActionPerformed = function(event) {
+        model.revert();
+        form.close(false);
     };
 }
