@@ -39,8 +39,11 @@
   <Label cursor="0" name="label4" parent="view" prefHeight="20px" prefWidth="70px" text="Активен">
     <AnchorsPaneConstraints height="20px" left="10px" top="85px" width="70px"/>
   </Label>
-  <Label cursor="0" name="lbCompany" parent="view" prefHeight="20px" prefWidth="370px" text="Выбрать ...">
-    <font family="Tahoma" size="11" style="1"/>
-    <AnchorsPaneConstraints height="20px" left="110px" top="13px" width="370px"/>
+  <Label cursor="0" name="lbCompany" parent="view" prefHeight="20px" prefWidth="220px" text="">
+    <font family="Monospaced" size="11" style="1"/>
+    <AnchorsPaneConstraints height="20px" left="110px" top="13px" width="220px"/>
   </Label>
+  <Button cursor="0" name="btnSelect" parent="view" prefHeight="20px" prefWidth="150px" text="Выбрать / Изменить">
+    <AnchorsPaneConstraints height="20px" right="9px" top="10px" width="150px"/>
+  </Button>
 </layout>
