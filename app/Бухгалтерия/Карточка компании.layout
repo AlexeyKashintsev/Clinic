@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane cursor="0" name="view" prefHeight="424px" prefWidth="670px"/>
+  <AnchorsPane cursor="0" name="view" prefHeight="494px" prefWidth="670px"/>
   <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.reg_address" format="" name="modelFormattedField12" parent="view" prefHeight="28px" prefWidth="540px">
-    <AnchorsPaneConstraints height="28px" left="110px" right="20px" top="82px"/>
+    <AnchorsPaneConstraints height="28px" left="110px" top="130px" width="540px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" format="" name="modelFormattedField11" parent="view" prefHeight="28px" prefWidth="330px">
-    <AnchorsPaneConstraints height="28px" left="320px" right="20px" top="48px"/>
+    <AnchorsPaneConstraints height="28px" left="320px" top="90px" width="330px"/>
   </ModelFormattedField>
   <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.inn" format="" name="modelFormattedField1" parent="view" prefHeight="28px" prefWidth="140px">
-    <AnchorsPaneConstraints height="28px" left="110px" top="48px" width="140px"/>
+    <AnchorsPaneConstraints height="28px" left="110px" top="90px" width="140px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label" parent="view" prefHeight="24px" prefWidth="98px" text="Наименование">
-    <AnchorsPaneConstraints height="24px" left="12px" top="12px" width="98px"/>
+    <AnchorsPaneConstraints height="24px" left="10px" top="10px" width="98px"/>
   </Label>
   <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.company_name" format="" name="modelFormattedField" parent="view" prefHeight="28px" prefWidth="540px">
     <AnchorsPaneConstraints height="28px" left="110px" top="10px" width="540px"/>
   </ModelFormattedField>
   <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="38px" text="ИНН">
-    <AnchorsPaneConstraints height="20px" left="12px" top="50px" width="38px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="100px" width="38px"/>
   </Label>
   <Label cursor="0" name="label2" parent="view" prefHeight="16px" prefWidth="38px" text="ОГРН">
-    <AnchorsPaneConstraints height="16px" left="270px" top="54px" width="38px"/>
+    <AnchorsPaneConstraints height="16px" left="270px" top="100px" width="38px"/>
   </Label>
   <Label cursor="0" name="label3" parent="view" prefHeight="26px" prefWidth="84px" text="Юр. Адрес">
-    <AnchorsPaneConstraints height="26px" left="12px" top="83px" width="84px"/>
+    <AnchorsPaneConstraints height="26px" left="10px" top="130px" width="84px"/>
   </Label>
-  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="250px" prefWidth="670px" selectedComponent="pnlContracts">
-    <AnchorsPaneConstraints bottom="54px" left="0px" right="0px" top="120px"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="280px" prefWidth="670px" selectedComponent="pnlContracts">
+    <AnchorsPaneConstraints bottom="54px" left="0px" right="0px" top="160px"/>
   </TabbedPane>
-  <BorderPane cursor="0" name="pnlContracts" parent="tabbedPane" prefHeight="222px" prefWidth="665px">
+  <BorderPane cursor="0" name="pnlContracts" parent="tabbedPane" prefHeight="252px" prefWidth="665px">
     <TabbedPaneConstraints tabTitle="Договора"/>
   </BorderPane>
-  <BorderPane cursor="0" name="pnlPeople" parent="tabbedPane" prefHeight="222px" prefWidth="665px" visible="false">
+  <BorderPane cursor="0" name="pnlPeople" parent="tabbedPane" prefHeight="252px" prefWidth="665px" visible="false">
     <TabbedPaneConstraints tabTitle="Сотрудники"/>
   </BorderPane>
   <Button cursor="0" name="btnSave" parent="view" prefHeight="29px" prefWidth="98px" text="Сохранить">
@@ -39,4 +39,10 @@
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="29px" prefWidth="94px" text="Отмена">
     <AnchorsPaneConstraints bottom="11px" height="29px" right="17px" width="94px"/>
   </Button>
+  <Label cursor="0" name="label4" parent="view" prefHeight="24px" prefWidth="98px" text="Сокращенно">
+    <AnchorsPaneConstraints height="24px" left="10px" top="50px" width="98px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qAllFirms" field="cursor.company_short_name" format="" name="modelFormattedField2" parent="view" prefHeight="28px" prefWidth="540px">
+    <AnchorsPaneConstraints height="28px" left="110px" top="50px" width="540px"/>
+  </ModelFormattedField>
 </layout>
