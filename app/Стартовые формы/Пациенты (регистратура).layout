@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Пациенты" view="view">
   <AnchorsPane background="#eaeaea" cursor="0" name="view" prefHeight="486px" prefWidth="940px"/>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="486px" prefWidth="230px">
+  <AnchorsPane background="#eaeaea" cursor="0" name="panel" parent="view" prefHeight="486px" prefWidth="230px">
     <AnchorsPaneConstraints bottom="0px" left="0px" top="0px" width="230px"/>
   </AnchorsPane>
-  <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="mcWorkPlace" parent="panel" prefHeight="20px" prefWidth="210px">
+  <ModelCombo background="#ffffff" cursor="0" displayField="company_name" displayList="qAllFirms" name="mcWorkPlace" parent="panel" prefHeight="20px" prefWidth="210px">
     <AnchorsPaneConstraints height="20px" left="10px" top="60px" width="210px"/>
   </ModelCombo>
   <ModelFormattedField cursor="0" format="" name="tfFirstName" parent="panel" prefHeight="20px" prefWidth="210px">
@@ -36,7 +36,7 @@
   <Label cursor="0" name="label7" parent="panel" prefHeight="20px" prefWidth="50px" text="Статус">
     <AnchorsPaneConstraints height="20px" left="10px" top="120px" width="50px"/>
   </Label>
-  <ModelCombo cursor="0" displayField="status_name" displayList="qObrStatus" name="mcTreatStatus" parent="panel" prefHeight="20px" prefWidth="160px">
+  <ModelCombo background="#ffffff" cursor="0" displayField="status_name" displayList="qObrStatus" name="mcTreatStatus" parent="panel" prefHeight="20px" prefWidth="160px">
     <AnchorsPaneConstraints height="20px" left="60px" top="120px" width="160px"/>
   </ModelCombo>
   <Label cursor="0" name="label8" parent="panel" prefHeight="20px" prefWidth="50px" text="С">
@@ -45,10 +45,10 @@
   <Label cursor="0" name="label9" parent="panel" prefHeight="20px" prefWidth="50px" text="По">
     <AnchorsPaneConstraints height="20px" left="10px" top="180px" width="50px"/>
   </Label>
-  <ModelDate cursor="0" name="mdTreatStart" parent="panel" prefHeight="20px" prefWidth="160px">
+  <ModelDate background="#ffffff" cursor="0" name="mdTreatStart" parent="panel" prefHeight="20px" prefWidth="160px">
     <AnchorsPaneConstraints height="20px" left="60px" top="150px" width="160px"/>
   </ModelDate>
-  <ModelDate cursor="0" name="mdTreatEnd" parent="panel" prefHeight="20px" prefWidth="160px">
+  <ModelDate background="#ffffff" cursor="0" name="mdTreatEnd" parent="panel" prefHeight="20px" prefWidth="160px">
     <AnchorsPaneConstraints height="20px" left="60px" top="180px" width="160px"/>
   </ModelDate>
   <Label cursor="0" name="label10" parent="panel" prefHeight="20px" prefWidth="210px" text="Фильтр по ФИО">
@@ -76,13 +76,13 @@
   <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="panel2" prefHeight="229px" prefWidth="708px">
     <AnchorsPaneConstraints bottom="20px" left="0px" right="0px" top="0px"/>
     <CheckGridColumn name="colCheck" resizable="true"/>
-    <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="111px">
+    <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="112px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="111px">
+    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="112px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="111px">
+    <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="112px">
       <ModelTextArea/>
     </ModelGridColumn>
     <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="111px">

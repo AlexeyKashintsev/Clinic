@@ -11,11 +11,13 @@ function DataLoader() {
         form.show();
     };
     
-    self.showModal - function (aCallback) {
+    self.showModal = function (aCallback) {
         form.showModal(aCallback);
     };
     
     form.btnChooseFile.onActionPerformed = function(evt) {
-        alert('clicked!');
+        P.selectFile(function(aFile) {
+            console.log(aFile);
+        });
     };
 }

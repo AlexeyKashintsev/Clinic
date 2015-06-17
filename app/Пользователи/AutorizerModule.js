@@ -30,11 +30,11 @@ function UserModule() {
     };
     
     self.getStartForm = function(aRole){
-        P.Logger.warning(P.principal.name);
+//        P.Logger.warning(P.principal.name);
         if(!aRole) aRole = self.getUserRole();
         for(var i in roles){
             //P.Logger.warning(aRole);
-            if(roles[i] == aRole)
+            if(roles[i] === aRole)
                 return forms[i];
         }
         return false;
