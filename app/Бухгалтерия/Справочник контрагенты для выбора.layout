@@ -4,7 +4,7 @@
     <AnchorsPaneConstraints bottom="10px" height="30px" left="160px" width="125px"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="view" prefHeight="30px" prefWidth="35px" toolTipText="Обновить" verticalTextPosition="3">
-    <AnchorsPaneConstraints bottom="10px" height="30px" left="10px" width="35px"/>
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="50px" width="35px"/>
   </Button>
   <ModelGrid cursor="0" data="qAllFirms" name="modelGrid" parent="view" prefHeight="250px" prefWidth="400px">
     <AnchorsPaneConstraints bottom="50px" left="0px" right="0px" top="0px"/>
@@ -13,10 +13,13 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="inn" name="colInn1" title="Инн" width="179px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="100px" text="Отмена">
     <AnchorsPaneConstraints bottom="10px" height="30px" right="10px" width="100px"/>
+  </Button>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/insert-object.png" name="btnReq1" parent="view" prefHeight="30px" prefWidth="35px" toolTipText="Добавить" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="10px" width="35px"/>
   </Button>
 </layout>

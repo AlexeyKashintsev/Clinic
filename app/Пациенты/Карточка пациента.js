@@ -57,20 +57,22 @@ function PatientForm() {
     
     form.btnAddWorkPlace.onActionPerformed = function(event) {
         if (!contAgSel)
-            contAgSel = new CompanySelectorView();
+            contAgSel = new CompaniesList();
         if (!jobSel)
             jobSel = new ManJobForm();
         contAgSel.showModal(function(aContagent) {
-            if (aContagent)
+            if (aContagent){
                 jobSel.showModal(function(aJob) {
                     if (aJob)
                         model.qWorkPlaceByPatient.push({
-                            company_id: aContagent,
+                            company_id: aContagent.id,
                             job_id: aJob,
                             man_id: patientId,
                             active: true
                         });
                 });
+                //model.qWorkPlaceByPatient.requery();
+            }
         });
     };
     
