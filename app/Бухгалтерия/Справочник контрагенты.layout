@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Справочник компании" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="367px" prefWidth="701px"/>
-  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="701px">
-    <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="180px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="521px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
@@ -15,7 +15,7 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="company_short_name" name="colCompanyShortname" title="Сокращенно" width="132px">
-      <ModelFormattedField/>
+      <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="inn" name="colInn" title="Инн" width="132px">
       <ModelFormattedField format=""/>
@@ -27,7 +27,16 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="110px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="7px" height="20px" right="11px" width="110px"/>
+  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="button" parent="view" prefHeight="35px" prefWidth="110px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="1px" height="35px" right="11px" width="110px"/>
   </Button>
+  <Button cursor="0" name="btnSearch" parent="view" prefHeight="30px" prefWidth="100px" text="Применить">
+    <AnchorsPaneConstraints height="30px" right="1px" top="0px" width="100px"/>
+  </Button>
+  <Label cursor="0" name="label" parent="view" prefHeight="30px" prefWidth="60px" text="Поиск:">
+    <AnchorsPaneConstraints height="30px" left="190px" top="0px" width="60px"/>
+  </Label>
+  <ModelFormattedField cursor="0" name="mfSearch" parent="view" prefHeight="30px" prefWidth="360px">
+    <AnchorsPaneConstraints height="30px" left="240px" top="0px" width="360px"/>
+  </ModelFormattedField>
 </layout>

@@ -97,8 +97,8 @@
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="149px" prefWidth="562px"/>
   <ModelGrid cursor="0" data="qWorkPlaceByPatient" name="mgWorkPlace" parent="panel" prefHeight="99px" prefWidth="562px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="50px"/>
-    <ModelGridColumn field="company_id" name="colCompany" title="Компания" width="259px">
-      <ModelCombo displayField="company_name" displayList="qAllFirms"/>
+    <ModelGridColumn field="companies" name="colCompany" title="Компания" width="259px">
+      <ModelCombo displayField="company_name" displayList="qAllFirms" list="false"/>
     </ModelGridColumn>
     <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="259px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>

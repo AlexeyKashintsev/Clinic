@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <parameters>
     <parameter description="" name="company_id" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
+    <parameter description="" name="company_name" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="100" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="company_find" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="12" typeName="VARCHAR"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="142342102955485" entityLocationX="250" entityLocationY="19" entityWidth="150" tableAlias="t1" tableName="buh_companies" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142342102955485" entityLocationX="245" entityLocationY="7" entityWidth="150" tableAlias="t1" tableName="buh_companies" tableSchemaName=""/>
+  <relation leftEntityFieldName="company_name" leftEntityId="142342102955485" rightEntityId="-1" rightEntityParameterName="company_find"/>
+  <relation leftEntityFieldName="reg_address" leftEntityId="142342102955485" rightEntityId="-1" rightEntityParameterName="company_find"/>
   <relation leftEntityFieldName="buh_companies_id" leftEntityId="142342102955485" rightEntityId="-1" rightEntityParameterName="company_id"/>
+  <relation leftEntityFieldName="company_short_name" leftEntityId="142342102955485" rightEntityId="-1" rightEntityParameterName="company_find"/>
 </datamodel>

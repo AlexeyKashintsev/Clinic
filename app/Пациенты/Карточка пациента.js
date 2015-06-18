@@ -71,6 +71,7 @@ function PatientForm() {
                             active: true
                         });
                 });
+                model.qAllFirms.requery();
                 //model.qWorkPlaceByPatient.requery();
             }
         });

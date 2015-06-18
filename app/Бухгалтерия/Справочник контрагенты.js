@@ -47,7 +47,9 @@ function CompaniesList() {
     };
     form.btnSave.onActionPerformed = function(event) {
         if (model.modified&&confirm('Сохранить изменения?')){
-            model.save();
+            model.save(function(){
+                model.requery();
+            });
         }
     };
     
@@ -58,20 +60,29 @@ function CompaniesList() {
     };
 
     form.button.onActionPerformed = function(event) {
-        form.close({
-            id: model.qAllFirms.cursor.buh_companies_id,
-            name: model.qAllFirms.cursor.company_name
+        model.save(function(){
+            form.close({
+                id: model.qAllFirms.cursor.buh_companies_id,
+                name: model.qAllFirms.cursor.company_name
+            });
         });
     };
     
     form.btnEdit.onActionPerformed = function(event) {
-        if (!fmCompany)
-            fmCompany = new CompanyCard;
-        fmCompany.setCompany(model.qAllFirms.cursor.buh_companies_id);
-        fmCompany.showModal(function(a){
-            model.qAllFirms.requery(function(){
-                model.requery();
+        model.save(function(){
+            if (!fmCompany)
+                fmCompany = new CompanyCard;
+            fmCompany.setCompany(model.qAllFirms.cursor.buh_companies_id);
+            fmCompany.showModal(function(a){
+                model.qAllFirms.requery(function(){
+                    model.requery();
+                });
             });
         });
+    };
+
+    form.btnSearch.onActionPerformed = function(event) {
+        model.qAllFirms.params.company_find = form.mfSearch.text;
+        model.requery();
     };
 }
