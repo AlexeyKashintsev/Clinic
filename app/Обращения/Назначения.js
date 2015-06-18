@@ -8,6 +8,7 @@ function AppointmentForm() {
             , form = P.loadForm(this.constructor.name, model);
     var treatCreator = new P.ServerModule('TreatCreator');
     model.qContracts.params.c_act = true;
+    var lp = new LongProcessor([form.button, form.btnApply, form.btnCancel]);
 //    model.qUslugaById.requery();
 //    model.qContracts.requery();
 //    model.qAllFirms.requery();
@@ -220,46 +221,48 @@ function AppointmentForm() {
     }
 
     function calculate() {
-        var uslugi = [];
-        naznacheniya = [];
-        model.qUslInTreat.forEach(function (usl) {
-            uslugi.push(usl.usluga_id);
+         lp.start(form.button, function(){
+            var uslugi = [];
+            naznacheniya = [];
+            model.qUslInTreat.forEach(function (usl) {
+                uslugi.push(usl.usluga_id);
+            });
+            var pcs = [];
+            patients.forEach(function (patient) {
+                pcs.push(patient.man_patient_id);
+            });
+
+            priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
+                    (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
+
+            treatCreator.calculateRoute(pcs, uslugi
+                    , function (res) {
+                        canApply = true;
+                        fullData = res;
+                        uslStat = [];
+                        errorsLog = [];
+
+                        prepareStatData(fullData.uslugi);
+                        fullData.patients.forEach(preaprePatientData);
+
+                        res.errors.forEach(prepareErrorData);
+
+                        if (priceSource)
+                            treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
+                                    , function (res) {
+                                        fullData.priceData = res.priceData;
+                                        fullData.priceData.forEach(preparePriceData);
+                                        res.errors.forEach(prepareErrorData);
+                                        if (!gridAppliance)
+                                            applyDataToGrids();
+                                    });
+                        else {
+                            if (!gridAppliance)
+                                applyDataToGrids();
+                        }
+                        lp.stop();
+                    });
         });
-        var pcs = [];
-        patients.forEach(function (patient) {
-            pcs.push(patient.man_patient_id);
-        });
-
-        priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
-                (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
-
-        treatCreator.calculateRoute(pcs, uslugi
-                , function (res) {
-                    canApply = true;
-                    fullData = res;
-                    uslStat = [];
-                    errorsLog = [];
-
-                    prepareStatData(fullData.uslugi);
-                    fullData.patients.forEach(preaprePatientData);
-
-                    res.errors.forEach(prepareErrorData);
-
-                    if (priceSource)
-                        treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
-                                , function (res) {
-                                    fullData.priceData = res.priceData;
-                                    fullData.priceData.forEach(preparePriceData);
-                                    res.errors.forEach(prepareErrorData);
-                                    if (!gridAppliance)
-                                        applyDataToGrids();
-                                });
-                    else {
-                        if (!gridAppliance)
-                            applyDataToGrids();
-                    }
-                });
-
     }
 
     function applyTreatment() {

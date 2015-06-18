@@ -13,7 +13,8 @@ function PatientForm() {
     var diagnosesForm = new DiagnosesForm();
     diagnosesForm.showOnPanel(form.pnlDiagnoses);
     var buhIinshuranceCompanyForm = false;
-    
+    var lp = new LongProcessor([form.btnSave, form.btnCancel]);
+     
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
         model.qTreatByPatient.params.patient_id = aPatientId;
@@ -45,9 +46,11 @@ function PatientForm() {
     model.requery();
     
     form.btnSave.onActionPerformed = function(event) {
-        model.save(function() {
-            address.save();
-            form.close(model.qPatientById.cursor.man_patient_id);
+        lp.start(this, function(){
+            model.save(function() {
+                address.save(function(){lp.stop();});
+                form.close(model.qPatientById.cursor.man_patient_id);
+            });
         });
     };
     form.btnCancel.onActionPerformed = function(event) {

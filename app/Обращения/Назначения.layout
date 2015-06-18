@@ -35,7 +35,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="113px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="30px"/>
-    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="504px">
+    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="501px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById"/>
     </ModelGridColumn>
   </ModelGrid>
@@ -150,11 +150,11 @@
   <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" parent="view" prefHeight="20px" prefWidth="50px" text="?">
     <AnchorsPaneConstraints height="20px" left="150px" top="6px" width="50px"/>
   </ModelFormattedField>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Посчитать" verticalTextPosition="3">
-    <AnchorsPaneConstraints bottom="7px" height="30px" left="10px" width="110px"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="140px" text="Посчитать" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="7px" height="30px" left="10px" width="140px"/>
   </Button>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnApply" parent="view" prefHeight="30px" prefWidth="110px" text="Назначить" verticalTextPosition="3">
-    <AnchorsPaneConstraints bottom="7px" height="30px" right="134px" width="110px"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnApply" parent="view" prefHeight="30px" prefWidth="130px" text="Назначить" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="7px" height="30px" right="134px" width="130px"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="110px" text="Отмена" verticalTextPosition="3">
     <AnchorsPaneConstraints bottom="7px" height="30px" right="14px" width="110px"/>
