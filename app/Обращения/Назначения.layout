@@ -6,41 +6,28 @@
   <AnchorsPane background="#ffffff" cursor="0" name="pnlContract" parent="tabbedPane" prefHeight="357px" prefWidth="519px">
     <TabbedPaneConstraints tabTitle="Договор"/>
   </AnchorsPane>
-  <Label cursor="0" name="label1" parent="pnlContract" prefHeight="20px" prefWidth="100px" text="Прайс лист">
-    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="100px"/>
-  </Label>
-  <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="pnlContract" prefHeight="19px" prefWidth="390px">
-    <font family="Monospaced" size="12" style="0"/>
-    <AnchorsPaneConstraints height="19px" left="120px" top="10px" width="390px"/>
-  </ModelCombo>
   <ModelCheckBox cursor="0" name="cbNoContract" parent="pnlContract" prefHeight="20px" prefWidth="160px">
-    <AnchorsPaneConstraints height="20px" right="9px" top="40px" width="160px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="6px" width="160px"/>
   </ModelCheckBox>
   <Label cursor="0" name="label6" parent="pnlContract" prefHeight="20px" prefWidth="140px" text="Без договора">
-    <AnchorsPaneConstraints height="20px" right="9px" top="40px" width="140px"/>
+    <AnchorsPaneConstraints height="20px" left="30px" top="5px" width="140px"/>
   </Label>
-  <ModelCheckBox cursor="0" name="cbAllRoute" parent="pnlContract" prefHeight="19px" prefWidth="300px">
-    <AnchorsPaneConstraints height="19px" left="10px" top="41px" width="300px"/>
-  </ModelCheckBox>
-  <Label cursor="0" name="label3" parent="pnlContract" prefHeight="20px" prefWidth="280px" text="Рассчитывать цену по отдельным услугам">
-    <AnchorsPaneConstraints height="20px" left="30px" top="40px" width="280px"/>
-  </Label>
-  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="pnlContract" prefHeight="177px" prefWidth="519px">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="180px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlUslugi" parent="pnlContract" prefHeight="237px" prefWidth="519px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="120px"/>
   </AnchorsPane>
   <ToolBar cursor="0" name="toolBar" parent="pnlUslugi" prefHeight="30px" prefWidth="519px">
     <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="148px" prefWidth="520px">
+  <ModelGrid cursor="0" data="qUslInTreat" name="mgUsl" parent="pnlUslugi" prefHeight="208px" prefWidth="520px">
     <AnchorsPaneConstraints bottom="-1px" left="0px" right="-1px" top="30px"/>
-    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="501px">
+    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="504px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById"/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="pnlContract" prefHeight="50px" prefWidth="520px">
-    <AnchorsPaneConstraints height="50px" left="0px" top="90px" width="520px"/>
+    <AnchorsPaneConstraints height="50px" left="0px" top="30px" width="520px"/>
   </AnchorsPane>
   <Label cursor="0" name="label4" parent="panel" prefHeight="20px" prefWidth="60px" text="Договор">
     <AnchorsPaneConstraints height="20px" left="10px" top="30px" width="60px"/>
@@ -59,17 +46,11 @@
     <AnchorsPaneConstraints height="20px" right="10px" top="30px" width="80px"/>
   </Button>
   <Label cursor="0" name="lbPeriodic" parent="pnlContract" prefHeight="20px" prefWidth="70px" text="Осмотр">
-    <AnchorsPaneConstraints height="20px" left="10px" top="150px" width="70px"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="90px" width="70px"/>
   </Label>
   <ModelCombo cursor="0" displayField="type_name" displayList="qUslPeriodicType" name="mcPeriodicType" parent="pnlContract" prefHeight="20px" prefWidth="130px">
-    <AnchorsPaneConstraints height="20px" left="80px" top="150px" width="130px"/>
+    <AnchorsPaneConstraints height="20px" left="80px" top="90px" width="130px"/>
   </ModelCombo>
-  <ModelCheckBox cursor="0" name="cbIgnoreMissedPrices" nullable="false" parent="pnlContract" prefHeight="20px" prefWidth="300px">
-    <AnchorsPaneConstraints height="20px" left="10px" top="60px" width="300px"/>
-  </ModelCheckBox>
-  <Label cursor="0" name="label5" parent="pnlContract" prefHeight="20px" prefWidth="260px" text="Игнорировать пропущенные цены">
-    <AnchorsPaneConstraints height="20px" left="30px" top="60px" width="260px"/>
-  </Label>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutesStat" parent="tabbedPane" prefHeight="357px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Статистика"/>
   </AnchorsPane>
@@ -88,7 +69,7 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn name="colRoute" preferredWidth="25px" title="Вкл" width="39px">
-      <ModelFormattedField format=""/>
+      <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlRoutes" parent="tabbedPane" prefHeight="357px" prefWidth="519px" visible="false">
@@ -113,8 +94,8 @@
   <AnchorsPane background="#ffffff" cursor="0" name="pnlCosts" parent="tabbedPane" prefHeight="357px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Цены на услуги"/>
   </AnchorsPane>
-  <ModelGrid cursor="0" deletable="false" name="mgCosts" parent="pnlCosts" prefHeight="326px" prefWidth="519px">
-    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="31px"/>
+  <ModelGrid cursor="0" deletable="false" name="mgCosts" parent="pnlCosts" prefHeight="247px" prefWidth="519px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="110px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="83px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
@@ -136,11 +117,30 @@
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar cursor="0" name="toolBar1" parent="pnlCosts" prefHeight="30px" prefWidth="519px">
-    <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
+    <AnchorsPaneConstraints height="30px" left="0px" top="80px" width="519px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDoublePrice" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Дублировать" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnSaveToPrice" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Сохранить в прайс-лист" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnSaveToContract" parent="toolBar1" prefHeight="30px" prefWidth="70px" text="Сохранить в договор" verticalTextPosition="3"/>
+  <Label cursor="0" name="label1" parent="pnlCosts" prefHeight="20px" prefWidth="100px" text="Прайс лист">
+    <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="100px"/>
+  </Label>
+  <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="pnlCosts" prefHeight="19px" prefWidth="390px">
+    <font family="Monospaced" size="12" style="0"/>
+    <AnchorsPaneConstraints height="19px" left="120px" right="9px" top="10px"/>
+  </ModelCombo>
+  <ModelCheckBox cursor="0" name="cbAllRoute" parent="pnlCosts" prefHeight="19px" prefWidth="310px">
+    <AnchorsPaneConstraints height="19px" left="10px" top="30px" width="310px"/>
+  </ModelCheckBox>
+  <Label cursor="0" name="label3" parent="pnlCosts" prefHeight="20px" prefWidth="280px" text="Рассчитывать цену по отдельным услугам">
+    <AnchorsPaneConstraints height="20px" left="30px" top="30px" width="280px"/>
+  </Label>
+  <ModelCheckBox cursor="0" name="cbIgnoreMissedPrices" nullable="false" parent="pnlCosts" prefHeight="20px" prefWidth="310px">
+    <AnchorsPaneConstraints height="20px" left="10px" top="50px" width="310px"/>
+  </ModelCheckBox>
+  <Label cursor="0" name="label5" parent="pnlCosts" prefHeight="20px" prefWidth="230px" text="Игнорировать пропущенные цены">
+    <AnchorsPaneConstraints height="20px" left="30px" top="50px" width="230px"/>
+  </Label>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlWarnings" parent="tabbedPane" prefHeight="357px" prefWidth="519px" visible="false">
     <TabbedPaneConstraints tabTitle="Ошибки/предупреждения"/>
   </AnchorsPane>
@@ -156,11 +156,11 @@
   <ModelFormattedField cursor="0" editable="false" format="" name="mtPatientsCount" parent="view" prefHeight="20px" prefWidth="50px" text="?">
     <AnchorsPaneConstraints height="20px" left="150px" top="6px" width="50px"/>
   </ModelFormattedField>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="140px" text="Посчитать" verticalTextPosition="3">
-    <AnchorsPaneConstraints bottom="7px" height="30px" left="10px" width="140px"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="button" parent="view" prefHeight="30px" prefWidth="110px" text="Посчитать" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="7px" height="30px" left="10px" width="110px"/>
   </Button>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnApply" parent="view" prefHeight="30px" prefWidth="130px" text="Назначить" verticalTextPosition="3">
-    <AnchorsPaneConstraints bottom="7px" height="30px" right="134px" width="130px"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnApply" parent="view" prefHeight="30px" prefWidth="110px" text="Назначить" verticalTextPosition="3">
+    <AnchorsPaneConstraints bottom="7px" height="30px" right="134px" width="110px"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="110px" text="Отмена" verticalTextPosition="3">
     <AnchorsPaneConstraints bottom="7px" height="30px" right="14px" width="110px"/>

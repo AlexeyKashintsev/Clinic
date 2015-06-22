@@ -9,15 +9,15 @@ function TreatCreator() {
     var treatCalculator = new TreatCalculator();
     var treatCostCalculator = new TreatCostCalculator();
     
-    var routeData;
+    var aRouteData;
     self.calculateRoute = function(aPatients, anUslugi) {
-        routeData = treatCalculator.calculateRoute4Group(aPatients, anUslugi);
-        return routeData;
+        aRouteData = treatCalculator.calculateRoute4Group(aPatients, anUslugi);
+        return aRouteData;
     };
     
-    self.calculatePrices = function(aPricesSource, calculateAllRoute) {
-        treatCostCalculator.calculateRoute(routeData, aPricesSource, calculateAllRoute);
-        return routeData;
+    self.calculatePrices = function(aPricesSource, calculateAllRoute, ignoreMissedPrices) {
+        treatCostCalculator.calculateRoute(aRouteData, aPricesSource, calculateAllRoute, ignoreMissedPrices);
+        return aRouteData;
     };
     
     self.updateRoute = function(aNewRouteData) {
@@ -76,18 +76,18 @@ function TreatCreator() {
         }
     }
     
-    self.applyTreatment = function(aTreat, anUslugi, aContract) {
+    self.applyTreatment = function(aRouteData, aTreat, anUslugi, aContract) {
         var treatGroup = null;
         if (!aTreat || aTreat == model.qTreatById.cursor.obr_treatment_id) {
             P.Logger.info('Добавляем назначение');
-            if (routeData.patients.length > 1) {
+            if (aRouteData.patients.length > 1) {
                 P.Logger.info('Групповое назначение');
                 treatGroup = self.createTreatment(null, aContract, null);
                 addUslugi4Contract(anUslugi, aTreat);//Добавление услуг к групповому маршруту
             } else
                 P.Logger.info('Single treatment');
             
-            routeData.patients.forEach(function(patient) {
+            aRouteData.patients.forEach(function(patient) {
                 P.Logger.info('Добавляем назначения по пациенту ' + patient.surname);
                 var cTreat = self.createTreatment(patient.man_patient_id, aContract, treatGroup);
                 addRoute(patient.route, cTreat);

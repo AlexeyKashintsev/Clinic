@@ -96,8 +96,8 @@ function TreatCostCalculator() {
         return pData;
     }
     
-    self.calculateRoute = function(aRouteData, aPricesSource, calculateAllRoute) {
-        var missedPrices = findMissedPrices(aPricesSource, aRouteData.uslugi, calculateAllRoute);
+    self.calculateRoute = function(aRouteData, aPricesSource, calculateAllRoute, ignoreMissedPrices) {
+        var missedPrices = !ignoreMissedPrices ? findMissedPrices(aPricesSource, aRouteData.uslugi, calculateAllRoute) : false;
         var priceData = calculatePrices(aRouteData.patients, aPricesSource, calculateAllRoute);
         if (missedPrices) {
             missedPrices.forEach(function(missedPrice) {

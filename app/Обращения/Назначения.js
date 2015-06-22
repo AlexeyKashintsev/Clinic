@@ -251,7 +251,7 @@ function AppointmentForm() {
                         res.errors.forEach(prepareErrorData);
 
                         if (priceSource)
-                            treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
+                            treatCreator.calculatePrices(priceSource, form.cbAllRoute.value, form.cbIgnoreMissedPrices.value
                                     , function (res) {
                                         fullData.priceData = res.priceData;
                                         fullData.priceData.forEach(preparePriceData);
@@ -269,7 +269,7 @@ function AppointmentForm() {
     }
 
     function applyTreatment() {
-        treatCreator.applyTreatment(curTreat
+        treatCreator.applyTreatment(fullData, curTreat
                 , function () {
                     var res = [];
                     model.qUslInTreat.forEach(function (usl) {
@@ -346,12 +346,16 @@ function AppointmentForm() {
     }
 
     form.btnApply.onActionPerformed = function (event) {
-        checkAppliance(function () {
-            applyTreatment();
-            form.close();
-        }, function () {
-            alert('Невозможно применить, сначала исправьте все ошибки');
-        });
+        function apply() {
+            checkAppliance(function () {
+                applyTreatment();
+                form.close();
+            }, function () {
+                alert('Невозможно применить, сначала исправьте все ошибки');
+            });
+        }
+        
+        form.cbNoContract.value ? apply() : updateContract(apply);
     };
 
     form.button.onActionPerformed = calculate;
@@ -391,7 +395,7 @@ function AppointmentForm() {
             });
         });
     }
-//    testData();
+    testData();
 
     form.btnCreateContract.onActionPerformed = function (event) {
         if (form.mcCompany.value) {
