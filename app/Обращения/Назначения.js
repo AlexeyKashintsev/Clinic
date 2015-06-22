@@ -57,7 +57,14 @@ function AppointmentForm() {
     }
 
     self.setPatients = function (aPatients, aContract, aCallback) {
-        form.mcAllRoute.value = false;
+        model.revert();
+        form.cbAllRoute.value = false;
+        form.cbIgnoreMissedPrices.value = false;
+        form.cbNoContract.value = false;
+        uslStat = [];
+        naznacheniya = [];
+        fullData = {};
+        
         if (typeof aPatients[0] === 'object') {
             patients = aPatients;
             form.mtPatientsCount.text = patients.length;
@@ -69,10 +76,6 @@ function AppointmentForm() {
                 setCurTreat(null, aCallback);
             });
         }
-        uslStat = [];
-        naznacheniya = [];
-        fullData = {};
-
     };
 
     var fmUslugiSelect = new Uslugi4SelectView();
@@ -246,7 +249,7 @@ function AppointmentForm() {
                     res.errors.forEach(prepareErrorData);
 
                     if (priceSource)
-                        treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
+                        treatCreator.calculatePrices(priceSource, form.cbAllRoute.value
                                 , function (res) {
                                     fullData.priceData = res.priceData;
                                     fullData.priceData.forEach(preparePriceData);
@@ -313,7 +316,7 @@ function AppointmentForm() {
             updateContract(function (aRes) {
                 if (aRes) {
                     treatCreator.calculatePrices(form.mcContract.value.buh_contracts_id
-                            , form.mcAllRoute.value
+                            , form.cbAllRoute.value
                             , function (res) {
                                 if (res.errors.length > 0) {
                                     fullData.priceData = res.priceData;

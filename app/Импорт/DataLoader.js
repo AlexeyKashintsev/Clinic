@@ -12,12 +12,17 @@ function DataLoader() {
     };
     
     self.showModal = function (aCallback) {
-        form.showModal(aCallback);
+        form.show(aCallback);
     };
     
+    var upMod = new uploadingModule(function(aRes) {
+        console.log(aRes);
+    });
+    
     form.btnChooseFile.onActionPerformed = function(evt) {
-        P.selectFile(function(aFile) {
-            console.log(aFile);
-        });
+//        P.selectFile(function (aFile) {
+//            console.log(aFile.name);
+//        });
+        upMod.execute();
     };
 }
