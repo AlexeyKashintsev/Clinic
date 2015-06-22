@@ -5,7 +5,7 @@
 
 var DESKTOP = null;
 
-function ProfView__() {
+function ProfView() {
     var self = this
         , model = P.loadModel(this.constructor.name)
         , form = P.loadForm(this.constructor.name, model);

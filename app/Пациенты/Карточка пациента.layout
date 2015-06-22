@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Карта пациента" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="477px" prefWidth="570px"/>
-  <Button cursor="0" icon="icons/loading20.gif" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="30px" prefWidth="100px" text="Сохранить">
     <AnchorsPaneConstraints bottom="12px" height="30px" right="100px" width="100px"/>
   </Button>
   <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="80px" text="Отмена">
