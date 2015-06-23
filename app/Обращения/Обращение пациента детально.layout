@@ -29,6 +29,6 @@
     <TabbedPaneConstraints tabTitle="Оплата"/>
   </BorderPane>
   <BorderPane background="#ffffff" cursor="0" name="pnlDop" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
-    <TabbedPaneConstraints tabTitle="Допы"/>
+    <TabbedPaneConstraints tabTitle="Дополнительные услуги"/>
   </BorderPane>
 </layout>
