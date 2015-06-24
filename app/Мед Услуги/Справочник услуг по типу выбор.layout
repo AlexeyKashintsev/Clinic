@@ -19,7 +19,7 @@
     <ModelGridColumn field="usl_name" name="colUsl_name" readonly="true" title="Наименование" width="326px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="status" maxWidth="100px" name="column" preferredWidth="100px" title="Статус" width="100px">
+    <ModelGridColumn field="clinic_work" maxWidth="100px" name="column" preferredWidth="100px" title="Статус" width="100px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
