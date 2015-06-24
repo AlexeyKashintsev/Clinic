@@ -28,4 +28,11 @@ function CompanySelectorView() {
     form.btnSelect.onActionPerformed = function(event) {
         form.close(model.qAllFirms.cursor.buh_companies_id);
     };
+    form.btnReq1.onActionPerformed = function(event) {
+        var companyCard = new CompanyCard();
+        companyCard.addNewCompany();
+        companyCard.showModal(function(a){
+            model.requery();
+        });
+    };
 }

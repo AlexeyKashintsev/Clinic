@@ -6,7 +6,9 @@ function ManJobForm() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-
+            
+    var lp = new LongProcessor([form.btnSelect, form.btnCancel]);
+    
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
@@ -33,12 +35,18 @@ function ManJobForm() {
     };
 
     form.btnReq.onActionPerformed = function (event) {
-        if (model.modified && confirm("Сохранить изменения?"))
-            model.save(function () {
-                model.requery();
-            });
-        else
-            model.requery();
+        lp.start(this, function(){
+            if (model.modified && confirm("Сохранить изменения?"))
+                model.save(function () {
+                    model.requery(function(){
+                        lp.stop();
+                    });
+                });
+            else
+                model.requery(function(){
+                    lp.stop();
+                });
+        });
     };
     form.btnSave.onActionPerformed = function (event) {
         model.save(function () {

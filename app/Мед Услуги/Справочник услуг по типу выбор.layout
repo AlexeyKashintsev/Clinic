@@ -13,11 +13,14 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" editable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="350px" prefWidth="470px">
-    <AnchorsPaneConstraints bottom="-2px" left="0px" right="-3px" top="30px"/>
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="348px" prefWidth="467px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Наименование" width="429px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" readonly="true" title="Наименование" width="326px">
       <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="status" maxWidth="100px" name="column" preferredWidth="100px" title="Статус" width="100px">
+      <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="378px" prefWidth="250px"/>

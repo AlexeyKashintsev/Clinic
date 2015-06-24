@@ -6,7 +6,7 @@
  */ 
 Insert into usl_cost
 Select nextval('usl_cost_seq') AS usl_cost_id, usluga_id, :contract_target AS contract_id
-, cost, start_date, end_date
+, cost
 , sex, per_type, limitation_age_type
 , limitation_age 
 From usl_cost

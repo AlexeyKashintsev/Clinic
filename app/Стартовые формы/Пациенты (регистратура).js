@@ -41,8 +41,10 @@ function PatientsForm() {
     form.btnEditPatient.onActionPerformed = function(event) {
         fmPatient.setParams(model.qPatientsByParams.cursor.man_patient_id);
         fmPatient.showModal(function(aResult) {
-            if (aResult)
+            if (aResult){
                 model.qPatientsByParams.requery();
+                model.qAllFirms.requery();
+            }
         });
     };
     form.btnAddPatient.onActionPerformed = function(event) {

@@ -8,6 +8,7 @@ function AppointmentForm() {
             , form = P.loadForm(this.constructor.name, model);
     var treatCreator = new P.ServerModule('TreatCreator');
     model.qContracts.params.c_act = true;
+    var lp = new LongProcessor([form.button, form.btnApply, form.btnCancel]);
 //    model.qUslugaById.requery();
 //    model.qContracts.requery();
 //    model.qAllFirms.requery();
@@ -57,7 +58,14 @@ function AppointmentForm() {
     }
 
     self.setPatients = function (aPatients, aContract, aCallback) {
-        form.mcAllRoute.value = false;
+        model.revert();
+        form.cbAllRoute.value = false;
+        form.cbIgnoreMissedPrices.value = false;
+        form.cbNoContract.value = false;
+        uslStat = [];
+        naznacheniya = [];
+        fullData = {};
+        
         if (typeof aPatients[0] === 'object') {
             patients = aPatients;
             form.mtPatientsCount.text = patients.length;
@@ -69,10 +77,6 @@ function AppointmentForm() {
                 setCurTreat(null, aCallback);
             });
         }
-        uslStat = [];
-        naznacheniya = [];
-        fullData = {};
-
     };
 
     var fmUslugiSelect = new Uslugi4SelectView();
@@ -220,50 +224,52 @@ function AppointmentForm() {
     }
 
     function calculate() {
-        var uslugi = [];
-        naznacheniya = [];
-        model.qUslInTreat.forEach(function (usl) {
-            uslugi.push(usl.usluga_id);
+         lp.start(form.button, function(){
+            var uslugi = [];
+            naznacheniya = [];
+            model.qUslInTreat.forEach(function (usl) {
+                uslugi.push(usl.usluga_id);
+            });
+            var pcs = [];
+            patients.forEach(function (patient) {
+                pcs.push(patient.man_patient_id);
+            });
+
+            priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
+                    (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
+
+            treatCreator.calculateRoute(pcs, uslugi
+                    , function (res) {
+                        canApply = true;
+                        fullData = res;
+                        uslStat = [];
+                        errorsLog = [];
+
+                        prepareStatData(fullData.uslugi);
+                        fullData.patients.forEach(preaprePatientData);
+
+                        res.errors.forEach(prepareErrorData);
+
+                        if (priceSource)
+                            treatCreator.calculatePrices(priceSource, form.cbAllRoute.value, form.cbIgnoreMissedPrices.value
+                                    , function (res) {
+                                        fullData.priceData = res.priceData;
+                                        fullData.priceData.forEach(preparePriceData);
+                                        res.errors.forEach(prepareErrorData);
+                                        if (!gridAppliance)
+                                            applyDataToGrids();
+                                    });
+                        else {
+                            if (!gridAppliance)
+                                applyDataToGrids();
+                        }
+                        lp.stop();
+                    });
         });
-        var pcs = [];
-        patients.forEach(function (patient) {
-            pcs.push(patient.man_patient_id);
-        });
-
-        priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
-                (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
-
-        treatCreator.calculateRoute(pcs, uslugi
-                , function (res) {
-                    canApply = true;
-                    fullData = res;
-                    uslStat = [];
-                    errorsLog = [];
-
-                    prepareStatData(fullData.uslugi);
-                    fullData.patients.forEach(preaprePatientData);
-
-                    res.errors.forEach(prepareErrorData);
-
-                    if (priceSource)
-                        treatCreator.calculatePrices(priceSource, form.mcAllRoute.value
-                                , function (res) {
-                                    fullData.priceData = res.priceData;
-                                    fullData.priceData.forEach(preparePriceData);
-                                    res.errors.forEach(prepareErrorData);
-                                    if (!gridAppliance)
-                                        applyDataToGrids();
-                                });
-                    else {
-                        if (!gridAppliance)
-                            applyDataToGrids();
-                    }
-                });
-
     }
 
     function applyTreatment() {
-        treatCreator.applyTreatment(curTreat
+        treatCreator.applyTreatment(fullData, curTreat
                 , function () {
                     var res = [];
                     model.qUslInTreat.forEach(function (usl) {
@@ -313,7 +319,7 @@ function AppointmentForm() {
             updateContract(function (aRes) {
                 if (aRes) {
                     treatCreator.calculatePrices(form.mcContract.value.buh_contracts_id
-                            , form.mcAllRoute.value
+                            , form.cbAllRoute.value
                             , function (res) {
                                 if (res.errors.length > 0) {
                                     fullData.priceData = res.priceData;
@@ -340,12 +346,16 @@ function AppointmentForm() {
     }
 
     form.btnApply.onActionPerformed = function (event) {
-        checkAppliance(function () {
-            applyTreatment();
-            form.close();
-        }, function () {
-            alert('Невозможно применить, сначала исправьте все ошибки');
-        });
+        function apply() {
+            checkAppliance(function () {
+                applyTreatment();
+                form.close();
+            }, function () {
+                alert('Невозможно применить, сначала исправьте все ошибки');
+            });
+        }
+        
+        form.cbNoContract.value ? apply() : updateContract(apply);
     };
 
     form.button.onActionPerformed = calculate;
@@ -385,7 +395,7 @@ function AppointmentForm() {
             });
         });
     }
-//    testData();
+    testData();
 
     form.btnCreateContract.onActionPerformed = function (event) {
         if (form.mcCompany.value) {
@@ -435,5 +445,19 @@ function AppointmentForm() {
     form.btnCancel.onActionPerformed = function(event) {
         model.revert();
         form.close(false);
+    };
+    form.btnDel.onActionPerformed = function(event) {
+        if(model.qUslInTreat.cursorPos && confirm("Удалить выбранную услугу?")){
+            model.qUslInTreat.remove(model.qUslInTreat.cursorPos);
+//            model.save(function(){
+//                model.qUslInTreat.requery();
+//            });
+        }
+    };
+    form.btnSave.onActionPerformed = function(event) {
+        model.save();
+    };
+    form.btnReq.onActionPerformed = function(event) {
+        model.requery();
     };
 }

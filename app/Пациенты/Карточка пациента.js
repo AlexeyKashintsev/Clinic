@@ -13,7 +13,8 @@ function PatientForm() {
     var diagnosesForm = new DiagnosesForm();
     diagnosesForm.showOnPanel(form.pnlDiagnoses);
     var buhIinshuranceCompanyForm = false;
-    
+    var lp = new LongProcessor([form.btnSave, form.btnCancel]);
+     
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
         model.qTreatByPatient.params.patient_id = aPatientId;
@@ -45,9 +46,11 @@ function PatientForm() {
     model.requery();
     
     form.btnSave.onActionPerformed = function(event) {
-        model.save(function() {
-            address.save();
-            form.close(model.qPatientById.cursor.man_patient_id);
+        lp.start(this, function(){
+            model.save(function() {
+                address.save(function(){lp.stop();});
+                form.close(model.qPatientById.cursor.man_patient_id);
+            });
         });
     };
     form.btnCancel.onActionPerformed = function(event) {
@@ -57,20 +60,23 @@ function PatientForm() {
     
     form.btnAddWorkPlace.onActionPerformed = function(event) {
         if (!contAgSel)
-            contAgSel = new CompanySelectorView();
+            contAgSel = new CompaniesList();
         if (!jobSel)
             jobSel = new ManJobForm();
         contAgSel.showModal(function(aContagent) {
-            if (aContagent)
+            if (aContagent){
                 jobSel.showModal(function(aJob) {
                     if (aJob)
                         model.qWorkPlaceByPatient.push({
-                            company_id: aContagent,
+                            company_id: aContagent.id,
                             job_id: aJob,
                             man_id: patientId,
                             active: true
                         });
                 });
+                model.qAllFirms.requery();
+                //model.qWorkPlaceByPatient.requery();
+            }
         });
     };
     
