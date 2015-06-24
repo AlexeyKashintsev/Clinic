@@ -14,7 +14,8 @@ function PatientForm() {
     diagnosesForm.showOnPanel(form.pnlDiagnoses);
     var buhIinshuranceCompanyForm = false;
     var lp = new LongProcessor([form.btnSave, form.btnCancel]);
-     
+    var selectPriceListView;
+    
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
         model.qTreatByPatient.params.patient_id = aPatientId;
@@ -131,6 +132,15 @@ function PatientForm() {
             if (anInshuranceCompany)
                 model.qPatientById.cursor.inshurance_company = anInshuranceCompany;
             //form.ddBuhIinshuranceCompany.redraw();
+        });
+    };
+
+    form.btnFromPrice.onActionPerformed = function(event) {
+        if(!selectPriceListView) selectPriceListView = new SelectPriceListView();
+        selectPriceListView.showModal(function(aPrice){
+            if(aPrice){
+                alert(aPrice.contract_id + " " + aPrice.contr_name);
+            }
         });
     };
 }

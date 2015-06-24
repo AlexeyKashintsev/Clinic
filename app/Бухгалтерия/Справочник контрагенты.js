@@ -81,8 +81,9 @@ function CompaniesList() {
         });
     };
 
-    form.btnSearch.onActionPerformed = function(event) {
+    form.mfSearch.onValueChange = function(event) {
         model.qAllFirms.params.company_find = form.mfSearch.text;
         model.requery();
     };
+
 }
