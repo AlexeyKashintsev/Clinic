@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="306px" prefWidth="469px"/>
+  <Button cursor="0" name="btnReport" parent="view" prefHeight="30px" prefWidth="210px" text="Сгенерировать отчет">
+    <AnchorsPaneConstraints height="30px" left="120px" top="130px" width="210px"/>
+  </Button>
+</layout>
