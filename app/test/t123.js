@@ -54,4 +54,12 @@ function t123() {
     form.button.onActionPerformed = function(event) {
         getUslRoute(form.textField.text);
     };
+    
+    form.button1.onActionPerformed = function(event) {
+        var req = new HTTPRequest();
+        req.URL = 'bcd';
+        req.get(function(aRes) {
+            console.log(aRes);
+        });
+    };
 }

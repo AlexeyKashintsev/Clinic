@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="230px" prefWidth="350px">
-    <AnchorsPaneConstraints height="230px" left="30px" top="50px" width="350px"/>
-    <ModelGridColumn field="id" name="column" title="column" width="116px">
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="50px" prefWidth="350px">
+    <AnchorsPaneConstraints height="50px" left="30px" top="50px" width="350px"/>
+    <ModelGridColumn field="id" name="column" title="column" width="117px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="parent" name="column1" title="column" width="116px">
+    <ModelGridColumn field="parent" name="column1" title="column" width="117px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="name" name="column2" title="column" width="116px">
@@ -18,4 +18,7 @@
   <TextField cursor="2" name="textField" parent="view" prefHeight="20px" prefWidth="48px" text="39">
     <AnchorsPaneConstraints height="20px" left="130px" top="20px" width="48px"/>
   </TextField>
+  <Button cursor="0" name="button1" parent="view" prefHeight="20px" prefWidth="160px" text="HTTP Get">
+    <AnchorsPaneConstraints height="20px" left="30px" top="200px" width="160px"/>
+  </Button>
 </layout>
