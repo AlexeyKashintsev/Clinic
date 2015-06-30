@@ -29,13 +29,13 @@
   <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="panel" prefHeight="160px" prefWidth="610px">
     <AnchorsPaneConstraints bottom="2px" left="0px" right="2px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="191px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="190px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="Пол" width="191px">
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="190px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="190px">
+    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="189px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
@@ -49,29 +49,29 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslParamsName" name="modelGrid1" parent="panel2" prefHeight="160px" prefWidth="610px">
+  <ModelGrid cursor="0" data="qUslParamsName" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="panel2" prefHeight="160px" prefWidth="610px">
     <AnchorsPaneConstraints bottom="2px" left="0px" right="2px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="param_name" name="colParam_name" title="Имя параметра" width="572px">
+    <ModelGridColumn field="param_name" name="colParam_name" title="Имя параметра" width="569px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.use_hazards" name="mcbUseHazards" nullable="false" parent="view" prefHeight="20px" prefWidth="30px">
+  <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.use_hazards" name="mcbUseHazards" parent="view" prefHeight="20px" prefWidth="30px">
     <AnchorsPaneConstraints height="20px" left="310px" top="100px" width="30px"/>
   </ModelCheckBox>
   <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="300px" text="Использовать назначения по вредностям">
     <AnchorsPaneConstraints height="20px" left="10px" top="100px" width="300px"/>
   </Label>
-  <Label cursor="0" name="label3" parent="view" prefHeight="20px" prefWidth="130px" text="Проходит в клинике">
-    <AnchorsPaneConstraints height="20px" left="10px" top="130px" width="130px"/>
+  <Label cursor="0" name="label3" parent="view" prefHeight="20px" prefWidth="160px" text="Проходит в клинике">
+    <AnchorsPaneConstraints height="20px" left="10px" top="130px" width="160px"/>
   </Label>
   <Label cursor="0" name="label4" parent="view" prefHeight="20px" prefWidth="160px" text="Можно назначить диагноз">
     <AnchorsPaneConstraints height="20px" left="220px" top="130px" width="160px"/>
   </Label>
-  <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.clinic_work" name="mcbInside" nullable="false" parent="view" prefHeight="20px" prefWidth="20px">
-    <AnchorsPaneConstraints height="20px" left="140px" top="130px" width="20px"/>
+  <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.clinic_work" name="mcbInside" parent="view" prefHeight="20px" prefWidth="20px">
+    <AnchorsPaneConstraints height="20px" left="170px" top="130px" width="20px"/>
   </ModelCheckBox>
-  <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.diagnosis_appliance" name="mcbDiagnosis" nullable="false" parent="view" prefHeight="20px" prefWidth="20px">
+  <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.diagnosis_appliance" name="mcbDiagnosis" parent="view" prefHeight="20px" prefWidth="20px">
     <AnchorsPaneConstraints height="20px" left="390px" top="130px" width="20px"/>
   </ModelCheckBox>
 </layout>

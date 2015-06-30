@@ -481,4 +481,18 @@ function AppointmentForm() {
         model.revert();
         form.close(false);
     };
+    form.btnDel.onActionPerformed = function(event) {
+        if(model.qUslInTreat.cursorPos && confirm("Удалить выбранную услугу?")){
+            model.qUslInTreat.remove(model.qUslInTreat.cursorPos);
+//            model.save(function(){
+//                model.qUslInTreat.requery();
+//            });
+        }
+    };
+    form.btnSave.onActionPerformed = function(event) {
+        model.save();
+    };
+    form.btnReq.onActionPerformed = function(event) {
+        model.requery();
+    };
 }

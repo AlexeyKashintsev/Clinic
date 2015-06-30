@@ -24,11 +24,11 @@
   <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="60px" text="Фильтр">
     <AnchorsPaneConstraints height="20px" left="10px" top="10px" width="60px"/>
   </Label>
-  <Button cursor="0" name="btnOk" parent="panel" prefHeight="20px" prefWidth="50px" text="ок">
-    <AnchorsPaneConstraints height="20px" right="7px" top="10px" width="50px"/>
-  </Button>
-  <ModelFormattedField cursor="0" name="tfFilter" parent="panel" prefHeight="20px" prefWidth="210px">
-    <AnchorsPaneConstraints height="20px" left="70px" top="10px" width="210px"/>
+  <ModelFormattedField cursor="0" format="" name="tfFilter" parent="panel" prefHeight="20px" prefWidth="256px">
+    <AnchorsPaneConstraints height="20px" left="70px" right="21px" top="10px"/>
   </ModelFormattedField>
+  <Label cursor="0" name="lbLoading" parent="panel" prefHeight="21px" prefWidth="21px" text="">
+    <AnchorsPaneConstraints height="21px" right="0px" top="10px" width="21px"/>
+  </Label>
   <BorderPane background="#ffffff" cursor="0" name="pnlUslContent" parent="splitPane1" prefHeight="600px" prefWidth="514px"/>
 </layout>

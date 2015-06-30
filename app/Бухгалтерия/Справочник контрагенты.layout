@@ -30,13 +30,10 @@
   <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="button" parent="view" prefHeight="35px" prefWidth="110px" text="Выбрать">
     <AnchorsPaneConstraints bottom="1px" height="35px" right="11px" width="110px"/>
   </Button>
-  <Button cursor="0" name="btnSearch" parent="view" prefHeight="30px" prefWidth="100px" text="Применить">
-    <AnchorsPaneConstraints height="30px" right="1px" top="0px" width="100px"/>
-  </Button>
   <Label cursor="0" name="label" parent="view" prefHeight="30px" prefWidth="60px" text="Поиск:">
     <AnchorsPaneConstraints height="30px" left="190px" top="0px" width="60px"/>
   </Label>
-  <ModelFormattedField cursor="0" name="mfSearch" parent="view" prefHeight="30px" prefWidth="360px">
-    <AnchorsPaneConstraints height="30px" left="240px" top="0px" width="360px"/>
+  <ModelFormattedField cursor="0" format="" name="mfSearch" parent="view" prefHeight="30px" prefWidth="460px">
+    <AnchorsPaneConstraints height="30px" left="240px" right="1px" top="0px"/>
   </ModelFormattedField>
 </layout>

@@ -9,7 +9,7 @@ function UslugiContentsView() {
     
     form.title = "Назначения по услугам";
     var fmUslContent = new UslugaContent();
-    var lp = new LongProcessor([form.btnOk]);
+    var lp = new LongProcessor();
     self.show = function (aDesktop) {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
@@ -35,8 +35,9 @@ function UslugiContentsView() {
     fmUslContent.showOnPanel(form.pnlUslContent);
     
     model.requery();
-    form.btnOk.onActionPerformed = function(event) {
-        lp.start(this, function(){
+
+    form.tfFilter.onValueChange = function(event) {
+        lp.start(form.lbLoading, function(){
             model.qUslugiByType.params.search = form.tfFilter.text;
             model.qUslugiByType.requery(function(){lp.stop();});
         });

@@ -116,4 +116,14 @@ function UslugaContent() {
     form.btnSave1.onActionPerformed = function(event) {
         form.btnSave.onActionPerformed();
     };
+    form.modelGrid1.onMouseClicked = function(event) {
+        if(event.clickCount > 1){
+            if (!resultsForm)
+                resultsForm = new ResultsForm();
+            resultsForm.showModal(function(){
+                model.qUslParamsName.requery();
+            });
+        }
+    };
+
 }
