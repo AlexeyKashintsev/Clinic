@@ -97,13 +97,13 @@
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="149px" prefWidth="562px"/>
   <ModelGrid cursor="0" data="qWorkPlaceByPatient" name="mgWorkPlace" parent="panel" prefHeight="99px" prefWidth="562px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="50px"/>
-    <ModelGridColumn field="company" name="colCompany" title="Компания" width="259px">
+    <ModelGridColumn field="companies" name="colCompany" title="Компания" width="241px">
       <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="259px">
+    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="242px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
-    <ModelGridColumn field="active" maxWidth="25px" minWidth="25px" name="colActive" preferredWidth="25px" title="Текущее" width="25px">
+    <ModelGridColumn field="active" maxWidth="100px" minWidth="25px" name="colActive" preferredWidth="60px" title="Текущее" width="60px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
