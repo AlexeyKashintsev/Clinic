@@ -489,10 +489,10 @@ function AppointmentForm() {
 //            });
         }
     };
-    form.btnSave.onActionPerformed = function(event) {
-        model.save();
-    };
-    form.btnReq.onActionPerformed = function(event) {
-        model.requery();
-    };
+//    form.btnSave.onActionPerformed = function(event) {
+//        model.save();
+//    };
+//    form.btnReq.onActionPerformed = function(event) {
+//        model.requery();
+//    };
 }
