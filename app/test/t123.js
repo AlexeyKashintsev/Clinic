@@ -57,9 +57,14 @@ function t123() {
     
     form.button1.onActionPerformed = function(event) {
         var req = new HTTPRequest();
-        req.URL = 'bcd';
-        req.get(function(aRes) {
+        req.module = 'testM';
+        req.method = 'test';
+        req.post("111", function(aRes) {
             console.log(aRes);
-        });
+        }, function(aRes) {alert(aRes)});
+    };
+    form.button2.onActionPerformed = function(event) {
+        var modT = new P.ServerModule('testM');
+        modT.test();
     };
 }

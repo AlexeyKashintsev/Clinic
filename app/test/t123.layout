@@ -21,4 +21,7 @@
   <Button cursor="0" name="button1" parent="view" prefHeight="20px" prefWidth="160px" text="HTTP Get">
     <AnchorsPaneConstraints height="20px" left="30px" top="200px" width="160px"/>
   </Button>
+  <Button cursor="0" name="button2" parent="view" prefHeight="20px" prefWidth="70px" text="button2">
+    <AnchorsPaneConstraints height="20px" right="60px" top="200px" width="70px"/>
+  </Button>
 </layout>

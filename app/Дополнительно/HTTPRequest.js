@@ -5,11 +5,15 @@
  */
 function HTTPRequest() {
     var self = this;
-    var URL;
-
-
+    var URL, module, method;
 
     var request = new XMLHttpRequest();
+    
+    function updateUrlByPlatypus() {
+        var path = window.location.pathname;
+        path = path.slice(0, path.lastIndexOf('/'));
+        URL = window.location.protocol +'//' + window.location.host + path + '/application?__type=14&__moduleName=' + module + '&__methodName=' + method;
+    }
 
     Object.defineProperty(self, 'URL', {
         get: function () {
@@ -19,6 +23,26 @@ function HTTPRequest() {
             URL = aNewUrl;
         }
     });
+    
+    Object.defineProperty(self, 'module', {
+        get: function () {
+            return module;
+        },
+        set: function (aNewModule) {
+            module = aNewModule;
+            updateUrlByPlatypus();
+        }
+    });    
+    
+    Object.defineProperty(self, 'method', {
+        get: function () {
+            return method;
+        },
+        set: function (aNewMethod) {
+            method = aNewMethod;
+            updateUrlByPlatypus();
+        }
+    });    
 
     function getParsedResponse(req) {
         var result;
@@ -31,7 +55,7 @@ function HTTPRequest() {
     }
 
     function execute(aMethod, aData, onSuccess, onFailure) {
-        request.open(aMethod, self.URL, true);
+        request.open(aMethod, URL, true);
         request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         request.onreadystatechange = function () {
             if (request.readyState === 4) {
