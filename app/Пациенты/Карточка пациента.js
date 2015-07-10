@@ -117,7 +117,8 @@ function PatientForm() {
         });
     };
     form.btnDelHazard.onActionPerformed = function(event) {
-        model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
+        model.qHazardsByManJob.splice(model.qHazardsByManJob.indexOf(form.mgHazards.selected[0]), 1);
+        //model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
     };
     
     self.tabProcessor = new TabProcessor(form, ['tfCardNumber', 'tfSanitaryBook', 'tfSurname', 'tfName'

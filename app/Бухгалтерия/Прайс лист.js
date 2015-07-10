@@ -54,7 +54,8 @@ function PriceListForm() {
     };
 
     form.btnDel.onActionPerformed = function(event) {
-        model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
+        model.qPricesByContractByType.splice(model.qPricesByContractByType.indexOf(form.modelGrid1.selected[0]), 1);
+        //model.qPricesByContractByType.remove(model.qPricesByContractByType.cursorPos);
     };
     
     form.btnReq.onActionPerformed = function(event) {

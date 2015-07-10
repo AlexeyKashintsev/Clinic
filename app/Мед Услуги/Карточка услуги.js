@@ -82,7 +82,8 @@ function UslugaContent() {
     
     form.btnDel.onActionPerformed = function(event) {
         if(confirm("Удалить выбранную услугу?")){
-            model.qUslugaContents.remove(model.qUslugaContents.cursorPos); // deleteRow();
+            model.qUslugaContents.splice(model.qUslugaContents.indexOf(form.modelGrid.selected[0]), 1);
+            //model.qUslugaContents.remove(model.qUslugaContents.cursorPos); // deleteRow();
         }
     };
     
@@ -107,7 +108,8 @@ function UslugaContent() {
     };
     form.btnDel1.onActionPerformed = function(event) {
         if(confirm("Удалить выбранный параметр?")){
-            model.qUslParamsName.remove(model.qUslParamsName.cursorPos); // deleteRow();
+            model.qUslParamsName.splice(model.qUslParamsName.indexOf(form.modelGrid1.selected[0]), 1);
+            //model.qUslParamsName.remove(model.qUslParamsName.cursorPos); // deleteRow();
         }
     };
     form.btnReq1.onActionPerformed = function(event) {
