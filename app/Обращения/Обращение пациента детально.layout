@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="397px" prefWidth="778px"/>
-  <SplitPane cursor="0" dividerLocation="270" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="397px" prefWidth="778px" rightComponent="tabbedPane">
+  <SplitPane cursor="0" dividerLocation="330" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="397px" prefWidth="778px" rightComponent="tabbedPane">
     <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="395px" prefWidth="269px"/>
-  <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel" prefHeight="364px" prefWidth="269px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="395px" prefWidth="329px"/>
+  <ModelGrid cursor="0" data="qTreatByPatient" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel" prefHeight="364px" prefWidth="329px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="31px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="treat_date" name="colTreat_date" title="Дата обращения" width="114px">
+    <ModelGridColumn field="treat_date" name="colTreat_date" title="Дата обращения" width="96px">
       <ModelDate dateFormat="dd.MM.yyyy HH:mm"/>
     </ModelGridColumn>
-    <ModelGridColumn field="q_TREAT" name="colTreat_status" title="Статус" width="114px">
+    <ModelGridColumn field="q_TREAT" name="colTreat_status" title="Статус" width="96px">
       <ModelCombo displayField="status_name" displayList="qObrStatus" list="false"/>
     </ModelGridColumn>
+    <ModelGridColumn field="conclusion" name="column" title="Заключение" width="96px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
   </ModelGrid>
-  <TabbedPane cursor="0" name="tabbedPane" parent="splitPane" prefHeight="395px" prefWidth="502px" selectedComponent="pnlUsl"/>
-  <BorderPane background="#ffffff" cursor="0" name="pnlUsl" parent="tabbedPane" prefHeight="367px" prefWidth="497px">
-    <TabbedPaneConstraints tabTitle="Услуги"/>
+  <TabbedPane cursor="0" name="tabbedPane" parent="splitPane" prefHeight="395px" prefWidth="442px" selectedComponent="pnlUsl"/>
+  <BorderPane background="#ffffff" cursor="0" name="pnlUsl" parent="tabbedPane" prefHeight="367px" prefWidth="437px">
+    <TabbedPaneConstraints tabTitle="Услуги" tabToolTip=""/>
   </BorderPane>
-  <BorderPane background="#ffffff" cursor="0" name="pnlNazn" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
-    <TabbedPaneConstraints tabTitle="Назначения"/>
+  <BorderPane background="#ffffff" cursor="0" name="pnlNazn" parent="tabbedPane" prefHeight="367px" prefWidth="437px" visible="false">
+    <TabbedPaneConstraints tabTitle="Назначения" tabToolTip=""/>
   </BorderPane>
-  <BorderPane background="#ffffff" cursor="0" name="pnlPrices" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
-    <TabbedPaneConstraints tabTitle="Цены"/>
+  <BorderPane background="#ffffff" cursor="0" name="pnlPrices" parent="tabbedPane" prefHeight="367px" prefWidth="437px" visible="false">
+    <TabbedPaneConstraints tabTitle="Цены" tabToolTip=""/>
   </BorderPane>
-  <BorderPane background="#ffffff" cursor="0" name="pnlPayment" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
-    <TabbedPaneConstraints tabTitle="Оплата"/>
+  <BorderPane background="#ffffff" cursor="0" name="pnlPayment" parent="tabbedPane" prefHeight="367px" prefWidth="437px" visible="false">
+    <TabbedPaneConstraints tabTitle="Оплата" tabToolTip=""/>
   </BorderPane>
-  <BorderPane background="#ffffff" cursor="0" name="pnlDop" parent="tabbedPane" prefHeight="367px" prefWidth="497px" visible="false">
-    <TabbedPaneConstraints tabTitle="Дополнительные услуги"/>
+  <BorderPane background="#ffffff" cursor="0" name="pnlDop" parent="tabbedPane" prefHeight="367px" prefWidth="437px" visible="false">
+    <TabbedPaneConstraints tabTitle="Дополнительные услуги" tabToolTip=""/>
   </BorderPane>
 </layout>
