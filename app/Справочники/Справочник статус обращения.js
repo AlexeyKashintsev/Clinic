@@ -23,7 +23,8 @@ function ObrStatusForm() {
     
     form.btnDel.onActionPerformed = function(event) {
         if (confirm("Удалить?"))
-        model.qObrStatus.remove(model.qObrStatus.cursorPos);
+            model.qObrStatus.splice(model.qObrStatus.indexOf(form.modelGrid.selected[0]), 1);
+       // model.qObrStatus.remove(model.qObrStatus.cursorPos);
     };
     form.btnReq.onActionPerformed = function(event) {
         if(model.modified && confirm("Сохранить изменения?")) 

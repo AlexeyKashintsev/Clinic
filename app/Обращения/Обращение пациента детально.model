@@ -2,20 +2,20 @@
   <entity Name="qObrStatus" Title="" entityHeight="200" entityIconified="false" entityId="143314427545372" entityLocationX="13" entityLocationY="252" entityWidth="150" queryId="qObrStatus" tableName="" tableSchemaName=""/>
   <entity Name="qUslugiInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143315652768921" entityLocationX="232" entityLocationY="244" entityWidth="150" queryId="qUslugiInTreat" tableName="" tableSchemaName=""/>
   <entity Name="qObrAdditional" Title="" entityHeight="200" entityIconified="false" entityId="143316488509167" entityLocationX="639" entityLocationY="45" entityWidth="150" queryId="qObrAdditional" tableName="" tableSchemaName=""/>
-  <entity Name="qTreatByPatient" Title="" entityHeight="200" entityIconified="false" entityId="143314421429055" entityLocationX="24" entityLocationY="23" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
+  <entity Name="qTreatByPatient" Title="" entityHeight="202" entityIconified="false" entityId="143314421429055" entityLocationX="24" entityLocationY="23" entityWidth="150" queryId="qTreatByPatient" tableName="" tableSchemaName=""/>
   <entity Name="qUslInTreat" Title="" entityHeight="200" entityIconified="false" entityId="143385909606789" entityLocationX="650" entityLocationY="299" entityWidth="150" queryId="qUslInTreat" tableName="" tableSchemaName=""/>
   <entity Name="qRouteStatus" Title="" entityHeight="200" entityIconified="false" entityId="143385806075930" entityLocationX="457" entityLocationY="303" entityWidth="150" queryId="qRouteStatus" tableName="" tableSchemaName=""/>
   <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="143315562862066" entityLocationX="431" entityLocationY="21" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
   <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314421429055" rightEntityId="143315652768921" rightEntityParameterName="treat_id"/>
   <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314421429055" rightEntityId="143316488509167" rightEntityParameterName="treat_id"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143315652768921" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
   <referenceRelation collectionPropertyName="q_STATUS" leftEntityFieldName="treat_status" leftEntityId="143314421429055" rightEntityFieldName="obr_status_id" rightEntityId="143314427545372" scalarPropertyName="q_TREAT"/>
-  <referenceRelation collectionPropertyName="q_ROUTE_STATUS_" leftEntityFieldName="route_status" leftEntityId="143315652768921" rightEntityFieldName="obr_route_status_id" rightEntityId="143385806075930" scalarPropertyName="q_ROUTE_STATUS"/>
-  <referenceRelation collectionPropertyName="q_USL_TREAT_USLUGA_" leftEntityFieldName="usluga_id" leftEntityId="143385909606789" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_USL_TREAT_USLUGA"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143315652768921" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143385909606789" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143316488509167" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
+  <referenceRelation leftEntityFieldName="route_status" leftEntityId="143316488509167" rightEntityFieldName="obr_route_status_id" rightEntityId="143385806075930"/>
+  <referenceRelation collectionPropertyName="q_USL_ID" leftEntityFieldName="usluga_id" leftEntityId="143315652768921" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_USLUGI_TREAT"/>
   <referenceRelation collectionPropertyName="q_USL_BYID" leftEntityFieldName="usluga_id" leftEntityId="143316488509167" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_ADD_USLUGA"/>
   <referenceRelation leftEntityFieldName="group_treat" leftEntityId="143314421429055" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143385909606789" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
-  <referenceRelation leftEntityFieldName="route_status" leftEntityId="143316488509167" rightEntityFieldName="obr_route_status_id" rightEntityId="143385806075930"/>
-  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="143316488509167" rightEntityFieldName="obr_treatment_id" rightEntityId="143314421429055"/>
-  <referenceRelation collectionPropertyName="q_USL_ID" leftEntityFieldName="usluga_id" leftEntityId="143315652768921" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_USLUGI_TREAT"/>
+  <referenceRelation collectionPropertyName="q_ROUTE_STATUS_" leftEntityFieldName="route_status" leftEntityId="143315652768921" rightEntityFieldName="obr_route_status_id" rightEntityId="143385806075930" scalarPropertyName="q_ROUTE_STATUS"/>
+  <referenceRelation collectionPropertyName="q_USL_TREAT_USLUGA_" leftEntityFieldName="usluga_id" leftEntityId="143385909606789" rightEntityFieldName="usl_uslugi_id" rightEntityId="143315562862066" scalarPropertyName="q_USL_TREAT_USLUGA"/>
 </datamodel>

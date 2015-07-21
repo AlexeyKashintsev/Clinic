@@ -22,7 +22,8 @@ function UslPeriodForm() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if (confirm("Удалить?"))
-        model.qUslPeriod.remove(model.qUslPeriod.cursorPos);
+            model.qUslPeriod.splice(model.qUslPeriod.indexOf(form.modelGrid.selected[0]), 1);
+        //model.qUslPeriod.remove(model.qUslPeriod.cursorPos);
     };
     form.btnReq.onActionPerformed = function(event) {
         if(model.modified && confirm("Сохранить изменения?")) 

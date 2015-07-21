@@ -117,7 +117,8 @@ function PatientForm() {
         });
     };
     form.btnDelHazard.onActionPerformed = function(event) {
-        model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
+        model.qHazardsByManJob.splice(model.qHazardsByManJob.indexOf(form.mgHazards.selected[0]), 1);
+        //model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
     };
     
     self.tabProcessor = new TabProcessor(form, ['tfCardNumber', 'tfSanitaryBook', 'tfSurname', 'tfName'
@@ -141,6 +142,18 @@ function PatientForm() {
             if(aPrice){
                 alert(aPrice.contract_id + " " + aPrice.contr_name);
             }
+        });
+    };
+    //TODO Не понятно почему эта кнопка тут НЕ работает. МАГИЯ!
+    var lp = new LongProcessor([form.btnReport]);
+    form.btnReport.onActionPerformed = function(event) {
+         lp.start(this, function(){
+            var srvModule = new P.ServerModule("PassportHealth");
+            srvModule.setPacient("142808473476141");
+            srvModule.execute(function(aReport){
+                aReport.show();
+                lp.stop();
+            });
         });
     };
 }

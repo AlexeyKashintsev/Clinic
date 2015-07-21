@@ -60,7 +60,7 @@ function ContractsByCompanyView() {
     };
 
     form.btnDel.onActionPerformed = function(event) {
-        model.qContracts.remove(model.qContracts.cursorPos);
+        model.qContracts.splice(model.qContracts.indexOf(form.modelGrid.selected[0]), 1);
     };
     
     form.cbActive.onMouseClicked = function(event) {
