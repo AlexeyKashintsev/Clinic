@@ -56,7 +56,7 @@ function HTTPRequest() {
 
     function execute(aMethod, aData, onSuccess, onFailure) {
         request.open(aMethod, URL, true);
-        request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        request.setRequestHeader('Content-type', 'text/plain');
         request.onreadystatechange = function () {
             if (request.readyState === 4) {
                 if (request.status >= 200 && request.status < 300) {
