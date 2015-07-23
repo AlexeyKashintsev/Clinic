@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="438px" prefWidth="452px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="wPanel" parent="view" prefHeight="380px" prefWidth="452px">
+    <AnchorsPaneConstraints bottom="58px" left="0px" right="0px" top="0px"/>
+  </AnchorsPane>
+  <Button cursor="0" name="btnPrev" parent="view" prefHeight="20px" prefWidth="80px" text="Назад">
+    <AnchorsPaneConstraints bottom="18px" height="20px" right="210px" width="80px"/>
+  </Button>
+  <Button cursor="0" name="btnNext" parent="view" prefHeight="20px" prefWidth="80px" text="Далее">
+    <AnchorsPaneConstraints bottom="18px" height="20px" right="120px" width="80px"/>
+  </Button>
+  <Button cursor="0" enabled="false" name="btnFinish" parent="view" prefHeight="20px" prefWidth="102px" text="Закончить">
+    <AnchorsPaneConstraints bottom="18px" height="20px" right="10px" width="102px"/>
+  </Button>
+  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="70px" text="button">
+    <AnchorsPaneConstraints bottom="18px" height="20px" left="20px" width="70px"/>
+  </Button>
+</layout>

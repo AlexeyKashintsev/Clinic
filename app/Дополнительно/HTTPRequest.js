@@ -3,7 +3,7 @@
  * @author alexey
  * @constructor
  */
-function HTTPRequest() {
+function HTTPRequestDeprecated() {
     var self = this;
     var URL, module, method;
 

@@ -282,9 +282,9 @@ function AppointmentForm() {
                     pcnt.route[j].hazards = [];
                     patient.route[j].hazards.forEach(function(hazard) {
                         pcnt.route[j].hazards.push({
-                            hazards_id: hazard.hazards_id
-//                            man_hazards_id: hazard.man_hazards_id,
-//                            workplace_id: hazard.workplace_id
+                            hazards_id: hazard.hazards_id,
+                            man_hazards_id: hazard.man_hazards_id,
+                            workplace_id: hazard.workplace_id
                         });
                     });
                 }
@@ -430,7 +430,7 @@ function AppointmentForm() {
             });
         });
     }
-    testData();
+//    testData();
 
     form.btnCreateContract.onActionPerformed = function (event) {
         if (form.mcCompany.value) {
