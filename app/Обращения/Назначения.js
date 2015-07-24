@@ -224,7 +224,7 @@ function AppointmentForm() {
     }
 
     function calculate() {
-         lp.start(form.button, function(){
+         lp.start(form.button, function() {
             var uslugi = [];
             naznacheniya = [];
             model.qUslInTreat.forEach(function (usl) {

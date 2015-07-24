@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <ModelGrid cursor="0" name="mgRoutes" parent="view" prefHeight="300px" prefWidth="400px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn name="colName" preferredWidth="250px" title="Пациент/Услуга" width="276px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colSelected" preferredWidth="25px" title="Выбрана" width="51px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colRoute" preferredWidth="25px" title="Назначена" width="51px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>

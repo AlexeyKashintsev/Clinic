@@ -17,7 +17,7 @@ function WizTest_1() {
             cont.add(form.view, new P.Anchors(1, null, 1, 1, null, 1));
         } else 
             form.show();
-        self.controller.prevBtn = false;
+//        self.controller.prevBtn = false;
     };
     
     model.requery(function () {
