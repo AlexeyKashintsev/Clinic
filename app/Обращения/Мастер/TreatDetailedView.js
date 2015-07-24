@@ -35,6 +35,16 @@ function TreatDetailedView() {
             form.show();
     };
     
+    self.onBeforeNext = function(callback) {
+        callback();
+    };
+    
+    Object.defineProperty(self, 'nextData', {
+        get: function() {
+            return rObj;
+        }
+    });
+    
     function preaprePatientData(patient) {
         var rec = {
             n_name: patient.surname + ' ' + patient.firstname + ' ' + patient.patronymic,

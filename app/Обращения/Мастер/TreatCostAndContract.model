@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qPriceLists" Title="" entityHeight="200" entityIconified="false" entityId="143774254564215" entityLocationX="432" entityLocationY="44" entityWidth="150" queryId="qPriceLists" tableName="" tableSchemaName=""/>
+  <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="143774250373873" entityLocationX="37" entityLocationY="44" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
+  <entity Name="qContracts" Title="" entityHeight="200" entityIconified="false" entityId="143774251971242" entityLocationX="245" entityLocationY="44" entityWidth="150" queryId="qContracts" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="company_id" leftEntityId="143774251971242" rightEntityFieldName="buh_companies_id" rightEntityId="143774250373873"/>
+  <referenceRelation leftEntityFieldName="company_id" leftEntityId="143774254564215" rightEntityFieldName="buh_companies_id" rightEntityId="143774250373873"/>
+</datamodel>
