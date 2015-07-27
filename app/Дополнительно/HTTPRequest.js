@@ -3,7 +3,7 @@
  * @author alexey
  * @constructor
  */
-function HTTPRequestDeprecated() {
+function HTTPRequest() {
     var self = this;
     var URL, module, method;
 
@@ -57,6 +57,7 @@ function HTTPRequestDeprecated() {
     function execute(aMethod, aData, onSuccess, onFailure) {
         request.open(aMethod, URL, true);
         request.setRequestHeader('Content-type', 'text/plain');
+        request.setRequestHeader('charset', 'utf-8');
         request.onreadystatechange = function () {
             if (request.readyState === 4) {
                 if (request.status >= 200 && request.status < 300) {

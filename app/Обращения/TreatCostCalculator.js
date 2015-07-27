@@ -2,6 +2,7 @@
  * 
  * @author root
  * @constructor
+ * @public
  */ 
 function TreatCostCalculator() {
     var self = this, model = P.loadModel(this.constructor.name);
@@ -95,6 +96,15 @@ function TreatCostCalculator() {
             pData.push(pricesData[j]);
         return pData;
     }
+    
+    self.calculateRoutePost = function() {
+       var rb = (new P.HttpContext()).request.body;
+       P.Logger.info(rb);
+        rb = JSON.parse(rb);
+//        for (var j in rb)
+//            P.Logger.warning(j);
+        return self.calculateRoute(rb, rb.priceSource, rb.allRoute, rb.ignoreMissedPrices);
+    };
     
     self.calculateRoute = function(aRouteData, aPricesSource, calculateAllRoute, ignoreMissedPrices) {
         var missedPrices = !ignoreMissedPrices ? findMissedPrices(aPricesSource, aRouteData.uslugi, calculateAllRoute) : false;

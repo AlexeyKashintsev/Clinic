@@ -10,6 +10,10 @@ function TreatCostAndContract() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
+    model.qAllFirms.requery();
+    model.qContracts.requery();
+    model.qPriceLists.requery();
+    
     var treatCostCalculator = new P.ServerModule('TreatCostCalculator');
     var rObj = {};
     self.setData = function(aRObj) {
@@ -33,9 +37,27 @@ function TreatCostAndContract() {
     self.onBeforeNext = function(callback) {
         rObj.priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
                     (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
-        treatCostCalculator.calculateRoute(rObj, rObj.priceSource, form.cbAllRoute.value, form.cbIgnoreMissedPrices.value,
+        rObj.allRoute = form.cbAllRoute.value;
+        rObj.ignoreMissedPrices = form.cbIgnoreMissedPrices.value;    
+//        var hr = new HTTPRequest();
+//        hr.module = 'TreatCostCalculator';
+//        hr.method = 'calculateRoutePost';
+//        hr.post(JSON.stringify(rObj), function(res) {
+//            rObj = res;
+//            callback();
+//        }, function() {
+//            console.log('Cost calculation failure.');
+//        });
+        var sRObj = {
+            patients:   rObj.patients,
+            uslugi: rObj.uslugi,
+            errors: rObj.errors
+        };
+        treatCostCalculator.calculateRoute(sRObj, rObj.priceSource, form.cbAllRoute.value, form.cbIgnoreMissedPrices.value,
             function(res) {
-                rObj = res;
+                rObj.patients = res.patients;
+                rObj.uslugi = res.uslugi;
+                rObj.errors = res.errors;
                 callback();
             });
     };
@@ -44,4 +66,8 @@ function TreatCostAndContract() {
         return form.mcPriceSource.value && form.cbNoContract.value || form.mcContract.value;
     }
     
+    form.mcCompany.onValueChange = function (event) {
+        model.qContracts.params.comp_id = form.mcCompany.value.buh_companies_id;
+        model.qContracts.execute();
+    };
 };

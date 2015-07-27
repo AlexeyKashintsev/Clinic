@@ -59,7 +59,7 @@ function TreatDetailedView() {
         if (patient.hazards.length > 0) {
             var hazards = {
                 n_name: "Вредности",
-                n_parent: rec,
+                n_parent: null,//rec,
                 n_children: []
             };
             for (var j in patient.hazards) {
@@ -67,7 +67,7 @@ function TreatDetailedView() {
                     var hazard = patient.hazards[j];
                     hazards.n_children.push({
                         n_name: hazard.haz_code + " " + hazard.haz_name,
-                        n_parent: hazards,
+                        n_parent: null,//hazards,
                         n_children: []
                     });
                 }
@@ -77,7 +77,7 @@ function TreatDetailedView() {
         }
         var route = {
             n_name: "Назначения",
-            n_parent: rec,
+            n_parent: null,//rec,
             n_children: []
         };
         for (var j in patient.route) {
@@ -85,7 +85,7 @@ function TreatDetailedView() {
                 n_name: model.qUslugaById.findByKey(j).usl_name,
                 n_by_hazard: patient.route[j].hazard,
                 n_by_content: patient.route[j].usl_content,
-                n_parent: hazards,
+                n_parent: null,//hazards,
                 n_children: [],
                 cost: patient.route[j].usl_cost,
                 selected: patient.route[j].selected,
