@@ -98,8 +98,9 @@ function TreatCostCalculator() {
     }
     
     self.calculateRoutePost = function() {
-       var rb = (new P.HttpContext()).request.body;
-       P.Logger.info(rb);
+        var rb = (new P.HttpContext()).request.body;
+        rb = rb.replace(new RegExp("'", "g"), '"');
+        P.Logger.info(rb);
         rb = JSON.parse(rb);
 //        for (var j in rb)
 //            P.Logger.warning(j);

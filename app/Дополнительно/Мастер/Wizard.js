@@ -108,7 +108,4 @@ function Wizard(anActionForms, anInitData) {
     form.btnFinish.onActionPerformed = function(event) {
         self.finish();
     };
-    form.button.onActionPerformed = function(event) {
-        actForm.container.visible = !actForm.container.visible;
-    };
 }

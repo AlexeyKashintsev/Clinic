@@ -7,8 +7,10 @@
 function testM() {
     var self = this, model = P.loadModel(this.constructor.name);
     
-    self.test = function(aInput) {
-        var c = new P.HttpContext();
-        return 'response:' + c.request.body;
+    self.test = function(anInput) {
+//        var c = new P.HttpContext();
+//        var response = decodeURIComponent(c.request.body);
+//        var json = JSON.parse(response);
+        return 'response:' + response;
     };
 }

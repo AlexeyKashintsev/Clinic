@@ -24,4 +24,16 @@
   <Button cursor="0" name="button2" parent="view" prefHeight="20px" prefWidth="70px" text="button2">
     <AnchorsPaneConstraints height="20px" right="60px" top="200px" width="70px"/>
   </Button>
+  <Button cursor="0" name="button3" parent="view" prefHeight="20px" prefWidth="90px" text="Test \">
+    <AnchorsPaneConstraints bottom="50px" height="20px" right="40px" width="90px"/>
+  </Button>
+  <CheckBox cursor="0" name="checkBox1" parent="view" prefHeight="20px" prefWidth="70px" text="checkBox1">
+    <AnchorsPaneConstraints height="20px" left="200px" top="125px" width="70px"/>
+  </CheckBox>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="70px" text="label">
+    <AnchorsPaneConstraints height="20px" right="30px" top="125px" width="70px"/>
+  </Label>
+  <ModelCheckBox cursor="0" name="modelCheckBox" nullable="false" parent="view" prefHeight="28px" prefWidth="157px" text="modelCheckBox">
+    <AnchorsPaneConstraints height="28px" left="30px" top="121px" width="157px"/>
+  </ModelCheckBox>
 </layout>

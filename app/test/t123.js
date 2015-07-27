@@ -67,4 +67,22 @@ function t123() {
         var modT = new P.ServerModule('testM');
         modT.test();
     };
+    
+
+    
+    form.button3.onActionPerformed = function(event) {
+        var testJSON = '{"hazards":[{"hazard_type":2,"haz_code":"25","haz_group":"","hazards_id":1027,"haz_short_name":"Работы на водопроводных сооружениях\"","man_hazards_id":143497395463481,"hazard_id":1027,"workplace_id":143455303158580,"haz_name":"Работы на водопроводных сооружениях, связанные с подготовкой воды и обслуживанием водопроводных сетей\"","period_type":1}]}';
+//        var req = new HTTPRequest();
+//        req.module = 'testM';
+//        req.method = 'test';
+//        req.post(encodeURIComponent(testJSON), function(aRes) {
+//            console.log(aRes);
+//        }, function(aRes) {alert(aRes)});
+        var modT = new P.ServerModule('testM');
+        modT.test(JSON.parse(testJSON));
+    };
+    form.modelCheckBox.onValueChange = function(event) {
+        form.checkBox1.selected = form.modelCheckBox.value;
+        form.label.text = form.modelCheckBox.value;
+    };
 }

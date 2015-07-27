@@ -18,8 +18,8 @@ function ContractConstructor() {
         model.qPricesByContract.requery();
         P.Logger.info(model.qPricesByContract.length + ' records found');
         aPriceData.forEach(function(priceData) {
-            P.Logger.info('Updating price for service ' + priceData.usluga_id + ', pd ' + !!priceData);
-            if (priceData) {
+            if (priceData && res) {
+                P.Logger.info('Updating price for service ' + priceData.usluga_id + ', pd ' + !!priceData);
                 var cPrice = model.qPricesByContract.filter(function(contrPrice) {
                     P.Logger.info('1: ' + contrPrice.usluga_id + ', 2: ' + priceData.usluga_id +
                             '\n1: ' + contrPrice.sex  + ', 2: ' +  priceData.sex +
@@ -62,7 +62,7 @@ function ContractConstructor() {
                         });
                 }
             } else {
-                P.Logger.warning('No price data present!');
+                P.Logger.warning(res ? 'No price data present!' : 'Skipping');
             }
         });
         if (res) {

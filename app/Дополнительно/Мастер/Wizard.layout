@@ -12,7 +12,4 @@
   <Button cursor="0" enabled="false" name="btnFinish" parent="view" prefHeight="20px" prefWidth="102px" text="Закончить">
     <AnchorsPaneConstraints bottom="18px" height="20px" right="10px" width="102px"/>
   </Button>
-  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="70px" text="button">
-    <AnchorsPaneConstraints bottom="18px" height="20px" left="10px" width="70px"/>
-  </Button>
 </layout>

@@ -37,17 +37,11 @@ function TreatCostAndContract() {
     self.onBeforeNext = function(callback) {
         rObj.priceSource = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id :
                     (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
+        rObj.price = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id : false;
+        rObj.contract = form.mcContract.value ? form.mcContract.value.buh_contracts_id : false;
         rObj.allRoute = form.cbAllRoute.value;
         rObj.ignoreMissedPrices = form.cbIgnoreMissedPrices.value;    
-//        var hr = new HTTPRequest();
-//        hr.module = 'TreatCostCalculator';
-//        hr.method = 'calculateRoutePost';
-//        hr.post(JSON.stringify(rObj), function(res) {
-//            rObj = res;
-//            callback();
-//        }, function() {
-//            console.log('Cost calculation failure.');
-//        });
+
         var sRObj = {
             patients:   rObj.patients,
             uslugi: rObj.uslugi,
@@ -58,16 +52,23 @@ function TreatCostAndContract() {
                 rObj.patients = res.patients;
                 rObj.uslugi = res.uslugi;
                 rObj.errors = res.errors;
+                rObj.priceData = res.priceData;
                 callback();
             });
     };
     
     function checkNextStep() {
-        return form.mcPriceSource.value && form.cbNoContract.value || form.mcContract.value;
+        var ready = form.mcPriceSource.value && form.cbNoContract.value || form.mcContract.value;
+        self.controller.nextBtn = ready;
+        return ready;
     }
     
     form.mcCompany.onValueChange = function (event) {
         model.qContracts.params.comp_id = form.mcCompany.value.buh_companies_id;
         model.qContracts.execute();
     };
+    
+    form.mcContract.onActionPerformed = form.mcPriceSource.onActionPerformed =
+            form.cbNoContract.onActionPerformed = form.mcContract.onValueChange = checkNextStep;
+
 };

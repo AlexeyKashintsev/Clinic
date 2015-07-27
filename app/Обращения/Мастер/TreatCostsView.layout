@@ -2,24 +2,23 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ModelGrid cursor="0" deletable="false" name="mgCosts" parent="view" prefHeight="260px" prefWidth="400px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="40px"/>
-    <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_id" name="colUsl_name" title="Название " width="75px">
-      <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false"/>
+    <ModelGridColumn field="usl_id" name="colUsl_name" preferredWidth="150px" title="Название " width="167px">
+      <ModelCombo displayField="usl_name" displayList="qUslById" nullable="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_sex" name="colSex" title="Пол" width="75px">
+    <ModelGridColumn field="usl_sex" name="colSex" preferredWidth="30px" title="Пол" width="47px">
       <ModelCombo displayField="man_sex_id" displayList="qSex"/>
     </ModelGridColumn>
-    <ModelGridColumn field="usl_per_type" name="colPer_type" title="Переодичность" width="75px">
-      <ModelCombo displayField="type_name" displayList="qUslPeriodicType"/>
+    <ModelGridColumn field="usl_per_type" name="colPer_type" preferredWidth="30px" title="Переодичность" width="47px">
+      <ModelCombo displayField="type_name" displayList="qPeriodic"/>
     </ModelGridColumn>
-    <ModelGridColumn field="lim_age_type" name="colVozrastType" title="Тип Возраста" width="75px">
+    <ModelGridColumn field="lim_age_type" name="colVozrastType" preferredWidth="30px" title="Тип Возраста" width="46px">
       <ModelCombo displayField="description" displayList="qUsiLimAgeType"/>
     </ModelGridColumn>
-    <ModelGridColumn field="limitation_age" name="colVozrast" title="Возраст" width="75px">
+    <ModelGridColumn field="limitation_age" name="colVozrast" preferredWidth="30px" title="Возраст" width="47px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="cost" name="colCost" title="Цена" width="75px">
-      <ModelTextArea/>
+    <ModelGridColumn field="cost" name="colCost" preferredWidth="30px" title="Цена" width="46px">
+      <ModelFormattedField/>
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar cursor="0" name="toolBar1" parent="view" prefHeight="40px" prefWidth="400px">
