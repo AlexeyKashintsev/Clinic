@@ -13,4 +13,9 @@ function testM() {
 //        var json = JSON.parse(response);
         return 'response:' + response;
     };
+    
+    self.testDB = function(callback, failure) {
+        model.qTestWrite.push({a: '1'});
+        model.save(callback, failure);
+    };
 }

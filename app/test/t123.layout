@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
-  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="50px" prefWidth="350px">
-    <AnchorsPaneConstraints height="50px" left="30px" top="50px" width="350px"/>
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="60px" prefWidth="350px">
+    <AnchorsPaneConstraints height="60px" left="30px" top="50px" width="350px"/>
     <ModelGridColumn field="id" name="column" title="column" width="117px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
@@ -36,4 +36,10 @@
   <ModelCheckBox cursor="0" name="modelCheckBox" nullable="false" parent="view" prefHeight="28px" prefWidth="157px" text="modelCheckBox">
     <AnchorsPaneConstraints height="28px" left="30px" top="121px" width="157px"/>
   </ModelCheckBox>
+  <Button cursor="0" name="button4" parent="view" prefHeight="20px" prefWidth="90px" text="Sparse array">
+    <AnchorsPaneConstraints bottom="20px" height="20px" right="40px" width="90px"/>
+  </Button>
+  <Button cursor="0" name="button5" parent="view" prefHeight="20px" prefWidth="140px" text="test db save">
+    <AnchorsPaneConstraints bottom="40px" height="20px" left="30px" width="140px"/>
+  </Button>
 </layout>

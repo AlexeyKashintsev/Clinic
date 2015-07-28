@@ -85,4 +85,21 @@ function t123() {
         form.checkBox1.selected = form.modelCheckBox.value;
         form.label.text = form.modelCheckBox.value;
     };
+    
+    var sp = [];
+    sp[1] = {};
+    sp[1000000000000000000000000] = {};
+    form.button4.onActionPerformed = function(event) {
+        form.modelGrid.data = sp;
+    };
+    
+    
+    form.button5.onActionPerformed = function(event) {
+        var modT = new P.ServerModule('testM');
+        modT.testDB(function() {
+            alert('ok');
+        }, function() {
+            alert('failure');
+        });
+    };
 }
