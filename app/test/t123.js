@@ -54,4 +54,52 @@ function t123() {
     form.button.onActionPerformed = function(event) {
         getUslRoute(form.textField.text);
     };
+    
+    form.button1.onActionPerformed = function(event) {
+        var req = new HTTPRequest();
+        req.module = 'testM';
+        req.method = 'test';
+        req.post("111", function(aRes) {
+            console.log(aRes);
+        }, function(aRes) {alert(aRes)});
+    };
+    form.button2.onActionPerformed = function(event) {
+        var modT = new P.ServerModule('testM');
+        modT.test();
+    };
+    
+
+    
+    form.button3.onActionPerformed = function(event) {
+        var testJSON = '{"hazards":[{"hazard_type":2,"haz_code":"25","haz_group":"","hazards_id":1027,"haz_short_name":"Работы на водопроводных сооружениях\"","man_hazards_id":143497395463481,"hazard_id":1027,"workplace_id":143455303158580,"haz_name":"Работы на водопроводных сооружениях, связанные с подготовкой воды и обслуживанием водопроводных сетей\"","period_type":1}]}';
+//        var req = new HTTPRequest();
+//        req.module = 'testM';
+//        req.method = 'test';
+//        req.post(encodeURIComponent(testJSON), function(aRes) {
+//            console.log(aRes);
+//        }, function(aRes) {alert(aRes)});
+        var modT = new P.ServerModule('testM');
+        modT.test(JSON.parse(testJSON));
+    };
+    form.modelCheckBox.onValueChange = function(event) {
+        form.checkBox1.selected = form.modelCheckBox.value;
+        form.label.text = form.modelCheckBox.value;
+    };
+    
+    var sp = [];
+    sp[1] = {};
+    sp[1000000000000000000000000] = {};
+    form.button4.onActionPerformed = function(event) {
+        form.modelGrid.data = sp;
+    };
+    
+    
+    form.button5.onActionPerformed = function(event) {
+        var modT = new P.ServerModule('testM');
+        modT.testDB(function() {
+            alert('ok');
+        }, function() {
+            alert('failure');
+        });
+    };
 }

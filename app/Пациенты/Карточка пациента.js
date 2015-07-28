@@ -14,7 +14,8 @@ function PatientForm() {
     diagnosesForm.showOnPanel(form.pnlDiagnoses);
     var buhIinshuranceCompanyForm = false;
     var lp = new LongProcessor([form.btnSave, form.btnCancel]);
-     
+    var selectPriceListView;
+    
     self.setParams = function(aPatientId) {
         model.qPatientById.params.patient_id = patientId = aPatientId ? aPatientId : null;
         model.qTreatByPatient.params.patient_id = aPatientId;
@@ -116,7 +117,8 @@ function PatientForm() {
         });
     };
     form.btnDelHazard.onActionPerformed = function(event) {
-        model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
+        model.qHazardsByManJob.splice(model.qHazardsByManJob.indexOf(form.mgHazards.selected[0]), 1);
+        //model.qHazardsByManJob.remove(model.qHazardsByManJob.cursorPos);
     };
     
     self.tabProcessor = new TabProcessor(form, ['tfCardNumber', 'tfSanitaryBook', 'tfSurname', 'tfName'
@@ -131,6 +133,27 @@ function PatientForm() {
             if (anInshuranceCompany)
                 model.qPatientById.cursor.inshurance_company = anInshuranceCompany;
             //form.ddBuhIinshuranceCompany.redraw();
+        });
+    };
+
+    form.btnFromPrice.onActionPerformed = function(event) {
+        if(!selectPriceListView) selectPriceListView = new SelectPriceListView();
+        selectPriceListView.showModal(function(aPrice){
+            if(aPrice){
+                alert(aPrice.contract_id + " " + aPrice.contr_name);
+            }
+        });
+    };
+    //TODO Не понятно почему эта кнопка тут НЕ работает. МАГИЯ!
+    var lp = new LongProcessor([form.btnReport]);
+    form.btnReport.onActionPerformed = function(event) {
+         lp.start(this, function(){
+            var srvModule = new P.ServerModule("PassportHealth");
+            srvModule.setPacient("142808473476141");
+            srvModule.execute(function(aReport){
+                aReport.show();
+                lp.stop();
+            });
         });
     };
 }

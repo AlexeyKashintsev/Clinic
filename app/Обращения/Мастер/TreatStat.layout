@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="325px" prefWidth="643px"/>
+  <ModelGrid cursor="0" name="mgUslugiStat" parent="view" prefHeight="285px" prefWidth="643px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="40px"/>
+    <ModelGridColumn name="colUslName" preferredWidth="200px" title="Услуга" width="253px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colCount" preferredWidth="25px" title="Количество" width="78px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colCountByRoute" preferredWidth="25px" title="По назначению" width="78px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colCountByHazard" preferredWidth="25px" title="По вредности" width="78px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colRoute" preferredWidth="25px" title="Вкл" width="78px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colClinic" preferredWidth="25px" title="В клинике" width="78px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnMore" parent="view" prefHeight="30px" prefWidth="120px" text="Подробнее">
+    <AnchorsPaneConstraints height="30px" right="13px" top="5px" width="120px"/>
+  </Button>
+</layout>

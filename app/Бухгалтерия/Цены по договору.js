@@ -50,7 +50,8 @@ function ContractPricesView() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if(confirm("Удалить?")){
-            model.qPricesByContract.remove(model.qPricesByContract.cursorPos);
+            model.qPricesByContract.splice(model.qPricesByContract.indexOf(form.modelGrid.selected[0]), 1);
+            //model.qPricesByContract.remove(model.qPricesByContract.cursorPos);
         }
     };
     

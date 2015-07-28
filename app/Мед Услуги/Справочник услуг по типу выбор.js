@@ -26,8 +26,11 @@ function Uslugi4SelectView() {
     
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
-        RequeryAnimate(form.mgUsl, model.qUslugiByType);
-        
+        try {
+            RequeryAnimate(form.mgUsl, model.qUslugiByType);
+        } catch (e) {
+            model.qUslugiByType.requery();
+        }
     };
     
     model.requery(function () {
@@ -83,7 +86,8 @@ function Uslugi4SelectView() {
     
     form.btnDel.onActionPerformed = function(event) {
         if(confirm("Удалить выбранную услугу?")){
-            model.qUslugiByType.remove(model.qUslugiByType.cursorPos); // deleteRow();
+            model.qUslugiByType.splice(model.qUslugiByType.indexOf(form.mgUsl.selected[0]), 1);
+            //model.qUslugiByType.remove(model.qUslugiByType.cursorPos); // deleteRow();
         }
     };
     
@@ -115,7 +119,8 @@ function Uslugi4SelectView() {
     form.btnDel1.onActionPerformed = function(event) {
         if (model.qUslTypes.cursor.usl_types_id) {
             if (confirm('Внимание! Так же будут удалены услуги с данным типом!\nУдалить данный тип услуги?')) {
-                model.qUslTypes.remove(model.qUslTypes.cursorPos);
+                model.qUslTypes.splice(model.qUslTypes.indexOf(form.modelGrid.selected[0]), 1);
+                //model.qUslTypes.remove(model.qUslTypes.cursorPos);
             };
         } else {
             alert('Невозможно удалить данный тип услуг!');

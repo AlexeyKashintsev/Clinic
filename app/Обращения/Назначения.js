@@ -224,7 +224,7 @@ function AppointmentForm() {
     }
 
     function calculate() {
-         lp.start(form.button, function(){
+         lp.start(form.button, function() {
             var uslugi = [];
             naznacheniya = [];
             model.qUslInTreat.forEach(function (usl) {
@@ -282,9 +282,9 @@ function AppointmentForm() {
                     pcnt.route[j].hazards = [];
                     patient.route[j].hazards.forEach(function(hazard) {
                         pcnt.route[j].hazards.push({
-                            hazards_id: hazard.hazards_id
-//                            man_hazards_id: hazard.man_hazards_id,
-//                            workplace_id: hazard.workplace_id
+                            hazards_id: hazard.hazards_id,
+                            man_hazards_id: hazard.man_hazards_id,
+                            workplace_id: hazard.workplace_id
                         });
                     });
                 }
@@ -430,7 +430,7 @@ function AppointmentForm() {
             });
         });
     }
-    testData();
+//    testData();
 
     form.btnCreateContract.onActionPerformed = function (event) {
         if (form.mcCompany.value) {
@@ -481,4 +481,19 @@ function AppointmentForm() {
         model.revert();
         form.close(false);
     };
+    form.btnDel.onActionPerformed = function(event) {
+        if(model.qUslInTreat.cursorPos && confirm("Удалить выбранную услугу?")){
+            model.qUslInTreat.splice(model.qUslInTreat.indexOf(form.mgUsl.selected[0]), 1);
+          //  model.qUslInTreat.remove(model.qUslInTreat.cursorPos);
+//            model.save(function(){
+//                model.qUslInTreat.requery();
+//            });
+        }
+    };
+//    form.btnSave.onActionPerformed = function(event) {
+//        model.save();
+//    };
+//    form.btnReq.onActionPerformed = function(event) {
+//        model.requery();
+//    };
 }

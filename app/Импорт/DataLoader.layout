@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Загрузка" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="124px" prefWidth="400px"/>
-  <TextField name="textField" parent="view" prefHeight="28px" prefWidth="380px">
+  <TextField cursor="0" name="textField" parent="view" prefHeight="28px" prefWidth="380px">
     <AnchorsPaneConstraints height="28px" left="10px" right="10px" top="30px"/>
   </TextField>
   <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="150px" text="Наименование файла">

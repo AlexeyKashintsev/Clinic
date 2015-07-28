@@ -22,7 +22,8 @@ function ObrRouteStatusForm() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if (confirm("Удалить?"))
-        model.qRouteStatus.remove(model.qRouteStatus.cursorPos);
+            model.qRouteStatus.splice(model.qRouteStatus.indexOf(form.modelGrid.selected[0]), 1);
+        //model.qRouteStatus.remove(model.qRouteStatus.cursorPos);
     };
     form.btnReq.onActionPerformed = function(event) {
         if(model.modified && confirm("Сохранить изменения?")) 

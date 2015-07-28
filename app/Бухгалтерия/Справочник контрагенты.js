@@ -37,7 +37,8 @@ function CompaniesList() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if(confirm("Удалить компанию?")){
-            model.qAllFirms.remove(model.qAllFirms.cursorPos);
+            model.qAllFirms.splice(model.qAllFirms.indexOf(form.modelGrid.selected[0]), 1);
+            //model.qAllFirms.remove(model.qAllFirms.cursorPos);
         }
     };
     form.btnReq.onActionPerformed = function(event) {
@@ -81,8 +82,9 @@ function CompaniesList() {
         });
     };
 
-    form.btnSearch.onActionPerformed = function(event) {
+    form.mfSearch.onValueChange = function(event) {
         model.qAllFirms.params.company_find = form.mfSearch.text;
         model.requery();
     };
+
 }

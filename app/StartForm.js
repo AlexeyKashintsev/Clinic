@@ -14,6 +14,8 @@ function StartForm() {
             P.require([formName], function(){
                 var f = new (eval(formName));
                 f.show();
+            }, function(er) {
+                console.log('Error on require ' + er);
             });
         } else {
             alert('Нет анонимного доступа!');
