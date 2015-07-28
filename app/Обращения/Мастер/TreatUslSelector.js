@@ -10,12 +10,14 @@ function TreatUslSelector() {
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
     
-    model.qUslugaById.requery();
+    model.qUslById.requery();
     
     var rObj = {}, patientsLoaded;
     self.setData = function(aPatients) {
         patientsLoaded = true;
         self.controller.nextBtn = false;
+        self.controller.data = {};
+        self.controller.qUslById = model.qUslById;
         
         if (typeof aPatients[0] === 'object') {
             rObj.patients = aPatients;
@@ -24,13 +26,11 @@ function TreatUslSelector() {
                 rObj.patientsAr.push(patient.man_patient_id);
             });
         } else {
-//            rObj.patients = [];
             rObj.patientsAr = aPatients;
-//            getPatientsData(aPatients, 0);
         }
     };
     
-    var treatCreator = new P.ServerModule('TreatCreator');
+    var treatCreator = new P.ServerModule('TreatCalculator');
     Object.defineProperty(self, 'nextData', {
         get: function() {
             return rObj;
@@ -42,10 +42,9 @@ function TreatUslSelector() {
             model.qUslInTreat.forEach(function(anUsluga) {
                 rObj.uslugi.push(anUsluga.usluga_id);
             });
-            treatCreator.calculateRoute(rObj.patientsAr, rObj.uslugi, function(res) {
+            treatCreator.calculateRoute4Group(rObj.patientsAr, rObj.uslugi, function(res) {
                 for (var j in res)
                     rObj[j] = res[j];
-//                rObj.fullData = res;
                 callback();
             });
     };

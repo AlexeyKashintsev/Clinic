@@ -4,7 +4,7 @@
     <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="43px" left="0px" right="0px" top="0px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="378px" prefWidth="560px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="380px" prefWidth="560px"/>
   <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="560px">
     <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="560px"/>
   </ToolBar>
@@ -13,33 +13,33 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="348px" prefWidth="560px">
+  <ModelGrid cursor="0" data="qUslugiByType" deletable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="350px" prefWidth="560px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" readonly="true" title="Наименование" width="219px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" readonly="true" title="Наименование" width="225px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="clinic_work" maxWidth="100px" name="colInWork" preferredWidth="100px" title="В клинике" width="100px">
       <ModelCheckBox/>
     </ModelGridColumn>
-    <ModelGridColumn field="use_hazards" maxWidth="100px" name="colHazards" preferredWidth="100px" title="По вредностям" width="100px">
+    <ModelGridColumn field="do_apply" maxWidth="100px" name="colDoApply" preferredWidth="100px" title="Назначать" width="100px">
       <ModelCheckBox/>
     </ModelGridColumn>
-    <ModelGridColumn field="diagnosis_appliance" maxWidth="100px" name="colDiagnoses" preferredWidth="100px" title="Назначить диагноз" width="100px">
+    <ModelGridColumn field="use_hazards" maxWidth="100px" name="colHazards" preferredWidth="100px" title="Вредности" width="100px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="378px" prefWidth="250px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="splitPane" prefHeight="380px" prefWidth="251px"/>
   <ToolBar cursor="0" name="toolBar1" parent="panel1" prefHeight="30px" prefWidth="250px">
     <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="250px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-folder-new.png" name="btnAddParent" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить вложенный элемент" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
-  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel1" parentField="parent" prefHeight="350px" prefWidth="250px">
+  <ModelGrid childrenField="child" cursor="0" data="qUslTypes" deletable="false" editable="false" insertable="false" name="modelGrid" parent="panel1" parentField="parent" prefHeight="352px" prefWidth="251px">
     <AnchorsPaneConstraints bottom="-2px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="209px">
+    <ModelGridColumn field="type_name" name="colType_name" title="Тип услуги" width="216px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>

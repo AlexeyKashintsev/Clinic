@@ -5,7 +5,7 @@
  * @author alexey
  * {global P}
  */
-function TreatDetailedView() {
+function TreatDetailedView_1() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);

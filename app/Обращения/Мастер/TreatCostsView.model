@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qUslById" Title="" entityHeight="200" entityIconified="false" entityId="143799872103522" entityLocationX="34" entityLocationY="31" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
   <entity Name="qSex" Title="" entityHeight="200" entityIconified="false" entityId="143799902126440" entityLocationX="549" entityLocationY="24" entityWidth="150" queryId="qSex" tableName="" tableSchemaName=""/>
   <entity Name="qUsiLimAgeType" Title="" entityHeight="200" entityIconified="false" entityId="143799906470631" entityLocationX="726" entityLocationY="18" entityWidth="150" queryId="qUsiLimAgeType" tableName="" tableSchemaName=""/>
   <entity Name="qPeriodic" Title="" entityHeight="200" entityIconified="false" entityId="143799898661842" entityLocationX="379" entityLocationY="25" entityWidth="150" queryId="qPeriodic" tableName="" tableSchemaName=""/>

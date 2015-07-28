@@ -26,8 +26,11 @@ function Uslugi4SelectView() {
     
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
-        RequeryAnimate(form.mgUsl, model.qUslugiByType);
-        
+        try {
+            RequeryAnimate(form.mgUsl, model.qUslugiByType);
+        } catch (e) {
+            model.qUslugiByType.requery();
+        }
     };
     
     model.requery(function () {

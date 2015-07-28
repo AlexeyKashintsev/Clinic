@@ -69,29 +69,46 @@ function TreatCostCalculator() {
         return res;
     }
     
-    function calculatePrices(aPatientsData, aPricesSource, calculateRoute) {
+    function calculatePrices(pData, aPatientsData, aPricesSource, calculateRoute) {
         P.Logger.info('Calculating cost for services');
         model.qPriceSource.params.contract_id = aPricesSource;
         model.qPriceSource.requery();
         var pricesData = {};
         
         aPatientsData.forEach(function(patient) {
-            for (var j in patient.route) {
-                if (patient.route[j].selected && !calculateRoute || calculateRoute && patient.route[j].route) {
-                    patient.route[j].payable = true;
-                    var usl_cost = getUslPrice(patient, patient.route[j].usl_id);
+            for (var usl_id in patient.route) {
+                if (patient.route[usl_id].selected && !calculateRoute 
+                        || calculateRoute && patient.route[usl_id].route && patient.route[usl_id].clinic_work) {
+                    patient.route[usl_id].payable = true;
+                    var usl_cost = getUslPrice(patient, usl_id);
                     if (usl_cost) {
                         if (!pricesData[usl_cost.usl_cost_id]) {
                             pricesData[usl_cost.usl_cost_id] = usl_cost;
-                            pricesData[usl_cost.usl_cost_id].patients_count++;
+                            pricesData[usl_cost.usl_cost_id].patients_count = 0;
                         }
-                        patient.route[j].usl_cost = usl_cost.cost;
-                    } else
-                        patient.route[j].usl_cost = null;
+                        pricesData[usl_cost.usl_cost_id].patients_count++;
+                        patient.route[usl_id].usl_cost = usl_cost.cost;
+                    } else {
+                        var found = false;
+                        patient.route[usl_id].usl_cost = null;
+                        pData.forEach(function(price) {
+                            if (price.usluga_id === usl_id) {
+                                price.patients_count++;
+                                found = true;
+                            };
+                        });
+                        if (!found) {
+                            pData.push({
+                                usluga_id: usl_id,
+                                missed: true,
+                                cost: null,
+                                patients_count: 1
+                            });
+                        }
+                    }
                 }
             };
         });
-        var pData = [];
         for (var j in pricesData)
             pData.push(pricesData[j]);
         return pData;
@@ -108,24 +125,25 @@ function TreatCostCalculator() {
     };
     
     self.calculateRoute = function(aRouteData, aPricesSource, calculateAllRoute, ignoreMissedPrices) {
-        var missedPrices = !ignoreMissedPrices ? findMissedPrices(aPricesSource, aRouteData.uslugi, calculateAllRoute) : false;
-        var priceData = calculatePrices(aRouteData.patients, aPricesSource, calculateAllRoute);
-        if (missedPrices) {
-            missedPrices.forEach(function(missedPrice) {
-                priceData.push({
-                    usluga_id: missedPrice,
-                    missed: true,
-                    cost: null
-                });
-            });
-            P.Logger.info(aRouteData.errors);
-            if (!aRouteData.errors)
-                aRouteData.errors = [];
-            aRouteData.errors.push({
-                errorType: 'missedPrices',
-                data: missedPrices
-            });
-        }
+//        var missedPrices = !ignoreMissedPrices ? findMissedPrices(aPricesSource, aRouteData.uslugi, calculateAllRoute) : false;
+        var priceData = [];
+//        if (missedPrices) {
+//            missedPrices.forEach(function(missedPrice) {
+//                priceData.push({
+//                    usluga_id: missedPrice,
+//                    missed: true,
+//                    cost: null
+//                });
+//            });
+//            P.Logger.info(aRouteData.errors);
+//            if (!aRouteData.errors)
+//                aRouteData.errors = [];
+//            aRouteData.errors.push({
+//                errorType: 'missedPrices',
+//                data: missedPrices
+//            });
+//        }
+        calculatePrices(priceData, aRouteData.patients, aPricesSource, calculateAllRoute);
         aRouteData.priceData = priceData;
         return aRouteData;
     };

@@ -20,7 +20,7 @@ function TreatCostsView() {
     var rObj = {};
     self.setData = function(aRObj) {
         function preparePriceData(price) {
-            price.usluga = model.qUslById.findByKey(price.usluga_id);
+            price.usluga = self.controller.qUslById.findByKey(price.usluga_id);
             price.periodic_type = model.qPeriodic.findByKey(price.per_type);
             price.sex_t = model.qSex.findByKey(price.sex);
             price.age_type = model.qSex.findByKey(price.limitation_age_type);
@@ -39,6 +39,8 @@ function TreatCostsView() {
                 if (event.object.missed)
                     event.cell.background = new P.Color('#FFCCCC');
             };
+            
+            checkForNextStep();
         });
     };
     
@@ -56,6 +58,16 @@ function TreatCostsView() {
             form.show();
     };
     
+    self.onBeforeNext = function(callback) {
+        if (checkForNextStep()) {
+            if (rObj.contract)
+                updateContract(callback);
+            else
+                updatePrice(callback);
+        } else {
+            alert('Ошибка! Не заданы все цены!');
+        }
+    };
     
     function getCosts() {
         var costs = [];
@@ -71,23 +83,33 @@ function TreatCostsView() {
         return costs;
     }
     
-    function updatePrice() {
+    function updatePrice(callback) {
         var contract_id;
         if (rObj.price && confirm('Обновить прайс лист?'))
             contract_id = rObj.price;
         if (contract_id)
-            contractConstructor.updateContractPrices(contract_id, getCosts());
+            contractConstructor.updateContractPrices(contract_id, getCosts(callback));
         return !!contract_id;
     }
-
-    function updateContract(aCallback) {
+    
+    function updateContract(callback) {
         var contract_id;
         if (rObj.contract) {
             contract_id = rObj.contract;
         }
         if (contract_id)
-            contractConstructor.updateContractPrices(contract_id, getCosts(), aCallback);
+            contractConstructor.updateContractPrices(contract_id, getCosts(), callback);
         return !!contract_id;
+    }
+    
+    function checkForNextStep() {
+        var ok = true;
+        rObj.priceData.forEach(function(pData) {
+            if (!pData.cost)
+                ok = false;
+        });
+        self.controller.finishBtn = self.controller.nextBtn = ok;
+        return ok;
     }
     
     form.btnDoublePrice.onActionPerformed = function (event) {
@@ -111,9 +133,20 @@ function TreatCostsView() {
     form.btnSaveToPrice.onActionPerformed = function(event) {
         if (!updatePrice())
             alert('Прайс-лист не выбран!');
+        else {
+            if (!rObj.contract)
+                checkForNextStep();
+        }
     };
     form.btnSaveToContract.onActionPerformed = function(event) {
         if (!updateContract())
             alert('Договор не выбран!');
+        else
+            checkForNextStep();
+    };
+    
+    self.doFinish = function(callback) {
+        var treatCreator = new P.ServerModule('TreatCreator');
+        treatCreator.applyTreatment(rObj, callback);
     };
 }

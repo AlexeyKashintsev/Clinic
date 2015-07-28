@@ -69,7 +69,7 @@ function Wizard(anActionForms, anInitData) {
     };
     
     self.finish = function() {
-        actForm.doFinish();
+        actForm.doFinish(form.close);
     };
     
     function initFormByIndex(aData) {

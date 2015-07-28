@@ -2,9 +2,8 @@
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ModelGrid cursor="0" data="qUslInTreat" deletable="false" editable="false" insertable="false" name="mgUsl" parent="view" prefHeight="270px" prefWidth="400px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
-    <ServiceGridColumn name="column"/>
-    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="365px">
-      <ModelCombo displayField="usl_name" displayList="qUslugaById" list="false" nullable="false"/>
+    <ModelGridColumn field="t_usluga" name="colUslName" title="Услуга" width="387px">
+      <ModelCombo displayField="usl_name" displayList="qUslById" list="false" nullable="false"/>
     </ModelGridColumn>
   </ModelGrid>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
