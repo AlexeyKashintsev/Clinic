@@ -11,7 +11,7 @@ function PatientsForm() {
             , form = P.loadForm(this.constructor.name, model);
     
     var fmPatient = new PatientForm();
-    var fmAppointment, fmDataLoader;
+    var treatWizard, fmDataLoader;
     var fmTreatmentDetail = new TreatmentDetailForm();
     
     model.requery(function(){
@@ -90,14 +90,13 @@ function PatientsForm() {
     
     form.btnAddTreat.onActionPerformed = function(event) {
         if (form.mgPatients.selected.length > 0)
-            if (!fmAppointment) {
-//                P.require(['AppointmentForm'], function() {
-                    fmAppointment = new AppointmentForm();
+            if (!treatWizard) {
+//                P.require(['TreatWizard'], function() {
+                    treatWizard = new TreatWizard();
                     form.btnAddTreat.onActionPerformed();
 //                });
             } else {
-                fmAppointment.setPatients(form.mgPatients.selected);
-                fmAppointment.showModal();
+                treatWizard.showWizard({patients: form.mgPatients.selected});
             }
         else
             alert('Необходимо выбрать хотя бы одного пациента!');

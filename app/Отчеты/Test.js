@@ -16,7 +16,8 @@ function OwnersView() {
 
     form.btnReport.onActionPerformed = function (event) {
         lp.start(this, function(){
-            var srvModule = new P.ServerModule("OwnersReport");
+            var srvModule = new P.ServerModule("PassportHealth");
+            srvModule.setPacient("142808473476141");
             srvModule.execute(function(aReport){
                 aReport.show();
                 lp.stop();

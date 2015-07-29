@@ -22,7 +22,8 @@ function UsiLimAgeTypeForm() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if(confirm("Удалить?")) 
-            model.qUsiLimAgeType.remove(model.qUsiLimAgeType.cursorPos);
+            model.qUsiLimAgeType.splice(model.qUsiLimAgeType.indexOf(form.modelGrid.selected[0]), 1);
+           // model.qUsiLimAgeType.remove(model.qUsiLimAgeType.cursorPos);
     };
     form.btnReq.onActionPerformed = function(event) {
         if (model.modified && confirm("Сохранить изменения?")) 

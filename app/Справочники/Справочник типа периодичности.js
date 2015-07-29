@@ -22,7 +22,8 @@ function UslPeriodicTypeForm() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if (confirm("Удалить?"))
-        model.qUslPeriodicType.remove(model.qUslPeriodicType.cursorPos);
+            model.qUslPeriodicType.splice(model.qUslPeriodicType.indexOf(form.modelGrid.selected[0]), 1);
+        //model.qUslPeriodicType.remove(model.qUslPeriodicType.cursorPos);
     };
     form.btnReq.onActionPerformed = function(event) {
         if(model.modified && confirm("Сохранить изменения?")) 

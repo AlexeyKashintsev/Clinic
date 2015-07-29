@@ -10,7 +10,7 @@
     <AnchorsPaneConstraints bottom="52px" left="0px" right="1px" top="0px"/>
   </TabbedPane>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlCommon" parent="tabbedPane" prefHeight="397px" prefWidth="564px">
-    <TabbedPaneConstraints tabTitle="Основное"/>
+    <TabbedPaneConstraints tabTitle="Основное" tabToolTip=""/>
   </AnchorsPane>
   <BorderPane background="#ffffff" cursor="0" name="pnlAddress" parent="pnlCommon" prefHeight="100px" prefWidth="564px">
     <AnchorsPaneConstraints height="100px" left="0px" top="150px" width="564px"/>
@@ -88,7 +88,7 @@
     <AnchorsPaneConstraints height="20px" left="240px" top="10px" width="70px"/>
   </Label>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlWorkplace" parent="tabbedPane" prefHeight="397px" prefWidth="564px" visible="false">
-    <TabbedPaneConstraints tabTitle="Работа и вредность"/>
+    <TabbedPaneConstraints tabTitle="Работа и вредность" tabToolTip=""/>
   </AnchorsPane>
   <SplitPane cursor="0" dividerLocation="150" foreground="#000000" leftComponent="panel" name="splitPane" orientation="0" parent="pnlWorkplace" prefHeight="397px" prefWidth="564px" rightComponent="panel1">
     <font family="Monospaced" size="11" style="0"/>
@@ -97,13 +97,13 @@
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="149px" prefWidth="562px"/>
   <ModelGrid cursor="0" data="qWorkPlaceByPatient" name="mgWorkPlace" parent="panel" prefHeight="99px" prefWidth="562px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="50px"/>
-    <ModelGridColumn field="company" name="colCompany" title="Компания" width="259px">
+    <ModelGridColumn field="companies" name="colCompany" title="Компания" width="241px">
       <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="259px">
+    <ModelGridColumn field="job" name="colJobTitle" title="Должность" width="242px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
-    <ModelGridColumn field="active" maxWidth="25px" minWidth="25px" name="colActive" preferredWidth="25px" title="Текущее" width="25px">
+    <ModelGridColumn field="active" maxWidth="100px" minWidth="25px" name="colActive" preferredWidth="60px" title="Текущее" width="60px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
@@ -127,7 +127,7 @@
     <AnchorsPaneConstraints height="30px" right="4px" top="36px" width="30px"/>
   </Button>
   <AnchorsPane background="#ffffff" cursor="0" name="pnlTreats" parent="tabbedPane" prefHeight="397px" prefWidth="564px" visible="false">
-    <TabbedPaneConstraints tabTitle="Обращения"/>
+    <TabbedPaneConstraints tabTitle="Обращения" tabToolTip=""/>
   </AnchorsPane>
   <ToolBar cursor="0" name="toolBar" parent="pnlTreats" prefHeight="33px" prefWidth="564px">
     <AnchorsPaneConstraints height="33px" left="0px" right="0px" top="0px"/>
@@ -147,6 +147,9 @@
     </ModelGridColumn>
   </ModelGrid>
   <BorderPane background="#ffffff" cursor="0" name="pnlDiagnoses" parent="tabbedPane" prefHeight="397px" prefWidth="564px" visible="false">
-    <TabbedPaneConstraints tabTitle="Диагнозы"/>
+    <TabbedPaneConstraints tabTitle="Диагнозы" tabToolTip=""/>
   </BorderPane>
+  <Button cursor="0" name="btnReport" parent="view" prefHeight="30px" prefWidth="130px" text="Печать карты">
+    <AnchorsPaneConstraints bottom="10px" height="30px" left="10px" width="130px"/>
+  </Button>
 </layout>

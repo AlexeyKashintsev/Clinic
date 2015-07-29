@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="360px" prefWidth="400px"/>
+  <ModelGrid cursor="0" name="mgRoutes" parent="view" prefHeight="320px" prefWidth="400px">
+    <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn name="colName" preferredWidth="250px" title="Пациент/Услуга" width="263px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colSelected" preferredWidth="25px" title="Выбрана" width="38px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colRoute" preferredWidth="25px" title="Назначена" width="39px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn name="colClinic" preferredWidth="25px" title="В клинике" width="38px">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Button cursor="0" name="btnOk" parent="view" prefHeight="20px" prefWidth="70px" text="Ок">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="100px" width="70px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="20px" prefWidth="70px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="10px" width="70px"/>
+  </Button>
+</layout>

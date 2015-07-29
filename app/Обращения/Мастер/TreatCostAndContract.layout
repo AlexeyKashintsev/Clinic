@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="334px"/>
+  <ModelCheckBox cursor="0" name="cbNoContract" nullable="false" parent="view" prefHeight="20px" prefWidth="310px" text="Без договора">
+    <AnchorsPaneConstraints height="20px" left="10px" top="50px" width="310px"/>
+  </ModelCheckBox>
+  <Label cursor="0" name="label2" parent="view" prefHeight="20px" prefWidth="90px" text="Компания">
+    <AnchorsPaneConstraints height="20px" left="10px" top="80px" width="90px"/>
+  </Label>
+  <Label cursor="0" name="label4" parent="view" prefHeight="20px" prefWidth="90px" text="Договор">
+    <AnchorsPaneConstraints height="20px" left="10px" top="110px" width="90px"/>
+  </Label>
+  <ModelCombo cursor="0" data="qContracts" displayField="contr_name" displayList="qContracts" focusable="false" name="mcContract" parent="view" prefHeight="19px" prefWidth="120px">
+    <font family="Monospaced" size="12" style="0"/>
+    <AnchorsPaneConstraints height="19px" left="110px" top="110px" width="120px"/>
+  </ModelCombo>
+  <ModelCombo cursor="0" displayField="company_name" displayList="qAllFirms" name="mcCompany" parent="view" prefHeight="20px" prefWidth="210px">
+    <AnchorsPaneConstraints height="20px" left="110px" top="80px" width="210px"/>
+  </ModelCombo>
+  <Button cursor="0" name="btnCreateContract" parent="view" prefHeight="20px" prefWidth="80px" text="Новый">
+    <AnchorsPaneConstraints height="20px" right="14px" top="110px" width="80px"/>
+  </Button>
+  <Label cursor="0" name="label" parent="view" prefHeight="20px" prefWidth="130px" text="Прайс-лист">
+    <AnchorsPaneConstraints height="20px" left="10px" top="14px" width="130px"/>
+  </Label>
+  <ModelCheckBox cursor="0" name="cbAllRoute" nullable="false" parent="view" prefHeight="19px" prefWidth="310px" text="Цена по назначенным">
+    <AnchorsPaneConstraints height="19px" left="10px" top="140px" width="310px"/>
+  </ModelCheckBox>
+  <ModelCheckBox cursor="0" name="cbIgnoreMissedPrices" nullable="false" parent="view" prefHeight="20px" prefWidth="310px" text="Игнорировать отсутствующие цены">
+    <AnchorsPaneConstraints height="20px" left="10px" top="160px" width="310px"/>
+  </ModelCheckBox>
+  <ModelCombo cursor="0" displayField="contr_name" displayList="qPriceLists" name="mcPriceSource" parent="view" prefHeight="28px" prefWidth="220px">
+    <AnchorsPaneConstraints height="28px" left="100px" right="14px" top="10px"/>
+  </ModelCombo>
+</layout>

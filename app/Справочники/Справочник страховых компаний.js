@@ -24,7 +24,8 @@ function BuhIinshuranceCompanyForm() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if (confirm("Удалить?"))
-        model.qBuh_inshurance_company.remove(model.qBuh_inshurance_company.cursorPos);
+            model.qBuh_inshurance_company.splice(model.qBuh_inshurance_company.indexOf(form.modelGrid.selected[0]), 1);
+        //model.qBuh_inshurance_company.remove(model.qBuh_inshurance_company.cursorPos);
     };
     form.btnReq.onActionPerformed = function(event) {
         if(model.modified && confirm("Сохранить изменения?")) 

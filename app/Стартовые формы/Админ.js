@@ -12,7 +12,6 @@ function MainView() {
     
     DESKTOP = form.formDesktop;
     
-    P.require(["Дополнительно/RequeryAnimate.js"]);
     
     
     

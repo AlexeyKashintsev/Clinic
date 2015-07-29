@@ -224,7 +224,7 @@ function AppointmentForm() {
     }
 
     function calculate() {
-         lp.start(form.button, function(){
+         lp.start(form.button, function() {
             var uslugi = [];
             naznacheniya = [];
             model.qUslInTreat.forEach(function (usl) {
@@ -267,9 +267,44 @@ function AppointmentForm() {
                     });
         });
     }
-
+    
+    function prepareData() {
+        var res = {};
+        res.patients = [];
+        fullData.patients.forEach(function(patient) {
+            var pcnt = {
+                man_patient_id: patient.man_patient_id,
+                route: {}
+            };
+            for (var j in patient.route) {
+                pcnt.route[j] = {};
+                if (patient.route[j].hazard) {
+                    pcnt.route[j].hazards = [];
+                    patient.route[j].hazards.forEach(function(hazard) {
+                        pcnt.route[j].hazards.push({
+                            hazards_id: hazard.hazards_id,
+                            man_hazards_id: hazard.man_hazards_id,
+                            workplace_id: hazard.workplace_id
+                        });
+                    });
+                }
+                if (patient.route[j].usl_content) {
+                    pcnt.route[j].usl_contents = [];
+                    patient.route[j].usl_contents.forEach(function(usl_content) {
+                        pcnt.route[j].usl_contents.push({
+                            usluga_id: usl_content.usluga_id
+                        });
+                    });
+                }
+            };
+            res.patients.push(pcnt);
+        });
+        
+        return res;
+    }
+    
     function applyTreatment() {
-        treatCreator.applyTreatment(fullData, curTreat
+        treatCreator.applyTreatment(prepareData(), curTreat
                 , function () {
                     var res = [];
                     model.qUslInTreat.forEach(function (usl) {
@@ -395,7 +430,7 @@ function AppointmentForm() {
             });
         });
     }
-    testData();
+//    testData();
 
     form.btnCreateContract.onActionPerformed = function (event) {
         if (form.mcCompany.value) {
@@ -448,16 +483,17 @@ function AppointmentForm() {
     };
     form.btnDel.onActionPerformed = function(event) {
         if(model.qUslInTreat.cursorPos && confirm("Удалить выбранную услугу?")){
-            model.qUslInTreat.remove(model.qUslInTreat.cursorPos);
+            model.qUslInTreat.splice(model.qUslInTreat.indexOf(form.mgUsl.selected[0]), 1);
+          //  model.qUslInTreat.remove(model.qUslInTreat.cursorPos);
 //            model.save(function(){
 //                model.qUslInTreat.requery();
 //            });
         }
     };
-    form.btnSave.onActionPerformed = function(event) {
-        model.save();
-    };
-    form.btnReq.onActionPerformed = function(event) {
-        model.requery();
-    };
+//    form.btnSave.onActionPerformed = function(event) {
+//        model.save();
+//    };
+//    form.btnReq.onActionPerformed = function(event) {
+//        model.requery();
+//    };
 }

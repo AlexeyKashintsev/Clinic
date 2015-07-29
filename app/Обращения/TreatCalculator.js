@@ -1,5 +1,5 @@
 /**
- * 
+ * @public
  * @author Alexey
  * @constructor
  */ 
@@ -27,7 +27,7 @@ function TreatCalculator() {
             model.qUslugaById.cursor.selected = true;
             model.qUslugaById.cursor.route = (model.qUslugaContents.length === 0);
             uslRoutes[anUslugaId].route.push(model.qUslugaById.cursor);
-            
+                    
             model.qUslugaContents.forEach(function(routeUsl) {
                 routeUsl.selected = false;
                 routeUsl.content = true;
@@ -94,6 +94,7 @@ function TreatCalculator() {
                          + (!aPatient.date_oft_birth ? 'не указана дата рождения' : '')
                 }
             });
+            //TODO Send message to user
             P.Logger.warning('Невозможно проверить примененимость услуги к пациенту ' + aPatient.surname + ' ' + aPatient.firstname
                     + (!aPatient.sex ? ', не указан пол пациента'  : '')
                     + (!aPatient.date_oft_birth ? ', не указана дата рождения' : ''));
@@ -168,9 +169,8 @@ function TreatCalculator() {
                         if (routeUsl.content)
                             patient.route[routeUslId].usl_contents.push(uslId);
                     }
-                    if (routeUsl.selected)
-                        patient.route[routeUslId].selected = true;
-                        
+                    patient.route[routeUslId].selected = routeUsl.selected;
+                    patient.route[routeUslId].clinic_work = routeUsl.clinic_work;
                     }
                 }
             });
