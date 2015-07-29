@@ -5,11 +5,20 @@
 // this === global
 (function () {
     function ready() {
-        P.require(['StartForm'], function(){
+        P.cacheBust = true;
+        P.require('StartForm', function(){
             var m = new StartForm();
             m.show();
         }, function(e){
             P.Logger.severe(e);
+            if(document){
+                var messageParagraph = document.createElement('p');
+                document.body.appendChild(messageParagraph);
+                messageParagraph.innerHTML = 'An error occured while require(\'StartForm\'). Error: ' + e;
+                messageParagraph.style.margin = '10px';
+                messageParagraph.style.fontFamily = 'Arial';
+                messageParagraph.style.fontSize = '14pt';
+            }
         });
     }
     if(!this.P) {

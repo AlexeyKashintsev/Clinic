@@ -1,6 +1,6 @@
-/web
-/web/pwc          
-/WEB-INF
-/META-INF
+'/web
+'/web/pwc          
+'/WEB-INF
+'/META-INF
 start.js
 private.properties
