@@ -34,7 +34,7 @@ function TreatCreator() {
             treat_status: 100,
             group_treat: aTreatGroup,
             contract_id: aContractId ? aContractId : null,
-            contract_data: !aPatientId && aContractId
+            contract_data: !!(!aPatientId && aContractId)
         });
         P.Logger.info('Новое назначение id ' + model.qTreatById.cursor.obr_treatment_id);
 //        model.save();
@@ -42,16 +42,17 @@ function TreatCreator() {
     };
     
     function addUslugi4Contract(anUslugi, aTreatment) {
-        P.Logger.info('Добавление услуг в договор');
-        for (var j in anUslugi) {
-            var usluga = anUslugi[j];
+        P.Logger.info('Добавление услуг в договор ' + aTreatment);
+        for (var usl_id in anUslugi) {
+            var usluga = anUslugi[usl_id];
             if (usluga.clinic_work && usluga.do_apply || usluga.selected)
             model.qUslInTreat.push({
                 treat_id: aTreatment,
-                usluga_id: usluga,
+                usluga_id: usl_id,
                 selected: true
             });
         };
+//        model.save();
     }
     
     function addRoute(aRoute, aTreatment) {
@@ -80,6 +81,7 @@ function TreatCreator() {
                 });
             }
         }
+//        model.save();
     }
     
     self.applyTreatment = function(aRouteData, callback, failure) {

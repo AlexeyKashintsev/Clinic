@@ -11,7 +11,7 @@ function StartForm() {
         var um = new P.ServerModule("UserModule");
         var formName = um.getStartForm(um.getUserRole());
         if(formName){
-            P.require([formName], function(){
+            P.require([formName, "RequeryAnimate"], function(){
                 var f = new (eval(formName));
                 f.show();
             }, function(er) {

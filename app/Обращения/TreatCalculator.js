@@ -94,6 +94,7 @@ function TreatCalculator() {
                          + (!aPatient.date_oft_birth ? 'не указана дата рождения' : '')
                 }
             });
+            //TODO Send message to user
             P.Logger.warning('Невозможно проверить примененимость услуги к пациенту ' + aPatient.surname + ' ' + aPatient.firstname
                     + (!aPatient.sex ? ', не указан пол пациента'  : '')
                     + (!aPatient.date_oft_birth ? ', не указана дата рождения' : ''));
