@@ -6,7 +6,7 @@ function Uslugi4SelectView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-    
+    var lp = new LongProcessor();
     var uslugaContent = new UslugaContent();
     var readonly = false;
     form.title = "Выбор услуги";
@@ -124,6 +124,21 @@ function Uslugi4SelectView() {
             };
         } else {
             alert('Невозможно удалить данный тип услуг!');
+        }
+    };
+    
+    form.mfSearch.onValueChange = function(event) {
+        console.log(model.qUslugiByType.params.usl_type);
+        if(model.qUslugiByType.params.usl_type){
+            model.qUslugiByType.params.usl_type=null;
+            model.requery(function(){search()});
+        }else
+            search();
+        function search(){    
+            lp.start(form.lbLoading, function(){
+                model.qUslugiByType.params.search = form.mfSearch.text;
+                model.qUslugiByType.requery(function(){lp.stop();});
+            });
         }
     };
 
