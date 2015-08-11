@@ -30,10 +30,10 @@
     </ModelGridColumn>
   </ModelGrid>
   <ModelFormattedField cursor="0" data="qUslugiByType" format="" name="mfSearch" parent="panel" prefHeight="20px" prefWidth="200px">
-    <AnchorsPaneConstraints height="20px" left="340px" top="5px" width="200px"/>
+    <AnchorsPaneConstraints height="20px" right="20px" top="5px" width="200px"/>
   </ModelFormattedField>
-  <Label cursor="0" name="label" parent="panel" prefHeight="30px" prefWidth="50px" text="Поиск">
-    <AnchorsPaneConstraints height="30px" left="290px" top="0px" width="50px"/>
+  <Label cursor="0" name="label" parent="panel" prefHeight="30px" prefWidth="60px" text="Фильтр">
+    <AnchorsPaneConstraints height="30px" right="220px" top="0px" width="60px"/>
   </Label>
   <Label cursor="0" name="lbLoading" parent="panel" prefHeight="21px" prefWidth="21px" text="">
     <AnchorsPaneConstraints height="21px" right="0px" top="5px" width="21px"/>

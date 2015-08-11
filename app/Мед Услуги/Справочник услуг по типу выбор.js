@@ -9,6 +9,8 @@ function Uslugi4SelectView() {
     var lp = new LongProcessor();
     var uslugaContent = new UslugaContent();
     var readonly = false;
+    var firstOpen = true;
+    
     form.title = "Выбор услуги";
     
     self.show = function (aDesktop) {
@@ -27,14 +29,17 @@ function Uslugi4SelectView() {
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
         try {
-            RequeryAnimate(form.mgUsl, model.qUslugiByType);
+            if(!firstOpen)
+                RequeryAnimate(form.mgUsl, model.qUslugiByType);
         } catch (e) {
             model.qUslugiByType.requery();
         }
+        firstOpen = false;
     };
     
     model.requery(function () {
-        // TODO : place your code here
+        var p = model.qUslTypes.findByKey(0);
+        form.modelGrid.makeVisible(p, true);
     });
     
     form.btnReq.onActionPerformed = function(event) {
@@ -128,18 +133,10 @@ function Uslugi4SelectView() {
     };
     
     form.mfSearch.onValueChange = function(event) {
-        console.log(model.qUslugiByType.params.usl_type);
-        if(model.qUslugiByType.params.usl_type){
-            model.qUslugiByType.params.usl_type=null;
-            model.requery(function(){search()});
-        }else
-            search();
-        function search(){    
-            lp.start(form.lbLoading, function(){
-                model.qUslugiByType.params.search = form.mfSearch.text;
-                model.qUslugiByType.requery(function(){lp.stop();});
-            });
-        }
+        lp.start(form.lbLoading, function(){
+            model.qUslugiByType.params.search = form.mfSearch.text;
+            model.qUslugiByType.params.usl_type = null;
+            model.qUslugiByType.requery(function(){lp.stop();});
+        });
     };
-
 }

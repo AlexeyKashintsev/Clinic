@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <parameters>
-    <parameter description="" name="usl_type" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="2" typeName="NUMERIC"/>
-    <parameter description="" name="search" nullable="true" parameterMode="1" precision="0" scale="0" selectionForm="null" signed="true" size="0" type="12" typeName="VARCHAR"/>
+    <parameter description="" name="usl_type" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
+    <parameter description="" name="search" nullable="true" parameterMode="1" selectionForm="null" type="String"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
-  <entity Title="" entityHeight="200" entityIconified="false" entityId="142281356435787" entityLocationX="186" entityLocationY="4" entityWidth="150" tableAlias="t1" tableName="usl_uslugi" tableSchemaName=""/>
-  <relation leftEntityFieldName="usl_name" leftEntityId="142281356435787" rightEntityId="-1" rightEntityParameterName="search"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="142281356435787" entityLocationX="248" entityLocationY="12" entityWidth="150" tableAlias="t1" tableName="usl_uslugi" tableSchemaName=""/>
   <relation leftEntityFieldName="usl_type" leftEntityId="142281356435787" rightEntityId="-1" rightEntityParameterName="usl_type"/>
+  <relation leftEntityFieldName="usl_name" leftEntityId="142281356435787" rightEntityId="-1" rightEntityParameterName="search"/>
 </datamodel>
