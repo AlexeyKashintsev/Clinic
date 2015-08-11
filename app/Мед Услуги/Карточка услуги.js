@@ -36,10 +36,12 @@ function UslugaContent() {
         model.qUslParamsName.params.p_usl_uslugi_id = aUslugaID;
         model.qUslugaById.params.usluga_id = aUslugaID;
         model.qUslugaContents.params.usluga_id = aUslugaID;
+        model.qHazardsInUsl.params.usl_id = aUslugaID * 1;
         model.qUslParamsName.requery();
         model.qUslugaById.requery();
         model.qUslugaContents.requery();
         model.qUslTypes.requery();
+        model.qHazardsInUsl.requery();
         
         if (!aUslugaID) {
             model.qUslugaById.push({

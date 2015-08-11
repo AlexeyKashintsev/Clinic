@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="usl_id" nullable="true" parameterMode="1" selectionForm="null" type="NUMERIC"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143920024601237" entityLocationX="398" entityLocationY="20" entityWidth="150" tableAlias="t" tableName="usl_routes" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143920019517795" entityLocationX="201" entityLocationY="21" entityWidth="150" tableAlias="t1" tableName="hazards" tableSchemaName=""/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="143920031152442" entityLocationX="582" entityLocationY="17" entityWidth="150" tableAlias="t2" tableName="usl_uslugi" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="usl_id" rightEntityFieldName="usl_uslugi_id" rightEntityId="143920031152442"/>
+  <relation leftEntityFieldName="route_usl" leftEntityId="143920024601237" rightEntityFieldName="usl_uslugi_id" rightEntityId="143920031152442"/>
+  <relation leftEntityFieldName="hazards_id" leftEntityId="143920019517795" rightEntityFieldName="hazard" rightEntityId="143920024601237"/>
+</datamodel>

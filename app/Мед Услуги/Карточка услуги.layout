@@ -16,45 +16,67 @@
   <TabbedPane cursor="0" name="tabbedPane" parent="view" prefHeight="220px" prefWidth="617px" selectedComponent="panel">
     <AnchorsPaneConstraints bottom="2px" left="0px" right="-2px" top="150px"/>
   </TabbedPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="182px" prefWidth="609px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="tabbedPane" prefHeight="192px" prefWidth="612px">
     <TabbedPaneConstraints tabTitle="Маршрут" tabToolTip=""/>
   </AnchorsPane>
-  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="607px">
+  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="610px">
     <AnchorsPaneConstraints height="30px" left="0px" right="2px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="panel" prefHeight="150px" prefWidth="607px">
+  <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="panel" prefHeight="160px" prefWidth="610px">
     <AnchorsPaneConstraints bottom="2px" left="0px" right="2px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="191px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="190px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="Пол" width="191px">
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="190px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="190px">
+    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="189px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="tabbedPane" prefHeight="182px" prefWidth="609px" visible="false">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="tabbedPane" prefHeight="192px" prefWidth="612px" visible="false">
     <TabbedPaneConstraints tabTitle="Параметры" tabToolTip=""/>
   </AnchorsPane>
-  <ToolBar cursor="0" name="toolBar1" parent="panel2" prefHeight="30px" prefWidth="607px">
+  <ToolBar cursor="0" name="toolBar1" parent="panel2" prefHeight="30px" prefWidth="610px">
     <AnchorsPaneConstraints height="30px" left="0px" right="2px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
-  <ModelGrid cursor="0" data="qUslParamsName" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="panel2" prefHeight="150px" prefWidth="607px">
+  <ModelGrid cursor="0" data="qUslParamsName" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="panel2" prefHeight="160px" prefWidth="610px">
     <AnchorsPaneConstraints bottom="2px" left="0px" right="2px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="param_name" name="colParam_name" title="Имя параметра" width="572px">
+    <ModelGridColumn field="param_name" name="colParam_name" title="Имя параметра" width="569px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
+  </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="tabbedPane" prefHeight="192px" prefWidth="612px" visible="false">
+    <TabbedPaneConstraints tabTitle="Вредности"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" data="qHazardsInUsl" name="modelGrid2" parent="panel3" prefHeight="190px" prefWidth="612px">
+    <AnchorsPaneConstraints height="190px" left="0px" right="0px" top="0px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Название" width="190px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="haz_group" name="colHaz_group" title="Группа" width="191px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+    <ModelGridColumn field="haz_code" name="colHaz_code" title="Код вредности" width="190px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel4" parent="tabbedPane" prefHeight="192px" prefWidth="612px" visible="false">
+    <TabbedPaneConstraints tabTitle="Услуги"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" name="modelGrid3" parent="panel4" prefHeight="190px" prefWidth="610px">
+    <AnchorsPaneConstraints height="190px" left="0px" top="0px" width="610px"/>
   </ModelGrid>
   <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.use_hazards" name="mcbUseHazards" nullable="false" parent="view" prefHeight="20px" prefWidth="340px" text="Использовать назначения по вредностям">
     <AnchorsPaneConstraints height="20px" left="260px" right="15px" top="102px"/>
