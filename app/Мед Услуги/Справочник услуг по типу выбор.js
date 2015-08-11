@@ -6,9 +6,11 @@ function Uslugi4SelectView() {
     var self = this
             , model = P.loadModel(this.constructor.name)
             , form = P.loadForm(this.constructor.name, model);
-    
+    var lp = new LongProcessor();
     var uslugaContent = new UslugaContent();
     var readonly = false;
+    var firstOpen = true;
+    
     form.title = "Выбор услуги";
     
     self.show = function (aDesktop) {
@@ -27,14 +29,17 @@ function Uslugi4SelectView() {
     model.qUslTypes.onScrolled = function(){
         model.qUslugiByType.params.usl_type = model.qUslTypes.cursor.usl_types_id;
         try {
-            RequeryAnimate(form.mgUsl, model.qUslugiByType);
+            if(!firstOpen)
+                RequeryAnimate(form.mgUsl, model.qUslugiByType);
         } catch (e) {
             model.qUslugiByType.requery();
         }
+        firstOpen = false;
     };
     
     model.requery(function () {
-        // TODO : place your code here
+        var p = model.qUslTypes.findByKey(0);
+        form.modelGrid.makeVisible(p, true);
     });
     
     form.btnReq.onActionPerformed = function(event) {
@@ -126,5 +131,12 @@ function Uslugi4SelectView() {
             alert('Невозможно удалить данный тип услуг!');
         }
     };
-
+    
+    form.mfSearch.onValueChange = function(event) {
+        lp.start(form.lbLoading, function(){
+            model.qUslugiByType.params.search = form.mfSearch.text;
+            model.qUslugiByType.params.usl_type = null;
+            model.qUslugiByType.requery(function(){lp.stop();});
+        });
+    };
 }

@@ -101,7 +101,7 @@ function SelectPriceListView() {
         }
     };
     
-    form.btnSelect.onActionPerformed = function(event) {
+    form.btnSelect1.onActionPerformed = function(event) {
         form.close({
             company_name : model.qAllFirms.cursor.company_name,
             contract_name: model.qContracts.cursor.contr_name,

@@ -111,8 +111,4 @@ function PriceListForm() {
             form.button.onActionPerformed();
         }
     };
-    
-    form.btnSelect.onActionPerformed = function(event) {
-        form.close(model.qPricesByContractByType.cursor);
-    };
 }
