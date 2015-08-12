@@ -15,6 +15,7 @@ function TreatStat() {
     var detailedForm = new TreatDetailedView();
     var rObj;
     function prepareStatData(aStatData) {
+        uslStat = [];
         for (var j in aStatData) {
             var usl = self.controller.qUslById.findByKey(j);
             aStatData[j].usl_name = usl.usl_name;
