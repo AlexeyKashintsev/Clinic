@@ -91,12 +91,13 @@ function PatientsForm() {
     form.btnAddTreat.onActionPerformed = function(event) {
         if (form.mgPatients.selected.length > 0)
             if (!treatWizard) {
-//                P.require(['TreatWizard'], function() {
+                P.require(['TreatWizard'], function() {
                     treatWizard = new TreatWizard();
                     form.btnAddTreat.onActionPerformed();
-//                });
+                });
             } else {
-                treatWizard.showWizard({patients: form.mgPatients.selected});
+                treatWizard.showWizard(form.mgPatients.selected);
+//                treatWizard.showModal();
             }
         else
             alert('Необходимо выбрать хотя бы одного пациента!');
