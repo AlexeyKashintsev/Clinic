@@ -4,11 +4,8 @@
  * 
  * @author alexey
  * {global P}
- * @param {type} anActionForms
- * @param {type} anInitData
- * @param {type} aWizardProperties
  */
-function Wizard(anActionForms, anInitData, aWizardProperties) {
+function Wizard(anActionForms, anInitData) {
     var self = this
             , form = P.loadForm(this.constructor.name);
     
@@ -23,8 +20,6 @@ function Wizard(anActionForms, anInitData, aWizardProperties) {
     var actionForms = anActionForms ? anActionForms : ['WizTest', 'WizTest_1'],
             activeForms = [], curFormIndex = 0, actForm;
     var lp = new LongProcessor([/*form.btnPrev, form.btnNext, form.btnFinish*/]);
-    if (aWizardProperties.title)
-        form.title = aWizardProperties.title;
     
     Object.defineProperty(self, 'nextBtn', {
         get: function() {

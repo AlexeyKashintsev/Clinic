@@ -11,21 +11,13 @@ function TreatCostAndContract() {
             , form = P.loadForm(this.constructor.name, model);
     
     model.qAllFirms.requery();
-    model.qContracts.requery(check);
-    model.qPriceLists.requery(check);
-    function check() {
-        form.mcPriceSource.value = model.qPriceLists.findById(rObj.price);
-        form.mcContract.value = model.qContracts.findById(rObj.contract);
-    }
+    model.qContracts.requery();
+    model.qPriceLists.requery();
     
     var treatCostCalculator = new P.ServerModule('TreatCostCalculator');
     var rObj = {};
     self.setData = function(aRObj) {
         rObj = aRObj;
-        form.cbAllRoute.value = rObj.allRoute;
-        form.cbNoContract.value = rObj.noContract;
-        form.cbIgnoreMissedPrices.value = rObj.ignoreMissedPrices;
-        check();
     };
     
     Object.defineProperty(self, 'nextData', {
@@ -47,8 +39,8 @@ function TreatCostAndContract() {
                     (form.mcContract.value ? form.mcContract.value.buh_contracts_id : null);
         rObj.price = form.mcPriceSource.value ? form.mcPriceSource.value.buh_contracts_id : false;
         rObj.contract = form.mcContract.value ? form.mcContract.value.buh_contracts_id : false;
-//        rObj.allRoute = form.cbAllRoute.value;
-//        rObj.ignoreMissedPrices = form.cbIgnoreMissedPrices.value;    
+        rObj.allRoute = form.cbAllRoute.value;
+        rObj.ignoreMissedPrices = form.cbIgnoreMissedPrices.value;    
 
         var sRObj = {
             patients:   rObj.patients,

@@ -13,50 +13,21 @@ function TreatUslSelector() {
     model.qUslById.requery();
     
     var rObj = {}, patientsLoaded;
-    self.setData = function(aRObj) {
+    self.setData = function(aPatients) {
+        patientsLoaded = true;
         self.controller.nextBtn = false;
         self.controller.data = {};
         self.controller.qUslById = model.qUslById;
         
-        if (!aRObj.forEach) {
-            rObj = aRObj;
-            var patients = rObj.patients;
-        } else {
-            rObj = {};
-            rObj.patientsAr = aRObj;
-        }
-        patientsLoaded = true;
-        
-        if (patients && typeof patients[0] === 'object') {
-            rObj.patients = patients;
+        if (typeof aPatients[0] === 'object') {
+            rObj.patients = aPatients;
             rObj.patientsAr = [];
-            patients.forEach(function(patient) {
+            aPatients.forEach(function(patient) {
                 rObj.patientsAr.push(patient.man_patient_id);
             });
+        } else {
+            rObj.patientsAr = aPatients;
         }
-            
-        if (rObj.uslugi) {
-            rObj.uslugi.forEach(function(uslugaId) {
-                model.qUslInTreat.push({
-                        treat_id: 0,
-                        usluga_id: uslugaId
-                    });
-                    self.controller.nextBtn = true;
-            });
-        }
-        
-//        if (!rObj.priceSource)
-//            rObj.priceSource = null;
-        if (!rObj.price)
-            rObj.price = null;
-        if (!rObj.contract)
-            rObj.contract = null;
-        if (!rObj.allRoute)
-            rObj.allRoute = null;
-        if (!rObj.noContract)
-            rObj.noContract = null;
-        if (!rObj.ignoreMissedPrices)
-            rObj.ignoreMissedPrices = null;
     };
     
     var treatCreator = new P.ServerModule('TreatCalculator');

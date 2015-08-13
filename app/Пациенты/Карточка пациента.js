@@ -135,23 +135,14 @@ function PatientForm() {
             //form.ddBuhIinshuranceCompany.redraw();
         });
     };
-    
-    var treatWisard = new TreatWizard();
+
     form.btnFromPrice.onActionPerformed = function(event) {
         if(!selectPriceListView) selectPriceListView = new SelectPriceListView();
         selectPriceListView.showModal(function(aPrice){
             if(aPrice){
-                treatWisard.showWizard({
-                    noContract: true,
-                    price:  aPrice.contract_id,
-                    patientAr: [model.qPatientById.cursor.man_patient_id]
-                });
-//                alert(aPrice.contract_id + " " + aPrice.contr_name);
+                alert(aPrice.contract_id + " " + aPrice.contr_name);
             }
         });
-    };
-    form.btnNewTreat.onActionPerformed = function(event) {
-        treatWisard.showWizard([model.qPatientById.cursor.man_patient_id]);
     };
     //TODO Не понятно почему эта кнопка тут НЕ работает. МАГИЯ!
     var lp = new LongProcessor([form.btnReport]);
