@@ -96,14 +96,16 @@ function PatientsForm() {
                     form.btnAddTreat.onActionPerformed();
                 });
             } else {
-                treatWizard.showWizard(form.mgPatients.selected);
+                treatWizard.showWizard(form.mgPatients.selected, function(res) {
+                    alert(res);
+                });
 //                treatWizard.showModal();
             }
         else
             alert('Необходимо выбрать хотя бы одного пациента!');
                 
     };
-    form.btnAddTreat1.onActionPerformed = function(event) {
+    form.btnExit.onActionPerformed = function(event) {
         if(confirm("Выйти из системы?")){
             P.logout(function(){
                 window.location.reload();

@@ -156,4 +156,16 @@ function PatientForm() {
             });
         });
     };
+    
+    var treatWizard;
+    form.btnNewTreat.onActionPerformed = function(event) {
+        if (!treatWizard) {
+                P.require(['TreatWizard'], function() {
+                    treatWizard = new TreatWizard();
+                    form.btnNewTreat.onActionPerformed();
+                });
+            } else {
+                treatWizard.showWizard([model.qPatientById[0]], model.requery);
+            }
+    };
 }
