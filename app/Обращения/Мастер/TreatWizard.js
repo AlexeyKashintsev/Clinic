@@ -8,10 +8,10 @@
 function TreatWizard() {
     var self = this, model = P.loadModel(this.constructor.name);
     
-    self.showWizard = function (aPatientsArray) {
+    self.showWizard = function (aPatientsArray, aCallback) {
         var wizard = new Wizard(['TreatUslSelector', 'TreatStat', 'TreatCostAndContract'
             , 'TreatCostsView', 'TreatFinish'], aPatientsArray);
-        wizard.showModal();
+        wizard.showModal(aCallback);
     };
     
     self.execute = function() {
