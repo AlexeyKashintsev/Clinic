@@ -41,4 +41,7 @@ function ObrRouteStatusForm() {
     form.button.onActionPerformed = function(event) {
         form.close(model.qRouteStatus.cursor.obr_route_status_id);
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }

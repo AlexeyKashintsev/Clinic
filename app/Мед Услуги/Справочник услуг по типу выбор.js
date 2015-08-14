@@ -10,6 +10,7 @@ function Uslugi4SelectView() {
     var uslugaContent = new UslugaContent();
     var readonly = false;
     var firstOpen = true;
+    var callback = false;
     
     form.title = "Выбор услуги";
     
@@ -18,6 +19,7 @@ function Uslugi4SelectView() {
     };
     
     self.showModal = function(aCallback) {
+        callback = true;
         form.showModal(aCallback);
     };
     
@@ -70,8 +72,12 @@ function Uslugi4SelectView() {
     };
     
     form.mgUsl.onMouseClicked = function(event) {
-        if(event.clickCount == 2)
-            form.button.onActionPerformed();
+        if(event.clickCount == 2){
+            if(callback)
+                form.btnSelect.onActionPerformed(); 
+            else
+                form.button.onActionPerformed();
+        }
     };
 
     

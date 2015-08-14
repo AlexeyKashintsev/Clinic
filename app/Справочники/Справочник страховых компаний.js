@@ -43,4 +43,7 @@ function BuhIinshuranceCompanyForm() {
     form.button.onActionPerformed = function(event) {
         form.close(model.qBuh_inshurance_company.cursor.buh_inshurance_company_id);
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }

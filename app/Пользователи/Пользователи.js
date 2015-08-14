@@ -36,10 +36,6 @@ function UsersView() {
         });
     };
     
-    form.btnSave.onActionPerformed = function(event) {
-        model.save();
-    };
-    
     form.btnReq.onActionPerformed = function(event) {
         model.requery();
     };
@@ -62,5 +58,11 @@ function UsersView() {
                 alert("Пароль успешно изменен!");
             });
         }
+    };
+    form.btnSave1.onActionPerformed = function(event) {
+        model.save();
+    };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
     };
 }

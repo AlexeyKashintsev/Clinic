@@ -41,4 +41,7 @@ function UslPeriodicTypeForm() {
     form.button.onActionPerformed = function(event) {
          form.close(model.qUslPeriodicType.cursor.usl_periodic_type_id);
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }

@@ -101,7 +101,7 @@ function SelectPriceListView() {
         }
     };
     
-    form.btnSelect1.onActionPerformed = function(event) {
+    form.btnSelect.onActionPerformed = function(event) {
         form.close({
             company_name : model.qAllFirms.cursor.company_name,
             contract_name: model.qContracts.cursor.contr_name,
@@ -109,5 +109,8 @@ function SelectPriceListView() {
             contract_id  : model.qContracts.cursor.buh_contracts_id,
             buh_contracts_id  : model.qContracts.cursor.buh_contracts_id
         });
+    };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
     };
 }

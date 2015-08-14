@@ -79,6 +79,7 @@ function UslugaContent() {
 
     form.btnSave.onActionPerformed = function(event) {
         model.save();
+        form.close(true);
     };
     
     form.btnReq.onActionPerformed = function(event) {
@@ -120,9 +121,7 @@ function UslugaContent() {
     form.btnReq1.onActionPerformed = function(event) {
         form.btnReq.onActionPerformed();
     };
-    form.btnSave1.onActionPerformed = function(event) {
-        form.btnSave.onActionPerformed();
-    };
+   
     form.modelGrid1.onMouseClicked = function(event) {
         if(event.clickCount > 1){
             if (!resultsForm)
@@ -132,5 +131,7 @@ function UslugaContent() {
             });
         }
     };
-
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
+    };
 }

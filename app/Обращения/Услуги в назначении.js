@@ -23,4 +23,10 @@ function AppointmentUslugi() {
     form.btnAdd.onActionPerformed = function(event) {
         //TODO Добавление услуги
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
+    form.btnSave.onActionPerformed = function(event) {
+      model.save();
+    };
 }

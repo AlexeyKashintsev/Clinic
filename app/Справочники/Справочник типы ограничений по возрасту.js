@@ -41,4 +41,7 @@ function UsiLimAgeTypeForm() {
     form.button.onActionPerformed = function(event) {
         form.close(model.qUsiLimAgeType.cursor.usl_lim_age_type_id);
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }
