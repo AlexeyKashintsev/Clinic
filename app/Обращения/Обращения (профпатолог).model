@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qObrStatus" Title="" entityHeight="200" entityIconified="false" entityId="143315734170017" entityLocationX="389" entityLocationY="271" entityWidth="150" queryId="qObrStatus" tableName="" tableSchemaName=""/>
+  <entity Name="qManJob" Title="" entityHeight="200" entityIconified="false" entityId="143187143598379" entityLocationX="611" entityLocationY="47" entityWidth="150" queryId="qManJob" tableName="" tableSchemaName=""/>
+  <entity Name="qAllPatientTreatmentsStatuses" Title="" entityHeight="200" entityIconified="false" entityId="144224653386693" entityLocationX="140" entityLocationY="53" entityWidth="150" queryId="qAllPatientTreatmentsStatuses" tableName="" tableSchemaName=""/>
+  <entity Name="qAllFirms" Title="" entityHeight="200" entityIconified="false" entityId="142816396875860" entityLocationX="439" entityLocationY="45" entityWidth="150" queryId="qAllFirms" tableName="" tableSchemaName=""/>
+  <entity Name="qUslugaById" Title="" entityHeight="200" entityIconified="false" entityId="144224722671689" entityLocationX="174" entityLocationY="288" entityWidth="150" queryId="qUslugaById" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="144224653386693" rightEntityFieldName="obr_treatment_id" rightEntityId="144224653386693"/>
+  <referenceRelation collectionPropertyName="j_patient" leftEntityFieldName="job_id" leftEntityId="144224653386693" rightEntityFieldName="man_job_id" rightEntityId="143187143598379" scalarPropertyName="p_job"/>
+  <referenceRelation leftEntityFieldName="patient" leftEntityId="144224653386693" rightEntityFieldName="man_patient_id" rightEntityId="144224653386693"/>
+  <referenceRelation collectionPropertyName="s_treats" leftEntityFieldName="treat_status" leftEntityId="144224653386693" rightEntityFieldName="obr_status_id" rightEntityId="143315734170017" scalarPropertyName="t_status"/>
+  <referenceRelation leftEntityFieldName="man_id" leftEntityId="144224653386693" rightEntityFieldName="man_patient_id" rightEntityId="144224653386693"/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="144224653386693" rightEntityFieldName="obr_treatment_id" rightEntityId="144224653386693"/>
+  <referenceRelation collectionPropertyName="c_patient" leftEntityFieldName="company_id" leftEntityId="144224653386693" rightEntityFieldName="buh_companies_id" rightEntityId="142816396875860" scalarPropertyName="p_company"/>
+  <referenceRelation collectionPropertyName="trt_and_patient" leftEntityFieldName="usluga_id" leftEntityId="144224653386693" rightEntityFieldName="usl_uslugi_id" rightEntityId="144224722671689" scalarPropertyName="usl_usluga"/>
+</datamodel>

@@ -7,28 +7,29 @@
   <MenuBar cursor="0" name="menuBar" parent="view" prefHeight="25px" prefWidth="720px">
     <AnchorsPaneConstraints height="25px" left="0px" right="0px" top="0px"/>
   </MenuBar>
-  <Menu cursor="0" name="mnuUslugi" parent="menuBar" prefHeight="23px" prefWidth="85px" text="Профпатолог"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiTypes" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Справочник типы услуг" visible="false"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiList" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Справочник услуги"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiContents" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Назначения по услугам"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miHazards" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Справочник вредности"/>
-  <Menu cursor="0" name="mnuCompanies" parent="menuBar" prefHeight="23px" prefWidth="75px" text="Бухгалтерия"/>
+  <Menu cursor="0" name="mnuUslugi" parent="menuBar" prefHeight="24px" prefWidth="114px" text="Профпатолог"/>
+  <MenuItem name="miPPMain" parent="mnuUslugi" prefHeight="0px" prefWidth="0px" text="Обращения"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiTypes" parent="mnuUslugi" prefHeight="19px" prefWidth="311px" text="Справочник типы услуг" visible="false"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiList" parent="mnuUslugi" prefHeight="19px" prefWidth="311px" text="Справочник услуги"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslugiContents" parent="mnuUslugi" prefHeight="19px" prefWidth="311px" text="Назначения по услугам"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miHazards" parent="mnuUslugi" prefHeight="19px" prefWidth="311px" text="Справочник вредности"/>
+  <Menu cursor="0" name="mnuCompanies" parent="menuBar" prefHeight="24px" prefWidth="105px" text="Бухгалтерия"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miContragents" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Справочник контрагенты"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="mContracts" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Все договора"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miPriceList" parent="mnuCompanies" prefHeight="0px" prefWidth="0px" text="Прайс лист"/>
-  <Menu cursor="0" name="mnuPacients" parent="menuBar" prefHeight="23px" prefWidth="81px" text="Регистратура"/>
+  <Menu cursor="0" name="mnuPacients" parent="menuBar" prefHeight="24px" prefWidth="112px" text="Регистратура"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miPatients" parent="mnuPacients" prefHeight="0px" prefWidth="0px" text="Пациенты"/>
-  <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="23px" prefWidth="95px" text="Администратор"/>
+  <Menu cursor="0" name="mnuAdmin" parent="menuBar" prefHeight="24px" prefWidth="130px" text="Администратор"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsers" parent="mnuAdmin" prefHeight="0px" prefWidth="0px" text="Пользователи"/>
-  <Menu cursor="0" name="mnuCatalog" parent="menuBar" prefHeight="23px" prefWidth="83px" text="Справочники"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miManJob" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Должности&quot;"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriod" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Периодичность&quot;"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miObrStatus" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Cтатус обращения&quot;"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Тип периодичности&quot;"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Типы ограничений по возрасту&quot;"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miMkbDeseases" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Коды МКБ-10&quot;"/>
-  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miResultsParams" parent="mnuCatalog" prefHeight="22px" prefWidth="379px" text="Справочник &quot;Результаты и параметры услуг&quot;"/>
+  <Menu cursor="0" name="mnuCatalog" parent="menuBar" prefHeight="24px" prefWidth="112px" text="Справочники"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miManJob" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Должности&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriod" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Периодичность&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miObrStatus" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Cтатус обращения&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUslPeriodicType" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Тип периодичности&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miUsiLimAgeType" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Типы ограничений по возрасту&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miMkbDeseases" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Коды МКБ-10&quot;"/>
+  <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miResultsParams" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Результаты и параметры услуг&quot;"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miRouteStatus" parent="mnuCatalog" prefHeight="0px" prefWidth="0px" text="Справочник &quot;Статус маршрута&quot;"/>
-  <Menu cursor="0" name="mnuLogout" parent="menuBar" prefHeight="23px" prefWidth="109px" text="Выйти из системы"/>
+  <Menu cursor="0" name="mnuLogout" parent="menuBar" prefHeight="24px" prefWidth="143px" text="Выйти из системы"/>
   <MenuItem cursor="0" focusable="true" horizontalTextPosition="4" name="miLogout" parent="mnuLogout" prefHeight="0px" prefWidth="0px" text="Выход"/>
 </layout>
