@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <parameters>
+    <parameter description="" name="usl_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
+  </parameters>
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="144291298333784" entityLocationX="255" entityLocationY="15" entityWidth="150" tableAlias="t1" tableName="rep_usl_con" tableSchemaName=""/>
+  <relation leftEntityId="-1" leftEntityParameterName="usl_id" rightEntityFieldName="usluga_id" rightEntityId="144291298333784"/>
+</datamodel>

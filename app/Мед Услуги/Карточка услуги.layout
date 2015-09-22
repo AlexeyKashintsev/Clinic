@@ -28,13 +28,13 @@
   <ModelGrid cursor="0" data="qUslugaContents" name="modelGrid" parent="panel" prefHeight="182px" prefWidth="718px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="2px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="227px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название" width="226px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="sex" name="colSex" title="Пол" width="227px">
+    <ModelGridColumn field="sex" name="colSex" title="Пол" width="226px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="226px">
+    <ModelGridColumn field="mandatory" name="colMandatory" title="Обязательная" width="225px">
       <ModelCheckBox/>
     </ModelGridColumn>
   </ModelGrid>
@@ -50,7 +50,7 @@
   <ModelGrid cursor="0" data="qUslParamsName" deletable="false" editable="false" insertable="false" name="modelGrid1" parent="panel2" prefHeight="180px" prefWidth="718px">
     <AnchorsPaneConstraints bottom="2px" left="0px" right="2px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="param_name" name="colParam_name" title="Имя параметра" width="680px">
+    <ModelGridColumn field="param_name" name="colParam_name" title="Имя параметра" width="677px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
@@ -66,7 +66,7 @@
     <ModelGridColumn field="haz_short_name" name="colHaz_short_name" title="Название" width="116px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="haz_group" name="colHaz_group" title="Группа" width="117px">
+    <ModelGridColumn field="haz_group" name="colHaz_group" title="Группа" width="116px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="sex" maxWidth="40px" name="colSex" preferredWidth="40px" title="Пол" width="40px">
@@ -75,10 +75,10 @@
     <ModelGridColumn field="periodic_type_haz" maxWidth="100px" name="colType" preferredWidth="60px" title="Тип" width="60px">
       <ModelCombo displayField="type_name" displayList="qPeriodic" list="false"/>
     </ModelGridColumn>
-    <ModelGridColumn field="mandatory" name="colModat" title="Обязательный" width="117px">
+    <ModelGridColumn field="mandatory" name="colModat" title="Обязательный" width="116px">
       <ModelCheckBox/>
     </ModelGridColumn>
-    <ModelGridColumn field="periods" name="colPeriod" title="Период" width="116px">
+    <ModelGridColumn field="periods" name="colPeriod" title="Период" width="115px">
       <ModelCombo displayField="period_name" displayList="qPeriods" list="false"/>
     </ModelGridColumn>
   </ModelGrid>
@@ -88,10 +88,26 @@
   <ModelGrid cursor="0" data="qUslContainerInUsl" deletable="false" editable="false" insertable="false" name="modelGrid3" parent="panel4" prefHeight="212px" prefWidth="720px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название услуги" width="682px">
+    <ModelGridColumn field="usl_name" name="colUsl_name" title="Название услуги" width="679px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel5" parent="tabbedPane" prefHeight="212px" prefWidth="720px" visible="false">
+    <TabbedPaneConstraints tabTitle="Отчеты" tabToolTip=""/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" data="qReportsConnect" name="modelGrid11" parent="panel5" prefHeight="180px" prefWidth="720px">
+    <AnchorsPaneConstraints height="180px" left="0px" top="30px" width="720px"/>
+    <ServiceGridColumn name="colService" resizable="true"/>
+    <ModelGridColumn field="q_reports_connect" name="colParam_name" title="Название отчета" width="679px">
+      <ModelCombo displayField="report_name" displayList="qReports"/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ToolBar cursor="0" name="toolBar11" parent="panel5" prefHeight="30px" prefWidth="720px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd11" parent="toolBar11" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel11" parent="toolBar11" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq11" parent="toolBar11" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <ModelCheckBox cursor="0" data="qUslugaById" field="cursor.use_hazards" name="mcbUseHazards" nullable="false" parent="view" prefHeight="20px" prefWidth="500px" text="Использовать назначения по вредностям">
     <AnchorsPaneConstraints height="20px" left="220px" right="5px" top="137px"/>
   </ModelCheckBox>
