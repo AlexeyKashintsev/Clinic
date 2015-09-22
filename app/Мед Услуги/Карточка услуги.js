@@ -38,6 +38,7 @@ function UslugaContent() {
         model.qUslugaContents.params.usluga_id = aUslugaID;
         model.qHazardsInUsl.params.usl_id = aUslugaID;
         model.qUslContainerInUsl.params.usl_id = aUslugaID;
+        model.qReportsConnect.params.usl_id = aUslugaID;
         console.log(aUslugaID);
         model.qUslContainerInUsl.requery();
         model.qUslParamsName.requery();
@@ -45,6 +46,7 @@ function UslugaContent() {
         model.qUslugaContents.requery();
         model.qUslTypes.requery();
         model.qHazardsInUsl.requery();
+        model.qReportsConnect.requery();
         
         if (!aUslugaID) {
             model.qUslugaById.push({
@@ -133,5 +135,18 @@ function UslugaContent() {
     };
     form.btnCancel.onActionPerformed = function(event) {
         form.close();
+    };
+    form.btnAdd11.onActionPerformed = function(event) {
+        model.qReportsConnect.push({
+            usluga_id :model.qReportsConnect.params.usl_id
+        });
+    };
+    form.btnReq11.onActionPerformed = function(event) {
+        model.qReportsConnect.requery();
+    };
+    form.btnDel11.onActionPerformed = function(event) {
+        if(confirm("Удалить?")){
+            model.qReportsConnect.splice(model.qReportsConnect.indexOf(form.modelGrid11.selected[0]), 1);
+        }
     };
 }
