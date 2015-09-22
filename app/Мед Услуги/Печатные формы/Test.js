@@ -11,20 +11,17 @@ function OwnersView() {
         form.show();
         model.requery();
     };
-    
-    var lp = new LongProcessor([form.btnReport]);
+   
+   var docx = new DocxTemplater();
 
-    form.btnReport.onActionPerformed = function (event) {
-        lp.start(this, function(){
-            var srvModule = new P.ServerModule("PassportHealth");
-            srvModule.setPacient("142808473476141");
-            srvModule.execute(function(aReport){
-                aReport.show();
-                lp.stop();
-            });
-        });
+    form.btnReport.onActionPerformed = function(event) {
+        var obj = {"first_name":"Мищка",
+            last_name:"Лапшин",
+            "phone":"687677868767868",
+            "description":"New Website",
+            ewedwdwdw: "ewdwed",
+            id: 868768768
+        };
+        docx.run("tagExample.docx", "test.docx", obj)
     };
-    
-
-
 }

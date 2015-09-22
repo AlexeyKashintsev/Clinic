@@ -13,6 +13,7 @@ function PatientsForm() {
     var fmPatient = new PatientForm();
     var treatWizard, fmDataLoader;
     var fmTreatmentDetail = new TreatmentDetailForm();
+    var docx = new DocxTemplater();
     
     model.requery(function(){
         fmTreatmentDetail.setPatient(model.qPatientsByParams.cursor.man_patient_id);
@@ -126,5 +127,19 @@ function PatientsForm() {
         if (!fmDataLoader)
             fmDataLoader = new DataLoader();
         fmDataLoader.showModal();
+    };
+    
+    form.btnPrint.onActionPerformed = function(event) {
+        var obj = {
+            firstname   : model.qPatientsByParams.cursor.firstname,
+            surname     : model.qPatientsByParams.cursor.surname,
+            patronymic  : model.qPatientsByParams.cursor.patronymic,
+            sex         : model.qPatientsByParams.cursor.sex,
+            date_oft_birth : model.qPatientsByParams.cursor.date_oft_birth.toString(),
+            company     : (model.qPatientsByParams.cursor.p_company?model.qPatientsByParams.cursor.p_company.company_name:"Не указана"),
+            job         : (model.qPatientsByParams.cursor.p_job?model.qPatientsByParams.cursor.p_job.job_title:"Не указана")
+        };
+        console.log(obj);
+        docx.run("pacientInfo.docx", "Пациент "+obj.surname+".docx", obj);
     };
 }
