@@ -141,6 +141,7 @@ function MainView() {
             fmRouteStatus = new ObrRouteStatusForm();
         fmRouteStatus.show(form.formDesktop);
     };
+    
     form.miPPMain.onActionPerformed = function(event) {
         if (!fmPPMain)
             fmPPMain = new TreatmentsForm();
