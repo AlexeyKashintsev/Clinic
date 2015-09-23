@@ -11,6 +11,7 @@ function TreatmentsForm() {
             , form = P.loadForm(this.constructor.name, model);
     
     var fmPatient = new PatientForm();
+    var repForms = {};
     model.requery();
     
     self.show = function (aDesktop) {
@@ -65,13 +66,6 @@ function TreatmentsForm() {
         form.lbSelectedCount.text = form.mgPatients.selected.length;
     };
     
-    form.btnExit.onActionPerformed = function(event) {
-        if(confirm("Выйти из системы?")){
-            P.logout(function(){
-                window.location.reload();
-            });
-        }
-    };
     form.btnClearFilter.onActionPerformed = function(event) {
         form.mcWorkPlace.value = null;
         form.tfFirstName.text = null;
@@ -82,4 +76,20 @@ function TreatmentsForm() {
         
         form.btnApplyFilter.onActionPerformed();
     };
+    
+    form.mgTreats.onMouseClicked = function(event) {
+        if (event.clickCount === 2) {
+            var usl = form.mgTreats.selected[0].usluga_id;
+            var fmName = model.qUslugaById.find(function(arElem) {
+                return false//(arElem.usl_uslugi_id === usl);
+            });
+            
+            fmName = fmName ? fmName.repFrom : null;
+            if (!repForms[fmName])
+                repForms[fmName] = new window[fmName]();
+            repForms[fmName].setTreatment(form.mgTreats.selected[0]);
+            repForms.showModal();
+        }
+    };
+
 }

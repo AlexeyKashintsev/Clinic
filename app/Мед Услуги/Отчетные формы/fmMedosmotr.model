@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qTreatById" Title="" entityHeight="200" entityIconified="false" entityId="144300238001165" entityLocationX="37" entityLocationY="30" entityWidth="150" queryId="qTreatById" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="group_treat" leftEntityId="144300238001165" rightEntityFieldName="obr_treatment_id" rightEntityId="144300238001165"/>
+</datamodel>

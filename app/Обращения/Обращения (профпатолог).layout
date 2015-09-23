@@ -58,22 +58,18 @@
   <Button cursor="0" name="btnClearFilter" parent="panel" prefHeight="30px" prefWidth="90px" text="Сбросить">
     <AnchorsPaneConstraints height="30px" left="130px" top="340px" width="90px"/>
   </Button>
-  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="620px">
-    <AnchorsPaneConstraints height="80px" left="230px" right="90px" top="0px"/>
+  <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="710px">
+    <AnchorsPaneConstraints height="80px" left="230px" right="0px" top="0px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-edit.png" name="btnEditPatient" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Карточка" verticalTextPosition="3">
     <font family="Monospaced" size="11" style="0"/>
-  </Button>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/application-exit.png" name="btnExit" parent="view" prefHeight="80px" prefWidth="90px" text="Выход" verticalTextPosition="3">
-    <font family="Monospaced" size="11" style="0"/>
-    <AnchorsPaneConstraints height="80px" right="0px" top="0px" width="90px"/>
   </Button>
   <SplitPane cursor="0" dividerLocation="250" foreground="#000000" leftComponent="panel2" name="splitPane" orientation="0" parent="view" prefHeight="406px" prefWidth="710px" rightComponent="pnlObr">
     <font family="Monospaced" size="11" style="0"/>
     <AnchorsPaneConstraints bottom="0px" left="230px" right="0px" top="80px"/>
   </SplitPane>
-  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="splitPane" prefHeight="248px" prefWidth="706px"/>
-  <AnchorsPane background="#eaeaea" cursor="0" name="panel1" parent="panel2" prefHeight="20px" prefWidth="706px">
+  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="splitPane" prefHeight="249px" prefWidth="708px"/>
+  <AnchorsPane background="#eaeaea" cursor="0" name="panel1" parent="panel2" prefHeight="20px" prefWidth="708px">
     <AnchorsPaneConstraints bottom="0px" height="20px" left="0px" right="0px"/>
   </AnchorsPane>
   <Label cursor="0" name="label1" parent="panel1" prefHeight="20px" prefWidth="110px" text="Всего записей:">
@@ -91,8 +87,8 @@
   <Button cursor="0" name="btnSelAll" parent="panel1" prefHeight="20px" prefWidth="110px" text="Выбрать все">
     <AnchorsPaneConstraints height="20px" left="410px" top="0px" width="110px"/>
   </Button>
-  <ModelGrid cursor="0" data="qAllPatientTreatmentsStatuses" name="modelGrid" parent="panel2" prefHeight="228px" prefWidth="706px">
-    <AnchorsPaneConstraints bottom="20px" left="0px" right="0px" top="0px"/>
+  <ModelGrid cursor="0" data="qAllPatientTreatmentsStatuses" deletable="false" editable="false" insertable="false" name="mgTreats" parent="panel2" prefHeight="229px" prefWidth="710px">
+    <AnchorsPaneConstraints bottom="20px" left="0px" right="-2px" top="0px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
     <ModelGridColumn field="usl_usluga" name="colUsluga_id" title="Обращение" width="75px">
       <ModelCombo displayField="usl_name" displayList="qUslugaById"/>
@@ -125,5 +121,20 @@
       <ModelCombo displayField="job_title" displayList="qManJob"/>
     </ModelGridColumn>
   </ModelGrid>
-  <BorderPane background="#ffffff" cursor="0" name="pnlObr" parent="splitPane" prefHeight="145px" prefWidth="706px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="pnlObr" parent="splitPane" prefHeight="150px" prefWidth="708px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel3" parent="pnlObr" prefHeight="150px" prefWidth="128px">
+    <AnchorsPaneConstraints height="150px" left="0px" top="0px" width="128px"/>
+  </AnchorsPane>
+  <Button cursor="0" name="button" parent="panel3" prefHeight="20px" prefWidth="110px" text="На приеме">
+    <AnchorsPaneConstraints height="20px" left="10px" top="30px" width="110px"/>
+  </Button>
+  <Label cursor="0" name="label11" parent="panel3" prefHeight="20px" prefWidth="70px" text="Статус">
+    <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="70px"/>
+  </Label>
+  <TabbedPane cursor="0" name="tabbedPane" parent="pnlObr" prefHeight="150px" prefWidth="578px">
+    <AnchorsPaneConstraints bottom="0px" left="130px" right="0px" top="0px"/>
+  </TabbedPane>
+  <AnchorsPane background="#ffffff" cursor="0" name="pblRoute" parent="tabbedPane" prefHeight="122px" prefWidth="573px">
+    <TabbedPaneConstraints tabTitle="Назначения"/>
+  </AnchorsPane>
 </layout>

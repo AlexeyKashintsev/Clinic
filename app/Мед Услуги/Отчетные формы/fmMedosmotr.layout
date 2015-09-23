@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="396px" prefWidth="838px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="120px" prefWidth="380px">
+    <AnchorsPaneConstraints height="120px" left="0px" top="0px" width="380px"/>
+  </AnchorsPane>
+  <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="70px" text="Фамилия">
+    <AnchorsPaneConstraints height="20px" left="10px" top="30px" width="70px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qPatientById" editable="false" field="&lt;Различные значения&gt;" format="" name="tfSurname" nullable="false" parent="panel" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="30px" width="150px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" data="qPatientById" editable="false" field="&lt;Различные значения&gt;" format="" name="tfName" nullable="false" parent="panel" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="60px" width="150px"/>
+  </ModelFormattedField>
+  <Label cursor="0" name="label1" parent="panel" prefHeight="20px" prefWidth="70px" text="Имя">
+    <AnchorsPaneConstraints height="20px" left="10px" top="60px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="panel" prefHeight="20px" prefWidth="70px" text="Отчество">
+    <AnchorsPaneConstraints height="20px" left="10px" top="90px" width="70px"/>
+  </Label>
+  <ModelFormattedField cursor="0" data="qPatientById" editable="false" field="&lt;Различные значения&gt;" format="" name="tfPatronymic" nullable="false" parent="panel" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="90px" width="150px"/>
+  </ModelFormattedField>
+  <ModelDate cursor="0" data="qPatientById" dateFormat="dd/MM/yyyy" editable="false" field="cursor.date_oft_birth" name="mdDateOfBirth" nullable="false" parent="panel" prefHeight="20px" prefWidth="130px">
+    <AnchorsPaneConstraints height="20px" left="240px" top="90px" width="130px"/>
+  </ModelDate>
+  <Label cursor="0" name="label4" parent="panel" prefHeight="20px" prefWidth="130px" text="Дата рождения">
+    <AnchorsPaneConstraints height="20px" left="240px" top="60px" width="130px"/>
+  </Label>
+  <Label cursor="0" name="label3" parent="panel" prefHeight="20px" prefWidth="40px" text="Пол">
+    <AnchorsPaneConstraints height="20px" left="240px" top="30px" width="40px"/>
+  </Label>
+  <ModelCombo cursor="0" data="qPatientById" displayField="sex_short" displayList="qSex" field="cursor.p_sex" name="ddSex" nullable="false" parent="panel" prefHeight="20px" prefWidth="90px">
+    <AnchorsPaneConstraints height="20px" left="280px" top="30px" width="90px"/>
+  </ModelCombo>
+  <Label cursor="0" name="label5" parent="panel" prefHeight="20px" prefWidth="70px" text="Пациент">
+    <AnchorsPaneConstraints height="20px" left="10px" top="0px" width="70px"/>
+  </Label>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="view" prefHeight="110px" prefWidth="458px">
+    <AnchorsPaneConstraints height="110px" left="380px" right="0px" top="0px"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" data="qHazardsByManJob" name="mgHazards" parent="panel1" prefHeight="110px" prefWidth="458px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="0px"/>
+    <ModelGridColumn field="haz_short_name" name="colHazardName" preferredWidth="20px" readonly="true" title="Вредности" width="442px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>
