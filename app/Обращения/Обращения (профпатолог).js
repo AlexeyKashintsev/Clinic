@@ -28,10 +28,10 @@ function TreatmentsForm() {
     
     
     form.btnEditPatient.onActionPerformed = function(event) {
-        fmPatient.setParams(model.qPatientsByParams.cursor.man_patient_id);
+        fmPatient.setParams(model.qAllPatientTreatmentsStatuses.cursor.man_patient_id);
         fmPatient.showModal(function(aResult) {
             if (aResult){
-                model.qPatientsByParams.requery();
+                model.qAllPatientTreatmentsStatuses.requery();
                 model.qAllFirms.requery();
             }
         });
@@ -81,5 +81,9 @@ function TreatmentsForm() {
         form.mdTreatEnd.value = null;
         
         form.btnApplyFilter.onActionPerformed();
+    };
+
+    form.btnPrint.onActionPerformed = function(event) {
+        
     };
 }

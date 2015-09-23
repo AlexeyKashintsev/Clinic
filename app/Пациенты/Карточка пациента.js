@@ -147,14 +147,14 @@ function PatientForm() {
     //TODO Не понятно почему эта кнопка тут НЕ работает. МАГИЯ!
     var lp = new LongProcessor([form.btnReport]);
     form.btnReport.onActionPerformed = function(event) {
-         lp.start(this, function(){
-            var srvModule = new P.ServerModule("PassportHealth");
-            srvModule.setPacient("142808473476141");
-            srvModule.execute(function(aReport){
-                aReport.show();
-                lp.stop();
-            });
-        });
+//         lp.start(this, function(){
+//            var srvModule = new P.ServerModule("PassportHealth");
+//            srvModule.setPacient("142808473476141");
+//            srvModule.execute(function(aReport){
+//                aReport.show();
+//                lp.stop();
+//            });
+//        });
     };
     
     var treatWizard;

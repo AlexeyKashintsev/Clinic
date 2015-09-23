@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><datamodel>
-  <entity Name="qUslTypes" Title="" entityHeight="200" entityIconified="false" entityId="143515469165212" entityLocationX="84" entityLocationY="93" entityWidth="150" queryId="qUslTypes" tableName="" tableSchemaName=""/>
-  <referenceRelation leftEntityFieldName="type_parent" leftEntityId="143515469165212" rightEntityFieldName="usl_types_id" rightEntityId="143515469165212"/>
-</datamodel>
