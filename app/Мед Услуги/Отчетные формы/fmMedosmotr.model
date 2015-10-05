@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="qRouteStatus" Title="" entityHeight="200" entityIconified="false" entityId="144301281302096" entityLocationX="428" entityLocationY="28" entityWidth="150" queryId="qRouteStatus" tableName="" tableSchemaName=""/>
   <entity Name="qTreatById" Title="" entityHeight="200" entityIconified="false" entityId="144300238001165" entityLocationX="37" entityLocationY="30" entityWidth="150" queryId="qTreatById" tableName="" tableSchemaName=""/>
+  <entity Name="qNaznach" Title="" entityHeight="200" entityIconified="false" entityId="144301234866075" entityLocationX="222" entityLocationY="29" entityWidth="150" queryId="qNaznach" tableName="" tableSchemaName=""/>
+  <referenceRelation leftEntityFieldName="usluga_id" leftEntityId="144301234866075" rightEntityFieldName="usl_uslugi_id" rightEntityId="144301234866075"/>
+  <referenceRelation collectionPropertyName="r_nazn" leftEntityFieldName="route_status" leftEntityId="144301234866075" rightEntityFieldName="obr_route_status_id" rightEntityId="144301281302096" scalarPropertyName="n_status"/>
+  <referenceRelation leftEntityFieldName="treat_id" leftEntityId="144301234866075" rightEntityFieldName="obr_treatment_id" rightEntityId="144300238001165"/>
   <referenceRelation leftEntityFieldName="group_treat" leftEntityId="144300238001165" rightEntityFieldName="obr_treatment_id" rightEntityId="144300238001165"/>
 </datamodel>

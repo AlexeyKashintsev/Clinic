@@ -18,6 +18,7 @@ function Patient() {
     };
     
     self.getPatientAsync = function(aPatientId, aCallback) {
+        reqCount = 0;
         model.qPatientById.params.patient_id =
                 model.qWorkPlaceByPatient.params.patient_id = aPatientId;
         model.qPatientById.requery(function() {

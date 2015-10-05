@@ -11,12 +11,12 @@
   <entity Title="" entityHeight="200" entityIconified="false" entityId="144224642776447" entityLocationX="838" entityLocationY="5" entityWidth="150" tableAlias="t3" tableName="man_workplace" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="143314714604832" entityLocationX="226" entityLocationY="12" entityWidth="150" tableAlias="t" tableName="obr_treatment" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="144224616122295" entityLocationX="665" entityLocationY="4" entityWidth="150" tableAlias="t1" tableName="man_patient" tableSchemaName=""/>
-  <relation leftEntityFieldName="patient" leftEntityId="143314714604832" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
-  <relation leftEntityId="-1" leftEntityParameterName="company_id" rightEntityFieldName="company_id" rightEntityId="144224642776447"/>
-  <relation leftEntityFieldName="man_id" leftEntityId="144224642776447" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
   <relation leftEntityId="-1" leftEntityParameterName="end_date" rightEntityFieldName="treat_date" rightEntityId="143314714604832"/>
-  <relation leftEntityId="-1" leftEntityParameterName="treat_status" rightEntityFieldName="treat_status" rightEntityId="143314714604832"/>
+  <relation leftEntityFieldName="patient" leftEntityId="143314714604832" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
+  <relation leftEntityFieldName="man_id" leftEntityId="144224642776447" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
   <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314714604832" rightEntityFieldName="treat_id" rightEntityId="144224622381823"/>
   <relation leftEntityId="-1" leftEntityParameterName="start_date" rightEntityFieldName="treat_date" rightEntityId="143314714604832"/>
+  <relation leftEntityId="-1" leftEntityParameterName="treat_status" rightEntityFieldName="treat_status" rightEntityId="143314714604832"/>
+  <relation leftEntityId="-1" leftEntityParameterName="company_id" rightEntityFieldName="company_id" rightEntityId="144224642776447"/>
   <relation leftEntityId="-1" leftEntityParameterName="usluga_id" rightEntityFieldName="usluga_id" rightEntityId="144224622381823"/>
 </datamodel>
