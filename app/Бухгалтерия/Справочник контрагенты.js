@@ -60,15 +60,6 @@ function CompaniesList() {
             form.btnEdit.onActionPerformed();
         }
     };
-
-    form.button.onActionPerformed = function(event) {
-        model.save(function(){
-            form.close({
-                id: model.qAllFirms.cursor.buh_companies_id,
-                name: model.qAllFirms.cursor.company_name
-            });
-        });
-    };
     
     form.btnEdit.onActionPerformed = function(event) {
         model.save(function(){
@@ -88,4 +79,17 @@ function CompaniesList() {
         model.requery();
     };
 
+    form.btnSelect.onActionPerformed = function(event) {
+        model.save(function(){
+            form.close({
+                id: model.qAllFirms.cursor.buh_companies_id,
+                name: model.qAllFirms.cursor.company_name
+            });
+        });
+    };
+    
+    form.btnCancel.onActionPerformed = function(event) {
+        if (model.modified||confirm('Изменения будут потеряны, продолжить?'))
+            form.close();
+    };
 }
