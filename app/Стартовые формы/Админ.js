@@ -30,7 +30,7 @@ function MainView() {
         {a: "rg",b: "ff"}
     ];
     
-    var fmUslTypes, fmUslList, fmUslContents;
+    var fmPPMain, fmUslTypes, fmUslList, fmUslContents;
     var fmContragents, fmContracts;
     var fmHazards;
     var fmUsers;
@@ -140,5 +140,11 @@ function MainView() {
         if (!fmRouteStatus)
             fmRouteStatus = new ObrRouteStatusForm();
         fmRouteStatus.show(form.formDesktop);
+    };
+    
+    form.miPPMain.onActionPerformed = function(event) {
+        if (!fmPPMain)
+            fmPPMain = new TreatmentsForm();
+        fmPPMain.show(form.formDesktop);
     };
 }

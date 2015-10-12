@@ -14,6 +14,9 @@ function StartForm() {
             P.require([formName], function(){
                 var f = new (eval(formName));
                 f.show();
+                var el = document.getElementById("app-load");
+                el.parentNode.removeChild(el);
+                delete el;
             }, function(er) {
                 console.log('Error on require ' + er);
             });
@@ -24,7 +27,6 @@ function StartForm() {
 //            });
         }
     };
-    
     
     
     model.requery(function () {

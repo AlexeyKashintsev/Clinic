@@ -19,12 +19,6 @@ function MkbDeseasesForm() {
 
     model.qMkbClasses.requery();
     
-    form.button.onActionPerformed = function(event) {
-        if (model.modified && confirm('Сохранить изменения'))
-            model.save();
-        form.close(form.mgDeseases.selected[0].mkb_deseases_id);
-    };
-    
     form.tfDeseasesSearch.onValueChange = function() {
       model.qMkbDeseases.params.mkb_find = form.tfDeseasesSearch.text ? form.tfDeseasesSearch.text : null;        
         model.qMkbDeseases.execute();  
@@ -42,4 +36,12 @@ function MkbDeseasesForm() {
         model.qMkbDeseases.requery();
     };
 
+    form.btnSelect.onActionPerformed = function(event) {
+        if (model.modified && confirm('Сохранить изменения'))
+            model.save();
+        form.close(form.mgDeseases.selected[0].mkb_deseases_id);
+    };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
+    };
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="Справочник &quot;Результаты и параметры услуг&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="447px" prefWidth="682px"/>
-  <Button cursor="0" name="button" parent="view" prefHeight="21px" prefWidth="82px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="16px" height="21px" right="10px" width="82px"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="82px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="7px" height="30px" right="100px" width="82px"/>
   </Button>
   <SplitPane cursor="0" dividerLocation="380" foreground="#000000" leftComponent="panel" name="splitPane" parent="view" prefHeight="410px" prefWidth="681px" rightComponent="panel1">
     <font family="Monospaced" size="11" style="0"/>
@@ -41,4 +41,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel1" parent="toolBar1" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="82px" text="Отмена">
+    <AnchorsPaneConstraints bottom="7px" height="30px" right="10px" width="82px"/>
+  </Button>
 </layout>

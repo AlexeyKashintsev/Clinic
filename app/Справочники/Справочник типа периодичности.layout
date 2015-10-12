@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник &quot;Тип периодичности&quot;" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Справочник &quot;Тип периодичности&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
     <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
@@ -8,7 +8,7 @@
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="80px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="10px" height="20px" right="10px" width="80px"/>
+    <AnchorsPaneConstraints bottom="10px" height="20px" left="230px" width="80px"/>
   </Button>
   <ModelGrid cursor="0" data="qUslPeriodicType" name="modelGrid" parent="view" prefHeight="230px" prefWidth="400px">
     <AnchorsPaneConstraints bottom="40px" left="0px" right="0px" top="30px"/>
@@ -17,4 +17,7 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
+  <Button cursor="0" name="button1" parent="view" prefHeight="20px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="0px" width="80px"/>
+  </Button>
 </layout>

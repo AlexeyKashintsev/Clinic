@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+  <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="230px" prefWidth="400px">
+    <AnchorsPaneConstraints height="230px" left="0px" top="30px" width="400px"/>
+  </ModelGrid>
+  <Button cursor="0" name="btnSave" parent="view" prefHeight="20px" prefWidth="90px" text="Сохранить">
+    <AnchorsPaneConstraints bottom="10px" height="20px" left="210px" width="90px"/>
+  </Button>
+  <Button cursor="0" name="button1" parent="view" prefHeight="20px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="10px" width="80px"/>
+  </Button>
+</layout>

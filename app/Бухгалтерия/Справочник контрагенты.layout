@@ -27,8 +27,8 @@
       <ModelFormattedField format=""/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="button" parent="view" prefHeight="35px" prefWidth="110px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="1px" height="35px" right="11px" width="110px"/>
+  <Button cursor="0" name="btnSelect" parent="view" prefHeight="26px" prefWidth="130px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="6px" height="26px" right="111px" width="130px"/>
   </Button>
   <Label cursor="0" name="label" parent="view" prefHeight="30px" prefWidth="60px" text="Поиск:">
     <AnchorsPaneConstraints height="30px" left="190px" top="0px" width="60px"/>
@@ -36,4 +36,7 @@
   <ModelFormattedField cursor="0" format="" name="mfSearch" parent="view" prefHeight="30px" prefWidth="460px">
     <AnchorsPaneConstraints height="30px" left="240px" right="1px" top="0px"/>
   </ModelFormattedField>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="26px" prefWidth="90px" text="Отмена">
+    <AnchorsPaneConstraints bottom="6px" height="26px" right="11px" width="90px"/>
+  </Button>
 </layout>

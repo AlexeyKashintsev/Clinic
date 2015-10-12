@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><layout resizable="false" title="Справочник &quot;Коды МКБ-10&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="395px" prefWidth="907px"/>
-  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="86px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="15px" height="20px" right="21px" width="86px"/>
-  </Button>
   <Label cursor="0" name="label" parent="view" prefHeight="16px" prefWidth="170px" text="Поиск по заболеваниям:">
     <AnchorsPaneConstraints height="16px" left="20px" top="16px" width="170px"/>
   </Label>
@@ -34,4 +31,10 @@
   <Label cursor="0" name="label1" parent="view" prefHeight="20px" prefWidth="110px" text="Поиск по классам">
     <AnchorsPaneConstraints height="20px" left="590px" top="14px" width="110px"/>
   </Label>
+  <Button cursor="0" name="btnSelect" parent="view" prefHeight="30px" prefWidth="100px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="5px" height="30px" right="97px" width="100px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="30px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="5px" height="30px" right="7px" width="80px"/>
+  </Button>
 </layout>

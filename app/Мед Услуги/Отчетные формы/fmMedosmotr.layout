@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="556px" prefWidth="840px"/>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="view" prefHeight="120px" prefWidth="380px">
+    <AnchorsPaneConstraints height="120px" left="0px" top="0px" width="380px"/>
+  </AnchorsPane>
+  <Label cursor="0" name="label" parent="panel" prefHeight="20px" prefWidth="70px" text="Фамилия">
+    <AnchorsPaneConstraints height="20px" left="10px" top="30px" width="70px"/>
+  </Label>
+  <ModelFormattedField cursor="0" editable="false" field="&lt;Различные значения&gt;" format="" name="tfSurname" nullable="false" parent="panel" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="30px" width="150px"/>
+  </ModelFormattedField>
+  <ModelFormattedField cursor="0" editable="false" field="&lt;Различные значения&gt;" format="" name="tfName" nullable="false" parent="panel" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="60px" width="150px"/>
+  </ModelFormattedField>
+  <Label cursor="0" name="label1" parent="panel" prefHeight="20px" prefWidth="70px" text="Имя">
+    <AnchorsPaneConstraints height="20px" left="10px" top="60px" width="70px"/>
+  </Label>
+  <Label cursor="0" name="label2" parent="panel" prefHeight="20px" prefWidth="70px" text="Отчество">
+    <AnchorsPaneConstraints height="20px" left="10px" top="90px" width="70px"/>
+  </Label>
+  <ModelFormattedField cursor="0" editable="false" field="&lt;Различные значения&gt;" format="" name="tfPatronymic" nullable="false" parent="panel" prefHeight="20px" prefWidth="150px">
+    <AnchorsPaneConstraints height="20px" left="80px" top="90px" width="150px"/>
+  </ModelFormattedField>
+  <ModelDate cursor="0" dateFormat="dd/MM/yyyy" field="cursor.date_oft_birth" name="mdDateOfBirth" nullable="false" parent="panel" prefHeight="20px" prefWidth="130px">
+    <AnchorsPaneConstraints height="20px" left="240px" top="90px" width="130px"/>
+  </ModelDate>
+  <Label cursor="0" name="label4" parent="panel" prefHeight="20px" prefWidth="130px" text="Дата рождения">
+    <AnchorsPaneConstraints height="20px" left="240px" top="60px" width="130px"/>
+  </Label>
+  <Label cursor="0" name="label3" parent="panel" prefHeight="20px" prefWidth="40px" text="Пол">
+    <AnchorsPaneConstraints height="20px" left="240px" top="30px" width="40px"/>
+  </Label>
+  <Label cursor="0" name="label5" parent="panel" prefHeight="20px" prefWidth="70px" text="Пациент">
+    <font family="Monospaced" size="11" style="1"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="70px"/>
+  </Label>
+  <ModelFormattedField cursor="0" editable="false" format="" name="tfSex" nullable="false" parent="panel" prefHeight="20px" prefWidth="100px">
+    <AnchorsPaneConstraints height="20px" right="10px" top="30px" width="100px"/>
+  </ModelFormattedField>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel1" parent="view" prefHeight="140px" prefWidth="380px">
+    <AnchorsPaneConstraints height="140px" left="0px" top="120px" width="380px"/>
+  </AnchorsPane>
+  <ModelGrid cursor="0" name="mgHazards" parent="panel1" prefHeight="110px" prefWidth="380px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
+    <ModelGridColumn maxWidth="75px" minWidth="75px" name="colHazardCode" readonly="true" title="Код" width="75px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="haz_short_name" name="colHazardName" preferredWidth="20px" readonly="true" sortable="false" title="Вредность" width="303px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <Label cursor="0" name="label6" parent="panel1" prefHeight="20px" prefWidth="70px" text="Вредности">
+    <font family="Monospaced" size="11" style="1"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="2px" width="70px"/>
+  </Label>
+  <AnchorsPane background="#ffffff" cursor="0" name="panel2" parent="view" prefHeight="260px" prefWidth="460px">
+    <AnchorsPaneConstraints height="260px" left="380px" right="0px" top="0px"/>
+  </AnchorsPane>
+  <Label cursor="0" name="label7" parent="panel2" prefHeight="20px" prefWidth="70px" text="Назначения">
+    <font family="Monospaced" size="11" style="1"/>
+    <AnchorsPaneConstraints height="20px" left="10px" top="5px" width="70px"/>
+  </Label>
+  <ModelGrid cursor="0" data="qNaznach" name="mgNaznacheniya" parent="panel2" prefHeight="230px" prefWidth="460px">
+    <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
+    <ModelGridColumn field="clinic_work" maxWidth="50px" name="colClinic_work" preferredWidth="50px" title="Клиника">
+      <ModelCheckBox/>
+    </ModelGridColumn>
+    <ModelGridColumn field="usl_name" name="colUsl_name" preferredWidth="50px" title="Назначение" width="294px">
+      <ModelFormattedField format=""/>
+    </ModelGridColumn>
+    <ModelGridColumn field="n_status" maxWidth="100px" name="colRoute_status" preferredWidth="100px" title="Статус" width="100px">
+      <ModelCombo displayField="status_name" displayList="qRouteStatus" nullable="false"/>
+    </ModelGridColumn>
+  </ModelGrid>
+</layout>

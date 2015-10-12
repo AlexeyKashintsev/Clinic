@@ -70,4 +70,7 @@ function ResultsForm() {
         else
             model.requery();
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }

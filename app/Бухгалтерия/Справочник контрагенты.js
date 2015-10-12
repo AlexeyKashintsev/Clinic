@@ -12,7 +12,8 @@ function CompaniesList() {
     self.show = function () {
         if(DESKTOP){
             form.showInternalFrame(DESKTOP);
-            form.button.visible = false;
+            form.btnSelect.visible = false;
+            form.btnCancel.visible = false;
         } else
             form.show();
     };

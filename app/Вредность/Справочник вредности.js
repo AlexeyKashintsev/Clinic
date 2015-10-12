@@ -70,4 +70,7 @@ function HazardForm() {
         }
    };
 
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
+    };
 }

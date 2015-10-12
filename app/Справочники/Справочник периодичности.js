@@ -41,4 +41,7 @@ function UslPeriodForm() {
     form.button.onActionPerformed = function(event) {
         form.close(model.qUslPeriod.cursor.usl_period_id);
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }

@@ -42,4 +42,7 @@ function ObrStatusForm() {
     form.button.onActionPerformed = function(event) {
         form.close(model.qObrStatus.cursor.obr_status_id);
     };
+    form.button1.onActionPerformed = function(event) {
+        form.close();
+    };
 }

@@ -33,7 +33,10 @@
       <ModelCombo displayField="period_name" displayList="qPeriods"/>
     </ModelGridColumn>
   </ModelGrid>
-  <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="80px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="7px" height="20px" right="12px" width="80px"/>
+  <Button cursor="0" name="button" parent="view" prefHeight="25px" prefWidth="80px" text="Выбрать">
+    <AnchorsPaneConstraints bottom="7px" height="25px" right="102px" width="80px"/>
+  </Button>
+  <Button cursor="0" name="btnCancel" parent="view" prefHeight="25px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="7px" height="25px" right="8px" width="80px"/>
   </Button>
 </layout>

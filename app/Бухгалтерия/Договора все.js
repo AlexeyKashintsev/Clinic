@@ -98,4 +98,7 @@ function AllContractsView() {
     form.btnSelect.onActionPerformed = function(event) {
         form.close(model.qContracts.cursor);
     };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
+    };
 }

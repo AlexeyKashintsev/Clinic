@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><layout icon="" title="Справочник &quot;Статус обращения&quot;" view="view">
+<?xml version="1.0" encoding="UTF-8"?><layout title="Справочник &quot;Статус обращения&quot;" view="view">
   <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
   <ToolBar cursor="0" name="toolBar" parent="view" prefHeight="30px" prefWidth="400px">
     <AnchorsPaneConstraints height="30px" left="0px" right="0px" top="0px"/>
@@ -15,6 +15,9 @@
     </ModelGridColumn>
   </ModelGrid>
   <Button cursor="0" name="button" parent="view" prefHeight="20px" prefWidth="80px" text="Выбрать">
-    <AnchorsPaneConstraints bottom="10px" height="20px" right="20px" width="80px"/>
+    <AnchorsPaneConstraints bottom="10px" height="20px" left="230px" width="80px"/>
+  </Button>
+  <Button cursor="0" name="button1" parent="view" prefHeight="20px" prefWidth="80px" text="Отмена">
+    <AnchorsPaneConstraints bottom="10px" height="20px" right="0px" width="80px"/>
   </Button>
 </layout>

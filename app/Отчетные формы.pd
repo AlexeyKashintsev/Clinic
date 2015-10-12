@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="94" entityIconified="false" entityId="144290412125001" entityLocationX="571" entityLocationY="34" entityWidth="150" tableName="rep_reports"/>
+  <fieldsEntity entityHeight="84" entityIconified="false" entityId="144290416426408" entityLocationX="337" entityLocationY="77" entityWidth="150" tableName="rep_usl_con"/>
+  <fieldsEntity entityHeight="216" entityIconified="false" entityId="144290414973010" entityLocationX="64" entityLocationY="72" entityWidth="150" tableName="usl_uslugi"/>
+  <fieldsEntity entityHeight="119" entityIconified="false" entityId="144290423487406" entityLocationX="337" entityLocationY="168" entityWidth="150" tableName="rep_forms"/>
+</datamodel>
