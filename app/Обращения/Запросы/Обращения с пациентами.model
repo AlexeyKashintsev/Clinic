@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?><datamodel>
   <parameters>
-    <parameter description="" name="start_date" nullable="true" parameterMode="1" selectionForm="null" type="Date"/>
-    <parameter description="" name="end_date" nullable="true" parameterMode="1" selectionForm="null" type="Date"/>
+    <parameter description="" name="start_date" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
+    <parameter description="" name="end_date" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
     <parameter description="" name="treat_status" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
     <parameter description="" name="usluga_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
     <parameter description="" name="company_id" nullable="true" parameterMode="1" selectionForm="null" type="Number"/>
+    <parameter description="" name="firstname" nullable="true" parameterMode="1" selectionForm="null" type="String"/>
+    <parameter description="" name="surname" nullable="true" parameterMode="1" selectionForm="null" type="String"/>
   </parameters>
   <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="8" entityLocationY="7" entityWidth="150"/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="144224622381823" entityLocationX="446" entityLocationY="43" entityWidth="150" tableAlias="t2" tableName="obr_uslugi" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="144224642776447" entityLocationX="838" entityLocationY="5" entityWidth="150" tableAlias="t3" tableName="man_workplace" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="143314714604832" entityLocationX="226" entityLocationY="12" entityWidth="150" tableAlias="t" tableName="obr_treatment" tableSchemaName=""/>
   <entity Title="" entityHeight="200" entityIconified="false" entityId="144224616122295" entityLocationX="665" entityLocationY="4" entityWidth="150" tableAlias="t1" tableName="man_patient" tableSchemaName=""/>
-  <relation leftEntityFieldName="patient" leftEntityId="143314714604832" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
-  <relation leftEntityId="-1" leftEntityParameterName="company_id" rightEntityFieldName="company_id" rightEntityId="144224642776447"/>
-  <relation leftEntityFieldName="man_id" leftEntityId="144224642776447" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
   <relation leftEntityId="-1" leftEntityParameterName="end_date" rightEntityFieldName="treat_date" rightEntityId="143314714604832"/>
-  <relation leftEntityId="-1" leftEntityParameterName="treat_status" rightEntityFieldName="treat_status" rightEntityId="143314714604832"/>
+  <relation leftEntityFieldName="surname" leftEntityId="144224616122295" rightEntityId="-1" rightEntityParameterName="surname"/>
+  <relation leftEntityId="-1" leftEntityParameterName="company_id" rightEntityFieldName="company_id" rightEntityId="144224642776447"/>
+  <relation leftEntityFieldName="firstname" leftEntityId="144224616122295" rightEntityId="-1" rightEntityParameterName="firstname"/>
+  <relation leftEntityFieldName="man_id" leftEntityId="144224642776447" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
   <relation leftEntityFieldName="obr_treatment_id" leftEntityId="143314714604832" rightEntityFieldName="treat_id" rightEntityId="144224622381823"/>
   <relation leftEntityId="-1" leftEntityParameterName="start_date" rightEntityFieldName="treat_date" rightEntityId="143314714604832"/>
+  <relation leftEntityFieldName="patient" leftEntityId="143314714604832" rightEntityFieldName="man_patient_id" rightEntityId="144224616122295"/>
+  <relation leftEntityId="-1" leftEntityParameterName="treat_status" rightEntityFieldName="treat_status" rightEntityId="143314714604832"/>
   <relation leftEntityId="-1" leftEntityParameterName="usluga_id" rightEntityFieldName="usluga_id" rightEntityId="144224622381823"/>
 </datamodel>

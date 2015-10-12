@@ -28,25 +28,25 @@ function TreatmentsForm() {
     
     
     form.btnEditPatient.onActionPerformed = function(event) {
-        fmPatient.setParams(model.qPatientsByParams.cursor.man_patient_id);
+        fmPatient.setParams(model.qAllPatientTreatmentsStatuses.cursor.man_patient_id);
         fmPatient.showModal(function(aResult) {
             if (aResult){
-                model.qPatientsByParams.requery();
+                model.qAllPatientTreatmentsStatuses.requery();
                 model.qAllFirms.requery();
             }
         });
     };
     
     form.btnApplyFilter.onActionPerformed = function(event) {
-        model.qPatientsByParams.params.company_id = form.mcWorkPlace.value ? 
+        model.qAllPatientTreatmentsStatuses.params.company_id = form.mcWorkPlace.value ? 
                 form.mcWorkPlace.value.buh_companies_id : null;
-        model.qPatientsByParams.params.firstname = form.tfFirstName.text;
-        model.qPatientsByParams.params.surname = form.tfSurname.text;
-        model.qPatientsByParams.params.treat_status = form.mcTreatStatus.value ? form.mcTreatStatus.value[0] : null;
-        model.qPatientsByParams.params.start_date = form.mdTreatStart.value;
-        model.qPatientsByParams.params.end_date = form.mdTreatEnd.value;
+        model.qAllPatientTreatmentsStatuses.params.firstname = form.tfFirstName.text;
+        model.qAllPatientTreatmentsStatuses.params.surname = form.tfSurname.text;
+        model.qAllPatientTreatmentsStatuses.params.treat_status = form.mcTreatStatus.value ? form.mcTreatStatus.value.obr_status_id : null;
+        model.qAllPatientTreatmentsStatuses.params.start_date = form.mdTreatStart.value ? form.mdTreatStart.value : null;
+        model.qAllPatientTreatmentsStatuses.params.end_date = form.mdTreatEnd.value ? form.mdTreatEnd.value : null;
         
-        model.qPatientsByParams.requery();
+        model.qAllPatientTreatmentsStatuses.requery();
     };
     
 //    model.qPatientsByParams.onRequeried = function(event) {
@@ -56,10 +56,10 @@ function TreatmentsForm() {
     
     
     form.btnSelAll.onActionPerformed = function(event) {
-        if (form.mgPatients.selected.length === model.qPatientsByParams.length)
+        if (form.mgPatients.selected.length === model.qAllPatientTreatmentsStatuses.length)
             form.mgPatients.clearSelection();
         else
-            model.qPatientsByParams.forEach(function(aCursor) {
+            model.qAllPatientTreatmentsStatuses.forEach(function(aCursor) {
                 form.mgPatients.select(aCursor);
             });
         form.lbSelectedCount.text = form.mgPatients.selected.length;
