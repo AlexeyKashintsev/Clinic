@@ -61,13 +61,13 @@
   <ToolBar background="#eaeaea" cursor="0" name="toolBar" parent="view" prefHeight="80px" prefWidth="620px">
     <AnchorsPaneConstraints height="80px" left="230px" right="90px" top="0px"/>
   </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/list-add-user.png" name="btnAddPatient" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Добавить" verticalTextPosition="3">
+    <font family="Monospaced" size="11" style="0"/>
+  </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-edit.png" name="btnEditPatient" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Карточка" verticalTextPosition="3">
     <font family="Monospaced" size="11" style="0"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/document-new.png" name="btnAddTreat" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Назначение" verticalTextPosition="3">
-    <font family="Monospaced" size="11" style="0"/>
-  </Button>
-  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/list-add-user.png" name="btnAddPatient" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Добавить" verticalTextPosition="3">
     <font family="Monospaced" size="11" style="0"/>
   </Button>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/48x48/actions/human-document-open.png" name="btnLoadData" parent="toolBar" prefHeight="80px" prefWidth="90px" text="Загрузить" verticalTextPosition="3">
