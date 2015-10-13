@@ -44,8 +44,8 @@ function TreatmentsForm() {
         model.qAllPatientTreatmentsStatuses.params.firstname = form.tfFirstName.text;
         model.qAllPatientTreatmentsStatuses.params.surname = form.tfSurname.text;
         model.qAllPatientTreatmentsStatuses.params.treat_status = form.mcTreatStatus.value ? form.mcTreatStatus.value.obr_status_id : null;
-        model.qAllPatientTreatmentsStatuses.params.start_date = form.mdTreatStart.value ? form.mdTreatStart.value : null;
-        model.qAllPatientTreatmentsStatuses.params.end_date = form.mdTreatEnd.value ? form.mdTreatEnd.value : null;
+        //model.qAllPatientTreatmentsStatuses.params.start_date = form.mdTreatStart.value ? form.mdTreatStart.value : null;
+//        model.qAllPatientTreatmentsStatuses.params.end_date = form.mdTreatEnd.value ? form.mdTreatEnd.value : null;
         
         model.qAllPatientTreatmentsStatuses.requery();
     };
