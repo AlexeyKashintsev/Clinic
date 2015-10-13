@@ -54,7 +54,7 @@
     <AnchorsPaneConstraints height="20px" left="210px" top="10px" width="100px"/>
   </Label>
   <Button cursor="0" icon="icons/22x22/actions/dialog-apply.png" name="btnSave" parent="view" prefHeight="30px" prefWidth="150px" text="Сохранить">
-    <AnchorsPaneConstraints bottom="5px" height="30px" left="470px" width="150px"/>
+    <AnchorsPaneConstraints bottom="5px" height="30px" right="137px" width="150px"/>
   </Button>
   <Button cursor="0" icon="icons/22x22/actions/gtk-no.png" name="btnCancel" parent="view" prefHeight="30px" prefWidth="120px" text="Отмена">
     <AnchorsPaneConstraints bottom="5px" height="30px" right="7px" width="120px"/>

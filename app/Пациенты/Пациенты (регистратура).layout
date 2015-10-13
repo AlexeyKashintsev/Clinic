@@ -88,23 +88,29 @@
   <ModelGrid cursor="0" data="qPatientsByParams" deletable="false" editable="false" insertable="false" name="mgPatients" parent="panel2" prefHeight="229px" prefWidth="708px">
     <AnchorsPaneConstraints bottom="20px" left="0px" right="0px" top="0px"/>
     <CheckGridColumn name="colCheck" resizable="true"/>
-    <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="111px">
+    <ModelGridColumn field="surname" name="colSurname" readonly="true" title="Фамилия" width="83px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="111px">
+    <ModelGridColumn field="firstname" name="colFirstname" readonly="true" title="Имя" width="83px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
-    <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="111px">
+    <ModelGridColumn field="patronymic" name="colPatronymic" readonly="true" title="Отчество" width="84px">
       <ModelTextArea/>
     </ModelGridColumn>
-    <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="111px">
+    <ModelGridColumn field="date_oft_birth" name="colBirthdate" readonly="true" title="Дата рождения" width="83px">
       <ModelDate dateFormat="dd MMMM yyyy"/>
     </ModelGridColumn>
-    <ModelGridColumn field="p_company" name="colCompany" readonly="true" title="Компания" width="112px">
+    <ModelGridColumn field="p_company" name="colCompany" readonly="true" title="Компания" width="84px">
       <ModelCombo displayField="company_name" displayList="qAllFirms"/>
     </ModelGridColumn>
-    <ModelGridColumn field="p_job" name="colJobTitle" readonly="true" title="Должность" width="111px">
+    <ModelGridColumn field="p_job" name="colJobTitle" readonly="true" title="Должность" width="83px">
       <ModelCombo displayField="job_title" displayList="qManJob"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="phone" name="colPhone" title="Телефон" width="84px">
+      <ModelTextArea/>
+    </ModelGridColumn>
+    <ModelGridColumn field="email" name="colEmail" title="Email" width="83px">
+      <ModelTextArea/>
     </ModelGridColumn>
   </ModelGrid>
   <AnchorsPane background="#eaeaea" cursor="0" name="panel1" parent="panel2" prefHeight="20px" prefWidth="708px">

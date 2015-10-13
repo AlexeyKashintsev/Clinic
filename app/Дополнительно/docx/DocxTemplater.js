@@ -8,11 +8,11 @@ function DocxTemplater() {
     var self = this, model = P.loadModel(this.constructor.name);
     
     P.require([
-        'libs/angular-expressions.js',
-        'libs/FileSaver.min.js',
-        'libs/jszip-utils.js',
-        'libs/downloadify.min.js',
-        'libs/main.min.js'
+        'Дополнительно/docx/libs/angular-expressions.js',
+        'Дополнительно/docx/libs/FileSaver.min.js',
+        'Дополнительно/docx/libs/jszip-utils.js',
+        'Дополнительно/docx/libs/downloadify.min.js',
+        'Дополнительно/docx/libs/main.min.js'
     ]);
     
     self.run = function (aTemplate, aOutputName, aData) {

@@ -3,9 +3,11 @@
   <fieldsEntity entityHeight="80" entityIconified="false" entityId="142641804941239" entityLocationX="21" entityLocationY="36" entityWidth="150" tableName="man_sex"/>
   <fieldsEntity entityHeight="152" entityIconified="false" entityId="142641813625000" entityLocationX="385" entityLocationY="36" entityWidth="150" tableName="man_workplace"/>
   <fieldsEntity entityHeight="119" entityIconified="false" entityId="142641811037396" entityLocationX="668" entityLocationY="116" entityWidth="150" tableName="buh_companies"/>
+  <fieldsEntity entityHeight="129" entityIconified="false" entityId="144472607612580" entityLocationX="29" entityLocationY="335" entityWidth="162" tableName="man_contacts"/>
   <fieldsEntity entityHeight="68" entityIconified="false" entityId="143048715402641" entityLocationX="19" entityLocationY="152" entityWidth="150" tableName="man_blood_type"/>
   <fieldsEntity entityHeight="92" entityIconified="false" entityId="142641834140859" entityLocationX="667" entityLocationY="18" entityWidth="150" tableName="man_hazards"/>
   <fieldsEntity entityHeight="113" entityIconified="false" entityId="143186057840362" entityLocationX="386" entityLocationY="204" entityWidth="241" tableName="buh_inshurance_company"/>
   <fieldsEntity entityHeight="281" entityIconified="false" entityId="142641768292968" entityLocationX="210" entityLocationY="38" entityWidth="166" tableName="man_patient"/>
   <fieldsEntity entityHeight="149" entityIconified="false" entityId="142641848574515" entityLocationX="833" entityLocationY="19" entityWidth="150" tableName="hazards"/>
+  <fieldsEntity entityHeight="130" entityIconified="false" entityId="144472609936802" entityLocationX="224" entityLocationY="335" entityWidth="177" tableName="man_contacts_types"/>
 </datamodel>
