@@ -5,18 +5,20 @@
     <AnchorsPaneConstraints bottom="43px" left="0px" right="0px" top="0px"/>
   </SplitPane>
   <AnchorsPane background="#ffffff" cursor="0" name="panel" parent="splitPane" prefHeight="378px" prefWidth="560px"/>
-  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="200px">
-    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="200px"/>
+  <ToolBar cursor="0" name="toolBar" parent="panel" prefHeight="30px" prefWidth="240px">
+    <AnchorsPaneConstraints height="30px" left="0px" top="0px" width="240px"/>
   </ToolBar>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-add.png" name="btnAdd" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Добавить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/list-remove.png" name="btnDel" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Удалить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/new-view-refresh.png" name="btnReq" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Обновить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-save.png" name="btnSave" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Сохранить" verticalTextPosition="3"/>
   <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/human-document-open.png" name="button" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Редактировать назначаемые услуги" verticalTextPosition="3"/>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" icon="icons/22x22/actions/document-revert.png" name="btnMove" parent="toolBar" prefHeight="30px" prefWidth="34px" toolTipText="Переместить услуги" verticalTextPosition="3"/>
   <ModelGrid cursor="0" data="qUslugiByType" deletable="false" insertable="false" name="mgUsl" parent="panel" prefHeight="348px" prefWidth="560px">
     <AnchorsPaneConstraints bottom="0px" left="0px" right="0px" top="30px"/>
     <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="usl_name" name="colUsl_name" readonly="true" title="Наименование" width="219px">
+    <CheckGridColumn name="colSelect"/>
+    <ModelGridColumn field="usl_name" name="colUsl_name" readonly="true" title="Наименование" width="197px">
       <ModelFormattedField format=""/>
     </ModelGridColumn>
     <ModelGridColumn field="clinic_work" maxWidth="100px" name="colInWork" preferredWidth="100px" title="В клинике" width="100px">

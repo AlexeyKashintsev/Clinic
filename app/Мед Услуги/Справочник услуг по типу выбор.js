@@ -145,4 +145,23 @@ function Uslugi4SelectView() {
             model.qUslugiByType.requery(function(){lp.stop();});
         });
     };
+    form.btnMove.onActionPerformed = function(event) {
+        var usl = form.mgUsl.selected;
+        if(!usl[0]){
+            alert("Вы ничего не выбрали!");
+        } else {
+            var uslTypesView = new UslTypesView();
+            uslTypesView.setTitle("Выбор типа для переноса услуг");
+            uslTypesView.showModal(function(typeId){
+                if(typeId){
+                    for(var i in usl){
+                        usl[i].usl_type = typeId;
+                    }
+                    model.save(function(){
+                        model.requery();
+                    });
+                }
+            })
+        }
+    };
 }

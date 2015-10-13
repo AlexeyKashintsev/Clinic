@@ -11,9 +11,17 @@ function UslTypesView() {
         aDesktop ? form.showInternalFrame(aDesktop) : form.show();
     };
     
+    self.showModal = function(aCallback) {
+        form.showModal(aCallback);
+    };
+    
     self.showOnPanel = function (aPanel) {
         aPanel.add(form.view);
     };
+    
+    self.setTitle = function(aTitle) {
+        form.title = aTitle;
+    }
     
     model.requery(function () {
         // TODO : place your code here
@@ -64,4 +72,10 @@ function UslTypesView() {
             });
     };
     
+    form.btnSelect.onActionPerformed = function(event) {
+        form.close(model.qUslTypes.cursor.usl_types_id);
+    };
+    form.btnCancel.onActionPerformed = function(event) {
+        form.close();
+    };
 }
